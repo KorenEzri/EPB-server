@@ -1,0 +1,176 @@
+2021-06-17 12:28:49:2849 [32minfo[39m: [32m[32m[1mDONE[22m[32m Project ready.[39m
+2021-06-17 12:29:48:2948 [32minfo[39m: [32mServer is now running at http://localhost:8081/graphql[39m
+2021-06-17 12:29:48:2948 [32minfo[39m: [32mconnected to database[39m
+2021-06-17 13:37:43:3743 [32minfo[39m: [32mServer is now running at http://localhost:8001/graphql[39m
+2021-06-17 13:38:17:3817 [32minfo[39m: [32mEasyPeasyBackend - http://localhost:8001/graphql[39m
+2021-06-17 13:38:28:3828 [32minfo[39m: [32mEasy-Peasy-Backend - http://localhost:8001/graphql[39m
+2021-06-17 13:38:51:3851 [35mhttp[39m: [35mEasy-Peasy-Backend - http://localhost:8001/graphql[39m
+2021-06-17 13:44:03:443 [35mhttp[39m: [35mEasy-Peasy-Backend - http://localhost:8001/graphql[39m
+2021-06-17 16:02:49:249 [35mhttp[39m: [35mEasy-Peasy-Backend - server at http://localhost:8001/graphql[39m
+2021-06-17 16:04:02:42 [35mhttp[39m: [35mEasy-Peasy-Backend - server at http://localhost:8001/graphql[39m
+2021-06-17 16:15:43:1543 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 16:15:43:1543 [32minfo[39m: [32mEasy-Peasy-Backend - server @ http://localhost:8001/graphql[39m
+2021-06-17 16:16:01:161 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 16:16:01:161 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:17:40:1740 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:17:40:1740 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:22:15:2215 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:22:15:2215 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:25:35:2535 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:25:35:2535 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:25:42:2542 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:25:42:2542 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:26:18:2618 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:26:18:2618 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:26:54:2654 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:27:52:2752 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:27:52:2752 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:28:09:289 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:28:47:2847 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:28:47:2847 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:28:48:2848 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:28:48:2848 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:28:48:2848 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:29:28:2928 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:29:28:2928 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:29:28:2928 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:29:57:2957 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:29:57:2957 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:29:58:2958 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:29:58:2958 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:30:11:3011 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:30:11:3011 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:30:12:3012 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:30:12:3012 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:30:13:3013 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:30:13:3013 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:31:11:3111 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:31:11:3111 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:31:17:3117 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:31:17:3117 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:31:24:3124 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:31:24:3124 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:31:25:3125 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:31:25:3125 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:32:14:3214 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:32:14:3214 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:33:06:336 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:33:06:336 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:33:30:3330 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:33:30:3330 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:33:31:3331 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:33:31:3331 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:33:31:3331 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:33:32:3332 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:33:32:3332 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:33:32:3332 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:34:31:3431 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:34:31:3431 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:34:31:3431 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:34:36:3436 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:34:36:3436 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:34:36:3436 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:34:38:3438 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:34:38:3438 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:34:38:3438 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:35:56:3556 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:35:56:3556 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:36:00:360 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:36:00:360 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:36:00:360 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:36:16:3616 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:36:16:3616 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:36:19:3619 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:36:19:3619 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:36:19:3619 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:37:35:3735 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:37:35:3735 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:37:45:3745 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:37:45:3745 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:37:53:3753 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:37:53:3753 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:38:17:3817 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:38:17:3817 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:38:18:3818 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:38:18:3818 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:38:18:3818 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:40:07:407 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:40:07:407 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:40:07:407 [32minfo[39m: [32mTEST PASSED![39m
+2021-06-17 17:40:07:407 [32minfo[39m: [32mPATH: [39m
+2021-06-17 17:40:07:407 [32minfo[39m: [32mPath received: [39m
+2021-06-17 17:40:13:4013 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:40:13:4013 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:41:29:4129 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:41:29:4129 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:41:56:4156 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:41:56:4156 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:42:33:4233 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 17:42:33:4233 [32minfo[39m: [32m<Buffer 69 6d 70 6f 72 74 20 7b 20 47 72 61 70 68 51 4c 53 63 61 6c 61 72 54 79 70 65 20 7d 20 66 72 6f 6d 20 22 67 72 61 70 68 71 6c 22 3b 0d 0a 69 6d 70 6f ... 503 more bytes>[39m
+2021-06-17 17:43:12:4312 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 17:43:12:4312 [32minfo[39m: [32m<Buffer 69 6d 70 6f 72 74 20 7b 20 47 72 61 70 68 51 4c 53 63 61 6c 61 72 54 79 70 65 20 7d 20 66 72 6f 6d 20 22 67 72 61 70 68 71 6c 22 3b 0d 0a 69 6d 70 6f ... 503 more bytes>[39m
+2021-06-17 17:44:00:440 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:44:00:440 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:44:01:441 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 17:44:01:441 [32minfo[39m: [32mimport { GraphQLScalarType } from "graphql";[39m
+[32mimport Logger from "./logger/logger";[39m
+[32mimport { getResolvers } from "./utils/codeToString";[39m
+
+[32mconst dateScalar = new GraphQLScalarType({[39m
+[32m  name: "Date",[39m
+[32m  parseValue(value: string | number | Date) {[39m
+[32m    return new Date(value);[39m
+[32m  },[39m
+[32m  serialize(value: { toISOString: () => any }) {[39m
+[32m    return value.toISOString();[39m
+[32m  },[39m
+[32m});[39m
+[32mexport const resolvers = {[39m
+[32m  Date: dateScalar,[39m
+[32m  Query: {[39m
+[32m    getResolvers: async () => {[39m
+[32m      Logger.info(await getResolvers());[39m
+[32m      return "OK!";[39m
+[32m    },[39m
+[32m  },[39m
+[32m};[39m
+[32m[39m
+2021-06-17 17:45:02:452 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 17:45:02:452 [32minfo[39m: [32mimport { GraphQLScalarType } from "graphql";[39m
+[32mimport Logger from "./logger/logger";[39m
+[32mimport { getResolvers } from "./utils/codeToString";[39m
+
+[32mconst dateScalar = new GraphQLScalarType({[39m
+[32m  name: "Date",[39m
+[32m  parseValue(value: string | number | Date) {[39m
+[32m    return new Date(value);[39m
+[32m  },[39m
+[32m  serialize(value: { toISOString: () => any }) {[39m
+[32m    return value.toISOString();[39m
+[32m  },[39m
+[32m});[39m
+[32mexport const resolvers = {[39m
+[32m  Date: dateScalar,[39m
+[32m  Query: {[39m
+[32m    getResolvers: async () => {[39m
+[32m      Logger.info(await getResolvers());[39m
+[32m      return "OK!";[39m
+[32m    },[39m
+[32m  },[39m
+[32m};[39m
+[32m[39m
+2021-06-17 17:46:31:4631 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-17 17:46:31:4631 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-17 17:46:34:4634 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:05:24:524 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:09:34:934 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:09:35:935 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:12:35:1235 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:12:54:1254 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:19:39:1939 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:24:43:2443 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:27:11:2711 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:27:19:2719 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:28:36:2836 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:30:56:3056 [32minfo[39m: [32mSending resolvers as string..[39m
+2021-06-17 18:33:09:339 [32minfo[39m: [32mSending resolvers as string..[39m
