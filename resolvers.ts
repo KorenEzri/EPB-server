@@ -1,6 +1,6 @@
 import { GraphQLScalarType } from "graphql";
 import Logger from "./logger/logger";
-import { getResolvers } from "./utils/codeToString";
+import { getResolvers, getTypeDefs, getActions } from "./utils/codeToString";
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",
@@ -15,7 +15,13 @@ export const resolvers = {
   Date: dateScalar,
   Query: {
     getResolvers: async () => {
-      return await getResolvers();
+      return await getResolvers(); // Action: get all resolvers
+    },
+    getTypeDefs: async () => {
+      return await getTypeDefs(); // Action: get all type definitions
+    },
+    getActions: async () => {
+      return await getActions(); // Action: get all actions
     },
   },
 };

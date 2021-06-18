@@ -4,5 +4,7 @@ export const typeDefs = gql`
   scalar Date
   type Query {
     getResolvers: String
+    getTypeDefs: String
+    getActions: [String]
   }
 `;
