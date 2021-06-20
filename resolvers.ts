@@ -1,14 +1,10 @@
 import { GraphQLScalarType } from "graphql";
-import { ResolverOptions } from "./types";
+// option types
+import { ResolverOptions, createCustomTypeOptions, stub } from "./types";
 import { getResolvers, getTypeDefs, getActions } from "./utils/codeToString";
 import * as create from "./utils/createNew";
 import Logger from "./logger/logger";
-//
 
-// generated interfaces
-// generated interfaces end
-
-//
 const dateScalar = new GraphQLScalarType({
   name: "Date",
   parseValue(value: string | number | Date) {
@@ -21,22 +17,42 @@ const dateScalar = new GraphQLScalarType({
 export const resolvers = {
   Date: dateScalar,
   Query: {
+    // Action: get all resolvers
     getResolvers: async () => {
-      return await getResolvers(); // Action: get all resolvers
+      Logger.info("HERE2");
+      return await getResolvers();
     },
+    // Action: get all type definitions
     getTypeDefs: async () => {
-      return await getTypeDefs(); // Action: get all type definitions
+      Logger.info("HERE3");
+      return await getTypeDefs();
     },
+    // Action: get all actions
     getActions: async () => {
-      return await getActions(); // Action: get all actions
+      Logger.info("HERE4");
+      return await getActions();
     },
     // query-end
   },
   Mutation: {
+    // Action: create a new resolver (empty)
     createResolver: async (_: any, { options }: ResolverOptions) => {
-      await create.createNewTypeDef({ options: options });
-      await create.createNewResolver({ options: options });
-      return "OK"; // Action: create a new resolver (empty)
+      try {
+        Logger.info("Creating a new type definition...");
+        await create.createNewTypeDef({ options: options });
+        Logger.info("Creating a new resolver...");
+        await create.createNewResolver({ options: options });
+        Logger.info("Action created successfully.");
+        return "OK";
+      } catch ({ message }) {
+        Logger.error(message);
+        return "ERROR";
+      }
+    },
+    // Action: create a new type definition (singular)
+    createCustomType: async (_: any, { options }: createCustomTypeOptions) => {
+      //
+      // return String
     },
     // mutation-end
   },

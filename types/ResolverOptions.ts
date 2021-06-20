@@ -5,6 +5,6 @@ export interface ResolverOptions {
     returnType: String;
     type: string;
     vars: [String];
-    description: string;
+    description: String;
   };
 }

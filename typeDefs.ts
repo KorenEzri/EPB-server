@@ -3,6 +3,13 @@ export const typeDefs = gql`
   scalar Date
   # generated definitions
 
+  input createCustomTypeOptions {
+    vars: [String]
+    name: String
+    type: String
+  }
+  # added at: Sun Jun 20 2021 15:26:15 GMT+0300 (Israel Daylight Time)
+
   # generated definitions end
   input ResolverOptions {
     name: String
@@ -22,6 +29,7 @@ export const typeDefs = gql`
   }
   type Mutation {
     createResolver(options: ResolverOptions): String
+    createCustomType(options: createCustomTypeOptions): String
 
     # mutation-end
   }

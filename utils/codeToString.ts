@@ -3,7 +3,7 @@ import Logger from "../logger/logger";
 import { promisify } from "util";
 const read = promisify(fs.readFile);
 const access = promisify(fs.access);
-const getActionOnly = new RegExp(/; \/\/ Action: \w+.*/g);
+const getActionOnly = new RegExp(/\/\/ Action: \w+.*/g);
 
 export const checkIfOK = async (path: string) => {
   try {
@@ -26,12 +26,9 @@ export const getTypeDefs = async () => {
 export const getActions = async () => {
   const resolvers = await getResolvers();
   if (!resolvers) return;
-  return resolvers
-    .split("Query:")[1]
-    .match(getActionOnly)
-    ?.map((action: string) => {
-      const parsedAction = action.split("//")[1].trim();
-      const actionAction = parsedAction.split("Action: ")[1];
-      return actionAction.charAt(0).toUpperCase() + actionAction.slice(1);
-    });
+  return resolvers.match(getActionOnly)?.map((action: string) => {
+    const parsedAction = action.split("//")[1].trim();
+    const actionAction = parsedAction.split("Action: ")[1];
+    return actionAction.charAt(0).toUpperCase() + actionAction.slice(1);
+  });
 };

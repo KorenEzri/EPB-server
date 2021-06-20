@@ -1,5 +1,6 @@
 import { ResolverOptions } from "../../types";
 import * as utils from "./string.util";
+import prettier from "prettier";
 import { promisify } from "util";
 import fs from "fs";
 import { getTypeDefs } from "../codeToString";
@@ -70,6 +71,13 @@ export const createNewTypeDef = async ({ options }: ResolverOptions) => {
     options.name,
     options.type
   ).join("\n");
+  // const formatted = prettier.format(
+  //   utils.replaceAllInString(revisedTypeDefs, "Number", "Int"),
+  //   {
+  //     semi: false,
+  //     parser: "babel",
+  //   }
+  // );
   await write(
     "./typeDefs.ts",
     utils.replaceAllInString(revisedTypeDefs, "Number", "Int")
