@@ -1,7 +1,14 @@
 import { GraphQLScalarType } from "graphql";
-import Logger from "./logger/logger";
+import { ResolverOptions } from "./types";
 import { getResolvers, getTypeDefs, getActions } from "./utils/codeToString";
+import * as create from "./utils/createNew";
+import Logger from "./logger/logger";
+//
 
+// generated interfaces
+// generated interfaces end
+
+//
 const dateScalar = new GraphQLScalarType({
   name: "Date",
   parseValue(value: string | number | Date) {
@@ -23,5 +30,14 @@ export const resolvers = {
     getActions: async () => {
       return await getActions(); // Action: get all actions
     },
+    // query-end
+  },
+  Mutation: {
+    createResolver: async (_: any, { options }: ResolverOptions) => {
+      await create.createNewTypeDef({ options: options });
+      await create.createNewResolver({ options: options });
+      return "OK"; // Action: create a new resolver (empty)
+    },
+    // mutation-end
   },
 };

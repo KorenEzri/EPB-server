@@ -2,3 +2,4 @@
 2021-06-17 23:08:10:810 [31merror[39m: [31mCould not locate resolvers file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\resolvers'[39m
 2021-06-17 23:08:34:834 [31merror[39m: [31mCould not locate resolvers file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\resolvers'[39m
 2021-06-17 23:08:45:845 [31merror[39m: [31mCould not locate resolvers file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\resolvers'[39m
+2021-06-19 18:31:55:3155 [31merror[39m: [31mCould not locate ../resolvers.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\resolvers.ts'[39m

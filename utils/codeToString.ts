@@ -4,25 +4,24 @@ import { promisify } from "util";
 const read = promisify(fs.readFile);
 const access = promisify(fs.access);
 const getActionOnly = new RegExp(/; \/\/ Action: \w+.*/g);
-const getWholeResolver = new RegExp(/await \w+.*/g);
 
-export const getResolvers = async () => {
+export const checkIfOK = async (path: string) => {
   try {
-    await access("resolvers.ts", fs.constants.R_OK);
+    await access(path, fs.constants.R_OK);
+    return "OK";
   } catch ({ message }) {
-    Logger.error(`Could not locate resolvers file, ${message}`);
+    Logger.error(`Could not locate ${path} file, ${message}`);
   }
+};
+export const getResolvers = async () => {
+  if (!(await checkIfOK("./resolvers.ts"))) return;
   Logger.info("Sending resolvers as string..");
-  return await read("resolvers.ts", "utf8");
+  return await read("./resolvers.ts", "utf8");
 };
 export const getTypeDefs = async () => {
-  try {
-    await access("typeDefs.ts", fs.constants.R_OK);
-  } catch ({ message }) {
-    Logger.error(`Could not locate resolvers file, ${message}`);
-  }
+  if (!(await checkIfOK("./typeDefs.ts"))) return;
   Logger.info("Sending typeDefs as string..");
-  return await read("typeDefs.ts", "utf8");
+  return await read("./typeDefs.ts", "utf8");
 };
 export const getActions = async () => {
   const resolvers = await getResolvers();
