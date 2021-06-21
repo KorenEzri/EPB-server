@@ -26,8 +26,8 @@ export const typeDefs = gql`
     getResolvers: String
     getTypeDefs: String
     getActions: [String]
-
     getAllResolverNames: [String]
+
     # query-end
   }
   type Mutation {

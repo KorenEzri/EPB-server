@@ -85,9 +85,9 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   const revisedResolvers = (
     await insertInterface(splatResolvers, options.name)
   ).join("\n");
-  const formatted = prettier.format(revisedResolvers, {
-    semi: false,
-    parser: "babel",
-  });
-  await write("./resolvers.ts", formatted);
+  // const formatted = prettier.format(revisedResolvers, {
+  //   semi: false,
+  //   parser: "babel",
+  // });
+  await write("./resolvers.ts", revisedResolvers);
 };

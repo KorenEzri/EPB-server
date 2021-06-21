@@ -1,6 +1,7 @@
 import Joi from "joi";
 import { validTypes, validResolverTypes } from "../consts";
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
+import { resolvers } from "../resolvers";
 import { compileToVarList } from "../utils/createNew/string.util";
 import { allTypeNames } from "./";
 const interval = setInterval(() => {
@@ -30,7 +31,8 @@ const interval = setInterval(() => {
 export let resolverSchema = Joi.object({
   comment: Joi.string().allow(""),
 });
-export const validatePropertyNames = async (options: any, getter: string) => {
+
+const validateVars = (options: any, getter: string) => {
   const setArray = Array.from(
     new Set(options[getter].map((v: string) => v.split(":")[0].toLowerCase()))
   );
@@ -41,19 +43,53 @@ export const validatePropertyNames = async (options: any, getter: string) => {
       message: "an interface cannot have two identical property names!",
     };
   }
+};
+const validateUnique = async (options: any) => {
   const allResolverNames = await getResolverNames();
   const allTypeDefs = await getTypeDefs();
-  if (allResolverNames && allResolverNames.includes(`${options.name}Options`))
+  const queriesAndResolvers = Object.keys(resolvers.Query).concat(
+    Object.keys(resolvers.Mutation)
+  );
+  if (allResolverNames) {
+    if (allResolverNames.includes(`${options.name}Options`))
+      return {
+        error: true,
+        message: "duplicate definitions detected, aborting.",
+      };
+    if (allResolverNames.includes(`${options.name}`))
+      return {
+        error: true,
+        message: "duplicate definitions detected, aborting.",
+      };
+  }
+  if (allTypeDefs) {
+    if (allTypeDefs.includes(`${options.name}Options`))
+      return {
+        error: true,
+        message: "duplicate definitions detected, aborting.",
+      };
+    if (allTypeDefs.includes(`${options.name}`))
+      return {
+        error: true,
+        message: "duplicate definitions detected, aborting.",
+      };
+  }
+  if (queriesAndResolvers.includes(`${options.name}Options`))
     return {
       error: true,
       message: "duplicate definitions detected, aborting.",
     };
-  if (allTypeDefs && allTypeDefs.includes(`${options.name}Options`))
+  if (queriesAndResolvers.includes(`${options.name}`))
     return {
       error: true,
       message: "duplicate definitions detected, aborting.",
     };
-
+};
+export const validateCreationQuery = async (options: any, getter: string) => {
+  const varsValid = validateVars(options, getter);
+  if (varsValid) return varsValid;
+  const uniqueValid = await validateUnique(options);
+  if (uniqueValid) return uniqueValid;
   const validateOpts: any = {};
   Object.assign(validateOpts, options);
   validateOpts[getter] = compileToVarList(options[getter]).map((prop) =>

@@ -1,5 +1,5 @@
 import { GraphQLScalarType } from "graphql";
-
+import execa from "execa";
 // TODO:
 //  - code cleanup
 //  - fix prettier problem with resolvers
@@ -9,7 +9,7 @@ import { GraphQLScalarType } from "graphql";
 import {
   resolverSchema,
   typeSchema,
-  validatePropertyNames,
+  validateCreationQuery,
 } from "./validations";
 // option types
 import { ResolverOptions, createCustomTypeOptions, stub } from "./types";
@@ -57,7 +57,7 @@ export const resolvers = {
   Mutation: {
     // Action: create a new resolver (empty)
     createResolver: async (_: any, { options }: ResolverOptions) => {
-      const validationRes = await validatePropertyNames(options, "vars");
+      const validationRes = await validateCreationQuery(options, "vars");
       if (validationRes.error) return validationRes.message;
       const { error, value } = resolverSchema.validate(validationRes);
       if (error) {
@@ -71,7 +71,14 @@ export const resolvers = {
         let res = await create.createNewTypeDef({ options: options });
         Logger.http("FROM: EPB-server: Creating a new resolver...");
         if (!res) res = await create.createNewResolver({ options: options });
-        Logger.http("FROM: EPB-server: Action created successfully.");
+        Logger.http(
+          "FROM: EPB-server: Action created successfully, applying Prettier for files.."
+        );
+        try {
+          await execa("npx prettier --write *.ts");
+        } catch ({ message }) {
+          Logger.error(`FROM: EPB-server: ${message}`);
+        }
         if (!res) return "OK";
         return "ERROR";
       } catch ({ message }) {
@@ -81,7 +88,7 @@ export const resolvers = {
     },
     // Action: create a new type definition (singular)
     createCustomType: async (_: any, { options }: createCustomTypeOptions) => {
-      const validationRes = await validatePropertyNames(options, "properties");
+      const validationRes = await validateCreationQuery(options, "properties");
       if (validationRes.error) return validationRes.message;
       const { error, value } = typeSchema.validate(validationRes);
       if (error) {
