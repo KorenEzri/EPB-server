@@ -2,11 +2,10 @@ import { ResolverOptions } from "../../types";
 import * as utils from "./string.util";
 import { promisify } from "util";
 import fs from "fs";
-import { getResolvers, checkIfOK } from "../codeToString";
+import { getResolverNames, getResolvers, getTypeDefs } from "../codeToString";
 import prettier from "prettier";
-import Logger from "../../logger/logger";
+import { insert_Into_Types_Index_TS } from "./";
 const write = promisify(fs.writeFile);
-const read = promisify(fs.readFile);
 
 let varInterface: any = {};
 
@@ -25,7 +24,15 @@ const toResolver = ({ options }: ResolverOptions) => {
   } else {
     varInterface.options = {};
     varList.forEach((variable) => {
-      varInterface.options[variable.var] = variable.type.trim().toLowerCase();
+      let lowerCaseVar = variable.type.trim().toLowerCase();
+      if (lowerCaseVar === "int" || lowerCaseVar === "[int]") {
+        lowerCaseVar = "number";
+      } else if (lowerCaseVar === "[int]") {
+        lowerCaseVar = "[number]";
+      } else if (lowerCaseVar === "date" || lowerCaseVar === "[date]") {
+        lowerCaseVar = utils.capitalizeFirstLetter(lowerCaseVar);
+      }
+      varInterface.options[variable.var] = lowerCaseVar;
     });
     varList = `{ options }:${name}Options`;
   }
@@ -36,25 +43,6 @@ const toResolver = ({ options }: ResolverOptions) => {
         // return ${returnType}
     },
       `;
-};
-const insert_Into_Types_Index_TS = async (exportStatement: string) => {
-  const typeIndexPath = "./types/index.ts";
-  try {
-    const isOK = await checkIfOK(typeIndexPath);
-    if (!isOK) return "ERROR";
-    const typeIndexFile = await read(typeIndexPath, "utf8");
-    try {
-      const assorted = typeIndexFile.split("\n");
-      assorted.push(exportStatement);
-      await write(typeIndexPath, assorted.join("\n"));
-    } catch ({ message }) {
-      Logger.error(message);
-      return "ERROR";
-    }
-  } catch ({ message }) {
-    Logger.error(message);
-    return "ERROR";
-  }
 };
 const insertInterface = async (splatResolvers: string[], name: String) => {
   if (!Object.values(varInterface).length) return splatResolvers;
@@ -74,9 +62,14 @@ const insertInterface = async (splatResolvers: string[], name: String) => {
   await insert_Into_Types_Index_TS(`export * from "./${name}Options"`);
   return splatResolvers;
 };
+
 export const createNewResolver = async ({ options }: ResolverOptions) => {
   // compile a resolver string from options
-  const fullResolver = toResolver({ options: options });
+  const fullResolver = utils.replaceAllInString(
+    toResolver({ options: options }),
+    "\t",
+    ""
+  );
   const resolvers = await getResolvers(); // current resolver file as string
   if (!resolvers) return "ERROR";
   const splatResolvers = resolvers
@@ -89,8 +82,10 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   // push into line indexToPush the compiled resolver.
   splatResolvers.splice(indexToPush, 0, fullResolver);
   // insert interface into resolvers if needed.
-  const revisedResolvers = await insertInterface(splatResolvers, options.name);
-  const formatted = prettier.format(revisedResolvers.join("\n"), {
+  const revisedResolvers = (
+    await insertInterface(splatResolvers, options.name)
+  ).join("\n");
+  const formatted = prettier.format(revisedResolvers, {
     semi: false,
     parser: "babel",
   });

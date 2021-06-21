@@ -1,9 +1,8 @@
 import { ResolverOptions } from "../../types";
 import * as utils from "./string.util";
-import prettier from "prettier";
 import { promisify } from "util";
 import fs from "fs";
-import { getTypeDefs } from "../codeToString";
+import { getTypeDefs, getResolverNames } from "../codeToString";
 const write = promisify(fs.writeFile);
 
 let typeDefInterface: any = {};
@@ -46,11 +45,12 @@ const insertTypeDef = (
     null,
     2
   )}\n# added at: ${new Date()}`;
-  splatTypeDefs.splice(
-    index + 1,
-    0,
-    utils.replaceAllInString(interfaceString, '"', "")
+  const finishedInterfaceDef = utils.replaceAllInString(
+    interfaceString,
+    '"',
+    ""
   );
+  splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
   return splatTypeDefs;
 };
 export const createNewTypeDef = async ({ options }: ResolverOptions) => {
@@ -64,7 +64,8 @@ export const createNewTypeDef = async ({ options }: ResolverOptions) => {
     ? (indexToPush = splatTypeDefs.indexOf("# mutation-end"))
     : (indexToPush = splatTypeDefs.indexOf("# query-end"));
   // push into line indexToPush the compiled typeDef.
-  splatTypeDefs.splice(indexToPush, 0, fullTypeDef);
+  if (!splatTypeDefs.includes(fullTypeDef))
+    splatTypeDefs.splice(indexToPush, 0, fullTypeDef);
   // insert input type / query type (interface) into typeDefs if needed
   const revisedTypeDefs = insertTypeDef(
     splatTypeDefs,

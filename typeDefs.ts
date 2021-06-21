@@ -4,9 +4,11 @@ export const typeDefs = gql`
   # generated definitions
 
   input createCustomTypeOptions {
-    vars: [String]
+    properties: [String]
     name: String
-    type: String
+    comment: String
+    dbSchema: Boolean
+    typeDef: Boolean
   }
   # added at: Sun Jun 20 2021 15:26:15 GMT+0300 (Israel Daylight Time)
 
@@ -25,6 +27,7 @@ export const typeDefs = gql`
     getTypeDefs: String
     getActions: [String]
 
+    getAllResolverNames: [String]
     # query-end
   }
   type Mutation {

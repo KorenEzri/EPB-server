@@ -1,7 +1,24 @@
 import { GraphQLScalarType } from "graphql";
+
+// TODO:
+//  - code cleanup
+//  - fix prettier problem with resolvers
+//  - finish adding custom types and DB schemas
+//  - validations for all
+
+import {
+  resolverSchema,
+  typeSchema,
+  validatePropertyNames,
+} from "./validations";
 // option types
 import { ResolverOptions, createCustomTypeOptions, stub } from "./types";
-import { getResolvers, getTypeDefs, getActions } from "./utils/codeToString";
+import {
+  getResolvers,
+  getTypeDefs,
+  getActions,
+  getResolverNames,
+} from "./utils/codeToString";
 import * as create from "./utils/createNew";
 import Logger from "./logger/logger";
 
@@ -19,40 +36,69 @@ export const resolvers = {
   Query: {
     // Action: get all resolvers
     getResolvers: async () => {
-      Logger.info("HERE2");
       return await getResolvers();
     },
     // Action: get all type definitions
     getTypeDefs: async () => {
-      Logger.info("HERE3");
       return await getTypeDefs();
     },
     // Action: get all actions
     getActions: async () => {
-      Logger.info("HERE4");
       return await getActions();
     },
+
+    // Action: get all resolver names
+    getAllResolverNames: async (_: any) => {
+      return await getResolverNames();
+    },
+
     // query-end
   },
   Mutation: {
     // Action: create a new resolver (empty)
     createResolver: async (_: any, { options }: ResolverOptions) => {
+      const validationRes = await validatePropertyNames(options, "vars");
+      if (validationRes.error) return validationRes.message;
+      const { error, value } = resolverSchema.validate(validationRes);
+      if (error) {
+        Logger.error(
+          `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
+        );
+        return error.message;
+      }
       try {
-        Logger.info("Creating a new type definition...");
-        await create.createNewTypeDef({ options: options });
-        Logger.info("Creating a new resolver...");
-        await create.createNewResolver({ options: options });
-        Logger.info("Action created successfully.");
-        return "OK";
+        Logger.http("FROM: EPB-server: Creating a new type definition...");
+        let res = await create.createNewTypeDef({ options: options });
+        Logger.http("FROM: EPB-server: Creating a new resolver...");
+        if (!res) res = await create.createNewResolver({ options: options });
+        Logger.http("FROM: EPB-server: Action created successfully.");
+        if (!res) return "OK";
+        return "ERROR";
       } catch ({ message }) {
-        Logger.error(message);
+        Logger.error(`FROM: EPB-server: ${message}`);
         return "ERROR";
       }
     },
     // Action: create a new type definition (singular)
     createCustomType: async (_: any, { options }: createCustomTypeOptions) => {
-      //
-      // return String
+      const validationRes = await validatePropertyNames(options, "properties");
+      if (validationRes.error) return validationRes.message;
+      const { error, value } = typeSchema.validate(validationRes);
+      if (error) {
+        Logger.error(
+          `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
+        );
+        return error.message;
+      }
+      try {
+        Logger.http("FROM: EPB-server: Creating a new type interface...");
+        const res = await create.createNewInterface({ options: options });
+        Logger.http("FROM: EPB-server: Interface created successfully.");
+        return "OK";
+      } catch ({ message }) {
+        Logger.error(`FROM: EPB-server: ${message}`);
+        return "ERROR";
+      }
     },
     // mutation-end
   },
