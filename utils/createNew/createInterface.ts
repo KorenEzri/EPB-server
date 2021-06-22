@@ -35,14 +35,7 @@ const toInterface = ({ options }: createCustomTypeOptions) => {
   varList = utils.compileToVarList(properties);
   interfaceString.options = {};
   varList.forEach((variable) => {
-    let lowerCaseVar = variable.type.trim().toLowerCase();
-    if (lowerCaseVar === "int" || lowerCaseVar === "[int]") {
-      lowerCaseVar = "number";
-    } else if (lowerCaseVar === "[int]") {
-      lowerCaseVar = "[number]";
-    } else if (lowerCaseVar === "date" || lowerCaseVar === "[date]") {
-      lowerCaseVar = utils.capitalizeFirstLetter(lowerCaseVar);
-    }
+    const lowerCaseVar = utils.fixTypes(variable);
     interfaceString.options[variable.var] = lowerCaseVar;
   });
   varList = `{ options }:${name}Options`;
@@ -80,26 +73,23 @@ const createTypeDef = async (
   typeDefs: string
 ) => {
   const { properties, name, comment, type } = options;
-  const splatTypeDefs = typeDefs.split("\n").map((line: string) => line.trim());
+  let splatTypeDefs: string | string[] = typeDefs
+    .split("\n")
+    .map((line: string) => line.trim());
+  let scalarType: string;
   const { typeDefInterface } = createInterface(properties, name);
   if (!Object.keys(typeDefInterface).length) return splatTypeDefs;
   const index = splatTypeDefs.indexOf("# generated definitions");
-  const interfaceString = `\n ${type} ${name}Options ${JSON.stringify(
-    typeDefInterface,
-    null,
-    2
-  )}\n#${comment}\n# added at: ${new Date()}`;
+  const interfaceStringified = JSON.stringify(typeDefInterface, null, 2);
+  const interfaceString = `\n ${type} ${name}Options ${interfaceStringified}\n#${comment}\n# added at: ${new Date()}`;
   let finishedInterfaceDef = utils.replaceAllInString(interfaceString, '"', "");
-  finishedInterfaceDef = utils.replaceAllInString(
-    finishedInterfaceDef,
-    "||",
-    "|"
-  );
   splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
-  await write(
-    "./typeDefs.ts",
-    utils.replaceAllInString(splatTypeDefs.join("\n"), "Number", "Int")
+  splatTypeDefs = utils.replaceAllInString(
+    splatTypeDefs.join("\n"),
+    "Number",
+    "Int"
   );
+  await write("./typeDefs.ts", splatTypeDefs);
   return;
 };
 export const createNewInterface = async ({

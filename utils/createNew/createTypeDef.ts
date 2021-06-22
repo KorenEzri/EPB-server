@@ -47,11 +47,6 @@ const insertTypeDef = (
     2
   )}\n# added at: ${new Date()}`;
   let finishedInterfaceDef = utils.replaceAllInString(interfaceString, '"', "");
-  finishedInterfaceDef = utils.replaceAllInString(
-    finishedInterfaceDef,
-    "||",
-    "|"
-  );
   splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
   return splatTypeDefs;
 };

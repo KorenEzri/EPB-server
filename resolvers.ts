@@ -4,6 +4,9 @@ import execa from "execa";
 // TODO: 22/06/21
 //  - DONE:  add support for || in type system // DONE;
 //  - add support for multiple unique identifiers in DB schema
+//  {
+//        - make a validator for unique identifiers!
+// }
 //  - add backend validations for DB schema creation (make it flexy!!!!)
 //  - add singular DB schema creation
 //  - finish adding DB schemas
@@ -13,6 +16,7 @@ import execa from "execa";
 //  - add prebuilt actions: {
 //    - user auth - four days
 //    - CRUD operations for DB schema - four days
+//    - Scalar type creator!! Then, add suppport for || in typedef creation as well.
 // {
 //////////// DUE: 01.07.21, Sunday. //////////////////
 // TODO:

@@ -13,7 +13,7 @@ import Logger from "../logger/logger";
 // typeDef: boolean,
 // dbSchema: boolean,
 // type: string,
-// uniqueProperty: string
+// uniqueIdentifiers: string[]
 
 export const dbJoiSchema = Joi.object({
   name: Joi.string().required(),
@@ -24,7 +24,7 @@ export const dbJoiSchema = Joi.object({
   typeDef: Joi.boolean(),
   dbSchema: Joi.boolean(),
   type: Joi.string(),
-  uniqueProperty: Joi.string(),
+  uniqueIdentifiers: Joi.array(),
 });
 
 export const validateSchemaCreation = async (options: any) => {

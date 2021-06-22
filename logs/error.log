@@ -187,3 +187,13 @@
 2021-06-22 14:19:38:1938 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
 2021-06-22 14:20:51:2051 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" is not allowed[39m
 2021-06-22 14:34:31:3431 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is not allowed[39m
+2021-06-22 15:06:17:617 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-22 15:07:39:739 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 15:07:39:739 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 15:08:39:839 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 15:08:39:839 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 15:09:44:944 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 15:09:44:944 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m

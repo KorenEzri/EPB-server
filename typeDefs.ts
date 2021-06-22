@@ -10,7 +10,7 @@ export const typeDefs = gql`
     typeDef: Boolean
     dbSchema: Boolean
     type: String
-    uniqueProperty: String
+    uniqueIdentifiers: [String]
   }
   # added at: Tue Jun 22 2021 09:40:13 GMT+0300 (Israel Daylight Time)
 

@@ -102,7 +102,7 @@ export const parseOptions = (
   const returnType = validateOpts.returnType;
   if (returnType) {
     if (returnType.split("|").length) {
-      const error = validateTypeList([returnType.split(":")[1]]);
+      const error = validateTypeList([returnType.split(":")[0]]);
       if (error) return error;
     }
   }
