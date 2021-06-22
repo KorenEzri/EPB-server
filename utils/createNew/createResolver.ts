@@ -9,14 +9,14 @@ const write = promisify(fs.writeFile);
 let varInterface: any = {};
 
 const toResolver = ({ options }: ResolverOptions) => {
-  const { name, comment, returnType, vars, description } = options;
+  const { name, comment, returnType, properties, description } = options;
   let parsedComment;
   let varList;
-  varList = utils.compileToVarList(vars);
+  varList = utils.compileToVarList(properties);
   comment.split("//").length
     ? (parsedComment = comment)
     : (parsedComment = `// ${comment}`);
-  if (vars.length < 3) {
+  if (properties.length < 3) {
     varList = varList.map((variable) => {
       return `${variable.var}:${variable.type}`;
     });
@@ -45,10 +45,31 @@ const toResolver = ({ options }: ResolverOptions) => {
 };
 const insertInterface = async (splatResolvers: string[], name: String) => {
   if (!Object.values(varInterface).length) return splatResolvers;
-  const index = splatResolvers.indexOf("// option types");
-  const importStateMent = `${splatResolvers[index + 1]}`.split(",");
-  importStateMent.splice(1, 0, ` ${name}Options`);
-  splatResolvers.splice(index + 1, 1, importStateMent.join(","));
+  const startIndex = splatResolvers.indexOf("// option types");
+  const endIndex = splatResolvers.indexOf("// option types end");
+  const importStatement = splatResolvers
+    .map((line: string, index: number) => {
+      if (index >= startIndex + 1 && index <= endIndex - 1) {
+        return line;
+      }
+    })
+    .filter((v) => {
+      return v != null;
+    });
+  if (!importStatement[0]) return;
+  if (importStatement.length > 1) {
+    importStatement.splice(1, 0, ` ${name}Options,`);
+    splatResolvers.splice(
+      startIndex + 1,
+      endIndex - startIndex - 1,
+      importStatement.join("")
+    );
+  } else {
+    const splat = importStatement[0].split(",");
+    splat[0] = `${splat[0]}, ${name}Options`;
+    splatResolvers.splice(startIndex + 1, 1, splat.join(","));
+  }
+
   const interfaceString = `export interface ${name}Options ${JSON.stringify(
     varInterface,
     null,
@@ -81,9 +102,9 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   // push into line indexToPush the compiled resolver.
   splatResolvers.splice(indexToPush, 0, fullResolver);
   // insert interface into resolvers if needed.
-  const revisedResolvers = (
-    await insertInterface(splatResolvers, options.name)
-  ).join("\n");
+  const insertedInterface = await insertInterface(splatResolvers, options.name);
+  if (!insertedInterface) return "ERROR";
+  const revisedResolvers = insertedInterface.join("\n");
   await write("./resolvers.ts", revisedResolvers);
   Logger.http(
     "FROM: EPB-server: Action created successfully, applying Prettier for files.."

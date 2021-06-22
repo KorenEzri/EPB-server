@@ -1,9 +1,9 @@
 import Joi from "joi";
-import { validateVars } from "./resolver";
 import { createSchemaOptions } from "../types";
 import * as schemas from "../db/schemas";
 import Logger from "../logger/logger";
-import { validResolverTypes, validTypes } from "../consts";
+import { validTypes } from "../consts";
+import { validateVars } from "./validation.util";
 const validateUnique = ({ options }: createSchemaOptions) => {
   const allSchemas = Object.keys(schemas);
   if (allSchemas.includes(`${options.name}Schema`))
@@ -33,8 +33,8 @@ export const dbJoiSchema = Joi.object({
   comment: Joi.string().allow(""),
 });
 
-export const validateDBSchemaQuery = async (options: createSchemaOptions) => {
-  const varsValid = validateVars(options, "properties");
+export const validateSchemaCreation = async (options: any) => {
+  const varsValid = validateVars(options);
   if (varsValid) return varsValid;
   const uniqueValid = validateUnique(options);
   if (uniqueValid) return uniqueValid;

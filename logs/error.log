@@ -53,3 +53,78 @@
 2021-06-21 19:40:45:4045 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "value" must be of type object[39m
 2021-06-21 19:40:56:4056 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "value" must be of type object[39m
 2021-06-22 06:42:07:427 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-22 11:58:51:5851 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" is not allowed[39m
+2021-06-22 11:58:56:5856 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" is not allowed[39m
+2021-06-22 12:01:48:148 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "description" is not allowed[39m
+2021-06-22 12:10:27:1027 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" is not allowed[39m
+2021-06-22 12:10:55:1055 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" is not allowed[39m
+2021-06-22 12:11:28:1128 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Identifier expected. (29:9)[39m
+[31m[error]   27 | } from "./validations";[39m
+[31m[error]   28 | // option types[39m
+[31m[error] > 29 | import {, KorenOptions[39m
+[31m[error]      |         ^[39m
+[31m[error]   30 | ResolverOptions,[39m
+[31m[error]   31 | createSchemaOptions,[39m
+[31m[error]   32 | createCustomTypeOptions,[39m
+[31mapp.ts 159ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 14ms[39m
+2021-06-22 12:14:03:143 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Identifier expected. (30:1)[39m
+[31m[error]   28 | // option types[39m
+[31m[error]   29 | import {[39m
+[31m[error] > 30 | import {, KorenOptions[39m
+[31m[error]      | ^[39m
+[31m[error]   31 | createSchemaOptions,[39m
+[31m[error]   32 | createCustomTypeOptions,[39m
+[31m[error]   33 | stub,[39m
+[31mapp.ts 156ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 17ms[39m
+
+[31mtypeDefs.ts 11ms[39m
+2021-06-22 12:25:01:251 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Identifier expected. (29:9)[39m
+[31m[error]   27 | } from "./validations";[39m
+[31m[error]   28 | // option types[39m
+[31m[error] > 29 | import {, KorenOptions,ResolverOptions,,createSchemaOptions,,createCustomTypeOptions,,stub,,} from "./types";[39m
+[31m[error]      |         ^[39m
+[31m[error]   30 | ResolverOptions,[39m
+[31m[error]   31 | createSchemaOptions,[39m
+[31m[error]   32 | createCustomTypeOptions,[39m
+[31mapp.ts 160ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 12ms[39m
+2021-06-22 12:32:15:3215 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (34:1)[39m
+[31m[error]   32 | createCustomTypeOptions,[39m
+[31m[error]   33 | stub,[39m
+[31m[error] > 34 | } from "./types";[39m
+[31m[error]      | ^[39m
+[31m[error]   35 | // option types end[39m
+[31m[error]   36 | import {[39m
+[31m[error]   37 | getResolvers,[39m
+[31mapp.ts 157ms[39m
+[31mconnections.ts 11ms[39m
+[31mindex.ts 18ms[39m
+
+[31mtypeDefs.ts 12ms[39m
+2021-06-22 12:34:06:346 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (34:1)[39m
+[31m[error]   32 | createCustomTypeOptions,[39m
+[31m[error]   33 | stub,[39m
+[31m[error] > 34 | } from "./types";[39m
+[31m[error]      | ^[39m
+[31m[error]   35 | // option types end[39m
+[31m[error]   36 | import {[39m
+[31m[error]   37 | getResolvers,[39m
+[31mapp.ts 162ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 17ms[39m
+
+[31mtypeDefs.ts 13ms[39m

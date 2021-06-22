@@ -15,3 +15,10 @@ export const capitalizeFirstLetter = (string: string | String) => {
     return "[" + string.charAt(1).toUpperCase() + string.slice(2);
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
+export const replaceBetween = (
+  origin: string,
+  startIndex: number,
+  endIndex: number,
+  insertion: string
+) =>
+  `${origin.substring(0, startIndex)}${insertion}${origin.substring(endIndex)}`;

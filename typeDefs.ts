@@ -31,7 +31,7 @@ export const typeDefs = gql`
     resolver: String
     returnType: String
     type: String
-    vars: [String]
+    properties: [String]
     description: String
   }
   type Query {

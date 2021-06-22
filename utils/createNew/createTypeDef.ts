@@ -8,10 +8,10 @@ const write = promisify(fs.writeFile);
 
 let typeDefInterface: any = {};
 const toTypeDef = ({ options }: ResolverOptions) => {
-  const { name, returnType, vars } = options;
+  const { name, returnType, properties } = options;
   let varList;
-  varList = utils.compileToVarList(vars);
-  if (vars.length < 3) {
+  varList = utils.compileToVarList(properties);
+  if (properties.length < 3) {
     varList = varList.map((variable) => {
       return `${variable.var}:${utils.capitalizeFirstLetter(variable.type)}`;
     });
@@ -24,7 +24,7 @@ const toTypeDef = ({ options }: ResolverOptions) => {
     varList = `options: ${name}Options`;
   }
   let typeDef;
-  vars.length
+  properties.length
     ? (typeDef = `${name}(${varList}): ${utils.capitalizeFirstLetter(
         returnType
       )}`)

@@ -4,7 +4,7 @@ export interface ResolverOptions {
     comment: String;
     returnType: String;
     type: string;
-    vars: [String];
+    properties: [String];
     description: String;
   };
 }

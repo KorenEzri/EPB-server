@@ -20,7 +20,11 @@ import execa from "execa";
 //  - add documentation, create a presentation
 //////////// DUE: 05.07.21, Sunday. //////////////////
 
-import { validateCreationQuery } from "./validations";
+import {
+  validateResolverCreation,
+  validateTypeCreation,
+  validateSchemaCreation,
+} from "./validations";
 // option types
 import {
   ResolverOptions,
@@ -28,6 +32,7 @@ import {
   createCustomTypeOptions,
   stub,
 } from "./types";
+// option types end
 import {
   getResolvers,
   getTypeDefs,
@@ -72,17 +77,18 @@ export const resolvers = {
   Mutation: {
     // Action: create a new resolver (empty)
     createResolver: async (_: any, { options }: ResolverOptions) => {
-      const validationRes = await validateCreationQuery(options, "vars");
+      const validationRes = await validateResolverCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
-        let res = await create.createNewTypeDef({ options: options });
-        if (!res) res = await create.createNewResolver({ options: options });
+        let error = await create.createNewTypeDef({ options: options });
+        if (!error)
+          error = await create.createNewResolver({ options: options });
         try {
           await execa("npx prettier --write *.ts");
         } catch ({ message }) {
           Logger.error(`FROM: EPB-server: ${message}`);
         }
-        if (!res) return "OK";
+        if (!error) return "OK";
         return "ERROR";
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
@@ -91,7 +97,7 @@ export const resolvers = {
     },
     // Action: create a new type definition (singular)
     createCustomType: async (_: any, { options }: createCustomTypeOptions) => {
-      const validationRes = await validateCreationQuery(options, "properties");
+      const validationRes = await validateTypeCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
         await create.createNewInterface({ options: options });
@@ -103,8 +109,8 @@ export const resolvers = {
     },
     // Action: create a new database schema
     createSchema: async (_: any, { options }: createSchemaOptions) => {
-      const validationRes = await validateCreationQuery(options, "properties");
-      if (validationRes.error) return validationRes.message;
+      const validationRes = await validateSchemaCreation(options);
+      // if (validationRes.error) return validationRes.message;
       try {
         await create.createDbSchema({ options: options });
         return "OK";
