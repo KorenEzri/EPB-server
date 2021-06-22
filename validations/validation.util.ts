@@ -1,5 +1,7 @@
 import { resolvers } from "../resolvers";
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
+import * as types from "../types";
+import Joi from "joi";
 
 export const validateVars = (options: any) => {
   const setArray = Array.from(
@@ -55,4 +57,23 @@ export const validateUnique = async (options: any) => {
       error: true,
       message: "duplicate definitions detected, aborting.",
     };
+};
+export const parseOptions = (
+  options:
+    | types.ResolverOptions
+    | types.createCustomTypeOptions
+    | types.createSchemaOptions
+) => {
+  const validateOpts: any = {};
+  Object.assign(validateOpts, options);
+  const varList = validateOpts.properties.map((variable: string) => {
+    const splat = variable.split(":");
+    const varb = splat[0];
+    const varType = splat[1];
+    return { var: varb, type: varType };
+  });
+  validateOpts.properties = varList.map(
+    (property: { var: string; type: string }) => property.type.trim()
+  );
+  return validateOpts;
 };

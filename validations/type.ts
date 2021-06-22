@@ -2,8 +2,7 @@ import Joi from "joi";
 import { validTypes } from "../consts";
 import Logger from "../logger/logger";
 import { resolvers } from "../resolvers";
-import { compileToVarList } from "../utils/createNew/string.util";
-import { validateVars, validateUnique } from "./validation.util";
+import { validateVars, validateUnique, parseOptions } from "./validation.util";
 export let allTypeNames = [""];
 const interval = setInterval(() => {
   try {
@@ -37,12 +36,8 @@ export const validateTypeCreation = async (options: any) => {
   if (varsValid) return varsValid;
   const uniqueValid = await validateUnique(options);
   if (uniqueValid) return uniqueValid;
-  const validateOpts: any = {};
-  Object.assign(validateOpts, options);
-  validateOpts.properties = compileToVarList(options.properties).map((prop) =>
-    prop.type.trim()
-  );
-  const { error, value } = typeSchema.validate(validateOpts);
+  const parsedOptions = parseOptions(options);
+  const { error, value } = typeSchema.validate(parsedOptions);
   if (error) {
     Logger.error(
       `FROM: EPB-server: Invalid type info received, aborting.. Error: ${error.message}`

@@ -1,9 +1,8 @@
 import Joi from "joi";
 import Logger from "../logger/logger";
 import { validTypes, validResolverTypes } from "../consts";
-import { compileToVarList } from "../utils/createNew/string.util";
 import { allTypeNames } from "./";
-import { validateVars, validateUnique } from "./validation.util";
+import { validateVars, validateUnique, parseOptions } from "./validation.util";
 
 const interval = setInterval(() => {
   try {
@@ -37,12 +36,8 @@ export const validateResolverCreation = async (options: any) => {
   if (varsValid) return varsValid;
   const uniqueValid = await validateUnique(options);
   if (uniqueValid) return uniqueValid;
-  const validateOpts: any = {};
-  Object.assign(validateOpts, options);
-  validateOpts.properties = compileToVarList(options.properties).map((prop) =>
-    prop.type.trim()
-  );
-  const { error, value } = resolverSchema.validate(validateOpts);
+  const parsedOptions = parseOptions(options);
+  const { error, value } = resolverSchema.validate(parsedOptions);
   if (error) {
     Logger.error(
       `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
