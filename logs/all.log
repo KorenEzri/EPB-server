@@ -4270,3 +4270,244 @@
 2021-06-22 12:44:11:4411 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
 2021-06-22 12:44:11:4411 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
 2021-06-22 12:44:17:4417 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 12:54:41:5441 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 12:54:41:5441 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 12:54:41:5441 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 12:54:41:5441 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-22 12:54:41:5441 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 12:54:41:5441 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-22 12:55:44:5544 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 12:55:44:5544 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 12:55:44:5544 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 12:55:44:5544 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 12:55:44:5544 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 12:55:44:5544 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 13:28:40:2840 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:28:40:2840 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:36:27:3627 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:36:27:3627 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:37:13:3713 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:37:13:3713 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "value" must be of type object[39m
+2021-06-22 13:37:13:3713 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 13:38:16:3816 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:38:16:3816 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:38:18:3818 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:38:18:3818 [31merror[39m: [31mFROM: EPB-server: Invalid ReturnType info received for resolver, aborting.. Error: "orReturnType" is not allowed[39m
+2021-06-22 13:38:18:3818 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 13:38:40:3840 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:38:40:3840 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:38:44:3844 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:38:44:3844 [31merror[39m: [31mFROM: EPB-server: Invalid ReturnType info received for resolver, aborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 13:38:44:3844 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 13:39:04:394 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:39:04:394 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:39:04:394 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:39:04:394 [31merror[39m: [31mFROM: EPB-server: Invalid ReturnType info received for resolver, aborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 13:39:04:394 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 13:40:57:4057 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:40:57:4057 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:41:02:412 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:41:02:412 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 13:41:36:4136 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:41:36:4136 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:41:40:4140 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:41:40:4140 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 13:42:21:4221 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:42:21:4221 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:42:23:4223 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:42:23:4223 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 13:45:26:4526 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:45:26:4526 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:45:28:4528 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:45:28:4528 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 13:52:14:5214 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:52:14:5214 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:52:16:5216 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:53:17:5317 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:53:17:5317 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:53:18:5318 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:53:34:5334 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:53:34:5334 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:53:35:5335 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:53:46:5346 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:53:46:5346 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:53:46:5346 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 13:54:38:5438 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 13:54:38:5438 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 13:54:39:5439 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:00:47:047 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:00:47:047 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:00:48:048 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:00:55:055 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:01:18:118 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:01:18:118 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:01:20:120 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:01:20:120 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateReturnType() @ validation,util.ts ~line 13.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:01:20:120 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:01:52:152 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:01:52:152 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:01:52:152 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:01:52:152 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:01:52:152 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:03:01:31 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:03:01:31 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:03:02:32 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:03:02:32 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:03:02:32 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:03:18:318 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:03:18:318 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:03:18:318 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:03:18:318 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:03:18:318 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "error" is not allowed[39m
+2021-06-22 14:05:05:55 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:05:05:55 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:05:06:56 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:07:49:749 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:07:49:749 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:07:50:750 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:07:50:750 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:08:55:855 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:08:55:855 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:08:56:856 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:08:56:856 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:08:56:856 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:09:16:916 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:09:16:916 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:09:16:916 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:09:16:916 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:09:16:916 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:09:57:957 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:09:57:957 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:09:57:957 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:09:57:957 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:09:57:957 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:10:31:1031 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:10:31:1031 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:10:36:1036 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:10:36:1036 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:10:38:1038 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:10:38:1038 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:10:38:1038 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:12:09:129 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:12:09:129 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:12:09:129 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:12:09:129 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:12:09:129 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "error" is not allowed[39m
+2021-06-22 14:12:28:1228 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:12:28:1228 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:12:28:1228 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:12:28:1228 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:12:28:1228 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:13:05:135 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:13:05:135 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:13:05:135 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:13:05:135 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:14:26:1426 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:14:26:1426 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:14:27:1427 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:14:27:1427 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:14:41:1441 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:14:41:1441 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:14:41:1441 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:14:41:1441 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is not allowed[39m
+2021-06-22 14:15:32:1532 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:15:32:1532 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:15:32:1532 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:15:32:1532 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:15:32:1532 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:15:42:1542 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:15:42:1542 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:15:42:1542 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:15:42:1542 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:16:59:1659 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:16:59:1659 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:17:00:170 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:17:00:170 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:17:00:170 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:17:24:1724 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:17:24:1724 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:17:25:1725 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:17:25:1725 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:17:25:1725 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-22 14:18:33:1833 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:18:33:1833 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:18:33:1833 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:19:38:1938 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:19:38:1938 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:19:38:1938 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:19:38:1938 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-22 14:20:48:2048 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:20:48:2048 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:20:51:2051 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:20:51:2051 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "returnType" is not allowed[39m
+2021-06-22 14:21:37:2137 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:21:37:2137 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:21:38:2138 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:21:38:2138 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:21:38:2138 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:21:38:2138 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:21:38:2138 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:21:38:2138 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 14:26:45:2645 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:26:45:2645 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:26:47:2647 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:26:47:2647 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:26:47:2647 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:26:47:2647 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:26:47:2647 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:26:47:2647 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 14:30:43:3043 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:30:43:3043 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:31:00:310 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:31:00:310 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:31:00:310 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:31:00:310 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:31:00:310 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:31:00:310 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 14:32:08:328 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:32:08:328 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:32:09:329 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:32:09:329 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:32:09:329 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:32:09:329 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:32:09:329 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:32:09:329 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 14:34:31:3431 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:34:31:3431 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:34:31:3431 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:34:31:3431 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is not allowed[39m
+2021-06-22 14:34:36:3436 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:34:36:3436 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:34:36:3436 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:34:36:3436 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:34:36:3436 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:34:36:3436 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:40:03:403 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:40:03:403 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-22 14:46:49:4649 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-22 14:46:49:4649 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-22 14:46:50:4650 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:46:50:4650 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-22 14:46:50:4650 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-22 14:46:50:4650 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-22 14:46:50:4650 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-22 14:46:50:4650 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m

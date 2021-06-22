@@ -14,13 +14,9 @@ const interval = setInterval(() => {
         type: Joi.string()
           .required()
           .valid(...validResolverTypes),
-        returnType: Joi.string()
-          .required()
-          .valid(...validTypes),
+        returnType: Joi.string().required(),
         description: Joi.string().required(),
-        properties: Joi.array()
-          .allow(null)
-          .items(Joi.string().valid(...validTypes)),
+        properties: Joi.array(),
         comment: Joi.string().allow(""),
       });
       clearInterval(interval);

@@ -1,8 +1,29 @@
 import { resolvers } from "../resolvers";
+import { createSchemaOptions } from "../types";
+import { validTypes } from "../consts";
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
+import * as schemas from "../db/schemas";
 import * as types from "../types";
 import Joi from "joi";
+import Logger from "../logger/logger";
+import { replaceAllInString } from "../utils/createNew/string.util";
 
+const typeSchema = Joi.object({
+  types: Joi.array().items(Joi.string().valid(...validTypes)),
+});
+const validateTypeList = (typeList: string[]) => {
+  let allTypes: string[] = [];
+  allTypes = replaceAllInString(typeList.join(","), "||", ",").split(",");
+  allTypes = replaceAllInString(allTypes.join(","), "|", ",").split(",");
+  allTypes = allTypes.map((type: string) => type.trim());
+  const { error, value } = typeSchema.validate({ types: allTypes });
+  if (error) {
+    Logger.error(
+      `FROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.\naborting.. Error: ${error.message}`
+    );
+    return { error: true, message: error.message };
+  }
+};
 export const validateVars = (options: any) => {
   const setArray = Array.from(
     new Set(
@@ -66,14 +87,32 @@ export const parseOptions = (
 ) => {
   const validateOpts: any = {};
   Object.assign(validateOpts, options);
-  const varList = validateOpts.properties.map((variable: string) => {
+  let varList: { var: string; type: string }[] = [];
+  varList = validateOpts.properties.map((variable: string) => {
     const splat = variable.split(":");
-    const varb = splat[0];
+    const varName = splat[0];
     const varType = splat[1];
-    return { var: varb, type: varType };
+    return { var: varName, type: varType };
   });
   validateOpts.properties = varList.map(
     (property: { var: string; type: string }) => property.type.trim()
   );
+  const error = validateTypeList(validateOpts.properties);
+  if (error) return error;
+  const returnType = validateOpts.returnType;
+  if (returnType) {
+    if (returnType.split("|").length) {
+      const error = validateTypeList([returnType.split(":")[1]]);
+      if (error) return error;
+    }
+  }
   return validateOpts;
+};
+export const validateUniqueSchemaName = ({ options }: createSchemaOptions) => {
+  const allSchemas = Object.keys(schemas);
+  if (allSchemas.includes(`${options.name}Schema`))
+    return {
+      error: true,
+      message: "duplicate schemas detected, aborting.",
+    };
 };

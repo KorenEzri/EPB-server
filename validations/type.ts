@@ -1,5 +1,4 @@
 import Joi from "joi";
-import { validTypes } from "../consts";
 import Logger from "../logger/logger";
 import { resolvers } from "../resolvers";
 import { validateVars, validateUnique, parseOptions } from "./validation.util";
@@ -15,9 +14,7 @@ const interval = setInterval(() => {
         name: Joi.string()
           .required()
           .invalid(...allTypeNames),
-        properties: Joi.array()
-          .required()
-          .items(Joi.string().valid(...validTypes)),
+        properties: Joi.array(),
         comment: Joi.string().allow(""),
         dbSchema: Joi.boolean(),
         typeDef: Joi.boolean(),

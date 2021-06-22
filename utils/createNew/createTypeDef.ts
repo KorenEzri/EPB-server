@@ -46,10 +46,11 @@ const insertTypeDef = (
     null,
     2
   )}\n# added at: ${new Date()}`;
-  const finishedInterfaceDef = utils.replaceAllInString(
-    interfaceString,
-    '"',
-    ""
+  let finishedInterfaceDef = utils.replaceAllInString(interfaceString, '"', "");
+  finishedInterfaceDef = utils.replaceAllInString(
+    finishedInterfaceDef,
+    "||",
+    "|"
   );
   splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
   return splatTypeDefs;
@@ -69,14 +70,12 @@ export const createNewTypeDef = async ({ options }: ResolverOptions) => {
   if (!splatTypeDefs.includes(fullTypeDef))
     splatTypeDefs.splice(indexToPush, 0, fullTypeDef);
   // insert input type / query type (interface) into typeDefs if needed
-  const revisedTypeDefs = insertTypeDef(
+  let revisedTypeDefs = insertTypeDef(
     splatTypeDefs,
     options.name,
     options.type
   ).join("\n");
-  await write(
-    "./typeDefs.ts",
-    utils.replaceAllInString(revisedTypeDefs, "Number", "Int")
-  );
+  revisedTypeDefs = utils.replaceAllInString(revisedTypeDefs, "Number", "Int");
+  await write("./typeDefs.ts", revisedTypeDefs);
 };
 export const createNewTypeOnly = async (options: any) => {};

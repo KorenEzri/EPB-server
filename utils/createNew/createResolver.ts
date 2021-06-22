@@ -23,14 +23,7 @@ const toResolver = ({ options }: ResolverOptions) => {
   } else {
     varInterface.options = {};
     varList.forEach((variable) => {
-      let lowerCaseVar = variable.type.trim().toLowerCase();
-      if (lowerCaseVar === "int" || lowerCaseVar === "[int]") {
-        lowerCaseVar = "number";
-      } else if (lowerCaseVar === "[int]") {
-        lowerCaseVar = "[number]";
-      } else if (lowerCaseVar === "date" || lowerCaseVar === "[date]") {
-        lowerCaseVar = utils.capitalizeFirstLetter(lowerCaseVar);
-      }
+      const lowerCaseVar = utils.fixTypes(variable);
       varInterface.options[variable.var] = lowerCaseVar;
     });
     varList = `{ options }:${name}Options`;
@@ -69,16 +62,14 @@ const insertInterface = async (splatResolvers: string[], name: String) => {
     splat[0] = `${splat[0]}, ${name}Options`;
     splatResolvers.splice(startIndex + 1, 1, splat.join(","));
   }
-
-  const interfaceString = `export interface ${name}Options ${JSON.stringify(
+  let interfaceString = `export interface ${name}Options ${JSON.stringify(
     varInterface,
     null,
     2
   )}\n// added at: ${new Date()}`;
-  await write(
-    `./types/${name}Options.ts`,
-    utils.replaceAllInString(interfaceString, '"', "")
-  );
+  interfaceString = utils.replaceAllInString(interfaceString, '"', "");
+  interfaceString = utils.replaceAllInString(interfaceString, "||", "|");
+  await write(`./types/${name}Options.ts`, interfaceString);
   await insert_Into_Types_Index_TS(`export * from "./${name}Options"`);
   return splatResolvers;
 };
