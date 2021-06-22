@@ -1,9 +1,11 @@
 import { createCustomTypeOptions, ResolverOptions } from "../../types";
 import Logger from "../../logger/logger";
-import { checkIfOK } from "../codeToString";
+import { checkIfOK, getTypeDefs } from "../codeToString";
 import * as utils from "./string.util";
 import { promisify } from "util";
 import fs from "fs";
+import execa from "execa";
+
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 
@@ -62,13 +64,63 @@ const insertInterface = async (name: String, interfaceString: any) => {
   );
   return res;
 };
+const createInterface = (props: string[], name: string) => {
+  let varList;
+  let typeDefInterface: any = {};
+  varList = utils.compileToVarList(props);
+  varList.forEach((variable) => {
+    typeDefInterface[variable.var] = utils.capitalizeFirstLetter(
+      variable.type.trim()
+    );
+  });
+  varList = `options: ${name}Options`;
+  return { varList, typeDefInterface };
+};
+const createTypeDef = async (
+  { options }: createCustomTypeOptions,
+  typeDefs: string
+) => {
+  const { properties, name, comment, type } = options;
+  const splatTypeDefs = typeDefs.split("\n").map((line: string) => line.trim());
+  const { typeDefInterface } = createInterface(properties, name);
+  if (!Object.keys(typeDefInterface).length) return splatTypeDefs;
+  const index = splatTypeDefs.indexOf("# generated definitions");
+  const interfaceString = `\n ${type} ${name}Options ${JSON.stringify(
+    typeDefInterface,
+    null,
+    2
+  )}\n#${comment}\n# added at: ${new Date()}`;
+  const finishedInterfaceDef = utils.replaceAllInString(
+    interfaceString,
+    '"',
+    ""
+  );
+  splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
+  await write(
+    "./typeDefs.ts",
+    utils.replaceAllInString(splatTypeDefs.join("\n"), "Number", "Int")
+  );
+  return;
+};
 export const createNewInterface = async ({
   options,
 }: createCustomTypeOptions) => {
+  Logger.http("FROM: EPB-server: Creating a new type interface...");
+  const typeDefs = await getTypeDefs(); // current typeDef file as string
+  if (!typeDefs) return;
   const compiledInterface = toInterface({ options: options });
   try {
     await insertInterface(options.name, compiledInterface);
-    const { dbSchema, typeDef } = options;
+    const { typeDef } = options;
+    if (typeDef) await createTypeDef({ options: options }, typeDefs);
+    Logger.http(
+      "FROM: EPB-server: Interface created successfully, applying Prettier."
+    );
+    try {
+      await execa("npx prettier --write *.ts");
+    } catch ({ message }) {
+      Logger.error(`FROM: EPB-server: ${message}`);
+    }
     return "OK";
   } catch ({ message }) {
     return message;

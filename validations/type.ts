@@ -19,6 +19,7 @@ const interval = setInterval(() => {
         comment: Joi.string().allow(""),
         dbSchema: Joi.boolean(),
         typeDef: Joi.boolean(),
+        type: Joi.string(),
       });
       clearInterval(interval);
     }

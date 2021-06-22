@@ -2,11 +2,10 @@ import { ResolverOptions } from "../../types";
 import * as utils from "./string.util";
 import { promisify } from "util";
 import fs from "fs";
-import { getResolverNames, getResolvers, getTypeDefs } from "../codeToString";
-import prettier from "prettier";
+import { getResolvers } from "../codeToString";
 import { insert_Into_Types_Index_TS } from "./";
+import Logger from "../../logger/logger";
 const write = promisify(fs.writeFile);
-
 let varInterface: any = {};
 
 const toResolver = ({ options }: ResolverOptions) => {
@@ -62,8 +61,8 @@ const insertInterface = async (splatResolvers: string[], name: String) => {
   await insert_Into_Types_Index_TS(`export * from "./${name}Options"`);
   return splatResolvers;
 };
-
 export const createNewResolver = async ({ options }: ResolverOptions) => {
+  Logger.http("FROM: EPB-server: Creating a new resolver...");
   // compile a resolver string from options
   const fullResolver = utils.replaceAllInString(
     toResolver({ options: options }),
@@ -85,9 +84,9 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   const revisedResolvers = (
     await insertInterface(splatResolvers, options.name)
   ).join("\n");
-  // const formatted = prettier.format(revisedResolvers, {
-  //   semi: false,
-  //   parser: "babel",
-  // });
   await write("./resolvers.ts", revisedResolvers);
+  Logger.http(
+    "FROM: EPB-server: Action created successfully, applying Prettier for files.."
+  );
+  return;
 };

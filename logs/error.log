@@ -52,3 +52,4 @@
 2021-06-21 19:40:07:407 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "value" must be of type object[39m
 2021-06-21 19:40:45:4045 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "value" must be of type object[39m
 2021-06-21 19:40:56:4056 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "value" must be of type object[39m
+2021-06-22 06:42:07:427 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "properties" is not allowed[39m

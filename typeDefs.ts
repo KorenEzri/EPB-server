@@ -3,12 +3,24 @@ export const typeDefs = gql`
   scalar Date
   # generated definitions
 
+  input createSchemaOptions {
+    properties: [String]
+    name: String
+    comment: String
+    typeDef: Boolean
+    dbSchema: Boolean
+    type: String
+    uniqueProperty: String
+  }
+  # added at: Tue Jun 22 2021 09:40:13 GMT+0300 (Israel Daylight Time)
+
   input createCustomTypeOptions {
     properties: [String]
     name: String
     comment: String
     dbSchema: Boolean
     typeDef: Boolean
+    type: String
   }
   # added at: Sun Jun 20 2021 15:26:15 GMT+0300 (Israel Daylight Time)
 
@@ -27,13 +39,12 @@ export const typeDefs = gql`
     getTypeDefs: String
     getActions: [String]
     getAllResolverNames: [String]
-
     # query-end
   }
   type Mutation {
     createResolver(options: ResolverOptions): String
     createCustomType(options: createCustomTypeOptions): String
-
+    createSchema(options: createSchemaOptions): String
     # mutation-end
   }
 `;

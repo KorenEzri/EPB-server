@@ -3,7 +3,8 @@ import { validTypes, validResolverTypes } from "../consts";
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
 import { resolvers } from "../resolvers";
 import { compileToVarList } from "../utils/createNew/string.util";
-import { allTypeNames } from "./";
+import { allTypeNames, typeSchema } from "./";
+import Logger from "../logger/logger";
 const interval = setInterval(() => {
   try {
     if (allTypeNames.length) {
@@ -27,12 +28,11 @@ const interval = setInterval(() => {
     }
   } catch ({ message }) {}
 }, 300);
-
 export let resolverSchema = Joi.object({
   comment: Joi.string().allow(""),
 });
 
-const validateVars = (options: any, getter: string) => {
+export const validateVars = (options: any, getter: string) => {
   const setArray = Array.from(
     new Set(options[getter].map((v: string) => v.split(":")[0].toLowerCase()))
   );
@@ -95,5 +95,11 @@ export const validateCreationQuery = async (options: any, getter: string) => {
   validateOpts[getter] = compileToVarList(options[getter]).map((prop) =>
     prop.type.trim()
   );
-  return validateOpts;
+  const { error, value } = typeSchema.validate(validateOpts);
+  if (error) {
+    Logger.error(
+      `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
+    );
+    return { error: true, message: error.message };
+  } else return { error: false, message: "OK" };
 };

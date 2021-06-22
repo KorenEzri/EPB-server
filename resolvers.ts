@@ -1,18 +1,33 @@
 import { GraphQLScalarType } from "graphql";
 import execa from "execa";
-// TODO:
-//  - code cleanup
-//  - fix prettier problem with resolvers
-//  - finish adding custom types and DB schemas
-//  - validations for all
 
-import {
-  resolverSchema,
-  typeSchema,
-  validateCreationQuery,
-} from "./validations";
+// TODO: 22/06/21
+//  - add support for || in type system
+//  - add support for multiple unique identifiers in DB schema
+//  - add backend validations for DB schema creation (make it flexy!!!!)
+//  - add singular DB schema creation
+//  - finish adding DB schemas
+//  - code cleanup
+//////////// DUE: 23.06.21, Sunday. //////////////////
+// TODO:
+//  - add prebuilt actions: {
+//    - user auth - four days
+//    - CRUD operations for DB schema - four days
+// {
+//////////// DUE: 01.07.21, Sunday. //////////////////
+// TODO:
+//  - code cleanup and tests
+//  - add documentation, create a presentation
+//////////// DUE: 05.07.21, Sunday. //////////////////
+
+import { validateCreationQuery } from "./validations";
 // option types
-import { ResolverOptions, createCustomTypeOptions, stub } from "./types";
+import {
+  ResolverOptions,
+  createSchemaOptions,
+  createCustomTypeOptions,
+  stub,
+} from "./types";
 import {
   getResolvers,
   getTypeDefs,
@@ -59,21 +74,9 @@ export const resolvers = {
     createResolver: async (_: any, { options }: ResolverOptions) => {
       const validationRes = await validateCreationQuery(options, "vars");
       if (validationRes.error) return validationRes.message;
-      const { error, value } = resolverSchema.validate(validationRes);
-      if (error) {
-        Logger.error(
-          `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
-        );
-        return error.message;
-      }
       try {
-        Logger.http("FROM: EPB-server: Creating a new type definition...");
         let res = await create.createNewTypeDef({ options: options });
-        Logger.http("FROM: EPB-server: Creating a new resolver...");
         if (!res) res = await create.createNewResolver({ options: options });
-        Logger.http(
-          "FROM: EPB-server: Action created successfully, applying Prettier for files.."
-        );
         try {
           await execa("npx prettier --write *.ts");
         } catch ({ message }) {
@@ -90,17 +93,20 @@ export const resolvers = {
     createCustomType: async (_: any, { options }: createCustomTypeOptions) => {
       const validationRes = await validateCreationQuery(options, "properties");
       if (validationRes.error) return validationRes.message;
-      const { error, value } = typeSchema.validate(validationRes);
-      if (error) {
-        Logger.error(
-          `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
-        );
-        return error.message;
-      }
       try {
-        Logger.http("FROM: EPB-server: Creating a new type interface...");
-        const res = await create.createNewInterface({ options: options });
-        Logger.http("FROM: EPB-server: Interface created successfully.");
+        await create.createNewInterface({ options: options });
+        return "OK";
+      } catch ({ message }) {
+        Logger.error(`FROM: EPB-server: ${message}`);
+        return "ERROR";
+      }
+    },
+    // Action: create a new database schema
+    createSchema: async (_: any, { options }: createSchemaOptions) => {
+      const validationRes = await validateCreationQuery(options, "properties");
+      if (validationRes.error) return validationRes.message;
+      try {
+        await create.createDbSchema({ options: options });
         return "OK";
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);

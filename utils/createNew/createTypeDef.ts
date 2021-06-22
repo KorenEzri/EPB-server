@@ -2,7 +2,8 @@ import { ResolverOptions } from "../../types";
 import * as utils from "./string.util";
 import { promisify } from "util";
 import fs from "fs";
-import { getTypeDefs, getResolverNames } from "../codeToString";
+import { getTypeDefs } from "../codeToString";
+import Logger from "../../logger/logger";
 const write = promisify(fs.writeFile);
 
 let typeDefInterface: any = {};
@@ -54,6 +55,7 @@ const insertTypeDef = (
   return splatTypeDefs;
 };
 export const createNewTypeDef = async ({ options }: ResolverOptions) => {
+  Logger.http("FROM: EPB-server: Creating a new type definition...");
   // compile a type definition string from options
   const fullTypeDef = toTypeDef({ options: options });
   const typeDefs = await getTypeDefs(); // current typeDef file as string
@@ -72,13 +74,6 @@ export const createNewTypeDef = async ({ options }: ResolverOptions) => {
     options.name,
     options.type
   ).join("\n");
-  // const formatted = prettier.format(
-  //   utils.replaceAllInString(revisedTypeDefs, "Number", "Int"),
-  //   {
-  //     semi: false,
-  //     parser: "babel",
-  //   }
-  // );
   await write(
     "./typeDefs.ts",
     utils.replaceAllInString(revisedTypeDefs, "Number", "Int")
