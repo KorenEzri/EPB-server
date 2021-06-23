@@ -100,5 +100,6 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   Logger.http(
     "FROM: EPB-server: Action created successfully, applying Prettier for files.."
   );
+  await utils.applyPrettier();
   return;
 };

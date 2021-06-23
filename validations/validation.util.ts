@@ -84,6 +84,7 @@ export const parseOptions = (
     | types.ResolverOptions
     | types.createCustomTypeOptions
     | types.createSchemaOptions
+    | {}
 ) => {
   const validateOpts: any = {};
   Object.assign(validateOpts, options);
@@ -108,7 +109,7 @@ export const parseOptions = (
   }
   return validateOpts;
 };
-export const validateUniqueSchemaName = ({ options }: createSchemaOptions) => {
+export const validateUniqueSchemaName = (options: any) => {
   const allSchemas = Object.keys(schemas);
   if (allSchemas.includes(`${options.name}Schema`))
     return {

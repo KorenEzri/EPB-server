@@ -1,3 +1,6 @@
+import execa from "execa";
+import Logger from "../../logger/logger";
+
 export const replaceAllInString = (str: string, find: string, replace: any) => {
   var escapedFind = find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
   return str.replace(new RegExp(escapedFind, "g"), replace);
@@ -15,10 +18,23 @@ export const capitalizeFirstLetter = (string: string | String) => {
     return "[" + string.charAt(1).toUpperCase() + string.slice(2);
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
-export const fixTypes = (variable: { type: string; var: string }) => {
+export const fixTypes = (
+  variable: { type: string; var: string },
+  toUpperCase?: boolean
+) => {
   let lowerCaseVar = variable.type.trim().toLowerCase();
   lowerCaseVar = replaceAllInString(lowerCaseVar, "int", "number");
   lowerCaseVar = replaceAllInString(lowerCaseVar, "Int", "number");
   lowerCaseVar = replaceAllInString(lowerCaseVar, "date", "Date");
+  if (toUpperCase) return capitalizeFirstLetter(lowerCaseVar);
   return lowerCaseVar;
+};
+export const applyPrettier = async (path?: string) => {
+  try {
+    path
+      ? await execa(`npx prettier --write ${path}`)
+      : await execa("npx prettier --write *.ts");
+  } catch ({ message }) {
+    Logger.error(`FROM: EPB-server: ${message}`);
+  }
 };

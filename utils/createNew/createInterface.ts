@@ -1,4 +1,4 @@
-import { createCustomTypeOptions, ResolverOptions } from "../../types";
+import { createCustomTypeOptions } from "../../types";
 import Logger from "../../logger/logger";
 import { checkIfOK, getTypeDefs } from "../codeToString";
 import * as utils from "./string.util";
@@ -17,8 +17,13 @@ export const insert_Into_Types_Index_TS = async (exportStatement: string) => {
     const typeIndexFile = await read(typeIndexPath, "utf8");
     try {
       const assorted = typeIndexFile.split("\n");
-      if (!assorted.includes(exportStatement)) assorted.push(exportStatement);
-      await write(typeIndexPath, assorted.join("\n"));
+      if (!assorted.includes(exportStatement)) {
+        assorted.push(exportStatement);
+        await write(typeIndexPath, assorted.join("\n"));
+        return "OK";
+      } else {
+        return "Export statement already exists, please update the interface's file instead.";
+      }
     } catch ({ message }) {
       Logger.error(message);
       return "ERROR";
@@ -39,11 +44,11 @@ const toInterface = ({ options }: createCustomTypeOptions) => {
     interfaceString.options[variable.var] = lowerCaseVar;
   });
   varList = `{ options }:${name}Options`;
-  interfaceString = `export interface ${name}Options ${JSON.stringify(
+  interfaceString = `// imports section \n\n//\n\n// imports section end\n\nexport interface ${name}Options ${JSON.stringify(
     interfaceString,
     null,
     2
-  )}\n// added at: ${new Date()}`;
+  )}\n// added at: ${new Date()} \n\n// exports section\n\n// exports section end`;
   return interfaceString;
 };
 const insertInterface = async (name: String, interfaceString: any) => {
@@ -96,25 +101,17 @@ export const createNewInterface = async ({
   options,
 }: createCustomTypeOptions) => {
   Logger.http("FROM: EPB-server: Creating a new type interface...");
-
   const typeDefs = await getTypeDefs(); // current typeDef file as string
   if (!typeDefs) return;
   const compiledInterface = toInterface({ options: options });
-
   try {
     await insertInterface(options.name, compiledInterface);
     const { typeDef } = options;
     if (typeDef) await createTypeDef({ options: options }, typeDefs);
-
     Logger.http(
       "FROM: EPB-server: Interface created successfully, applying Prettier."
     );
-
-    try {
-      await execa("npx prettier --write *.ts");
-    } catch ({ message }) {
-      Logger.error(`FROM: EPB-server: ${message}`);
-    }
+    await utils.applyPrettier();
     return "OK";
   } catch ({ message }) {
     return message;

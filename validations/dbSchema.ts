@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { validTypes } from "../consts";
+import { createSchemaOptions } from "../types";
 import {
   parseOptions,
   validateUniqueSchemaName,
@@ -7,19 +7,9 @@ import {
 } from "./validation.util";
 import Logger from "../logger/logger";
 
-// name: string,
-// properties: [string],
-// comment: string,
-// typeDef: boolean,
-// dbSchema: boolean,
-// type: string,
-// uniqueIdentifiers: string[]
-
 export const dbJoiSchema = Joi.object({
   name: Joi.string().required(),
-  properties: Joi.array()
-    .allow(null)
-    .items(Joi.string().valid(...validTypes)),
+  properties: Joi.array(),
   comment: Joi.string().allow(""),
   typeDef: Joi.boolean(),
   dbSchema: Joi.boolean(),
@@ -27,16 +17,16 @@ export const dbJoiSchema = Joi.object({
   uniqueIdentifiers: Joi.array(),
 });
 
-export const validateSchemaCreation = async (options: any) => {
-  const varsValid = validateVars(options);
+export const validateSchemaCreation = async (options: createSchemaOptions) => {
+  const varsValid = validateVars(options.options);
   if (varsValid) return varsValid;
-  const uniqueValid = validateUniqueSchemaName(options);
+  const uniqueValid = validateUniqueSchemaName(options.options);
   if (uniqueValid) return uniqueValid;
-  const parsedOptions = parseOptions(options);
+  const parsedOptions = parseOptions(options.options);
   const { error, value } = dbJoiSchema.validate(parsedOptions);
   if (error) {
     Logger.error(
-      `FROM: EPB-server: Invalid resolver info received, aborting.. Error: ${error.message}`
+      `FROM: EPB-server: Invalid Schema info received, aborting.. Error: ${error.message}`
     );
     return { error: true, message: error.message };
   } else return { error: false, message: "OK" };

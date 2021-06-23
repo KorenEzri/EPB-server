@@ -3,10 +3,6 @@ import execa from "execa";
 
 // TODO: 22/06/21
 //  - DONE:  add support for || in type system // DONE;
-//  - add support for multiple unique identifiers in DB schema
-//  {
-//        - make a validator for unique identifiers!
-// }
 //  - add backend validations for DB schema creation (make it flexy!!!!)
 //  - add singular DB schema creation
 //  - finish adding DB schemas
@@ -45,6 +41,7 @@ import {
 } from "./utils/codeToString";
 import * as create from "./utils/createNew";
 import Logger from "./logger/logger";
+import { ConsoleTransportOptions } from "winston/lib/winston/transports";
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",
@@ -87,11 +84,6 @@ export const resolvers = {
         let error = await create.createNewTypeDef({ options: options });
         if (!error)
           error = await create.createNewResolver({ options: options });
-        try {
-          await execa("npx prettier --write *.ts");
-        } catch ({ message }) {
-          Logger.error(`FROM: EPB-server: ${message}`);
-        }
         if (!error) return "OK";
         return "ERROR";
       } catch ({ message }) {
@@ -113,14 +105,15 @@ export const resolvers = {
     },
     // Action: create a new database schema
     createSchema: async (_: any, { options }: createSchemaOptions) => {
-      const validationRes = await validateSchemaCreation(options);
-      // if (validationRes.error) return validationRes.message;
+      const validationRes = await validateSchemaCreation({ options: options });
+      if (validationRes.error)
+        return `Creation of DB schema failed: ${validationRes.message}`;
       try {
         await create.createDbSchema({ options: options });
         return "OK";
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
-        return "ERROR";
+        return message;
       }
     },
 
