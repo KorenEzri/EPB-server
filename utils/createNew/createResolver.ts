@@ -82,7 +82,8 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
     ""
   );
   const resolvers = await getResolvers(); // current resolver file as string
-  if (!resolvers) return "ERROR";
+  if (!resolvers)
+    return "Error in utils/createNew/createResolver.ts: No resolvers found!";
   const splatResolvers = resolvers
     .split("\n")
     .map((line: string) => line.trim());
@@ -94,12 +95,13 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   splatResolvers.splice(indexToPush, 0, fullResolver);
   // insert interface into resolvers if needed.
   const insertedInterface = await insertInterface(splatResolvers, options.name);
-  if (!insertedInterface) return "ERROR";
+  if (!insertedInterface)
+    return "Error in utils/createNew/createResolver.ts - @ insertInterface() - returned undefined!";
   const revisedResolvers = insertedInterface.join("\n");
   await write("./resolvers.ts", revisedResolvers);
   Logger.http(
     "FROM: EPB-server: Action created successfully, applying Prettier for files.."
   );
   await utils.applyPrettier();
-  return;
+  return "Resolver created successfully.";
 };

@@ -5048,3 +5048,234 @@
 2021-06-23 17:55:05:555 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
 2021-06-23 17:55:05:555 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
 2021-06-23 17:55:05:555 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 18:14:26:1426 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 18:14:26:1426 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 18:15:17:1517 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-23 18:15:17:1517 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-23 18:15:17:1517 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-23 18:16:35:1635 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-23 18:16:35:1635 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-23 18:16:35:1635 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-23 18:17:11:1711 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-23 18:17:11:1711 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-23 18:17:11:1711 [35mhttp[39m: [35mFROM: EPB-server: Sending typeDefs as string..[39m
+2021-06-23 18:17:11:1711 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-23 18:17:11:1711 [35mhttp[39m: [35mFROM: EPB-server: Sending resolvers as string..[39m
+2021-06-23 18:17:11:1711 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-23 22:25:13:2513 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 22:25:13:2513 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 22:44:12:4412 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:44:12:4412 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:44:12:4412 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:44:12:4412 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 22:44:12:4412 [31merror[39m: [31mCould not locate ./types/JumanjeeOptions.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-06-23 22:44:12:4412 [35mhttp[39m: [35mFROM: EPB-server: Creating a new interface file..[39m
+2021-06-23 22:44:12:4412 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-23 22:44:12:4412 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-23 22:44:14:4414 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 22:45:35:4535 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-23 22:45:35:4535 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-23 22:45:37:4537 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:45:37:4537 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:45:37:4537 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:45:37:4537 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 22:45:37:4537 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 22:46:51:4651 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 22:46:51:4651 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 22:46:53:4653 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-23 22:46:53:4653 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-23 22:46:55:4655 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:46:55:4655 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:46:55:4655 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:46:55:4655 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 22:46:55:4655 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 22:47:50:4750 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:47:50:4750 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:47:50:4750 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:47:50:4750 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 22:47:50:4750 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 22:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 22:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 22:53:32:5332 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 22:53:32:5332 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 22:53:34:5334 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-23 22:53:34:5334 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-23 22:53:36:5336 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:53:36:5336 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:53:36:5336 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:53:36:5336 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 22:53:36:5336 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 22:53:36:5336 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 22:53:57:5357 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:53:57:5357 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:53:57:5357 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:53:57:5357 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:54:22:5422 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:54:22:5422 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:54:22:5422 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:54:22:5422 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:55:00:550 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 22:55:00:550 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 22:55:01:551 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:55:01:551 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:55:01:551 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:55:01:551 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:56:21:5621 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:56:21:5621 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:56:21:5621 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:56:21:5621 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:56:31:5631 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:56:31:5631 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:56:31:5631 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:56:31:5631 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:59:44:5944 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 22:59:44:5944 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 22:59:46:5946 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 22:59:46:5946 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 22:59:46:5946 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 22:59:46:5946 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 23:00:54:054 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 23:00:54:054 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 23:00:56:056 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 23:00:56:056 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 23:00:56:056 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 23:00:56:056 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 23:01:24:124 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-23 23:01:24:124 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-23 23:01:26:126 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 23:01:26:126 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 23:01:26:126 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 23:01:26:126 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 23:01:48:148 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 23:01:48:148 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 23:01:48:148 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 23:01:48:148 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 23:01:48:148 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 23:01:48:148 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-23 23:02:09:29 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-23 23:02:09:29 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-23 23:02:09:29 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-23 23:02:09:29 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 23:02:09:29 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-23 23:02:09:29 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-24 14:58:20:5820 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-24 14:58:20:5820 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-24 14:59:07:597 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-24 14:59:07:597 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-24 14:59:08:598 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-24 14:59:08:598 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-24 14:59:08:598 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-24 14:59:08:598 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-24 14:59:08:598 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-24 14:59:08:598 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-24 15:01:00:10 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-24 15:01:00:10 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-24 15:01:00:10 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-25 15:21:37:2137 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 15:21:37:2137 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 19:03:06:36 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 19:03:06:36 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 19:30:06:306 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-25 19:30:07:307 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-25 19:30:07:307 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-25 19:58:40:5840 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 19:58:40:5840 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:13:49:1349 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:13:49:1349 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:18:41:1841 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:18:41:1841 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:21:49:2149 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:21:49:2149 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:22:06:226 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:22:06:226 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:22:14:2214 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:22:14:2214 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:22:29:2229 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:22:29:2229 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:22:39:2239 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:22:39:2239 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:35:41:3541 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:35:41:3541 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:35:49:3549 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:35:49:3549 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:35:55:3555 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:35:55:3555 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:36:14:3614 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:36:14:3614 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:36:17:3617 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:36:17:3617 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:36:32:3632 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:36:32:3632 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:36:43:3643 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:36:43:3643 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:36:56:3656 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:36:56:3656 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:37:04:374 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:37:04:374 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:37:14:3714 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:37:14:3714 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:37:26:3726 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:37:26:3726 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:44:38:4438 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:44:38:4438 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:44:42:4442 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:44:42:4442 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:45:23:4523 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:45:23:4523 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:48:14:4814 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:48:14:4814 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:49:47:4947 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:49:47:4947 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:49:58:4958 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:49:58:4958 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:50:25:5025 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:50:25:5025 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:50:33:5033 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:50:33:5033 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:51:54:5154 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:51:54:5154 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:54:21:5421 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:54:21:5421 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-25 20:55:10:5510 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:55:10:5510 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:55:12:5512 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 20:55:12:5512 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-25 20:55:13:5513 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-25 20:55:13:5513 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-25 20:55:13:5513 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-25 20:55:13:5513 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-25 20:55:13:5513 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-25 20:55:13:5513 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-25 20:55:40:5540 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 20:55:40:5540 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-25 20:55:41:5541 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-25 20:55:41:5541 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-25 20:55:41:5541 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-25 20:55:41:5541 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m
+2021-06-25 20:55:41:5541 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-25 20:55:41:5541 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-25 20:55:48:5548 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:55:48:5548 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:56:01:561 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:56:01:561 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:56:19:5619 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:56:19:5619 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:57:33:5733 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:57:33:5733 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 20:59:21:5921 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 20:59:21:5921 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:01:43:143 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:01:43:143 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:03:07:37 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:03:07:37 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:03:32:332 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:03:32:332 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m

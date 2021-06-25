@@ -13,7 +13,8 @@ export const insert_Into_Types_Index_TS = async (exportStatement: string) => {
   const typeIndexPath = "./types/index.ts";
   try {
     const isOK = await checkIfOK(typeIndexPath);
-    if (!isOK) return "ERROR";
+    if (!isOK)
+      return "Error in insert_Into_Types_Index_TS - checkIfOK() returned 'undefined'";
     const typeIndexFile = await read(typeIndexPath, "utf8");
     try {
       const assorted = typeIndexFile.split("\n");
@@ -26,11 +27,11 @@ export const insert_Into_Types_Index_TS = async (exportStatement: string) => {
       }
     } catch ({ message }) {
       Logger.error(message);
-      return "ERROR";
+      return message;
     }
   } catch ({ message }) {
     Logger.error(message);
-    return "ERROR";
+    return message;
   }
 };
 const toInterface = ({ options }: createCustomTypeOptions) => {
@@ -81,12 +82,13 @@ const createTypeDef = async (
   let splatTypeDefs: string | string[] = typeDefs
     .split("\n")
     .map((line: string) => line.trim());
-  let scalarType: string;
   const { typeDefInterface } = createInterface(properties, name);
   if (!Object.keys(typeDefInterface).length) return splatTypeDefs;
   const index = splatTypeDefs.indexOf("# generated definitions");
   const interfaceStringified = JSON.stringify(typeDefInterface, null, 2);
-  const interfaceString = `\n ${type} ${name}Options ${interfaceStringified}\n#${comment}\n# added at: ${new Date()}`;
+  const interfaceString = `\n ${type} ${name}Options${utils.capitalizeFirstLetter(
+    type || "Type"
+  )} ${interfaceStringified}\n#${comment}\n# added at: ${new Date()}`;
   let finishedInterfaceDef = utils.replaceAllInString(interfaceString, '"', "");
   splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
   splatTypeDefs = utils.replaceAllInString(

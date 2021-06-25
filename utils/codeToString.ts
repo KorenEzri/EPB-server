@@ -17,12 +17,10 @@ export const checkIfOK = async (path: string) => {
 };
 export const getResolvers = async () => {
   if (!(await checkIfOK("./resolvers.ts"))) return;
-  Logger.http("FROM: EPB-server: Sending resolvers as string..");
   return await read("./resolvers.ts", "utf8");
 };
 export const getTypeDefs = async () => {
   if (!(await checkIfOK("./typeDefs.ts"))) return;
-  Logger.http("FROM: EPB-server: Sending typeDefs as string..");
   return await read("./typeDefs.ts", "utf8");
 };
 export const getActions = async () => {

@@ -55,7 +55,8 @@ export const createNewTypeDef = async ({ options }: ResolverOptions) => {
   // compile a type definition string from options
   const fullTypeDef = toTypeDef({ options: options });
   const typeDefs = await getTypeDefs(); // current typeDef file as string
-  if (!typeDefs) return "ERROR";
+  if (!typeDefs)
+    return "Error with utils/createNew/createTypeDef.ts, getTypeDefs() returned undefined!";
   const splatTypeDefs = typeDefs.split("\n").map((line: string) => line.trim());
   let indexToPush; // The index (line number) in which the next typeDef is meant to enter.
   options.type.toLowerCase() === "mutation" // mutation or query? different line number

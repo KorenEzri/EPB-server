@@ -3,6 +3,14 @@ export const typeDefs = gql`
   scalar Date
   # generated definitions
 
+  input addUserAuthOptions {
+    publicUserInputs: [String]
+    authUserInputs: [String]
+    publicUserProperties: [String]
+    authUserProperties: [String]
+  }
+  # added at: Fri Jun 25 2021 19:30:07 GMT+0300 (Israel Daylight Time)
+
   input createSchemaOptions {
     properties: [String]
     name: String
@@ -45,6 +53,7 @@ export const typeDefs = gql`
     createResolver(options: ResolverOptions): String
     createCustomType(options: createCustomTypeOptions): String
     createSchema(options: createSchemaOptions): String
+    addUserAuth(options: addUserAuthOptions): String
     # mutation-end
   }
 `;

@@ -218,3 +218,25 @@
 2021-06-23 17:49:06:496 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
 2021-06-23 17:51:11:5111 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
 2021-06-23 17:55:05:555 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 22:44:12:4412 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 22:44:12:4412 [31merror[39m: [31mCould not locate ./types/JumanjeeOptions.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-06-23 22:53:36:5336 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 22:53:57:5357 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:54:22:5422 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:55:01:551 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:56:21:5621 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:56:31:5631 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 22:59:46:5946 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 23:00:56:056 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 23:01:26:126 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-23 23:01:48:148 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-23 23:02:09:29 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-24 14:59:08:598 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-25 20:55:13:5513 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-25 20:55:41:5541 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m

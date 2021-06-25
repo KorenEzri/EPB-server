@@ -19,10 +19,10 @@ export const createDbSchema = async ({ options }: createSchemaOptions) => {
   switch (res) {
     case "mongodb":
       try {
-        await create.createMongoDBSchema({
+        const res = await create.createMongoDBSchema({
           options: options,
         });
-        return "OK";
+        return res;
       } catch ({ message }) {
         Logger.error(
           `FROM: EPB-server: Error with creating a DB schema: ${message}`

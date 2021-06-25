@@ -127,24 +127,35 @@ const handleInterface = async ({ options }: createSchemaOptions) => {
     await createNewInterface({ options: options });
     await updateInterfaceFile({ options: options });
   } else {
-    Logger.error(
-      "FROM: EPB-server: Failed to detect interface file, yet it seems an import to it in ./types/index.ts exists. Aborting."
-    );
+    const msg =
+      "FROM: EPB-server: Failed to detect interface file, yet it seems an import to it in ./types/index.ts exists. Aborting.";
+    Logger.error(msg);
+    return msg;
   }
 };
 const writeSchemaToFile = async (name: string, schema: string) => {
   const schemaFilepath = `./db/schemas/${name}Schema.ts`;
   const doesSchemaFileExist = await checkIfOK(schemaFilepath);
-  if (!doesSchemaFileExist) await write(schemaFilepath, schema);
+  if (!doesSchemaFileExist) {
+    await write(schemaFilepath, schema);
+  } else {
+    Logger.error(
+      `FROM: EPB-server: Error: Schema file by the name ${name}Schema.ts already exists!`
+    );
+    return "Schema file already exists!";
+  }
 };
 export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   Logger.http("FROM: EPB-server: Creating a MongoDB schema...");
   const mongoDBSchema = toMongoSchema({ options: options });
   Logger.http("FROM: EPB-server: Schema created, applying...");
-  await writeSchemaToFile(options.name, mongoDBSchema);
-  await handleInterface({ options: options });
+  let error = await writeSchemaToFile(options.name, mongoDBSchema);
+  if (error) return error;
+  error = await handleInterface({ options: options });
+  if (error) return error;
   Logger.http("FROM: EPB-server: Done, applying prettier for files.");
   await utils.applyPrettier("./db/schemas/*.ts");
+  return "Schema created successfully.";
 };
 
 //// FIX '[' parsing in dbSchema creation

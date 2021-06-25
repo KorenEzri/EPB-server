@@ -1,6 +1,6 @@
 export interface createCustomTypeOptions {
   options: {
-    properties: [string];
+    properties: string[] | [string];
     name: string;
     comment: string;
     dbSchema: boolean;

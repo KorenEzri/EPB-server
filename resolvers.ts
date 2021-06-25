@@ -1,13 +1,6 @@
 import { GraphQLScalarType } from "graphql";
 import execa from "execa";
 
-// TODO: 22/06/21
-//  - DONE:  add support for || in type system // DONE;
-//  - add backend validations for DB schema creation (make it flexy!!!!)
-//  - add singular DB schema creation
-//  - finish adding DB schemas
-//  - code cleanup
-//////////// DUE: 23.06.21, Sunday. //////////////////
 // TODO:
 //  - add prebuilt actions: {
 //    - user auth - four days
@@ -27,6 +20,7 @@ import {
 } from "./validations";
 // option types
 import {
+  addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
   createCustomTypeOptions,
@@ -82,13 +76,14 @@ export const resolvers = {
       if (validationRes.error) return validationRes.message;
       try {
         let error = await create.createNewTypeDef({ options: options });
-        if (!error)
-          error = await create.createNewResolver({ options: options });
-        if (!error) return "OK";
-        return "ERROR";
+        if (error) return error;
+        const resolverCreationRes = await create.createNewResolver({
+          options: options,
+        });
+        return resolverCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
-        return "ERROR";
+        return message;
       }
     },
     // Action: create a new type definition (singular)
@@ -96,11 +91,13 @@ export const resolvers = {
       const validationRes = await validateTypeCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
-        await create.createNewInterface({ options: options });
-        return "OK";
+        const interfaceCreationRes = await create.createNewInterface({
+          options: options,
+        });
+        return interfaceCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
-        return "ERROR";
+        return message;
       }
     },
     // Action: create a new database schema
@@ -109,12 +106,22 @@ export const resolvers = {
       if (validationRes.error)
         return `Creation of DB schema failed: ${validationRes.message}`;
       try {
-        await create.createDbSchema({ options: options });
-        return "OK";
+        const schemaCreationRes = await create.createDbSchema({
+          options: options,
+        });
+        return schemaCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
         return message;
       }
+    },
+
+    // Action: Add prebuilt action: User Auth
+    addUserAuth: async (_: any, { options }: addUserAuthOptions) => {
+      console.log("OPTS: ", options);
+      return "OK";
+      //
+      // return String
     },
 
     // mutation-end
