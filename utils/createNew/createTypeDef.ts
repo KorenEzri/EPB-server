@@ -83,4 +83,3 @@ export const createNewTypeDef = async ({ options }: ResolverOptions) => {
   revisedTypeDefs = utils.replaceAllInString(revisedTypeDefs, "Number", "Int");
   await write("./typeDefs.ts", revisedTypeDefs);
 };
-export const createNewTypeOnly = async (options: any) => {};
