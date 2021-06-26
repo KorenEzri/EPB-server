@@ -240,3 +240,76 @@
 2021-06-25 20:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
 2021-06-25 20:55:13:5513 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
 2021-06-25 20:55:41:5541 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m
+2021-06-26 01:14:59:1459 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 01:15:01:151 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 02:02:11:211 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 02:02:12:212 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 02:11:16:1116 [31merror[39m: [31mCould not locate ./db/schemas/authUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\authUserSchema.ts'[39m
+2021-06-26 02:11:19:1119 [31merror[39m: [31mCould not locate ./db/schemas/publicUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\publicUserSchema.ts'[39m
+2021-06-26 02:11:20:1120 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\publicUserSchema.ts: SyntaxError: ',' expected. (16:2)[39m
+[31m[error]   14 |   isActive: Boolean,[39m
+[31m[error]   15 |   lastConnected: Date[39m
+[31m[error] > 16 | })[39m
+[31m[error]      |  ^[39m
+[31m[error]   17 |         [39m
+[31m[error]   18 |         publicUserSchema.set('toJSON', {[39m
+[31m[error]   19 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\authUserSchema.ts 177ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 3ms[39m
+2021-06-26 09:56:55:5655 [31merror[39m: [31mCould not locate ./db/schemas/authUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\authUserSchema.ts'[39m
+2021-06-26 09:56:58:5658 [31merror[39m: [31mCould not locate ./db/schemas/publicUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\publicUserSchema.ts'[39m
+2021-06-26 09:56:59:5659 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\publicUserSchema.ts: SyntaxError: ',' expected. (14:2)[39m
+[31m[error]   12 |   isActive: Boolean,[39m
+[31m[error]   13 |   lastConnected: Date[39m
+[31m[error] > 14 | })[39m
+[31m[error]      |  ^[39m
+[31m[error]   15 |         [39m
+[31m[error]   16 |         publicUserSchema.set('toJSON', {[39m
+[31m[error]   17 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\authUserSchema.ts 198ms[39m
+[31mdb\schemas\index.ts 4ms[39m
+
+[31mdb\schemas\stub.ts 2ms[39m
+2021-06-26 10:01:17:117 [31merror[39m: [31mCould not locate ./db/schemas/avatarSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\avatarSchema.ts'[39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:03:05:35 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:04:28:428 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:06:07:67 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-26 10:06:07:67 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:06:49:649 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:07:16:716 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:12:14:1214 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:30:48:3048 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:33:57:3357 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:35:50:3550 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-26 10:35:50:3550 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:35:50:3550 [31merror[39m: [31mCould not locate ./types/KorenOptions.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\types\KorenOptions.ts'[39m
+2021-06-26 10:36:10:3610 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:38:36:3836 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:40:50:4050 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:41:19:4119 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:42:11:4211 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:49:39:4939 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:58:30:5830 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:02:57:257 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:06:54:654 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:11:34:1134 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:12:51:1251 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:16:47:1647 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:17:31:1731 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 11:19:01:191 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m

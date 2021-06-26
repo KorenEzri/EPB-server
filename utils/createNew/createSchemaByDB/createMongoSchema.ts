@@ -1,15 +1,15 @@
 import { createSchemaOptions } from "../../../types";
+import { allCustomTypes } from "../../../consts";
+import { createNewInterface } from "../";
 import { imports } from "../../../consts/imports";
-import * as utils from "../string.util";
 import { promisify } from "util";
-import fs from "fs";
-import { createNewInterface, insert_Into_Types_Index_TS } from "../";
-import Logger from "../../../logger/logger";
 import { checkIfOK } from "../../codeToString";
+import Logger from "../../../logger/logger";
+import fs from "fs";
+import * as utils from "../string.util";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
-
-const addUniqueVariant = (type: string) => {
+const addUniqueVariant = (type: string | String) => {
   const uniqueVarString = `
         { type: ${type}, unique: true }
     `;
@@ -52,8 +52,8 @@ const compileSchemaVarList = (
 ) => {
   const schemaInterface: any = {};
   let varList = utils.compileToVarList(properties);
-  varList.forEach((variable) => {
-    let lowerCaseType = utils.fixTypes(variable);
+  varList.forEach((variable: any) => {
+    let lowerCaseType = utils.fixTypes(variable, false, true);
     variable.type = lowerCaseType;
     variable = arrangeOrOperatorTypes(variable);
   });
@@ -69,8 +69,7 @@ const compileSchemaVarList = (
   return utils.replaceAllInString(stringified, '"', "");
 };
 const toMongoSchema = (options: createSchemaOptions) => {
-  const { properties, name, comment, type, uniqueIdentifiers } =
-    options.options;
+  const { properties, name, comment, uniqueIdentifiers } = options.options;
   const mongoImportsList = imports.statements.db.mongodb;
   const schemaInterface = compileSchemaVarList(properties, uniqueIdentifiers);
   if (uniqueIdentifiers.length)
@@ -102,10 +101,12 @@ const updateInterfaceFile = async ({ options }: createSchemaOptions) => {
   const splat = interfaceFile.split("\n");
   const importStartIndex = splat.indexOf("// imports section") + 1;
   const importEndIndex = splat.indexOf("// imports section end");
+  const imports = splat.slice(importStartIndex, importEndIndex - 1);
+  imports.push("import { Document } from 'mongoose'");
   splat.splice(
     importStartIndex,
     importEndIndex - importStartIndex,
-    "import { Document } from 'mongoose'"
+    imports.join("\n")
   );
   const exportStartIndex = splat.indexOf("// exports section") + 1;
   const exportEndIndex = splat.indexOf("// exports section end");

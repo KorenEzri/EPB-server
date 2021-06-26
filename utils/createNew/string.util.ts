@@ -1,4 +1,5 @@
 import execa from "execa";
+import { allCustomTypes } from "../../consts";
 import Logger from "../../logger/logger";
 
 export const replaceAllInString = (str: string, find: string, replace: any) => {
@@ -14,14 +15,20 @@ export const compileToVarList = (vars: string[] | [String]) => {
   });
 };
 export const capitalizeFirstLetter = (string: string | String) => {
+  if (allCustomTypes.includes(string.trim())) return string;
   if (string[0] === "[")
     return "[" + string.charAt(1).toUpperCase() + string.slice(2);
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 export const fixTypes = (
   variable: { type: string; var: string },
-  toUpperCase?: boolean
+  toUpperCase?: boolean,
+  forSchema?: boolean
 ) => {
+  if (allCustomTypes.includes(variable.type.trim())) {
+    if (forSchema) return "Object";
+    else return variable.type;
+  }
   let lowerCaseVar = variable.type.trim().toLowerCase();
   lowerCaseVar = replaceAllInString(lowerCaseVar, "int", "number");
   lowerCaseVar = replaceAllInString(lowerCaseVar, "Int", "number");

@@ -5279,3 +5279,409 @@
 2021-06-25 21:03:07:37 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
 2021-06-25 21:03:32:332 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-06-25 21:03:32:332 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:03:58:358 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:03:58:358 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:07:19:719 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:07:19:719 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:07:29:729 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:08:04:84 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:08:04:84 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:08:06:86 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:08:51:851 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:08:51:851 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:08:52:852 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:08:54:854 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:01:91 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-25 21:09:01:91 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-25 21:09:01:91 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:03:93 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:03:93 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:04:94 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:04:94 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:05:95 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:05:95 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:05:95 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-25 21:09:05:95 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:51:55:5155 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:51:55:5155 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:52:35:5235 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:53:00:530 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:53:00:530 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:53:04:534 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:54:03:543 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:54:03:543 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:54:17:5417 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:54:50:5450 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:54:50:5450 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:54:51:5451 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:55:38:5538 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:55:38:5538 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:55:38:5538 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:55:54:5554 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:55:54:5554 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:56:00:560 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:56:00:560 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:56:01:561 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:56:10:5610 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:56:10:5610 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:56:11:5611 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:56:19:5619 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:56:19:5619 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:56:19:5619 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:56:52:5652 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:56:52:5652 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:56:52:5652 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:57:00:570 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:58:23:5823 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:58:23:5823 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:58:24:5824 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 00:59:05:595 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:59:05:595 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 00:59:12:5912 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 00:59:12:5912 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:01:35:135 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:01:35:135 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:01:38:138 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:01:38:138 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:02:09:29 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:02:09:29 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:02:18:218 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:02:18:218 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:02:32:232 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:02:32:232 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:02:57:257 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:02:57:257 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:03:02:32 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:03:02:32 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:03:03:33 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:03:03:33 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:05:01:51 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:05:01:51 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:05:13:513 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:05:13:513 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:05:14:514 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:05:14:514 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:05:15:515 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:05:15:515 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:14:57:1457 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:14:57:1457 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 01:14:58:1458 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:14:58:1458 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:14:59:1459 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 01:14:59:1459 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 01:14:59:1459 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 01:14:59:1459 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:14:59:1459 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:15:00:150 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 01:15:00:150 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 01:15:01:151 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 01:15:01:151 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 01:15:01:151 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 01:59:29:5929 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 01:59:29:5929 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 02:02:10:210 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 02:02:10:210 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 02:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 02:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 02:02:11:211 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 02:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 02:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 02:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 02:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 02:02:12:212 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 02:02:12:212 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 02:02:12:212 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Cannot read property 'map' of undefined[39m
+2021-06-26 02:11:03:113 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 02:11:03:113 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 02:11:15:1115 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 02:11:15:1115 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 02:11:16:1116 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 02:11:16:1116 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 02:11:16:1116 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 02:11:16:1116 [31merror[39m: [31mCould not locate ./db/schemas/authUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\authUserSchema.ts'[39m
+2021-06-26 02:11:16:1116 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 02:11:16:1116 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 02:11:17:1117 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 02:11:17:1117 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 02:11:18:1118 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 02:11:18:1118 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 02:11:19:1119 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 02:11:19:1119 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 02:11:19:1119 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 02:11:19:1119 [31merror[39m: [31mCould not locate ./db/schemas/publicUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\publicUserSchema.ts'[39m
+2021-06-26 02:11:19:1119 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 02:11:19:1119 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 02:11:20:1120 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\publicUserSchema.ts: SyntaxError: ',' expected. (16:2)[39m
+[31m[error]   14 |   isActive: Boolean,[39m
+[31m[error]   15 |   lastConnected: Date[39m
+[31m[error] > 16 | })[39m
+[31m[error]      |  ^[39m
+[31m[error]   17 |         [39m
+[31m[error]   18 |         publicUserSchema.set('toJSON', {[39m
+[31m[error]   19 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\authUserSchema.ts 177ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 3ms[39m
+2021-06-26 09:37:13:3713 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 09:37:13:3713 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 09:56:45:5645 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 09:56:45:5645 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 09:56:54:5654 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 09:56:54:5654 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 09:56:55:5655 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 09:56:55:5655 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 09:56:55:5655 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 09:56:55:5655 [31merror[39m: [31mCould not locate ./db/schemas/authUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\authUserSchema.ts'[39m
+2021-06-26 09:56:55:5655 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 09:56:55:5655 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 09:56:56:5656 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 09:56:56:5656 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 09:56:57:5657 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 09:56:57:5657 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 09:56:58:5658 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 09:56:58:5658 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 09:56:58:5658 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 09:56:58:5658 [31merror[39m: [31mCould not locate ./db/schemas/publicUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\publicUserSchema.ts'[39m
+2021-06-26 09:56:58:5658 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 09:56:58:5658 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 09:56:59:5659 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\publicUserSchema.ts: SyntaxError: ',' expected. (14:2)[39m
+[31m[error]   12 |   isActive: Boolean,[39m
+[31m[error]   13 |   lastConnected: Date[39m
+[31m[error] > 14 | })[39m
+[31m[error]      |  ^[39m
+[31m[error]   15 |         [39m
+[31m[error]   16 |         publicUserSchema.set('toJSON', {[39m
+[31m[error]   17 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\authUserSchema.ts 198ms[39m
+[31mdb\schemas\index.ts 4ms[39m
+
+[31mdb\schemas\stub.ts 2ms[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:01:17:117 [31merror[39m: [31mCould not locate ./db/schemas/avatarSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\avatarSchema.ts'[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:01:17:117 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:00:20 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:02:36:236 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:02:36:236 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-26 10:02:38:238 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-26 10:03:04:34 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:03:04:34 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:03:05:35 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:03:05:35 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:03:05:35 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:03:05:35 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:03:05:35 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:03:05:35 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:04:14:414 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:04:14:414 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:04:27:427 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:04:27:427 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:04:28:428 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:04:28:428 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:04:28:428 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:04:28:428 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:06:07:67 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:06:07:67 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:06:07:67 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-26 10:06:07:67 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:06:07:67 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:06:07:67 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:06:07:67 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:06:48:648 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:06:48:648 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:06:49:649 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:06:49:649 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:06:49:649 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:06:49:649 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:07:15:715 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:07:15:715 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:07:16:716 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:07:16:716 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:07:16:716 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:07:16:716 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:12:11:1211 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:12:11:1211 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:12:13:1213 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:12:13:1213 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:12:14:1214 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:12:14:1214 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:12:14:1214 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:12:14:1214 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:12:14:1214 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:12:14:1214 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:29:13:2913 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:29:13:2913 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:30:47:3047 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:30:47:3047 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:30:48:3048 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:30:48:3048 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:30:48:3048 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:30:48:3048 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:30:48:3048 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:30:48:3048 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:33:14:3314 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:33:14:3314 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:33:56:3356 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:33:56:3356 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:33:57:3357 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:35:50:3550 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:35:50:3550 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:35:50:3550 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:35:50:3550 [31merror[39m: [31mCould not locate ./types/KorenOptions.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\types\KorenOptions.ts'[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: Creating a new interface file..[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:35:50:3550 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:36:10:3610 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:36:10:3610 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:36:10:3610 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:36:10:3610 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:38:28:3828 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:38:28:3828 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:38:35:3835 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:38:35:3835 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:38:36:3836 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:38:36:3836 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:38:36:3836 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:38:36:3836 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:38:36:3836 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:38:36:3836 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:40:47:4047 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:40:47:4047 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:40:50:4050 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:40:50:4050 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:40:50:4050 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:40:50:4050 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:41:19:4119 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:41:19:4119 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:41:19:4119 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:41:19:4119 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:41:19:4119 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:41:19:4119 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 10:42:03:423 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:42:03:423 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:42:10:4210 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:42:10:4210 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:42:11:4211 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:42:11:4211 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:42:11:4211 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:42:11:4211 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:42:11:4211 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:42:11:4211 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:49:21:4921 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:49:21:4921 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:49:38:4938 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:49:38:4938 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:49:39:4939 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:49:39:4939 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:49:39:4939 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:49:39:4939 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:49:39:4939 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:49:39:4939 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 10:58:18:5818 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 10:58:18:5818 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 10:58:29:5829 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 10:58:29:5829 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 10:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 10:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 10:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 10:58:30:5830 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 10:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 10:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:02:42:242 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 11:02:42:242 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 11:02:56:256 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:02:56:256 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:02:57:257 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:02:57:257 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:02:57:257 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:02:57:257 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:02:57:257 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 11:02:57:257 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:06:52:652 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 11:06:52:652 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 11:06:53:653 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:06:54:654 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:06:54:654 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:06:54:654 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:06:54:654 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:06:54:654 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:06:54:654 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 11:06:54:654 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:11:27:1127 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 11:11:27:1127 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 11:11:33:1133 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:11:33:1133 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:11:34:1134 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:11:34:1134 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:11:34:1134 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:11:34:1134 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:11:34:1134 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 11:11:34:1134 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:12:50:1250 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:12:50:1250 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:12:51:1251 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:12:51:1251 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:12:51:1251 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:12:51:1251 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:12:51:1251 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 11:12:51:1251 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:16:46:1646 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 11:16:46:1646 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:16:47:1647 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:17:29:1729 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 11:17:29:1729 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 11:17:30:1730 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:17:30:1730 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:17:31:1731 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:17:31:1731 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:17:31:1731 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:17:31:1731 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
+2021-06-26 11:18:58:1858 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-26 11:18:58:1858 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-26 11:19:00:190 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-26 11:19:00:190 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-26 11:19:01:191 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-26 11:19:01:191 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-26 11:19:01:191 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-26 11:19:01:191 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-26 11:19:01:191 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-26 11:19:01:191 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-26 11:20:14:2014 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-26 11:20:14:2014 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-26 11:20:14:2014 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m

@@ -1,9 +1,11 @@
 import { GraphQLScalarType } from "graphql";
-import execa from "execa";
-
 // TODO:
 //  - add prebuilt actions: {
-//    - user auth - four days
+//    - user auth - four days {
+// -  TODO:
+// -        - add option - i forgot what it was.. OH! add custom types to be available as return or receive types when creating interfaces
+// -        - add auto export of schemas from index.ts of db schema folder.
+// }
 //    - CRUD operations for DB schema - four days
 //    - Scalar type creator!! Then, add suppport for || in typedef creation as well.
 // {
@@ -34,8 +36,8 @@ import {
   getResolverNames,
 } from "./utils/codeToString";
 import * as create from "./utils/createNew";
+import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
-import { ConsoleTransportOptions } from "winston/lib/winston/transports";
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",
@@ -66,8 +68,6 @@ export const resolvers = {
     getAllResolverNames: async (_: any) => {
       return await getResolverNames();
     },
-
-    // query-end
   },
   Mutation: {
     // Action: create a new resolver (empty)
@@ -118,8 +118,8 @@ export const resolvers = {
 
     // Action: Add prebuilt action: User Auth
     addUserAuth: async (_: any, { options }: addUserAuthOptions) => {
-      console.log("OPTS: ", options);
-      return "OK";
+      const res = await add.addUserAuthToBackend({ options: options });
+      if (res) return "OK";
       //
       // return String
     },

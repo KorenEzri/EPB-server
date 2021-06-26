@@ -1,9 +1,10 @@
 import { ResolverOptions } from "../../types";
-import * as utils from "./string.util";
+import { allCustomTypes } from "../../consts";
 import { promisify } from "util";
-import fs from "fs";
 import { getTypeDefs } from "../codeToString";
 import Logger from "../../logger/logger";
+import fs from "fs";
+import * as utils from "./string.util";
 const write = promisify(fs.writeFile);
 
 let typeDefInterface: any = {};
@@ -13,13 +14,21 @@ const toTypeDef = ({ options }: ResolverOptions) => {
   varList = utils.compileToVarList(properties);
   if (properties.length < 3) {
     varList = varList.map((variable) => {
-      return `${variable.var}:${utils.capitalizeFirstLetter(variable.type)}`;
+      if (allCustomTypes.includes(variable.type.trim())) {
+        return `${variable.var}:${variable.type}`;
+      } else {
+        return `${variable.var}:${utils.capitalizeFirstLetter(variable.type)}`;
+      }
     });
   } else {
     varList.forEach((variable) => {
-      typeDefInterface[variable.var] = utils.capitalizeFirstLetter(
-        variable.type.trim()
-      );
+      if (allCustomTypes.includes(variable.type.trim())) {
+        typeDefInterface[variable.var] = variable.type.trim();
+      } else {
+        typeDefInterface[variable.var] = utils.capitalizeFirstLetter(
+          variable.type.trim()
+        );
+      }
     });
     varList = `options: ${name}Options`;
   }
