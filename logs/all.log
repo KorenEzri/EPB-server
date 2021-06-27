@@ -7013,3 +7013,5 @@
 2021-06-27 17:17:57:1757 [35mhttp[39m: [35mpushing to oprator , [object Object][39m
 2021-06-27 17:17:57:1757 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
 2021-06-27 17:17:57:1757 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 17:27:10:2710 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 17:27:10:2710 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
