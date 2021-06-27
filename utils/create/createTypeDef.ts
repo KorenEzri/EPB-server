@@ -1,10 +1,9 @@
-import { ResolverOptions } from "../../types2";
+import { ResolverOptions, createCustomTypeOptions } from "../../types";
 import { getTypeDefs } from "../codeToString";
 import Logger from "../../logger/logger";
 import { promisify } from "util";
 import fs from "fs";
 import * as utils from "./utils";
-import { createCustomTypeOptions } from "../../types2";
 import { toLineArray } from "./utils";
 const write = promisify(fs.writeFile);
 
@@ -30,7 +29,8 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     allTypeDefsAsString,
     name,
     typeDefInterface,
-    type
+    type,
+    returnType
   );
   let typeInsertEndIndex: string | number =
     type === "Query" ? "# query-end" : "# mutation-end";
@@ -74,10 +74,12 @@ const insertTypeDefInterface = (
   typeDefs: string,
   name: string,
   typeDefInterface: any,
-  type?: string
+  type?: string,
+  returnType?: string
 ) => {
   let interfacePreFix;
   type === "Query" ? (interfacePreFix = "type") : (interfacePreFix = "input");
+  if (returnType) interfacePreFix = "input";
   const handlerA = "# generated definitions";
   const interfaceString = JSON.stringify(typeDefInterface, null, 2);
   const typeDef = `\n ${interfacePreFix} ${name}Options ${interfaceString}\n# added at: ${new Date()}`;

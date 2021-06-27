@@ -415,3 +415,47 @@
 [31mtypeDefs.ts 15ms[39m
 2021-06-27 13:10:55:1055 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'assign' of undefined[39m
 2021-06-27 13:11:40:1140 [31merror[39m: [31mFROM: EPB-server: interfaceOptions.assign is not a function[39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-27 14:20:22:2022 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m
+2021-06-27 14:55:21:5521 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\JumanjeeSchema.ts: SyntaxError: ',' expected. (3:68)[39m
+[31m[error]   1 |[39m
+[31m[error]   2 |         import mongoose, { Schema } from 'mongoose';import uniqueValidator from 'mongoose-unique-validator';import {JumanjeeDoc} from "../../types";[39m
+[31m[error] > 3 |         const JumanjeeSchema: Schema = new mongoose.Schema([object Object])[39m
+[31m[error]     |                                                                    ^[39m
+[31m[error]   4 |         JumanjeeSchema.plugin(uniqueValidator)[39m
+[31m[error]   5 |         JumanjeeSchema.set('toJSON', {[39m
+[31m[error]   6 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\avatarSchema.ts 180ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 2ms[39m
+2021-06-27 15:02:08:28 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\JumanjeeSchema.ts: SyntaxError: Expression expected. (2:135)[39m
+[31m[error]   1 |[39m
+[31m[error] > 2 |         import mongoose, { Schema } from 'mongoose';import uniqueValidator from 'mongoose-unique-validator';import {JumanjeeDoc} from ../../types;[39m
+[31m[error]     |                                                                                                                                       ^[39m
+[31m[error]   3 |         const JumanjeeSchema: Schema = new mongoose.Schema({[39m
+[31m[error]   4 |   amount:           { type: Object, unique: true }      ,[39m
+[31m[error]   5 |   kaki:           { type: Object, unique: true }      ,[39m
+[31mdb\schemas\avatarSchema.ts 170ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 2ms[39m
+2021-06-27 15:09:36:936 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\JumanjeeSchema.ts: SyntaxError: Expression expected. (2:135)[39m
+[31m[error]   1 |[39m
+[31m[error] > 2 |         import mongoose, { Schema } from 'mongoose';import uniqueValidator from 'mongoose-unique-validator';import {JumanjeeDoc} from ../../types;[39m
+[31m[error]     |                                                                                                                                       ^[39m
+[31m[error]   3 |         const JumanjeeSchema: Schema = new mongoose.Schema({[39m
+[31m[error]   4 |   amount:           { type: Object, unique: true }      ,[39m
+[31m[error]   5 |   kaki:           { type: Object, unique: true }      ,[39m
+[31mdb\schemas\avatarSchema.ts 167ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 3ms[39m

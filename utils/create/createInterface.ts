@@ -1,4 +1,4 @@
-import { createCustomTypeOptions } from "../../types2";
+import { createCustomTypeOptions } from "../../types";
 import { createNewTypeDef } from "./createTypeDef";
 import { promisify } from "util";
 import Logger from "../../logger/logger";
@@ -38,7 +38,18 @@ const fromOptionsToInterfaceString = ({ options }: createCustomTypeOptions) => {
 
 const writeInterfaceToFiles = async (name: String, interfaceString: any) => {
   const typesPath = "./types";
-  await write(`${typesPath}/${name}Options.ts`, interfaceString);
+  const typeFilePath = `${typesPath}/${name}Options.ts`;
+  const doesSchemaFileExist = await utils.checkIfFileAlreadyExists(
+    "./db/schemas",
+    typeFilePath
+  );
+  if (!doesSchemaFileExist) {
+    await write(typeFilePath, interfaceString);
+  } else {
+    Logger.error(
+      "FROM: EPB-server: Interface file already exists, aborting interface creation."
+    );
+  }
   const exportStatement = `export * from "./${name}Options"`;
   const res = await utils.addExportStatement(typesPath, exportStatement);
   return res;
@@ -57,8 +68,8 @@ export const createNewInterface = async ({
       "FROM: EPB-server: Interface created successfully, applying Prettier."
     );
     const { typeDef } = options;
-    Logger.http("FROM: EPB-server: typeDef option received, creating..");
     if (typeDef) {
+      Logger.http("FROM: EPB-server: typeDef option received, creating..");
       const res = await createNewTypeDef({ options: options });
       return res || "OK";
     }

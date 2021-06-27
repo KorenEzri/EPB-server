@@ -1,4 +1,4 @@
-import { createCustomTypeOptions, ResolverOptions } from "../../types2";
+import { createCustomTypeOptions, ResolverOptions } from "../../types";
 import { getResolvers } from "../codeToString";
 import Logger from "../../logger/logger";
 import { createNewInterface } from "./";

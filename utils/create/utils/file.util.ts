@@ -1,4 +1,4 @@
-import { createCustomTypeOptions } from "../../../types2";
+import { createCustomTypeOptions } from "../../../types";
 import { allCustomTypes } from "../../../consts";
 import Logger from "../../../logger/logger";
 import fs from "fs";
@@ -56,6 +56,6 @@ export const checkIfFileAlreadyExists = async (
 ) => {
   const dir = await readDir(dirPath);
   if (dir.includes(fileName || `${fileName}.ts`)) {
-    return false;
-  } else return true;
+    return true;
+  } else return false;
 };

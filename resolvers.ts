@@ -1,5 +1,6 @@
 import { GraphQLScalarType } from "graphql";
 // TODO:
+// CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TS
 //  creating typeDef bugs: 1. typedef structure is nameOptions: { options: {}, kaki:string, ... }
 // TODO:
 //  - add prebuilt actions: {
@@ -29,7 +30,7 @@ import {
   createSchemaOptions,
   createCustomTypeOptions,
   stub,
-} from "./types2";
+} from "./types";
 // option types end
 import {
   getResolvers,
@@ -37,8 +38,7 @@ import {
   getActions,
   getResolverNames,
 } from "./utils/codeToString";
-import * as create from "./utils/createNew";
-import * as create2 from "./utils/create";
+import * as create from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
 
@@ -80,9 +80,9 @@ export const resolvers = {
       const validationRes = await validateResolverCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
-        let error = await create2.createNewTypeDef({ options: options });
+        let error = await create.createNewTypeDef({ options: options });
         if (error && error !== "OK") return error;
-        const resolverCreationRes = await create2.createNewResolver({
+        const resolverCreationRes = await create.createNewResolver({
           options: options,
         });
         return resolverCreationRes;
@@ -96,7 +96,7 @@ export const resolvers = {
       const validationRes = await validateTypeCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
-        const interfaceCreationRes = await create2.createNewInterface({
+        const interfaceCreationRes = await create.createNewInterface({
           options: options,
         });
         return interfaceCreationRes;

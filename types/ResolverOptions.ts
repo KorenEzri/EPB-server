@@ -1,10 +1,10 @@
 export interface ResolverOptions {
   options: {
-    name: String;
-    comment: String;
-    returnType: String;
+    name: string;
+    comment: string;
+    returnType?: string;
     type: string;
-    properties: [String];
-    description: String;
+    properties: string[];
+    description: string;
   };
 }

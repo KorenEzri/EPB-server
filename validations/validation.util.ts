@@ -1,12 +1,11 @@
-import { resolvers } from "../resolvers";
-import { createSchemaOptions } from "../types";
-import { validTypes } from "../consts";
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
+import { replaceAllInString } from "../utils/create/utils";
+import Logger from "../logger/logger";
+import { validTypes } from "../consts";
+import { resolvers } from "../resolvers";
 import * as schemas from "../db/schemas";
 import * as types from "../types";
 import Joi from "joi";
-import Logger from "../logger/logger";
-import { replaceAllInString } from "../utils/createNew/string.util";
 
 const typeSchema = Joi.object({
   types: Joi.array().items(Joi.string().valid(...validTypes)),

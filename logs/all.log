@@ -6313,3 +6313,163 @@
 2021-06-27 13:18:55:1855 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
 2021-06-27 13:18:55:1855 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
 2021-06-27 13:18:56:1856 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-27 14:08:18:818 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:08:18:818 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:10:00:100 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:10:00:100 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-27 14:10:00:100 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:10:00:100 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:10:00:100 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:10:01:101 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[2]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-27 14:10:48:1048 [31merror[39m: [31mFROM: EPB-server: Invalid Schema info received, aborting.. Error: "name" is required[39m
+2021-06-27 14:16:05:165 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:16:05:165 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:16:07:167 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:16:07:167 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-27 14:16:07:167 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:16:07:167 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:16:07:167 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:16:08:168 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-27 14:17:12:1712 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:17:12:1712 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:18:35:1835 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:18:35:1835 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:19:04:194 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:19:04:194 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:19:06:196 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:19:06:196 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-06-27 14:19:06:196 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:19:06:196 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:19:06:196 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:19:07:197 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-06-27 14:19:48:1948 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:19:48:1948 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 14:20:22:2022 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Updating an existing interface file..[39m
+2021-06-27 14:20:22:2022 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 14:22:09:229 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:22:09:229 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:54:43:5443 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:54:43:5443 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Creating a new interface file..[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:55:21:5521 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 14:55:21:5521 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\JumanjeeSchema.ts: SyntaxError: ',' expected. (3:68)[39m
+[31m[error]   1 |[39m
+[31m[error]   2 |         import mongoose, { Schema } from 'mongoose';import uniqueValidator from 'mongoose-unique-validator';import {JumanjeeDoc} from "../../types";[39m
+[31m[error] > 3 |         const JumanjeeSchema: Schema = new mongoose.Schema([object Object])[39m
+[31m[error]     |                                                                    ^[39m
+[31m[error]   4 |         JumanjeeSchema.plugin(uniqueValidator)[39m
+[31m[error]   5 |         JumanjeeSchema.set('toJSON', {[39m
+[31m[error]   6 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\avatarSchema.ts 180ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 2ms[39m
+2021-06-27 14:58:27:5827 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 14:58:27:5827 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a new interface file..[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 14:58:30:5830 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 15:02:04:24 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 15:02:04:24 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Creating a new interface file..[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 15:02:07:27 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 15:02:08:28 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\JumanjeeSchema.ts: SyntaxError: Expression expected. (2:135)[39m
+[31m[error]   1 |[39m
+[31m[error] > 2 |         import mongoose, { Schema } from 'mongoose';import uniqueValidator from 'mongoose-unique-validator';import {JumanjeeDoc} from ../../types;[39m
+[31m[error]     |                                                                                                                                       ^[39m
+[31m[error]   3 |         const JumanjeeSchema: Schema = new mongoose.Schema({[39m
+[31m[error]   4 |   amount:           { type: Object, unique: true }      ,[39m
+[31m[error]   5 |   kaki:           { type: Object, unique: true }      ,[39m
+[31mdb\schemas\avatarSchema.ts 170ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 2ms[39m
+2021-06-27 15:08:39:839 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 15:08:39:839 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 15:09:36:936 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 15:09:36:936 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\JumanjeeSchema.ts: SyntaxError: Expression expected. (2:135)[39m
+[31m[error]   1 |[39m
+[31m[error] > 2 |         import mongoose, { Schema } from 'mongoose';import uniqueValidator from 'mongoose-unique-validator';import {JumanjeeDoc} from ../../types;[39m
+[31m[error]     |                                                                                                                                       ^[39m
+[31m[error]   3 |         const JumanjeeSchema: Schema = new mongoose.Schema({[39m
+[31m[error]   4 |   amount:           { type: Object, unique: true }      ,[39m
+[31m[error]   5 |   kaki:           { type: Object, unique: true }      ,[39m
+[31mdb\schemas\avatarSchema.ts 167ms[39m
+[31mdb\schemas\index.ts 3ms[39m
+
+[31mdb\schemas\stub.ts 3ms[39m
+2021-06-27 15:12:29:1229 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 15:12:29:1229 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 15:12:32:1232 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-06-27 15:20:23:2023 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-06-27 15:20:23:2023 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: Schema created, applying...[39m
+2021-06-27 15:20:25:2025 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
