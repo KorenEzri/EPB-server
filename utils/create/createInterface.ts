@@ -1,6 +1,5 @@
 import { createCustomTypeOptions } from "../../types2";
 import { createNewTypeDef } from "./createTypeDef";
-import { getTypeDefs } from "../codeToString";
 import { promisify } from "util";
 import Logger from "../../logger/logger";
 import * as utils from "./utils";

@@ -22,9 +22,11 @@ export const parseInterfaceVarlist = (vars: string[]) => {
   let importList: string[] = [];
   if (!Array.isArray(varList)) return { importList: [], varList };
   varList = varList.map((variable) => {
-    let type = removeTypePostfix(variable.type).toLowerCase();
+    let type = removeTypePostfix(variable.type);
     if (isCustomType(type)) {
       importList.push(type);
+    } else {
+      type = type.toLowerCase();
     }
     type = utils.replaceAllInString(type, "int", "number");
     type = utils.replaceAllInString(type, "Int", "number");
@@ -36,10 +38,26 @@ export const parseInterfaceVarlist = (vars: string[]) => {
 // take an array of strings that look like this: "foo: int"
 // and turn it into an array of { name: foo, type: int } and return it as varList
 // also return importList - an array of custom types to import later in the interface's file.
-
+export const parseResolverVarlist = (vars: string[]) => {
+  let varList = utils.splitNameType(vars);
+  const resolverInterface: any = vars.length < 3 ? undefined : { options: {} };
+  if (!Array.isArray(varList)) return { importList: [], varList };
+  varList = varList.map((variable) => {
+    let type = removeTypePostfix(variable.type);
+    if (!isCustomType(type)) {
+      type = type.toLowerCase();
+    }
+    type = utils.replaceAllInString(type, "int", "number");
+    type = utils.replaceAllInString(type, "Int", "number");
+    type = utils.replaceAllInString(type, "date", "Date");
+    resolverInterface.options[variable.name] = type;
+    return { name: variable.name, type };
+  });
+  return { resolverInterface, varList };
+};
+//
 export const parseMongoVarlist = (vars: string[]) => {};
 //
-
 export const parseTypeDefVarlist = (vars: string[], name: string) => {
   const varList = utils.splitNameType(vars);
   const typeDefAsInterface: any = vars.length < 3 ? undefined : { options: {} };
@@ -56,7 +74,8 @@ export const parseTypeDefVarlist = (vars: string[], name: string) => {
     } else {
       // if it's not, we want to capitalize it's first letter, as per GQL syntax.
       const capitalizedType = utils.capitalizeFirstLetter(type);
-      if (typeDefAsInterface) typeDefAsInterface[name] = capitalizedType;
+      if (typeDefAsInterface)
+        typeDefAsInterface.options[name] = capitalizedType;
       return `${name}:${capitalizedType}`;
     }
   });
@@ -71,4 +90,4 @@ export const parseTypeDefVarlist = (vars: string[], name: string) => {
       typeDefInterface: typeDefAsInterface,
     };
 };
-//
+//takes a string[] of foo:type elements and parses it, returns varList - ['foo:Type', 'bar:Type'] and typeDefInterface.

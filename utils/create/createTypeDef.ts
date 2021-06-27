@@ -5,7 +5,6 @@ import { promisify } from "util";
 import fs from "fs";
 import * as utils from "./utils";
 import { createCustomTypeOptions } from "../../types2";
-import { typeDefs } from "../../typeDefs";
 const write = promisify(fs.writeFile);
 
 const grabTypeDefsAndInsertNewTypeDef = async (
@@ -14,7 +13,6 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   type?: string,
   returnType?: string
 ) => {
-  let handlerA: number;
   const { typeDef, typeDefInterface } = fromOptionsToGQLTypeDefinition(
     name,
     properties,
@@ -27,20 +25,12 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   if (typeDefLineArray.includes(typeDef))
     // check if typeDef already exists
     return "Duplicate type definitions detected, aborting..";
-  type?.toLowerCase() === "mutation" // mutation or query? different line number
-    ? (handlerA = typeDefLineArray.indexOf("# mutation-end"))
-    : (handlerA = typeDefLineArray.indexOf("# query-end"));
-  const handlerB = handlerA;
-  // we want endIndex in pushIntoString() to be 0, hence handlerB - handlerA now equals 0;
-  return {
-    typeDefs: utils.pushIntoString(
-      allTypeDefsAsString,
-      handlerA,
-      handlerB,
-      typeDef
-    ),
-    typeDefInterface,
-  };
+  return utils.insertToString(
+    allTypeDefsAsString,
+    typeDef,
+    type || "type",
+    "#"
+  );
 };
 const fromOptionsToGQLTypeDefinition = (
   name: string,

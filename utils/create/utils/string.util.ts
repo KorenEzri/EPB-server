@@ -55,3 +55,19 @@ export const pushIntoString = (
 // - two handlers to produce a range inside an array of lines,
 // - string to push - what to insert?
 // - extra function (like parser etc)
+export const insertToString = (
+  string: string,
+  toInsert: string,
+  type: string,
+  selector: string
+) => {
+  let handlerA: number;
+  const stringLineArray = toLineArray(string, (arr: string[]) =>
+    arr.map((line) => line.trim())
+  );
+  type.toLowerCase() === "mutation" // mutation or query? different line number
+    ? (handlerA = stringLineArray.indexOf(`${selector} mutation-end`))
+    : (handlerA = stringLineArray.indexOf(`${selector} query-end`));
+  const handlerB = handlerA;
+  return pushIntoString(string, handlerA, handlerB, toInsert);
+};

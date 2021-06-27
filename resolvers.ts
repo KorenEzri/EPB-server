@@ -1,5 +1,7 @@
 import { GraphQLScalarType } from "graphql";
 // TODO:
+//  creating typeDef bugs: 1. typedef structure is nameOptions: { options: {}, kaki:string, ... }
+// TODO:
 //  - add prebuilt actions: {
 //    - user auth - four days {
 // -  TODO:
@@ -27,7 +29,7 @@ import {
   createSchemaOptions,
   createCustomTypeOptions,
   stub,
-} from "./types";
+} from "./types2";
 // option types end
 import {
   getResolvers,
@@ -36,6 +38,7 @@ import {
   getResolverNames,
 } from "./utils/codeToString";
 import * as create from "./utils/createNew";
+import * as create2 from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
 
@@ -75,9 +78,9 @@ export const resolvers = {
       const validationRes = await validateResolverCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
-        let error = await create.createNewTypeDef({ options: options });
+        let error = await create2.createNewTypeDef({ options: options });
         if (error) return error;
-        const resolverCreationRes = await create.createNewResolver({
+        const resolverCreationRes = await create2.createNewResolver({
           options: options,
         });
         return resolverCreationRes;
@@ -91,7 +94,7 @@ export const resolvers = {
       const validationRes = await validateTypeCreation(options);
       if (validationRes.error) return validationRes.message;
       try {
-        const interfaceCreationRes = await create.createNewInterface({
+        const interfaceCreationRes = await create2.createNewInterface({
           options: options,
         });
         return interfaceCreationRes;
