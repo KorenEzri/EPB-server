@@ -4,7 +4,7 @@ import Logger from "../../logger/logger";
 import { createNewInterface } from "./";
 import { promisify } from "util";
 import fs from "fs";
-import * as utils from "./utils";
+import * as utils from "../utils";
 const write = promisify(fs.writeFile);
 
 const insertImportStatement = (resolvers: string, name: string) => {

@@ -2,7 +2,7 @@ import { createSchemaOptions } from "../../../types";
 import { createNewInterface } from "../../create";
 import { imports } from "../../../consts/imports";
 import Logger from "../../../logger/logger";
-import * as utils from "../utils";
+import * as utils from "../../utils";
 import { promisify } from "util";
 import fs from "fs";
 const write = promisify(fs.writeFile);

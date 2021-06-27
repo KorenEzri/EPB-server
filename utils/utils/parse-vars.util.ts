@@ -1,6 +1,6 @@
-import { allCustomTypes } from "../../../consts";
-import Logger from "../../../logger/logger";
-import * as utils from "./";
+import { allCustomTypes } from "../../consts";
+import Logger from "../../logger/logger";
+import * as utils from ".";
 
 // for graphQL types I add "Type" || "Input" accordingly to definition names,
 // so users can make both type and input definitions.

@@ -3,8 +3,8 @@ import { getTypeDefs } from "../codeToString";
 import Logger from "../../logger/logger";
 import { promisify } from "util";
 import fs from "fs";
-import * as utils from "./utils";
-import { toLineArray } from "./utils";
+import * as utils from "../utils";
+import { toLineArray } from "../utils";
 const write = promisify(fs.writeFile);
 
 const grabTypeDefsAndInsertNewTypeDef = async (

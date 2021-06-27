@@ -1,10 +1,10 @@
-import { createCustomTypeOptions } from "../../../types";
-import { allCustomTypes } from "../../../consts";
-import Logger from "../../../logger/logger";
+import { createCustomTypeOptions } from "../../types";
+import { allCustomTypes } from "../../consts";
+import Logger from "../../logger/logger";
 import fs from "fs";
 import execa from "execa";
 import { promisify } from "util";
-import * as utils from "./";
+import * as utils from ".";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);

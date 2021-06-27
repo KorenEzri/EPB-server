@@ -2,7 +2,7 @@ import { createCustomTypeOptions } from "../../types";
 import { createNewTypeDef } from "./createTypeDef";
 import { promisify } from "util";
 import Logger from "../../logger/logger";
-import * as utils from "./utils";
+import * as utils from "../utils";
 import fs from "fs";
 import { type } from "os";
 const write = promisify(fs.writeFile);

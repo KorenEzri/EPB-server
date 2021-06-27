@@ -1,5 +1,5 @@
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
-import { replaceAllInString } from "../utils/create/utils";
+import { replaceAllInString } from "../utils/utils";
 import Logger from "../logger/logger";
 import { validTypes } from "../consts";
 import { resolvers } from "../resolvers";
