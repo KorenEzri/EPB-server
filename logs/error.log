@@ -459,3 +459,16 @@
 [31mdb\schemas\index.ts 3ms[39m
 
 [31mdb\schemas\stub.ts 3ms[39m
+2021-06-27 15:54:37:5437 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-27 15:56:54:5654 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-27 16:07:15:715 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-27 16:21:21:2121 [31merror[39m: [31mFROM: EPB-server: Maximum call stack size exceeded[39m
+2021-06-27 16:21:21:2121 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m
+2021-06-27 16:21:29:2129 [31merror[39m: [31mFROM: EPB-server: Maximum call stack size exceeded[39m
+2021-06-27 16:21:29:2129 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m
+2021-06-27 16:22:06:226 [31merror[39m: [31mFROM: EPB-server: Maximum call stack size exceeded[39m
+2021-06-27 16:22:06:226 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m
+2021-06-27 16:22:31:2231 [31merror[39m: [31mFROM: EPB-server: Maximum call stack size exceeded[39m
+2021-06-27 16:22:31:2231 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m
+2021-06-27 16:22:57:2257 [31merror[39m: [31mFROM: EPB-server: Maximum call stack size exceeded[39m
+2021-06-27 16:22:57:2257 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m

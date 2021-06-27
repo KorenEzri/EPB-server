@@ -55,7 +55,7 @@ export const checkIfFileAlreadyExists = async (
   fileName: string
 ) => {
   const dir = await readDir(dirPath);
-  if (dir.includes(fileName || `${fileName}.ts`)) {
+  if (dir.includes(fileName) || dir.includes(`${fileName}.ts`)) {
     return true;
   } else return false;
 };

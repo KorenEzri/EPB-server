@@ -4,6 +4,7 @@ import { promisify } from "util";
 import Logger from "../../logger/logger";
 import * as utils from "./utils";
 import fs from "fs";
+import { type } from "os";
 const write = promisify(fs.writeFile);
 
 const toInterfaceString = (
@@ -28,7 +29,9 @@ const fromOptionsToInterfaceString = ({ options }: createCustomTypeOptions) => {
   // varList = an array of { name: string, type: string } to compose the interface object string.
   if (!Array.isArray(varList)) return; // always will be an array, this is for TS
   varList.forEach((variable) => {
-    interfaceOpts.options[variable.name] = variable.type; // assign names and types to interfaceOpts
+    let type = variable.type;
+    type = utils.removeLastWordFromString(type, ["Type", "Input"]);
+    interfaceOpts.options[variable.name] = type; // assign names and types to interfaceOpts
   });
   const importStatements = utils.toImportStatements(importList);
   // turn an array of custom type names to an array of import statements

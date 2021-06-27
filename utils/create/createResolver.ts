@@ -13,7 +13,6 @@ const insertImportStatement = (resolvers: string, name: string) => {
     .map((line: string) => line.trim());
   const startIndex = splatResolvers.indexOf("// option types");
   const endIndex = splatResolvers.indexOf("// option types end");
-  console.log(startIndex, endIndex);
   const importStatement = splatResolvers
     .map((line: string, index: number) => {
       if (index >= startIndex + 1 && index <= endIndex - 1) {
@@ -23,7 +22,6 @@ const insertImportStatement = (resolvers: string, name: string) => {
     .filter((v) => {
       return v != null;
     });
-  console.log(importStatement);
   if (!importStatement[0]) return "err";
   if (importStatement.length > 1) {
     importStatement.splice(1, 0, ` ${name}Options,`);

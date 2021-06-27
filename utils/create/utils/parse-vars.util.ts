@@ -1,15 +1,7 @@
 import { allCustomTypes } from "../../../consts";
+import Logger from "../../../logger/logger";
 import * as utils from "./";
 
-const removeTypePostfix = (string: string) => {
-  if (string.includes("Type")) {
-    string = string.split("Type")[0];
-  }
-  if (string.includes("Input")) {
-    string = string.split("Input")[0];
-  }
-  return string;
-};
 // for graphQL types I add "Type" || "Input" accordingly to definition names,
 // so users can make both type and input definitions.
 export const isCustomType = (type: string) => {
@@ -24,9 +16,9 @@ export const parseInterfaceVarlist = (vars: string[]) => {
   varList = varList.map((variable) => {
     let type = variable.type;
     if (isCustomType(type)) {
-      importList.push(type);
+      importList.push(utils.removeLastWordFromString(type, ["Type", "Input"]));
     } else {
-      type = removeTypePostfix(type).toLowerCase();
+      type = type.toLowerCase();
     }
     type = utils.replaceAllInString(type, "int", "number");
     type = utils.replaceAllInString(type, "Int", "number");
@@ -43,7 +35,7 @@ export const parseResolverVarlist = (vars: string[]) => {
   const resolverInterface: any = vars.length < 3 ? undefined : { options: {} };
   if (!Array.isArray(varList)) return { importList: [], varList };
   varList = varList.map((variable) => {
-    let type = removeTypePostfix(variable.type);
+    let type = utils.removeLastWordFromString(variable.type, ["Type", "Input"]);
     if (!isCustomType(type)) {
       type = type.toLowerCase();
     }
@@ -97,7 +89,7 @@ export const parseMongoVarlist = (vars: string[], uniques: string[]) => {
   const schemaInterface: any = {};
   if (!Array.isArray(varList)) return { importList: [], varList };
   varList = varList.map((variable) => {
-    let type = removeTypePostfix(variable.type);
+    let type = utils.removeLastWordFromString(variable.type, ["Type", "Input"]);
     if (!isCustomType(type)) {
       type = "Object";
     }
