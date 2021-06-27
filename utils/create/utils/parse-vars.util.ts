@@ -22,11 +22,11 @@ export const parseInterfaceVarlist = (vars: string[]) => {
   let importList: string[] = [];
   if (!Array.isArray(varList)) return { importList: [], varList };
   varList = varList.map((variable) => {
-    let type = removeTypePostfix(variable.type);
+    let type = variable.type;
     if (isCustomType(type)) {
       importList.push(type);
     } else {
-      type = type.toLowerCase();
+      type = removeTypePostfix(type).toLowerCase();
     }
     type = utils.replaceAllInString(type, "int", "number");
     type = utils.replaceAllInString(type, "Int", "number");
@@ -60,7 +60,7 @@ export const parseMongoVarlist = (vars: string[]) => {};
 //
 export const parseTypeDefVarlist = (vars: string[], name: string) => {
   const varList = utils.splitNameType(vars);
-  const typeDefAsInterface: any = vars.length < 3 ? undefined : { options: {} };
+  const typeDefAsInterface: any = vars.length < 3 ? undefined : {};
   // if we have more than three properties, create a type definition especially for the custom type.
   // else, we'll just add the properties as params in the query/mutation.
   if (!Array.isArray(varList))
@@ -74,8 +74,7 @@ export const parseTypeDefVarlist = (vars: string[], name: string) => {
     } else {
       // if it's not, we want to capitalize it's first letter, as per GQL syntax.
       const capitalizedType = utils.capitalizeFirstLetter(type);
-      if (typeDefAsInterface)
-        typeDefAsInterface.options[name] = capitalizedType;
+      if (typeDefAsInterface) typeDefAsInterface[name] = capitalizedType;
       return `${name}:${capitalizedType}`;
     }
   });

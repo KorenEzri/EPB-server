@@ -313,3 +313,105 @@
 2021-06-26 11:16:47:1647 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
 2021-06-26 11:17:31:1731 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name KorenSchema.ts already exists![39m
 2021-06-26 11:19:01:191 [31merror[39m: [31mCould not locate ./db/schemas/KorenSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\KorenSchema.ts'[39m
+2021-06-27 10:24:14:2414 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:24:14:2414 [31merror[39m: [31mCould not locate ./db/schemas/authUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\authUserSchema.ts'[39m
+2021-06-27 10:24:15:2415 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:24:15:2415 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:24:15:2415 [31merror[39m: [31mCould not locate ./db/schemas/publicUserSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\publicUserSchema.ts'[39m
+2021-06-27 10:24:16:2416 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\publicUserSchema.ts: SyntaxError: ',' expected. (16:2)[39m
+[31m[error]   14 |   lastConnected: Object,[39m
+[31m[error]   15 |   isActive: Boolean[39m
+[31m[error] > 16 | })[39m
+[31m[error]      |  ^[39m
+[31m[error]   17 |         [39m
+[31m[error]   18 |         publicUserSchema.set('toJSON', {[39m
+[31m[error]   19 |             transform: (_: any, returnedObject: any) => {[39m
+[31mdb\schemas\authUserSchema.ts 166ms[39m
+[31mdb\schemas\avatarSchema.ts 9ms[39m
+[31mdb\schemas\index.ts 2ms[39m
+
+[31mdb\schemas\stub.ts 3ms[39m
+2021-06-27 10:25:31:2531 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:25:31:2531 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:28:39:2839 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:28:39:2839 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:29:38:2938 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:29:38:2938 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:30:49:3049 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:30:49:3049 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:31:53:3153 [31merror[39m: [31mEISDIR: illegal operation on a directory, read[39m
+2021-06-27 10:31:53:3153 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:32:58:3258 [31merror[39m: [31mEISDIR: illegal operation on a directory, open 'C:\Users\Koren\Documents\EPB-server\types'[39m
+2021-06-27 10:32:58:3258 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:33:51:3351 [31merror[39m: [31mEISDIR: illegal operation on a directory, open 'C:\Users\Koren\Documents\EPB-server\types'[39m
+2021-06-27 10:33:51:3351 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:34:37:3437 [31merror[39m: [31mEISDIR: illegal operation on a directory, open 'C:\Users\Koren\Documents\EPB-server\types'[39m
+2021-06-27 10:34:37:3437 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:35:31:3531 [31merror[39m: [31mEISDIR: illegal operation on a directory, open 'C:\Users\Koren\Documents\EPB-server\types'[39m
+2021-06-27 10:35:31:3531 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:36:30:3630 [31merror[39m: [31mEISDIR: illegal operation on a directory, open 'C:\Users\Koren\Documents\EPB-server\types'[39m
+2021-06-27 10:36:30:3630 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:37:34:3734 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-27 10:37:34:3734 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:37:39:3739 [31merror[39m: [31mEISDIR: illegal operation on a directory, open 'C:\Users\Koren\Documents\EPB-server\types'[39m
+2021-06-27 10:37:39:3739 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:38:43:3843 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:39:20:3920 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:39:49:3949 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:40:56:4056 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 10:42:25:4225 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 10:43:59:4359 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:01:36:136 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:01:36:136 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:04:05:45 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:04:05:45 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:05:07:57 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:05:07:57 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:05:53:553 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:05:53:553 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:06:24:624 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:06:24:624 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:07:02:72 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:07:02:72 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:08:42:842 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:08:42:842 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:09:27:927 [31merror[39m: [31mError creating type definition![39m
+2021-06-27 11:09:27:927 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:26:00:260 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:28:57:2857 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:31:16:3116 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "properties" is not allowed[39m
+2021-06-27 11:31:16:3116 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:31:28:3128 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:32:48:3248 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:34:04:344 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:36:44:3644 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:42:11:4211 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 11:43:59:4359 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:45:38:4538 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:45:43:4543 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:45:48:4548 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:46:53:4653 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:47:11:4711 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 11:47:14:4714 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m
+2021-06-27 11:47:20:4720 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee23Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\Jumanjee23Schema.ts'[39m
+2021-06-27 11:49:34:4934 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee23Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\Jumanjee23Schema.ts'[39m
+2021-06-27 11:49:40:4940 [31merror[39m: [31mCould not locate ./db/schemas/Jumanjee2Schema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\Jumanjee2Schema.ts'[39m
+2021-06-27 11:49:40:4940 [31merror[39m: [31mCould not locate ./types/Jumanjee2Options.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\types\Jumanjee2Options.ts'[39m
+2021-06-27 12:26:19:2619 [31merror[39m: [31mCould not locate ./db/schemas/JumanjeeSchema.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\db\schemas\JumanjeeSchema.ts'[39m
+2021-06-27 12:29:25:2925 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name JumanjeeSchema.ts already exists![39m
+2021-06-27 12:37:12:3712 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (138:9)[39m
+[31m[error]   136 |           // [39m
+[31m[error]   137 |           // return createSchemaOptions[39m
+[31m[error] > 138 |       },[39m
+[31m[error]       |         ^[39m
+[31m[error]   139 |         [39m
+[31m[error]   140 |[39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-06-27 13:10:55:1055 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'assign' of undefined[39m
+2021-06-27 13:11:40:1140 [31merror[39m: [31mFROM: EPB-server: interfaceOptions.assign is not a function[39m

@@ -5,6 +5,7 @@ import { promisify } from "util";
 import fs from "fs";
 import * as utils from "./utils";
 import { createCustomTypeOptions } from "../../types2";
+import { toLineArray } from "./utils";
 const write = promisify(fs.writeFile);
 
 const grabTypeDefsAndInsertNewTypeDef = async (
@@ -25,12 +26,26 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   if (typeDefLineArray.includes(typeDef))
     // check if typeDef already exists
     return "Duplicate type definitions detected, aborting..";
-  return utils.insertToString(
+  let finishedTypeDefs = insertTypeDefInterface(
     allTypeDefsAsString,
-    typeDef,
-    type || "type",
-    "#"
+    name,
+    typeDefInterface,
+    type
   );
+  let typeInsertEndIndex: string | number =
+    type === "Query" ? "# query-end" : "# mutation-end";
+  typeInsertEndIndex = toLineArray(finishedTypeDefs)
+    .map((line: string) => line.trim())
+    .indexOf(typeInsertEndIndex);
+  if (returnType) {
+    finishedTypeDefs = utils.pushIntoString(
+      finishedTypeDefs,
+      typeInsertEndIndex,
+      0,
+      typeDef
+    );
+  }
+  return finishedTypeDefs;
 };
 const fromOptionsToGQLTypeDefinition = (
   name: string,
@@ -41,51 +56,66 @@ const fromOptionsToGQLTypeDefinition = (
     properties,
     name
   );
-  const capitalizedReturnType = utils.capitalizeFirstLetter(returnType || "");
+  if (returnType) {
+    if (!utils.isCustomType(returnType)) {
+      returnType = utils.capitalizeFirstLetter(returnType);
+    }
+  }
   let typeDef;
   if (!Array.isArray(varList)) {
-    typeDef = `${name}(${varList}): ${capitalizedReturnType}`;
+    typeDef = `${name}(${varList}): ${returnType}`;
   } else {
-    typeDef = `${name}: ${capitalizedReturnType}
+    typeDef = `${name}: ${returnType}
     `;
   }
   return { typeDef, typeDefInterface };
 };
-const insertTypeDef = (
-  splatTypeDefs: string[],
+const insertTypeDefInterface = (
+  typeDefs: string,
   name: string,
   typeDefInterface: any,
   type?: string
 ) => {
   let interfacePreFix;
-  type === "query" ? (interfacePreFix = "type") : (interfacePreFix = "input");
-  const index = splatTypeDefs.indexOf("# generated definitions");
+  type === "Query" ? (interfacePreFix = "type") : (interfacePreFix = "input");
+  const handlerA = "# generated definitions";
   const interfaceString = JSON.stringify(typeDefInterface, null, 2);
   const typeDef = `\n ${interfacePreFix} ${name}Options ${interfaceString}\n# added at: ${new Date()}`;
-  let finishedInterfaceDef = utils.replaceAllInString(typeDef, '"', "");
-  splatTypeDefs.splice(index + 1, 0, finishedInterfaceDef);
-  return splatTypeDefs;
+  let finishedInterfaceDef = utils.replaceAllInString(
+    typeDef,
+    ['"', "Number"],
+    ["", "Int"]
+  );
+  const finishedTypeDefs = utils.pushIntoString(
+    typeDefs,
+    handlerA,
+    0,
+    finishedInterfaceDef
+  );
+  return finishedTypeDefs;
 };
 export const createNewTypeDef = async ({
   options,
 }: ResolverOptions | createCustomTypeOptions) => {
   Logger.http("FROM: EPB-server: Creating a new type definition...");
-  const res = await grabTypeDefsAndInsertNewTypeDef(
-    options.name,
-    options.properties,
-    options.type,
-    options.returnType
-  );
-  // calls fromOptionsToGQLTypeDefinition()
-  if (typeof res === "string") return res;
-  // if res === string => error occured.
-  const { typeDefs, typeDefInterface } = res;
-  let revisedTypeDefs = insertTypeDef(
-    utils.toLineArray(typeDefs),
-    options.name,
-    typeDefInterface,
-    options.type
-  ).join("\n");
-  revisedTypeDefs = utils.replaceAllInString(revisedTypeDefs, "Number", "Int");
-  await write("./typeDefs.ts", revisedTypeDefs);
+  try {
+    const res = await grabTypeDefsAndInsertNewTypeDef(
+      options.name,
+      options.properties,
+      options.type,
+      options.returnType
+    );
+    // calls fromOptionsToGQLTypeDefinition()
+    if (!res) {
+      Logger.error("Error creating type definition!");
+      return res;
+    }
+    await write("./typeDefs.ts", res);
+    return "OK";
+  } catch ({ message }) {
+    Logger.error(
+      `From: EPB-server: Error creating type definition, ${message}`
+    );
+    return message;
+  }
 };

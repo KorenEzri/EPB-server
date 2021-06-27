@@ -16,9 +16,21 @@ export const splitNameType = (toSplit: string | string[]) => {
 export const fromLineArray = (lineArray: string[]) => {
   return lineArray.join("\n");
 };
-export const replaceAllInString = (str: string, find: string, replace: any) => {
-  var escapedFind = find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
-  return str.replace(new RegExp(escapedFind, "g"), replace);
+export const replaceAllInString = (
+  str: string,
+  find: string | string[],
+  replace: string | string[]
+) => {
+  if (Array.isArray(find) && Array.isArray(replace)) {
+    find.forEach((toFind, index) => {
+      const escapedFind = toFind.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+      str = str.replace(new RegExp(escapedFind, "g"), replace[index]);
+    });
+    return str;
+  } else if (typeof replace === "string" && typeof find === "string") {
+    const escapedFind = find.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+    return str.replace(new RegExp(escapedFind, "g"), replace);
+  } else return "err";
 };
 export const toImportStatements = (importList: string[]) => {
   return importList.map((typeImport: string) => {
@@ -44,7 +56,7 @@ export const pushIntoString = (
   );
   // split the stirng to an array of lines, trim each line.
   const startIndex =
-    typeof handlerA === "number" ? handlerA : lineArray.indexOf(handlerA); // The index (line number) in which to push
+    typeof handlerA === "number" ? handlerA : lineArray.indexOf(handlerA) + 1; // The index (line number) in which to push
   const endIndex =
     typeof handlerB === "number" ? handlerB : lineArray.indexOf(handlerB); // The index (line number) in which to stop splicing.
   if (extraFunc) stringToPush = extraFunc(stringToPush);
@@ -66,8 +78,8 @@ export const insertToString = (
     arr.map((line) => line.trim())
   );
   type.toLowerCase() === "mutation" // mutation or query? different line number
-    ? (handlerA = stringLineArray.indexOf(`${selector} mutation-end`))
-    : (handlerA = stringLineArray.indexOf(`${selector} query-end`));
+    ? (handlerA = stringLineArray.indexOf(`${selector} mutation-end`) - 1)
+    : (handlerA = stringLineArray.indexOf(`${selector} query-end`) - 1);
   const handlerB = handlerA;
   return pushIntoString(string, handlerA, handlerB, toInsert);
 };

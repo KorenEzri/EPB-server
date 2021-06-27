@@ -1,6 +1,8 @@
 const { gql } = require("apollo-server-express");
 export const typeDefs = gql`
   scalar Date
+  #
+
   # generated definitions
 
   type avatarOptionsType {
@@ -40,7 +42,10 @@ export const typeDefs = gql`
   }
   # added at: Sun Jun 20 2021 15:26:15 GMT+0300 (Israel Daylight Time)
 
+  #
+
   # generated definitions end
+
   input ResolverOptions {
     name: String
     comment: String

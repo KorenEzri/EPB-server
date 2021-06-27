@@ -7,21 +7,23 @@ import { promisify } from "util";
 import * as utils from "./";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
+const readDir = promisify(fs.readdir);
 const access = promisify(fs.access);
 
 export const addExportStatement = async (
   filePath: string,
   exportStatement: string
 ) => {
+  const path = `${filePath}/index.ts`;
   try {
-    const isOK = await checkIfOK(filePath);
+    const isOK = await checkIfOK(path);
     if (!isOK)
       return "Error in create/file.util.ts/addExportStatement() - checkIfOK() returned 'undefined'";
-    const readFile = await read(filePath, "utf8");
+    const readFile = await read(path, "utf8");
     const lineArray = utils.toLineArray(readFile);
     if (!lineArray.includes(exportStatement)) {
       lineArray.push(exportStatement);
-      await write(filePath, utils.fromLineArray(lineArray));
+      await write(path, utils.fromLineArray(lineArray));
       return "OK";
     } else {
       return "Export statement already exists, please update the interface's file instead.";
@@ -47,4 +49,13 @@ export const checkIfOK = async (path: string) => {
   } catch ({ message }) {
     Logger.error(`Could not locate ${path} file, ${message}`);
   }
+};
+export const checkIfFileAlreadyExists = async (
+  dirPath: string,
+  fileName: string
+) => {
+  const dir = await readDir(dirPath);
+  if (dir.includes(fileName || `${fileName}.ts`)) {
+    return false;
+  } else return true;
 };

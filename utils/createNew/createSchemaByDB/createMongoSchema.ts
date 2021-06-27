@@ -1,6 +1,6 @@
 import { createSchemaOptions } from "../../../types";
 import { allCustomTypes } from "../../../consts";
-import { createNewInterface } from "../";
+import { createNewInterface } from "../../create";
 import { imports } from "../../../consts/imports";
 import { promisify } from "util";
 import { checkIfOK } from "../../codeToString";

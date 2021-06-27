@@ -1,4 +1,5 @@
-import { createNewInterface, createDbSchema } from "../../createNew";
+import { createNewInterface } from "../../create";
+import { createDbSchema } from "../../createNew";
 import { addUserAuthOptions, createSchemaOptions } from "../../../types";
 
 const compileInterfaceOptions = async (

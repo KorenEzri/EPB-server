@@ -71,6 +71,8 @@ export const resolvers = {
     getAllResolverNames: async (_: any) => {
       return await getResolverNames();
     },
+
+    // query-end
   },
   Mutation: {
     // Action: create a new resolver (empty)
@@ -79,7 +81,7 @@ export const resolvers = {
       if (validationRes.error) return validationRes.message;
       try {
         let error = await create2.createNewTypeDef({ options: options });
-        if (error) return error;
+        if (error && error !== "OK") return error;
         const resolverCreationRes = await create2.createNewResolver({
           options: options,
         });
