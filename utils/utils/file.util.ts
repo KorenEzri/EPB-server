@@ -1,5 +1,4 @@
-import { createCustomTypeOptions } from "../../types";
-import { allCustomTypes } from "../../consts";
+import { allCustomTypesWithArrayTypes } from "../../consts";
 import Logger from "../../logger/logger";
 import fs from "fs";
 import execa from "execa";
@@ -9,6 +8,7 @@ const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);
 const access = promisify(fs.access);
+const unlink = promisify(fs.unlink);
 
 export const addExportStatement = async (
   filePath: string,
@@ -58,4 +58,15 @@ export const checkIfFileAlreadyExists = async (
   if (dir.includes(fileName) || dir.includes(`${fileName}.ts`)) {
     return true;
   } else return false;
+};
+export const addToAllowedTypes = (name: string) => {
+  allCustomTypesWithArrayTypes.push(`[${name}Options]`);
+  allCustomTypesWithArrayTypes.push(`${name}Options[]`);
+  allCustomTypesWithArrayTypes.push(`${name}Options`);
+};
+export const restartServer = async () => {
+  // await write(
+  //   'node_modules/@korenezri/easy-peasy-backend/epb/client/build" "nodemon index.ts" "nodemon node_modules/@korenezri/easy-peasy-backend/epb/epb-server/build/restart.json',
+  //   `{"restart":"${Math.random()}"}`
+  // );
 };

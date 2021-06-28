@@ -6,7 +6,29 @@ import * as utils from "../../utils";
 import { promisify } from "util";
 import fs from "fs";
 const write = promisify(fs.writeFile);
-
+const read = promisify(fs.readFile);
+const updateInterfaceFile = async ({ options }: createSchemaOptions) => {
+  const interfaceFilePath = `./types/${options.name}Options.ts`;
+  const interfaceFile = await read(interfaceFilePath, "utf8");
+  const splat = interfaceFile.split("\n");
+  const importStartIndex = splat.indexOf("// imports section") + 1;
+  const importEndIndex = splat.indexOf("// imports section end");
+  const imports = splat.slice(importStartIndex, importEndIndex - 1);
+  imports.push("import { Document } from 'mongoose'");
+  splat.splice(
+    importStartIndex,
+    importEndIndex - importStartIndex,
+    imports.join("\n")
+  );
+  const exportStartIndex = splat.indexOf("// exports section") + 1;
+  const exportEndIndex = splat.indexOf("// exports section end");
+  splat.splice(
+    exportStartIndex,
+    exportEndIndex - exportStartIndex,
+    `export interface ${options.name}Doc extends Document, ${options.name}Options {}`
+  );
+  await write(interfaceFilePath, splat.join("\n"));
+};
 const toMongoSchema = (options: createSchemaOptions) => {
   const { properties, name, comment, uniqueIdentifiers } = options.options;
   const mongoImportsList = imports.statements.db.mongodb;
@@ -55,8 +77,12 @@ const writeSchemaToFile = async (name: string, schema: string) => {
 };
 export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   Logger.http("FROM: EPB-server: Creating a MongoDB schema...");
+  await createNewInterface({ options: options });
   const mongoDBSchema = toMongoSchema({ options: options });
-  Logger.http("FROM: EPB-server: Schema created, applying...");
+  Logger.http(
+    "FROM: EPB-server: Schema created, updating interface file to include a mongo document export..."
+  );
+  await updateInterfaceFile({ options: options });
   let error = await writeSchemaToFile(options.name, mongoDBSchema);
   if (error) return error;
   Logger.http("FROM: EPB-server: Done, applying prettier for files.");

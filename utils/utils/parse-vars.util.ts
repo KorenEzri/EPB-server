@@ -1,13 +1,22 @@
-import { allCustomTypes } from "../../consts";
-import Logger from "../../logger/logger";
+import { allCustomTypesWithArrayTypes } from "../../consts";
 import * as utils from ".";
 
 // for graphQL types I add "Type" || "Input" accordingly to definition names,
 // so users can make both type and input definitions.
 export const isCustomType = (type: string) => {
-  return allCustomTypes.includes(type) ? true : false;
+  if (type.toLowerCase() === "date") return false;
+  return allCustomTypesWithArrayTypes.includes(type) ? true : false;
 };
 // checks if the type is a custom type (IE an existing type that is not string, number, etc)
+
+export const parseArrayOperatorTypes = (type: string) => {
+  if (type.includes("[") && type.includes("]")) {
+    let typeString: string | string[] = type.split("[").join("").split("]");
+    typeString = typeString + "[]";
+    typeString = typeString.split(",").join("");
+    return typeString;
+  } else return type;
+};
 
 export const parseInterfaceVarlist = (vars: string[]) => {
   let varList = utils.splitNameType(vars);
@@ -20,6 +29,7 @@ export const parseInterfaceVarlist = (vars: string[]) => {
     } else {
       type = type.toLowerCase();
     }
+    type = parseArrayOperatorTypes(type);
     type = utils.replaceAllInString(type, "int", "number");
     type = utils.replaceAllInString(type, "Int", "number");
     type = utils.replaceAllInString(type, "date", "Date");
@@ -42,7 +52,7 @@ export const parseResolverVarlist = (vars: string[]) => {
     type = utils.replaceAllInString(type, "int", "number");
     type = utils.replaceAllInString(type, "Int", "number");
     type = utils.replaceAllInString(type, "date", "Date");
-    resolverInterface.options[variable.name] = type;
+    if (resolverInterface) resolverInterface.options[variable.name] = type;
     return { name: variable.name, type };
   });
   return { resolverInterface, varList };
@@ -90,7 +100,7 @@ export const parseMongoVarlist = (vars: string[], uniques: string[]) => {
   if (!Array.isArray(varList)) return { importList: [], varList };
   varList = varList.map((variable) => {
     let type = utils.removeLastWordFromString(variable.type, ["Type", "Input"]);
-    if (!isCustomType(type)) {
+    if (isCustomType(type)) {
       type = "Object";
     }
     type = utils.replaceAllInString(type, "int", "number");
@@ -108,7 +118,7 @@ export const parseMongoVarlist = (vars: string[], uniques: string[]) => {
 //
 export const parseTypeDefVarlist = (vars: string[], name: string) => {
   const varList = utils.splitNameType(vars);
-  const typeDefAsInterface: any = vars.length < 3 ? undefined : {};
+  const typeDefAsInterface: any = vars.length < 1 ? undefined : {};
   // if we have more than three properties, create a type definition especially for the custom type.
   // else, we'll just add the properties as params in the query/mutation.
   if (!Array.isArray(varList))
@@ -131,10 +141,11 @@ export const parseTypeDefVarlist = (vars: string[], name: string) => {
       varList: `options: ${name}Options`,
       typeDefInterface: typeDefAsInterface,
     };
-  } else
+  } else {
     return {
       varList: variableStringList,
       typeDefInterface: typeDefAsInterface,
     };
+  }
 };
 //takes a string[] of foo:type elements and parses it, returns varList - ['foo:Type', 'bar:Type'] and typeDefInterface.

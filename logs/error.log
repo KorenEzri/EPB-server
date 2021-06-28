@@ -472,3 +472,109 @@
 2021-06-27 16:22:31:2231 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m
 2021-06-27 16:22:57:2257 [31merror[39m: [31mFROM: EPB-server: Maximum call stack size exceeded[39m
 2021-06-27 16:22:57:2257 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: Maximum call stack size exceeded[39m
+2021-06-28 15:08:54:854 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-28 15:08:54:854 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-28 15:10:46:1046 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-28 15:10:46:1046 [31merror[39m: [31mFROM: EPB-server: Invalid type info received, aborting.. Error: "name" is required[39m
+2021-06-28 15:21:00:210 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, String, number, Number, boolean, Boolean, date, Date, [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, Int, [int], [Int], messageOptions, avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-28 15:21:00:210 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-28 15:26:51:2651 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'options' of undefined[39m
+2021-06-28 15:32:31:3231 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, string[], String, String[], number, number[], Number, Number[], boolean, boolean[], Boolean, Boolean[], date, date[], Date, Date[], [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, int[], Int, Int[], [int], [Int], avatarOptionsType[], addUserAuthOptions[], createSchemaOptions[], createCustomTypeOptions[], ResolverOptions[], Query[], Mutation[], [avatarOptionsType], [addUserAuthOptions], [createSchemaOptions], [createCustomTypeOptions], [ResolverOptions], [Query], [Mutation], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-28 15:32:31:3231 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-28 15:40:55:4055 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, string[], String, String[], number, number[], Number, Number[], boolean, boolean[], Boolean, Boolean[], date, date[], Date, Date[], [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, int[], Int, Int[], [int], [Int], avatarOptionsType[], addUserAuthOptions[], createSchemaOptions[], createCustomTypeOptions[], ResolverOptions[], Query[], Mutation[], [avatarOptionsType], [addUserAuthOptions], [createSchemaOptions], [createCustomTypeOptions], [ResolverOptions], [Query], [Mutation], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-28 15:40:55:4055 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-28 15:44:31:4431 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'options' of undefined[39m
+2021-06-28 15:46:35:4635 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'options' of undefined[39m
+2021-06-28 15:49:06:496 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (76:44)[39m
+[31m[error]   74 |[39m
+[31m[error]   75 |         // Action: Get all messages or portion of messages according to identifier.[39m
+[31m[error] > 76 |         getMessages: async (_:any, [object Object]) => {[39m
+[31m[error]      |                                            ^[39m
+[31m[error]   77 |           // [39m
+[31m[error]   78 |           // return [messageOptions][39m
+[31m[error]   79 |       },[39m
+[31mapp.ts 160ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 20ms[39m
+
+[31mtypeDefs.ts 12ms[39m
+2021-06-28 15:54:59:5459 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (76:44)[39m
+[31m[error]   74 |[39m
+[31m[error]   75 |         // Action: Get all messages or portion of messages according to identifier.[39m
+[31m[error] > 76 |         getMessages: async (_:any, [object Object]) => {[39m
+[31m[error]      |                                            ^[39m
+[31m[error]   77 |           // [39m
+[31m[error]   78 |           // return [messageOptions][39m
+[31m[error]   79 |       },[39m
+[31mapp.ts 174ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 19ms[39m
+
+[31mtypeDefs.ts 13ms[39m
+2021-06-28 15:57:22:5722 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (76:44)[39m
+[31m[error]   74 |[39m
+[31m[error]   75 |         // Action: Get all messages or portion of messages according to identifier.[39m
+[31m[error] > 76 |         getMessages: async (_:any, [object Object]) => {[39m
+[31m[error]      |                                            ^[39m
+[31m[error]   77 |           // [39m
+[31m[error]   78 |           // return [messageOptions][39m
+[31m[error]   79 |       },[39m
+[31mapp.ts 169ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 19ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-06-28 16:20:01:201 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" must be one of [string, string[], String, String[], number, number[], Number, Number[], boolean, boolean[], Boolean, Boolean[], date, date[], Date, Date[], [string], [String], [number], [Number], [boolean], [Boolean], [date], [Date], int, int[], Int, Int[], [int], [Int], avatarOptionsType[], addUserAuthOptions[], createSchemaOptions[], createCustomTypeOptions[], ResolverOptions[], Query[], Mutation[], [avatarOptionsType], [addUserAuthOptions], [createSchemaOptions], [createCustomTypeOptions], [ResolverOptions], [Query], [Mutation], avatarOptionsType, addUserAuthOptions, createSchemaOptions, createCustomTypeOptions, ResolverOptions, Query, Mutation][39m
+2021-06-28 16:20:01:201 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-28 17:02:48:248 [31merror[39m: [31mFROM: EPB-server: ENOENT: no such file or directory, open '../logs/all.log'[39m
+2021-06-28 17:02:49:249 [31merror[39m: [31mFROM: EPB-server: ENOENT: no such file or directory, open '../logs/all.log'[39m
+2021-06-28 17:04:34:434 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:04:35:435 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:04:43:443 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:04:44:444 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:04:53:453 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:04:54:454 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:14:16:1416 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:14:17:1417 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:14:22:1422 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:16:10:1610 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:18:28:1828 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:20:54:2054 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:20:55:2055 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:22:14:2214 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:22:15:2215 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:22:39:2239 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:22:40:2240 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:23:28:2328 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:23:28:2328 [31merror[39m: [31mFROM: EPB-server: spawn UNKNOWN[39m
+2021-06-28 17:25:28:2528 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:26:04:264 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:26:04:264 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:42:35:4235 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:42:41:4241 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:42:45:4245 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:44:20:4420 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:44:46:4446 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:45:51:4551 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:45:59:4559 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:46:04:464 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:46:50:4650 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:47:06:476 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:48:43:4843 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:48:52:4852 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:49:09:499 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:49:22:4922 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:49:26:4926 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:49:53:4953 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:50:24:5024 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:50:45:5045 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 17:50:53:5053 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m

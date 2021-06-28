@@ -1,4 +1,5 @@
 import { GraphQLScalarType } from "graphql";
+
 // TODO:
 // CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TS
 //  creating typeDef bugs: 1. typedef structure is nameOptions: { options: {}, kaki:string, ... }
@@ -38,6 +39,7 @@ import {
   getActions,
   getResolverNames,
 } from "./utils/codeToString";
+import * as utils from "./utils/utils";
 import * as create from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
@@ -85,6 +87,9 @@ export const resolvers = {
         const resolverCreationRes = await create.createNewResolver({
           options: options,
         });
+        setTimeout(async () => {
+          await utils.restartServer();
+        }, 1000);
         return resolverCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
@@ -99,6 +104,9 @@ export const resolvers = {
         const interfaceCreationRes = await create.createNewInterface({
           options: options,
         });
+        setTimeout(async () => {
+          await utils.restartServer();
+        }, 1000);
         return interfaceCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
@@ -114,6 +122,9 @@ export const resolvers = {
         const schemaCreationRes = await create.createDbSchema({
           options: options,
         });
+        setTimeout(async () => {
+          await utils.restartServer();
+        }, 1000);
         return schemaCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);

@@ -1,6 +1,6 @@
 import Joi from "joi";
 import Logger from "../logger/logger";
-import { validTypes, validResolverTypes } from "../consts";
+import { validResolverTypes } from "../consts";
 import { allTypeNames } from "./";
 import { validateVars, validateUnique, parseOptions } from "./validation.util";
 
@@ -11,9 +11,7 @@ const interval = setInterval(() => {
         name: Joi.string()
           .required()
           .invalid(...allTypeNames),
-        type: Joi.string()
-          .required()
-          .valid(...validResolverTypes),
+        type: Joi.string().required(),
         returnType: Joi.string().required(),
         description: Joi.string().required(),
         properties: Joi.array(),

@@ -8,7 +8,7 @@ import * as types from "../types";
 import Joi from "joi";
 
 const typeSchema = Joi.object({
-  types: Joi.array().items(Joi.string().valid(...validTypes)),
+  types: Joi.array().items(Joi.string()),
 });
 const validateTypeList = (typeList: string[]) => {
   let allTypes: string[] = [];

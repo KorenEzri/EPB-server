@@ -1,11 +1,14 @@
 import { ResolverOptions, createCustomTypeOptions } from "../../types";
+import { typeDefs } from "../../typeDefs";
 import { getTypeDefs } from "../codeToString";
-import Logger from "../../logger/logger";
 import { promisify } from "util";
+import Logger from "../../logger/logger";
 import fs from "fs";
 import * as utils from "../utils";
-import { toLineArray } from "../utils";
 const write = promisify(fs.writeFile);
+const allTypeDefinitions = typeDefs.definitions.map((definition: any) =>
+  definition.name.value.trim()
+);
 
 const grabTypeDefsAndInsertNewTypeDef = async (
   name: string,
@@ -22,9 +25,17 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   if (!allTypeDefsAsString)
     return "Error with utils/createNew/createTypeDef.ts, getTypeDefs() returned undefined!";
   const typeDefLineArray = utils.toLineArray(allTypeDefsAsString);
-  if (typeDefLineArray.includes(typeDef))
+
+  if (
+    typeDefLineArray.includes(typeDef) ||
+    utils.isCustomType(`${name}Options`) ||
+    allTypeDefinitions.includes(`${name.trim()}Options`)
+  ) {
     // check if typeDef already exists
-    return "Duplicate type definitions detected, aborting..";
+    return { error: "Duplicate type definitions detected, aborting.." };
+  } else {
+    allTypeDefinitions.push(`${name.trim()}Options`);
+  }
   let finishedTypeDefs = insertTypeDefInterface(
     allTypeDefsAsString,
     name,
@@ -34,7 +45,8 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   );
   let typeInsertEndIndex: string | number =
     type === "Query" ? "# query-end" : "# mutation-end";
-  typeInsertEndIndex = toLineArray(finishedTypeDefs)
+  typeInsertEndIndex = utils
+    .toLineArray(finishedTypeDefs)
     .map((line: string) => line.trim())
     .indexOf(typeInsertEndIndex);
   if (returnType) {
@@ -82,9 +94,11 @@ const insertTypeDefInterface = (
   if (returnType) interfacePreFix = "input";
   const handlerA = "# generated definitions";
   const interfaceString = JSON.stringify(typeDefInterface, null, 2);
-  const typeDef = `\n ${interfacePreFix} ${name}Options ${interfaceString}\n# added at: ${new Date()}`;
+  const typeDef = interfaceString
+    ? `\n ${interfacePreFix} ${name}Options ${interfaceString}\n# added at: ${new Date()}`
+    : undefined;
   let finishedInterfaceDef = utils.replaceAllInString(
-    typeDef,
+    typeDef || "",
     ['"', "Number"],
     ["", "Int"]
   );
@@ -101,15 +115,16 @@ export const createNewTypeDef = async ({
 }: ResolverOptions | createCustomTypeOptions) => {
   Logger.http("FROM: EPB-server: Creating a new type definition...");
   try {
-    const res = await grabTypeDefsAndInsertNewTypeDef(
+    const res: any = await grabTypeDefsAndInsertNewTypeDef(
       options.name,
       options.properties,
       options.type,
       options.returnType
     );
     // calls fromOptionsToGQLTypeDefinition()
-    if (!res) {
-      Logger.error("Error creating type definition!");
+    if (!res || res.error) {
+      Logger.error(`Error creating type definition! ${res.error}`);
+      if (res.error) return res.error;
       return res;
     }
     await write("./typeDefs.ts", res);
