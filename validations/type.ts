@@ -31,8 +31,8 @@ export let typeSchema = Joi.object({
 export const validateTypeCreation = async (options: any) => {
   const varsValid = validateVars(options);
   if (varsValid) return varsValid;
-  const uniqueValid = await validateUnique(options);
-  if (uniqueValid) return uniqueValid;
+  // const uniqueValid = await validateUnique(options);
+  // if (uniqueValid) return uniqueValid;
   const parsedOptions = parseOptions(options);
   const { error, value } = typeSchema.validate(parsedOptions);
   if (error) {

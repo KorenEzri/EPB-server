@@ -6,12 +6,13 @@ import { Document } from 'mongoose'
 
 export interface messageOptions {
   options: {
-    content: string,
+    sender: string,
+    follows: string[],
     likes: number,
-    followers: string[]
+    content: string
   }
 }
-// added at: Tue Jun 29 2021 08:10:07 GMT+0300 (Israel Daylight Time) 
+// added at: Tue Jun 29 2021 23:03:07 GMT+0300 (Israel Daylight Time) 
 
 // exports section
 export interface messageDoc extends Document, messageOptions {}

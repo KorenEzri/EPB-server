@@ -2,9 +2,10 @@ import mongoose, { Schema } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
 import { messageDoc } from "../../types";
 const messageSchema: Schema = new mongoose.Schema({
-  content: String,
+  sender: String,
+  follows: Array,
   likes: Number,
-  followers: Array,
+  content: String,
 });
 messageSchema.plugin(uniqueValidator);
 messageSchema.set("toJSON", {

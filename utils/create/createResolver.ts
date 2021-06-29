@@ -1,4 +1,4 @@
-import { createCustomTypeOptions, ResolverOptions } from "../../types";
+import { ResolverOptions } from "../../types";
 import { getResolvers } from "../codeToString";
 import Logger from "../../logger/logger";
 import { createNewInterface } from "./";
@@ -13,6 +13,7 @@ const insertImportStatement = (resolvers: string, name: string) => {
     .map((line: string) => line.trim());
   const startIndex = splatResolvers.indexOf("// option types");
   const endIndex = splatResolvers.indexOf("// option types end");
+  let importName: string = "";
   const importStatement = splatResolvers
     .map((line: string, index: number) => {
       if (index >= startIndex + 1 && index <= endIndex - 1) {
@@ -24,7 +25,11 @@ const insertImportStatement = (resolvers: string, name: string) => {
     });
   if (!importStatement[0]) return "err";
   if (importStatement.length > 1) {
-    importStatement.splice(1, 0, ` ${name}Options,`);
+    let nameOptionsStringIncluded = name.includes("Options");
+    nameOptionsStringIncluded
+      ? (importName = ` ${name},`)
+      : (importName = ` ${name}Options,`);
+    importStatement.splice(1, 0, importName);
     splatResolvers.splice(
       startIndex + 1,
       endIndex - startIndex - 1,
@@ -39,7 +44,8 @@ const insertImportStatement = (resolvers: string, name: string) => {
 };
 const toResolver = ({ options }: ResolverOptions) => {
   const { name, comment, returnType, properties, description } = options;
-  const { resolverInterface, varList } = utils.parseResolverVarlist(properties);
+  const { resolverInterface, varList, importList } =
+    utils.parseResolverVarlist(properties);
   let stringifiedVarList: string[] = [];
   if (Array.isArray(varList)) {
     stringifiedVarList = varList.map((variable) => {
@@ -57,13 +63,13 @@ const toResolver = ({ options }: ResolverOptions) => {
         `;
   resolverString = utils.replaceAllInString(resolverString, "\t", "");
   resolverString = utils.replaceAllInString(resolverString, '"', "");
-  return resolverString;
+  return { fullResolver: resolverString, importList };
 };
 
 export const createNewResolver = async ({ options }: ResolverOptions) => {
   Logger.http("FROM: EPB-server: Creating a new resolver...");
-  const fullResolver = toResolver({ options: options });
-  let allResolversAsString = await getResolvers(); // current resolver file as string
+  const { fullResolver, importList } = toResolver({ options: options });
+  let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
   if (!allResolversAsString)
     return "Error in utils/createNew/createResolver.ts: No resolvers found!";
   if (options.properties.length >= 3) {
@@ -75,6 +81,12 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
       options.name
     );
   }
+  importList.forEach((toImport: string) => {
+    allResolversAsString = insertImportStatement(
+      allResolversAsString,
+      toImport
+    );
+  });
   const finishedResolvers = utils.insertToString(
     allResolversAsString,
     fullResolver,

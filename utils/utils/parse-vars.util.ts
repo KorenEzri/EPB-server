@@ -9,13 +9,16 @@ export const isCustomType = (type: string) => {
 };
 // checks if the type is a custom type (IE an existing type that is not string, number, etc)
 
-export const addToCustomTypes = (type: string) => {
-  allCustomTypesWithArrayTypes.push(type);
-  allCustomTypesWithArrayTypes.push(`${type}[]`);
-  allCustomTypesWithArrayTypes.push(`[${type}]`);
-  allCustomTypesWithArrayTypes.push(`${type}Options`);
-  allCustomTypesWithArrayTypes.push(`${type}Options[]`);
-  allCustomTypesWithArrayTypes.push(`[${type}Options]`);
+export const addToCustomTypes = (name: string, gqlType: string) => {
+  allCustomTypesWithArrayTypes.push(name);
+  allCustomTypesWithArrayTypes.push(`${name}[]`);
+  allCustomTypesWithArrayTypes.push(`[${name}]`);
+  allCustomTypesWithArrayTypes.push(`${name}Options`);
+  allCustomTypesWithArrayTypes.push(`${name}Options[]`);
+  allCustomTypesWithArrayTypes.push(`[${name}Options]`);
+  allCustomTypesWithArrayTypes.push(`${name}Options${gqlType}[]`);
+  allCustomTypesWithArrayTypes.push(`[${name}Options${gqlType}]`);
+  allCustomTypesWithArrayTypes.push(`[${name}Options${gqlType}]`);
 };
 
 export const parseArrayOperatorTypes = (type: string, gqlArray?: boolean) => {
@@ -51,20 +54,28 @@ export const parseInterfaceVarlist = (vars: string[]) => {
 // also return importList - an array of custom types to import later in the interface's file.
 export const parseResolverVarlist = (vars: string[]) => {
   let varList = utils.splitNameType(vars);
+  let importList: string[] = [];
   const resolverInterface: any = vars.length < 3 ? undefined : { options: {} };
-  if (!Array.isArray(varList)) return { importList: [], varList };
+  if (!Array.isArray(varList)) return { importList: [""], varList };
   varList = varList.map((variable) => {
     let type = utils.removeLastWordFromString(variable.type, ["Type", "Input"]);
-    if (!isCustomType(type)) {
+    if (
+      !isCustomType(type) &&
+      !isCustomType(`${type}Input`) &&
+      !isCustomType(`${type}Type`)
+    ) {
       type = type.toLowerCase();
+    } else {
+      importList.push(type);
     }
+
     type = utils.replaceAllInString(type, "int", "number");
     type = utils.replaceAllInString(type, "Int", "number");
     type = utils.replaceAllInString(type, "date", "Date");
     if (resolverInterface) resolverInterface.options[variable.name] = type;
     return { name: variable.name, type };
   });
-  return { resolverInterface, varList };
+  return { resolverInterface, varList, importList };
 };
 //
 const arragenMongoTypes = (type: string) => {
@@ -125,11 +136,36 @@ export const parseMongoVarlist = (vars: string[], uniques: string[]) => {
   return { schemaInterface, varList };
 };
 //
-export const parseTypeDefVarlist = (vars: string[], name: string) => {
-  const varList = utils.splitNameType(vars);
+export const parseTypeDefVarlist = (
+  vars: string[],
+  name: string,
+  type: string
+) => {
+  let varList = utils.splitNameType(vars);
   const typeDefAsInterface: any = vars.length < 1 ? undefined : {};
-  // if we have more than three properties, create a type definition especially for the custom type.
-  // else, we'll just add the properties as params in the query/mutation.
+  // if we have more than one property, create a type definition especially for the custom type.
+  // else, we'll just add the property as params in the query/mutation.
+  if (Array.isArray(varList)) {
+    const areAllVarsCustomTypes = varList.map((variable) => {
+      if (utils.isCustomType(`${variable.type}`)) {
+        return "custom";
+      } else return "not_custom";
+    });
+    if (!areAllVarsCustomTypes.includes("not_custom"))
+      if (varList.length > 1) {
+        varList.forEach((variable) => {
+          typeDefAsInterface[variable.name] = variable.type;
+        });
+        return {
+          varList: `${name}OptionsInput`,
+          typeDefInterface: typeDefAsInterface,
+        };
+      } else {
+        return {
+          varList: `${varList[0].name}:${varList[0].type}`,
+        };
+      }
+  }
   if (!Array.isArray(varList))
     return { varList: [], typeDefInterface: typeDefAsInterface };
   const variableStringList = varList.map((variable) => {

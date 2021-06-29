@@ -1,23 +1,44 @@
 import { GraphQLScalarType } from "graphql";
 
-// TODO:
-// CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TS
-//  creating typeDef bugs: 1. typedef structure is nameOptions: { options: {}, kaki:string, ... }
-// TODO:
-//  - add prebuilt actions: {
-//    - user auth - four days {
-// -  TODO:
-// -        - add option - i forgot what it was.. OH! add custom types to be available as return or receive types when creating interfaces
-// -        - add auto export of schemas from index.ts of db schema folder.
-// }
-//    - CRUD operations for DB schema - four days
-//    - Scalar type creator!! Then, add suppport for || in typedef creation as well.
-// {
-//////////// DUE: 01.07.21, Sunday. //////////////////
-// TODO:
-//  - code cleanup and tests
-//  - add documentation, create a presentation
-//////////// DUE: 05.07.21, Sunday. //////////////////
+/*
+TODO:
+
+- Add compatibility for custom types when creating a resolver on the "...And will receive?" section
+- Add custom type suggestions for client.
+CRUD
+- Add list of schemas to select box on "Select a schema" @ add/crud
+- Add "Select all" button when choosing CRUD actions
+- Add a json file for each schema and a function that checks which CRUD operations are available for the schema.
+- Make CRUD-composing functions.
+DUE: 4.07.21, Saturday night.
+
+CHAT APP PRESENTATION
+- Make a 100% working chatapp presentation
+- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TS
+DUE: 8.07.21, Thursday morning.
+
+PRESENTATION
+- Make a presentation to depict the project
+- Add documentation to your Github repo.
+DUE: 9.07.21, Friday night.
+
+AUTH
+- Add complete user auth system with the click of a button - will include:
+- public user schema
+- auth user schema
+four GQLtypes - input and type for user, input and type for auth
+CRUD operations for both schemas:
+- create - with hashing of passwords and saving them in a DB
+- delete - to delete
+- read - to get the user
+- login - to log in with password.
+- cookies on backend.
+DUE: 12.07.21, Monday morning.
+
+//  - add more options to the CLI - make it customizable
+//  - make sure creating only a DB schema works
+*/
+//////////// DUE: 13.07.21, Sunday. //////////////////
 
 import {
   validateResolverCreation,
@@ -26,6 +47,7 @@ import {
 } from "./validations";
 // option types
 import {
+  messageOptions,
   addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
@@ -74,10 +96,10 @@ export const resolvers = {
       return await getResolverNames();
     },
 
-    // Action: dadsadasdsadas
+    // Action: asdadsadsad
     getMessages: async (_: any) => {
       //
-      // return [messageOptions]
+      // return [messageOptionsType]
     },
 
     // query-end
@@ -140,6 +162,12 @@ export const resolvers = {
     addUserAuth: async (_: any, { options }: addUserAuthOptions) => {
       const res = await add.addUserAuthToBackend({ options: options });
       if (res) return "OK";
+      //
+      // return String
+    },
+
+    // Action: asdsadsdad
+    createMessage: async (_: any, message: messageOptions) => {
       //
       // return String
     },

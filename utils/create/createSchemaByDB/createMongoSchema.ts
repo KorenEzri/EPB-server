@@ -64,7 +64,7 @@ const writeSchemaToFile = async (name: string, schema: string) => {
   const schemaFilepath = `./db/schemas/${name}Schema.ts`;
   const doesSchemaFileExist = await utils.checkIfFileAlreadyExists(
     "./db/schemas",
-    schemaFilepath
+    `${name}Schema.ts`
   );
   if (!doesSchemaFileExist) {
     await write(schemaFilepath, schema);

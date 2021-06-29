@@ -1,7 +1,7 @@
 import Joi from "joi";
 import Logger from "../logger/logger";
 import { validResolverTypes } from "../consts";
-import { allTypeNames } from "./";
+import { allTypeNames } from ".";
 import { validateVars, validateUnique, parseOptions } from "./validation.util";
 
 const interval = setInterval(() => {

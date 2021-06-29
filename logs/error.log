@@ -608,3 +608,29 @@
 2021-06-29 07:20:00:200 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
 2021-06-29 08:04:31:431 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
 2021-06-29 08:08:23:823 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 08:14:11:1411 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\messageOptions.ts'[39m
+2021-06-29 08:18:28:1828 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 08:18:32:1832 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 08:19:01:191 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:02:47:247 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:03:07:37 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:09:57:957 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:10:58:1058 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:12:07:127 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:13:01:131 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:13:46:1346 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:16:10:1610 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:16:15:1615 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 11:16:15:1615 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 11:17:16:1716 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 23:02:52:252 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 23:02:52:252 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 23:03:07:37 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-29 23:05:49:549 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 23:53:38:5338 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 23:53:59:5359 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 23:54:15:5415 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 23:54:22:5422 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-30 00:44:12:4412 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-30 00:54:28:5428 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-30 01:39:10:3910 [31merror[39m: [31mCould not locate types.ts/index.ts file, ENOENT: no such file or directory, access 'C:\Users\Koren\Documents\EPB-server\types.ts\index.ts'[39m

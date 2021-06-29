@@ -8,7 +8,6 @@ const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);
 const access = promisify(fs.access);
-const unlink = promisify(fs.unlink);
 
 export const addExportStatement = async (
   filePath: string,

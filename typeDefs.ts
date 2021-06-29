@@ -5,12 +5,21 @@ export const typeDefs = gql`
 
   # generated definitions
 
-  type messageOptions {
-    content: String
+  input messageOptionsInput {
+    sender: String
+    follows: [String]
     likes: Int
-    followers: [String]
+    content: String
   }
-  # added at: Tue Jun 29 2021 08:10:07 GMT+0300 (Israel Daylight Time)
+  # added at: Tue Jun 29 2021 23:03:07 GMT+0300 (Israel Daylight Time)
+
+  type messageOptionsType {
+    sender: String
+    follows: [String]
+    likes: Int
+    content: String
+  }
+  # added at: Tue Jun 29 2021 23:02:44 GMT+0300 (Israel Daylight Time)
 
   input addUserAuthOptions {
     publicUserInputs: [String]
@@ -60,7 +69,7 @@ export const typeDefs = gql`
     getActions: [String]
     getAllResolverNames: [String]
 
-    getMessages: [messageOptions]
+    getMessages: [messageOptionsType]
 
     # query-end
   }
@@ -69,6 +78,7 @@ export const typeDefs = gql`
     createCustomType(options: createCustomTypeOptions): String
     createSchema(options: createSchemaOptions): String
     addUserAuth(options: addUserAuthOptions): String
+    createMessage(message: messageOptionsInput): String
     # mutation-end
   }
 `;

@@ -47,12 +47,12 @@ export const validateUnique = async (options: any) => {
     if (allResolverNames.includes(`${options.name}Options`))
       return {
         error: true,
-        message: "duplicate definitions detected, aborting.",
+        message: `duplicate definitions detected, aborting. Duplicate name: ${options.name}Options`,
       };
     if (allResolverNames.includes(`${options.name}`))
       return {
         error: true,
-        message: "duplicate definitions detected, aborting.",
+        message: `duplicate definitions detected, aborting. Duplicate name: ${options.name}`,
       };
   }
   if (allTypeDefs) {
@@ -94,9 +94,17 @@ export const parseOptions = (
     const varType = splat[1];
     return { var: varName, type: varType };
   });
-  validateOpts.properties = varList.map(
-    (property: { var: string; type: string }) => property.type.trim()
-  );
+  try {
+    validateOpts.properties = varList.map(
+      (property: { var: string; type: string }) => property.type.trim()
+    );
+  } catch ({ message }) {
+    Logger.error(
+      `Error at validation.util.ts, at parseOptions() ~line 97: `,
+      message
+    );
+    return message;
+  }
   const error = validateTypeList(validateOpts.properties);
   if (error) return error;
   const returnType = validateOpts.returnType;
