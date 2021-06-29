@@ -1,15 +1,25 @@
 const { gql } = require("apollo-server-express");
 export const typeDefs = gql`
   scalar Date
+  #
+
   # generated definitions
 
-  type avatarOptionsType {
-    id: String
-    kaki: Int
-    amount: [String]
+  input messageOptionsInput {
+    sender: String
+    follows: [String]
+    likes: Int
+    content: String
   }
-  #asdasda
-  # added at: Sat Jun 26 2021 10:01:17 GMT+0300 (Israel Daylight Time)
+  # added at: Tue Jun 29 2021 23:03:07 GMT+0300 (Israel Daylight Time)
+
+  type messageOptionsType {
+    sender: String
+    follows: [String]
+    likes: Int
+    content: String
+  }
+  # added at: Tue Jun 29 2021 23:02:44 GMT+0300 (Israel Daylight Time)
 
   input addUserAuthOptions {
     publicUserInputs: [String]
@@ -40,7 +50,10 @@ export const typeDefs = gql`
   }
   # added at: Sun Jun 20 2021 15:26:15 GMT+0300 (Israel Daylight Time)
 
+  #
+
   # generated definitions end
+
   input ResolverOptions {
     name: String
     comment: String
@@ -55,6 +68,9 @@ export const typeDefs = gql`
     getTypeDefs: String
     getActions: [String]
     getAllResolverNames: [String]
+
+    getMessages: [messageOptionsType]
+
     # query-end
   }
   type Mutation {
@@ -62,6 +78,7 @@ export const typeDefs = gql`
     createCustomType(options: createCustomTypeOptions): String
     createSchema(options: createSchemaOptions): String
     addUserAuth(options: addUserAuthOptions): String
+    createMessage(message: messageOptionsInput): String
     # mutation-end
   }
 `;

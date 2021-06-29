@@ -1,15 +1,14 @@
-import { resolvers } from "../resolvers";
-import { createSchemaOptions } from "../types";
-import { validTypes } from "../consts";
 import { getResolverNames, getTypeDefs } from "../utils/codeToString";
+import { replaceAllInString } from "../utils/utils";
+import Logger from "../logger/logger";
+import { validTypes } from "../consts";
+import { resolvers } from "../resolvers";
 import * as schemas from "../db/schemas";
 import * as types from "../types";
 import Joi from "joi";
-import Logger from "../logger/logger";
-import { replaceAllInString } from "../utils/createNew/string.util";
 
 const typeSchema = Joi.object({
-  types: Joi.array().items(Joi.string().valid(...validTypes)),
+  types: Joi.array(),
 });
 const validateTypeList = (typeList: string[]) => {
   let allTypes: string[] = [];
@@ -48,12 +47,12 @@ export const validateUnique = async (options: any) => {
     if (allResolverNames.includes(`${options.name}Options`))
       return {
         error: true,
-        message: "duplicate definitions detected, aborting.",
+        message: `duplicate definitions detected, aborting. Duplicate name: ${options.name}Options`,
       };
     if (allResolverNames.includes(`${options.name}`))
       return {
         error: true,
-        message: "duplicate definitions detected, aborting.",
+        message: `duplicate definitions detected, aborting. Duplicate name: ${options.name}`,
       };
   }
   if (allTypeDefs) {
@@ -95,9 +94,17 @@ export const parseOptions = (
     const varType = splat[1];
     return { var: varName, type: varType };
   });
-  validateOpts.properties = varList.map(
-    (property: { var: string; type: string }) => property.type.trim()
-  );
+  try {
+    validateOpts.properties = varList.map(
+      (property: { var: string; type: string }) => property.type.trim()
+    );
+  } catch ({ message }) {
+    Logger.error(
+      `Error at validation.util.ts, at parseOptions() ~line 97: `,
+      message
+    );
+    return message;
+  }
   const error = validateTypeList(validateOpts.properties);
   if (error) return error;
   const returnType = validateOpts.returnType;

@@ -1,9 +1,9 @@
 import { createSchemaOptions } from "../../types";
 import { checkIfOK } from "../../utils/codeToString";
-import { promisify } from "util";
-import Logger from "../../logger/logger";
-import fs from "fs";
 import * as create from "./createSchemaByDB";
+import Logger from "../../logger/logger";
+import { promisify } from "util";
+import fs from "fs";
 const read = promisify(fs.readFile);
 
 const currentDatabase = async (path: string) => {
