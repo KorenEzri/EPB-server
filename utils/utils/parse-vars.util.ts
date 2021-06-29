@@ -9,11 +9,20 @@ export const isCustomType = (type: string) => {
 };
 // checks if the type is a custom type (IE an existing type that is not string, number, etc)
 
-export const parseArrayOperatorTypes = (type: string) => {
+export const addToCustomTypes = (type: string) => {
+  allCustomTypesWithArrayTypes.push(type);
+  allCustomTypesWithArrayTypes.push(`${type}[]`);
+  allCustomTypesWithArrayTypes.push(`[${type}]`);
+  allCustomTypesWithArrayTypes.push(`${type}Options`);
+  allCustomTypesWithArrayTypes.push(`${type}Options[]`);
+  allCustomTypesWithArrayTypes.push(`[${type}Options]`);
+};
+
+export const parseArrayOperatorTypes = (type: string, gqlArray?: boolean) => {
   if (type.includes("[") && type.includes("]")) {
     let typeString: string | string[] = type.split("[").join("").split("]");
-    typeString = typeString + "[]";
-    typeString = typeString.split(",").join("");
+    typeString = gqlArray ? `[${typeString.join("")}]` : typeString + "[]";
+    typeString = gqlArray ? typeString : typeString.split(",").join("");
     return typeString;
   } else return type;
 };
@@ -132,7 +141,12 @@ export const parseTypeDefVarlist = (vars: string[], name: string) => {
     } else {
       // if it's not, we want to capitalize it's first letter, as per GQL syntax.
       const capitalizedType = utils.capitalizeFirstLetter(type);
-      if (typeDefAsInterface) typeDefAsInterface[name] = capitalizedType;
+      if (typeDefAsInterface) {
+        typeDefAsInterface[name] = parseArrayOperatorTypes(
+          capitalizedType,
+          true
+        );
+      }
       return `${name}:${capitalizedType}`;
     }
   });

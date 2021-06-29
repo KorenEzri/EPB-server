@@ -74,6 +74,12 @@ export const resolvers = {
       return await getResolverNames();
     },
 
+    // Action: dadsadasdsadas
+    getMessages: async (_: any) => {
+      //
+      // return [messageOptions]
+    },
+
     // query-end
   },
   Mutation: {
@@ -104,9 +110,7 @@ export const resolvers = {
         const interfaceCreationRes = await create.createNewInterface({
           options: options,
         });
-        setTimeout(async () => {
-          await utils.restartServer();
-        }, 1000);
+        await utils.restartServer();
         return interfaceCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);

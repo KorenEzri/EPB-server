@@ -34,6 +34,7 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     // check if typeDef already exists
     return { error: "Duplicate type definitions detected, aborting.." };
   } else {
+    utils.addToCustomTypes(name.trim());
     allTypeDefinitions.push(`${name.trim()}Options`);
   }
   let finishedTypeDefs = insertTypeDefInterface(
@@ -69,7 +70,8 @@ const fromOptionsToGQLTypeDefinition = (
     name
   );
   if (returnType) {
-    if (!utils.isCustomType(returnType)) {
+    if (utils.isCustomType(returnType)) {
+    } else {
       returnType = utils.capitalizeFirstLetter(returnType);
     }
   }
@@ -90,7 +92,13 @@ const insertTypeDefInterface = (
   returnType?: string
 ) => {
   let interfacePreFix;
-  type === "Query" ? (interfacePreFix = "type") : (interfacePreFix = "input");
+  type === "Query"
+    ? (interfacePreFix = "type")
+    : type === "type"
+    ? (interfacePreFix = type)
+    : type === "input"
+    ? (interfacePreFix = "input")
+    : (interfacePreFix = "type");
   if (returnType) interfacePreFix = "input";
   const handlerA = "# generated definitions";
   const interfaceString = JSON.stringify(typeDefInterface, null, 2);

@@ -578,3 +578,33 @@
 2021-06-28 17:50:24:5024 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
 2021-06-28 17:50:45:5045 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
 2021-06-28 17:50:53:5053 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 21:57:31:5731 [31merror[39m: [31mFROM: EPB-server: Invalid typeList info received for validateTypeList() @ validation.util.ts ~line 24.[39m
+[31maborting.. Error: "types[0]" is not allowed to be empty[39m
+2021-06-28 21:57:31:5731 [31merror[39m: [31mFROM: EPB-server: Invalid resolver info received, aborting.. Error: "name" is required[39m
+2021-06-28 22:00:07:07 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:03:43:343 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:03:53:353 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:03:58:358 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:03:58:358 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:04:03:43 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:04:03:43 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:04:10:410 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:04:10:410 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:04:33:433 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:05:36:536 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:05:36:536 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:05:52:552 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:06:14:614 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:06:14:614 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:06:24:624 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:06:49:649 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:07:49:749 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:08:06:86 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:08:22:822 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:08:26:826 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:08:44:844 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:09:08:98 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-28 22:10:22:1022 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 07:20:00:200 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 08:04:31:431 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-29 08:08:23:823 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m

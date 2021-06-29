@@ -77,7 +77,7 @@ const writeSchemaToFile = async (name: string, schema: string) => {
 };
 export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   Logger.http("FROM: EPB-server: Creating a MongoDB schema...");
-  await createNewInterface({ options: options });
+  // await createNewInterface({ options: options });
   const mongoDBSchema = toMongoSchema({ options: options });
   Logger.http(
     "FROM: EPB-server: Schema created, updating interface file to include a mongo document export..."

@@ -5,6 +5,13 @@ export const typeDefs = gql`
 
   # generated definitions
 
+  type messageOptions {
+    content: String
+    likes: Int
+    followers: [String]
+  }
+  # added at: Tue Jun 29 2021 08:10:07 GMT+0300 (Israel Daylight Time)
+
   input addUserAuthOptions {
     publicUserInputs: [String]
     authUserInputs: [String]
@@ -52,6 +59,9 @@ export const typeDefs = gql`
     getTypeDefs: String
     getActions: [String]
     getAllResolverNames: [String]
+
+    getMessages: [messageOptions]
+
     # query-end
   }
   type Mutation {
