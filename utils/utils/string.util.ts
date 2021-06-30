@@ -98,20 +98,3 @@ export const removeLastWordFromString = (string: string, word: string[]) => {
   });
   return string;
 };
-// export const removeTypePostfix = (type: string) => {
-//   const removeType = (type: string) => {
-//     const firstIndex = type.indexOf("Type");
-//     const lastIndex = type.lastIndexOf("Type");
-//     if (firstIndex !== lastIndex) {
-//       return;
-//     }
-//   };
-//   if (!type.split("Type")[1]) type = removeTypePostfix(type);
-//   if (type.includes("Type")) {
-//     type = type.split("Type")[0];
-//   }
-//   if (type.includes("Input")) {
-//     type = type.split("Input")[0];
-//   }
-//   return type;
-// };

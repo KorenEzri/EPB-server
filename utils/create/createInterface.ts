@@ -2,6 +2,7 @@ import { createCustomTypeOptions } from "../../types";
 import { createNewTypeDef } from "./createTypeDef";
 import { promisify } from "util";
 import Logger from "../../logger/logger";
+import * as parseVars from "../utils/parse-vars";
 import * as utils from "../utils";
 import fs from "fs";
 const write = promisify(fs.writeFile);
@@ -23,7 +24,7 @@ const toInterfaceString = (
 const fromOptionsToInterfaceString = ({ options }: createCustomTypeOptions) => {
   let interfaceOpts: any = { options: {} }; // this will be the interface as a string to write to a file
   const { properties, name } = options; // properties of the interface and it's name (ie const "name" = {...})
-  const { importList, varList } = utils.parseInterfaceVarlist(properties);
+  const { importList, varList } = parseVars.parseInterfaceVarlist(properties);
   // importList = an array of import statements to add to the interface utils.
   // varList = an array of { name: string, type: string } to compose the interface object string.
   if (!Array.isArray(varList)) return; // always will be an array, this is for TS

@@ -1,8 +1,8 @@
 import { createSchemaOptions } from "../../../types";
-import { createNewInterface } from "../../create";
 import { imports } from "../../../consts/imports";
 import Logger from "../../../logger/logger";
 import * as utils from "../../utils";
+import * as parseVars from "../../utils/parse-vars";
 import { promisify } from "util";
 import fs from "fs";
 const write = promisify(fs.writeFile);
@@ -32,7 +32,7 @@ const updateInterfaceFile = async ({ options }: createSchemaOptions) => {
 const toMongoSchema = (options: createSchemaOptions) => {
   const { properties, name, comment, uniqueIdentifiers } = options.options;
   const mongoImportsList = imports.statements.db.mongodb;
-  const { schemaInterface } = utils.parseMongoVarlist(
+  const { schemaInterface } = parseVars.parseMongoVarlist(
     properties,
     uniqueIdentifiers
   );

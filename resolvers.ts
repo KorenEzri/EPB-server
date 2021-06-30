@@ -2,9 +2,6 @@ import { GraphQLScalarType } from "graphql";
 
 /*
 TODO:
-
-- Add compatibility for custom types when creating a resolver on the "...And will receive?" section
-- Add custom type suggestions for client.
 CRUD
 - Add list of schemas to select box on "Select a schema" @ add/crud
 - Add "Select all" button when choosing CRUD actions
@@ -47,7 +44,6 @@ import {
 } from "./validations";
 // option types
 import {
-  messageOptions,
   addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
@@ -96,10 +92,9 @@ export const resolvers = {
       return await getResolverNames();
     },
 
-    // Action: asdadsadsad
-    getMessages: async (_: any) => {
-      //
-      // return [messageOptionsType]
+    // Action: get a list of all allowed input and return types
+    getAllowedTypes: async (_: any) => {
+      return utils.getAllAllowedTypes();
     },
 
     // query-end
@@ -115,9 +110,6 @@ export const resolvers = {
         const resolverCreationRes = await create.createNewResolver({
           options: options,
         });
-        setTimeout(async () => {
-          await utils.restartServer();
-        }, 1000);
         return resolverCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
@@ -132,7 +124,6 @@ export const resolvers = {
         const interfaceCreationRes = await create.createNewInterface({
           options: options,
         });
-        await utils.restartServer();
         return interfaceCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
@@ -148,9 +139,6 @@ export const resolvers = {
         const schemaCreationRes = await create.createDbSchema({
           options: options,
         });
-        setTimeout(async () => {
-          await utils.restartServer();
-        }, 1000);
         return schemaCreationRes;
       } catch ({ message }) {
         Logger.error(`FROM: EPB-server: ${message}`);
@@ -166,10 +154,11 @@ export const resolvers = {
       // return String
     },
 
-    // Action: asdsadsdad
-    createMessage: async (_: any, message: messageOptions) => {
-      //
-      // return String
+    // Action: Restart the server
+    restartServer: async (_: any, timeout: number) => {
+      setTimeout(async () => {
+        await utils.restartServer();
+      }, timeout);
     },
 
     // mutation-end

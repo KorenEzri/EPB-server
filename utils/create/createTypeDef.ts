@@ -5,6 +5,7 @@ import { promisify } from "util";
 import Logger from "../../logger/logger";
 import fs from "fs";
 import * as utils from "../utils";
+import * as parseVars from "../utils/parse-vars";
 const write = promisify(fs.writeFile);
 const allTypeDefinitions = typeDefs.definitions.map((definition: any) =>
   definition.name.value.trim()
@@ -81,14 +82,13 @@ const fromOptionsToGQLTypeDefinition = (
   returnType?: string
 ) => {
   // Function receives the name of the type Def, the list of it's properties, and it's returntype (optional)
-  const { varList, typeDefInterface } = utils.parseTypeDefVarlist(
+  const { varList, typeDefInterface } = parseVars.parseTypeDefVarlist(
     // This function returns varList
     // - either an array, or a stringified represntation of name:type in case of having only one option.
     // it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
     // for GraphQL.
     properties,
-    name,
-    type
+    name
   );
   if (returnType) {
     if (!utils.isCustomType(returnType)) {

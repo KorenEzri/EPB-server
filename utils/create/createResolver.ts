@@ -4,6 +4,7 @@ import Logger from "../../logger/logger";
 import { createNewInterface } from "./";
 import { promisify } from "util";
 import fs from "fs";
+import * as parseVars from "../utils/parse-vars";
 import * as utils from "../utils";
 const write = promisify(fs.writeFile);
 
@@ -24,6 +25,14 @@ const insertImportStatement = (resolvers: string, name: string) => {
       return v != null;
     });
   if (!importStatement[0]) return "err";
+  if (
+    importStatement.includes(name) ||
+    importStatement.includes(`${name}Options`) ||
+    importStatement[0].includes(name) ||
+    importStatement[0].includes(`${name}Options`)
+  ) {
+    return splatResolvers.join("\n");
+  }
   if (importStatement.length > 1) {
     let nameOptionsStringIncluded = name.includes("Options");
     nameOptionsStringIncluded
@@ -45,7 +54,7 @@ const insertImportStatement = (resolvers: string, name: string) => {
 const toResolver = ({ options }: ResolverOptions) => {
   const { name, comment, returnType, properties, description } = options;
   const { resolverInterface, varList, importList } =
-    utils.parseResolverVarlist(properties);
+    parseVars.parseResolverVarlist(properties);
   let stringifiedVarList: string[] = [];
   if (Array.isArray(varList)) {
     stringifiedVarList = varList.map((variable) => {
@@ -81,12 +90,13 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
       options.name
     );
   }
-  importList.forEach((toImport: string) => {
-    allResolversAsString = insertImportStatement(
-      allResolversAsString,
-      toImport
-    );
-  });
+  if (Array.isArray(importList))
+    importList.forEach((toImport: string) => {
+      allResolversAsString = insertImportStatement(
+        allResolversAsString,
+        toImport
+      );
+    });
   const finishedResolvers = utils.insertToString(
     allResolversAsString,
     fullResolver,

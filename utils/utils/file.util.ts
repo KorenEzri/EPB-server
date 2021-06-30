@@ -68,4 +68,5 @@ export const restartServer = async () => {
   //   'node_modules/@korenezri/easy-peasy-backend/epb/client/build" "nodemon index.ts" "nodemon node_modules/@korenezri/easy-peasy-backend/epb/epb-server/build/restart.json',
   //   `{"restart":"${Math.random()}"}`
   // );
+  await write("restart.json", `{"restart":"${Math.random()}"}`);
 };
