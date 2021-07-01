@@ -9537,3 +9537,116 @@
 2021-06-30 20:10:29:1029 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
 2021-06-30 20:10:39:1039 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-06-30 20:10:39:1039 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 14:51:55:5155 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 14:51:55:5155 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 14:55:15:5515 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 14:55:15:5515 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-01 15:22:05:225 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-01 15:22:06:226 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:23:34:2334 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:23:34:2334 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-01 15:23:51:2351 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-01 15:23:51:2351 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-07-01 15:23:51:2351 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:37:35:3735 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:37:35:3735 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:37:35:3735 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:37:42:3742 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:37:42:3742 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:37:42:3742 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:37:57:3757 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:37:57:3757 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:37:57:3757 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:39:08:398 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:39:08:398 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:39:08:398 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:40:06:406 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:40:06:406 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:40:14:4014 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:40:14:4014 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-01 15:40:14:4014 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-01 15:40:15:4015 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:44:38:4438 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:44:38:4438 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:44:41:4441 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:44:41:4441 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-01 15:44:41:4441 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-01 15:44:42:4442 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:52:37:5237 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:52:37:5237 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:52:41:5241 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:52:41:5241 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:52:41:5241 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:52:44:5244 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:52:44:5244 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:55:10:5510 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:55:10:5510 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:55:12:5512 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:55:12:5512 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-01 15:55:12:5512 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-01 15:55:13:5513 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:55:40:5540 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:55:40:5540 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:56:36:5636 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:56:36:5636 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:56:42:5642 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:56:42:5642 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-01 15:56:42:5642 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-01 15:56:43:5643 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:56:46:5646 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:56:46:5646 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:56:54:5654 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:56:57:5657 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:56:57:5657 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:57:18:5718 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:57:32:5732 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:57:32:5732 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 15:57:34:5734 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 15:57:34:5734 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-01 15:57:34:5734 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-01 15:57:35:5735 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 15:57:38:5738 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 15:57:38:5738 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:01:12:112 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:01:12:112 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:04:35:435 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:04:35:435 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:04:52:452 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:04:52:452 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:05:12:512 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:05:12:512 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:05:38:538 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:05:38:538 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:06:18:618 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:06:18:618 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:28:35:2835 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:28:35:2835 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:28:41:2841 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:28:41:2841 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:39:16:3916 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:39:16:3916 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:39:22:3922 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-01 16:40:45:4045 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:40:45:4045 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:41:26:4126 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:41:26:4126 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-01 16:41:30:4130 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-01 16:50:14:5014 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-01 16:50:14:5014 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-01 16:50:14:5014 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-01 16:50:15:5015 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-01 16:50:18:5018 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-01 16:50:18:5018 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m

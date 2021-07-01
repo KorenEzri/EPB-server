@@ -19,10 +19,11 @@ const grabTypeDefsAndInsertNewTypeDef = async (
 ) => {
   const capType = utils.capitalizeFirstLetter(type || "");
   const { typeDef, typeDefInterface } = fromOptionsToGQLTypeDefinition(
-    // This function returns varList
-    // - either an array, or a stringified represntation of name:type in case of having only one option.
-    // it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
-    // for GraphQL.
+    /*
+    This function returns varList - either an array, or a stringified represntation of name:type in case of having only one option.
+    it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
+    for GraphQL.
+    */
     name,
     properties,
     capType,
@@ -65,16 +66,16 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     .toLineArray(finishedTypeDefs)
     .map((line: string) => line.trim())
     .indexOf(typeInsertEndIndex);
-  finishedTypeDefs = utils.pushIntoString(
-    finishedTypeDefs,
-    typeInsertEndIndex,
-    0,
-    typeDef
-  );
+  if (returnType) {
+    finishedTypeDefs = utils.pushIntoString(
+      finishedTypeDefs,
+      typeInsertEndIndex,
+      0,
+      typeDef
+    );
+  }
   return finishedTypeDefs;
 };
-// BUG: when entering only one property to type creation UI, we get an undefined typeDef. I just
-// remove a condition between lines 67 and 68 - if (returnType) then save. See if it helps.
 const fromOptionsToGQLTypeDefinition = (
   name: string,
   properties: string[],
@@ -83,10 +84,11 @@ const fromOptionsToGQLTypeDefinition = (
 ) => {
   // Function receives the name of the type Def, the list of it's properties, and it's returntype (optional)
   const { varList, typeDefInterface } = parseVars.parseTypeDefVarlist(
-    // This function returns varList
-    // - either an array, or a stringified represntation of name:type in case of having only one option.
-    // it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
-    // for GraphQL.
+    /*
+    This function returns varList - either an array, or a stringified represntation of name:type in case of having only one option.
+    it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
+    for GraphQL.
+    */
     properties,
     name
   );
@@ -107,6 +109,11 @@ const fromOptionsToGQLTypeDefinition = (
     /* this^^^^ is like:
                   getMessageOptions(message: messageOptionsInput): messageOptionsType
     */
+  } else if (varList.length === 0) {
+    return {
+      typeDef: `${name}: ${returnType}`,
+      typeDefInterface,
+    };
   } else {
     typeDef = `${name}: ${returnType}`; // this <<< is like:
     // getMessageOptions: messsageOptionsType

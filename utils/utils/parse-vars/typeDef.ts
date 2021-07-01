@@ -17,8 +17,14 @@ const compileVarlistAndTypedefInterfaceForCustomTypes = (
   varList: { name: string; type: string }[],
   name: string
 ) => {
+  const amountOfVars = varList.length;
   const typeDefInterface: any = {};
-  const moreThanOneVarInVarlist = varList.length > 1 ? true : false;
+  if (amountOfVars === 0)
+    return {
+      varList,
+      typeDefInterface: undefined,
+    };
+  const moreThanOneVarInVarlist = amountOfVars > 1 ? true : false;
   if (!moreThanOneVarInVarlist) {
     const { type, name } = varList[0];
     return {

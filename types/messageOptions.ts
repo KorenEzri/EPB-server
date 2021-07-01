@@ -9,7 +9,7 @@ export interface messageOptions {
     content: string
   }
 }
-// added at: Wed Jun 30 2021 20:10:29 GMT+0300 (Israel Daylight Time) 
+// added at: Thu Jul 01 2021 15:23:51 GMT+0300 (Israel Daylight Time) 
 
 // exports section
 export interface messageDoc extends Document, messageOptions {}

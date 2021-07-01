@@ -97,6 +97,14 @@ export const resolvers = {
       return utils.getAllAllowedTypes();
     },
 
+    // Action: get a list of all database schemas.
+    getAllDBSchemaNames: async (_: any) => {
+      // await add.createDBSchemaConfigList("messageSchema");
+      return await utils.getAllSchemaNames();
+
+      // return [String]
+    },
+
     // query-end
   },
   Mutation: {
@@ -162,6 +170,20 @@ export const resolvers = {
       setTimeout(async () => {
         await utils.restartServer();
       }, timeout);
+    },
+
+    // Action: add prebuilt action: Crud Operations
+    addCrudOperations: async (
+      _: any,
+      schemaName: string,
+      crudActions: string[]
+    ) => {
+      const res = await add.addCrudToDBSchemas(schemaName, crudActions);
+      if (!Array.isArray(res)) return "OK";
+      res.forEach((error) => {
+        Logger.error(`FROM: EPB-server: ${error.message}`);
+      });
+      return `${res.length} out of ${crudActions.length} CRUD operations could not be created for DB schema ${schemaName}!`;
     },
 
     // mutation-end

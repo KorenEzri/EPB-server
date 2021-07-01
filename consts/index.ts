@@ -44,3 +44,24 @@ export const validTypes = [
   "[int]",
   "[Int]",
 ].concat(allCustomTypesWithArrayTypes);
+
+export const avalableCRUDActions = `const avalableCRUDActions = [
+    Create One,
+  ,
+    Create Many,
+  ,
+    Read One,
+  ,
+    Read Many,
+  ,
+    Read All,
+  ,
+    Update One,
+  ,
+    Update Many,
+  ,
+    Delete One,
+  ,
+    Delete Many,
+  ,
+]`;

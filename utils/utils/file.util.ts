@@ -70,3 +70,63 @@ export const restartServer = async () => {
   // );
   await write("restart.json", `{"restart":"${Math.random()}"}`);
 };
+export const getAllSchemaNames = async () => {
+  const schemaFolderPath = "db/schemas";
+  const isOK = await checkIfOK(schemaFolderPath);
+  if (!isOK) {
+    Logger.error("FROM: EPB-server: could not locate databse schema folder!");
+  }
+  const allSchemaNames = await readDir(schemaFolderPath);
+  return allSchemaNames.filter((val) => {
+    if (
+      val !== "index.ts" &&
+      val !== "stub.ts" &&
+      val != null &&
+      !val.includes("SchemaConfig")
+    )
+      return val;
+  });
+};
+export const insertImportStatement = (resolvers: string, name: string) => {
+  const splatResolvers: string[] = utils
+    .toLineArray(resolvers)
+    .map((line: string) => line.trim());
+  const startIndex = splatResolvers.indexOf("// option types");
+  const endIndex = splatResolvers.indexOf("// option types end");
+  let importName: string = "";
+  const importStatement = splatResolvers
+    .map((line: string, index: number) => {
+      if (index >= startIndex + 1 && index <= endIndex - 1) {
+        return line;
+      }
+    })
+    .filter((v) => {
+      return v != null;
+    });
+  if (!importStatement[0]) return "err";
+  if (
+    importStatement.includes(name) ||
+    importStatement.includes(`${name}Options`) ||
+    importStatement[0].includes(name) ||
+    importStatement[0].includes(`${name}Options`)
+  ) {
+    return splatResolvers.join("\n");
+  }
+  if (importStatement.length > 1) {
+    let nameOptionsStringIncluded = name.includes("Options");
+    nameOptionsStringIncluded
+      ? (importName = ` ${name},`)
+      : (importName = ` ${name}Options,`);
+    importStatement.splice(1, 0, importName);
+    splatResolvers.splice(
+      startIndex + 1,
+      endIndex - startIndex - 1,
+      importStatement.join("")
+    );
+  } else {
+    const splat = importStatement[0].split(",");
+    splat[0] = `${splat[0]}, ${name}Options`;
+    splatResolvers.splice(startIndex + 1, 1, splat.join(","));
+  }
+  return splatResolvers.join("\n");
+};

@@ -735,3 +735,9 @@
 2021-06-30 20:07:13:713 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
 2021-06-30 20:08:10:810 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
 2021-06-30 20:10:29:1029 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-07-01 15:23:51:2351 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-07-01 15:37:35:3735 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:37:42:3742 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:37:57:3757 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:39:08:398 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-01 15:52:41:5241 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m

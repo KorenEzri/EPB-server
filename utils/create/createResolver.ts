@@ -8,49 +8,6 @@ import * as parseVars from "../utils/parse-vars";
 import * as utils from "../utils";
 const write = promisify(fs.writeFile);
 
-const insertImportStatement = (resolvers: string, name: string) => {
-  const splatResolvers: string[] = utils
-    .toLineArray(resolvers)
-    .map((line: string) => line.trim());
-  const startIndex = splatResolvers.indexOf("// option types");
-  const endIndex = splatResolvers.indexOf("// option types end");
-  let importName: string = "";
-  const importStatement = splatResolvers
-    .map((line: string, index: number) => {
-      if (index >= startIndex + 1 && index <= endIndex - 1) {
-        return line;
-      }
-    })
-    .filter((v) => {
-      return v != null;
-    });
-  if (!importStatement[0]) return "err";
-  if (
-    importStatement.includes(name) ||
-    importStatement.includes(`${name}Options`) ||
-    importStatement[0].includes(name) ||
-    importStatement[0].includes(`${name}Options`)
-  ) {
-    return splatResolvers.join("\n");
-  }
-  if (importStatement.length > 1) {
-    let nameOptionsStringIncluded = name.includes("Options");
-    nameOptionsStringIncluded
-      ? (importName = ` ${name},`)
-      : (importName = ` ${name}Options,`);
-    importStatement.splice(1, 0, importName);
-    splatResolvers.splice(
-      startIndex + 1,
-      endIndex - startIndex - 1,
-      importStatement.join("")
-    );
-  } else {
-    const splat = importStatement[0].split(",");
-    splat[0] = `${splat[0]}, ${name}Options`;
-    splatResolvers.splice(startIndex + 1, 1, splat.join(","));
-  }
-  return splatResolvers.join("\n");
-};
 const toResolver = ({ options }: ResolverOptions) => {
   const { name, comment, returnType, properties, description } = options;
   const { resolverInterface, varList, importList } =
@@ -85,14 +42,14 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
     let interfaceOptions: any = {};
     Object.assign(interfaceOptions, options);
     await createNewInterface({ options: interfaceOptions });
-    allResolversAsString = insertImportStatement(
+    allResolversAsString = utils.insertImportStatement(
       allResolversAsString,
       options.name
     );
   }
   if (Array.isArray(importList))
     importList.forEach((toImport: string) => {
-      allResolversAsString = insertImportStatement(
+      allResolversAsString = utils.insertImportStatement(
         allResolversAsString,
         toImport
       );
