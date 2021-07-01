@@ -61,6 +61,24 @@ const removeCrudOpsFromAvailabilityList = async (
   crudOps: string[]
 ) => {};
 //
+const insertImportStatementToResolverFile = async (modelName: string) => {
+  try {
+    let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
+    if (!allResolversAsString)
+      return "Error in utils/createNew/createResolver.ts: No resolvers found!";
+    const insertImportStatementRes = utils.insertImportStatement(
+      allResolversAsString,
+      modelName
+    );
+    await write("./resolvers.ts", insertImportStatementRes);
+  } catch ({ message }) {
+    Logger.error(
+      `FROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, `,
+      message
+    );
+  }
+};
+//
 const createCrudOps = async (schemaName: string, crudOps: string[]) => {};
 //
 export const addCrudToDBSchemas = async (
@@ -78,15 +96,7 @@ export const addCrudToDBSchemas = async (
   await removeCrudOpsFromAvailabilityList(schemaName, crudOperations);
   return "OK";
 };
-
 const generate = async (modelName: string) => {
   const modelImport = `db/schemas/${modelName}.ts`;
-  let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
-  if (!allResolversAsString)
-    return "Error in utils/createNew/createResolver.ts: No resolvers found!";
-  const insertImportStatementRes = utils.insertImportStatement(
-    allResolversAsString,
-    modelName
-  );
-  await write("./resolvers.ts", insertImportStatementRes);
+  await insertImportStatementToResolverFile(modelName);
 };
