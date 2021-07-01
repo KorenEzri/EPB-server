@@ -156,6 +156,9 @@ export const resolvers = {
 
     // Action: Restart the server
     restartServer: async (_: any, timeout: number) => {
+      Logger.info(
+        `FROM: EPB-server: Restarting server in ${timeout} miliseconds.`
+      );
       setTimeout(async () => {
         await utils.restartServer();
       }, timeout);

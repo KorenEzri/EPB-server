@@ -4,4 +4,4 @@ export * from "./createCustomTypeOptions";
 export * from "./createSchemaOptions";
 export * from "./addUserAuthOptions";
 
-export * from "./JumanjeeOptions"
+export * from "./messageOptions"

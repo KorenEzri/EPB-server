@@ -65,16 +65,16 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     .toLineArray(finishedTypeDefs)
     .map((line: string) => line.trim())
     .indexOf(typeInsertEndIndex);
-  if (returnType) {
-    finishedTypeDefs = utils.pushIntoString(
-      finishedTypeDefs,
-      typeInsertEndIndex,
-      0,
-      typeDef
-    );
-  }
+  finishedTypeDefs = utils.pushIntoString(
+    finishedTypeDefs,
+    typeInsertEndIndex,
+    0,
+    typeDef
+  );
   return finishedTypeDefs;
 };
+// BUG: when entering only one property to type creation UI, we get an undefined typeDef. I just
+// remove a condition between lines 67 and 68 - if (returnType) then save. See if it helps.
 const fromOptionsToGQLTypeDefinition = (
   name: string,
   properties: string[],
@@ -101,7 +101,9 @@ const fromOptionsToGQLTypeDefinition = (
      so it's placed inside the Query/Mutation definition itself.
      if the varList is an array, we use typeDefInterface, and it will be inserted later.
     */
-    typeDef = `${name}(${varList}): ${returnType}`;
+    returnType
+      ? (typeDef = `${name}(${varList}): ${returnType}`)
+      : (typeDef = `${type.toLowerCase()} ${name} {${varList}}`);
     /* this^^^^ is like:
                   getMessageOptions(message: messageOptionsInput): messageOptionsType
     */

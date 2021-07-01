@@ -727,3 +727,11 @@
 2021-06-30 12:05:38:538 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
 2021-06-30 12:06:00:60 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
 2021-06-30 14:26:24:2624 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-06-30 19:43:09:439 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:00:19:019 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:00:38:038 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:03:38:338 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:05:52:552 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:07:13:713 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:08:10:810 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-06-30 20:10:29:1029 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
