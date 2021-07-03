@@ -38,7 +38,7 @@ export const createNewResolver = async ({ options }: ResolverOptions) => {
   let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
   if (!allResolversAsString)
     return "Error in utils/createNew/createResolver.ts: No resolvers found!";
-  if (options.properties.length >= 3) {
+  if (options.properties.length > 1) {
     let interfaceOptions: any = {};
     Object.assign(interfaceOptions, options);
     await createNewInterface({ options: interfaceOptions });

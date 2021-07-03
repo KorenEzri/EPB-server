@@ -130,3 +130,42 @@ export const insertImportStatement = (resolvers: string, name: string) => {
   }
   return splatResolvers.join("\n");
 };
+
+export const insertStringToFileInRangeOfLines = async (
+  filePath: string,
+  string: string,
+  startHandler: string | number,
+  endHandler: string | number,
+  duplicates?: boolean
+) => {
+  const fileAsString = await read(filePath, "utf8");
+  const lineArray = await utils
+    .toLineArray(fileAsString)
+    .map((line: string) => line.trim());
+  const startIndex =
+    typeof startHandler === "number"
+      ? startHandler
+      : lineArray.indexOf(startHandler);
+  const endIndex =
+    typeof endHandler === "number" ? endHandler : lineArray.indexOf(endHandler);
+  const linesInRange = lineArray
+    .map((line: string, index: number) => {
+      if (index >= startIndex + 1 && index <= endIndex - 1) {
+        return line.trim();
+      }
+    })
+    .filter((v: string) => v != null);
+  if (linesInRange.includes(string) || linesInRange[0].includes(string)) {
+    if (!duplicates) return lineArray.join("\n");
+  }
+  if (linesInRange.length > 1) {
+    linesInRange.splice(1, 0, string);
+    lineArray.splice(startIndex, endIndex - startIndex, linesInRange.join(""));
+  } else {
+    const splatOneLineRange = linesInRange[0].split("}");
+    splatOneLineRange[0] = `${splatOneLineRange[0]}, ${string} }`;
+    lineArray.splice(startIndex + 1, 1, splatOneLineRange.join(""));
+  }
+  const finished = utils.fromLineArray(lineArray);
+  await write(filePath, finished);
+};

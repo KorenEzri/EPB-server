@@ -1,1 +1,1 @@
-export const stub = 0;
+export const modelstub = 0;

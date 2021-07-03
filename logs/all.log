@@ -9650,3 +9650,250 @@
 2021-07-01 16:50:15:5015 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
 2021-07-01 16:50:18:5018 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-07-01 16:50:18:5018 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 16:31:17:3117 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 16:31:17:3117 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:23:47:2347 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:23:47:2347 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:23:47:2347 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, [39m
+2021-07-02 17:24:56:2456 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:24:56:2456 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:24:56:2456 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, ENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\resolvers'[39m
+2021-07-02 17:25:25:2525 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:25:25:2525 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:25:25:2525 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, lineArray.map(...).finter is not a function[39m
+2021-07-02 17:25:43:2543 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:25:43:2543 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:26:57:2657 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:26:57:2657 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:44:05:445 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:44:05:445 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:44:33:4433 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:44:33:4433 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:45:40:4540 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:45:40:4540 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:46:06:466 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:46:06:466 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:51:44:5144 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:51:44:5144 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-02 17:53:09:539 [31merror[39m: [31mCould not locate db/schemas/index.ts/index.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\index.ts\index.ts'[39m
+2021-07-02 17:53:09:539 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-02 17:53:10:5310 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-02 17:53:13:5313 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:53:13:5313 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:54:39:5439 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:54:39:5439 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-02 17:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-02 17:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\index.ts: SyntaxError: Expression expected. (3:15)[39m
+[31m[error]   1 | export * from "./stub";[39m
+[31m[error]   2 |[39m
+[31m[error] > 3 | export * from ./messageSchema[39m
+[31m[error]     |               ^[39m
+
+[31mdb\schemas\messageSchema.ts 29ms[39m
+[31mdb\schemas\stub.ts 2ms[39m
+2021-07-02 17:54:43:5443 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-02 17:55:13:5513 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:55:13:5513 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-02 17:55:15:5515 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-02 17:55:16:5516 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-02 17:56:07:567 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:56:07:567 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:56:46:5646 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:56:46:5646 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:57:44:5744 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:57:44:5744 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:58:46:5846 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:58:46:5846 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 17:59:48:5948 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 17:59:48:5948 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 18:02:23:223 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 18:02:23:223 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 18:05:27:527 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 18:05:27:527 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 19:24:03:243 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 19:24:03:243 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 19:26:18:2618 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 19:26:18:2618 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 19:28:12:2812 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 19:28:12:2812 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 19:30:09:309 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 19:30:09:309 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 19:33:30:3330 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 19:33:30:3330 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:03:25:325 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:03:25:325 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:04:01:41 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:04:01:41 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:10:49:1049 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:10:49:1049 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:10:50:1050 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:11:55:1155 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:11:55:1155 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:11:55:1155 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:13:19:1319 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:13:19:1319 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:13:33:1333 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:14:31:1431 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:14:31:1431 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:14:32:1432 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:15:52:1552 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:15:52:1552 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:16:58:1658 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:16:58:1658 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:17:52:1752 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:17:52:1752 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:18:16:1816 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:18:16:1816 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:19:31:1931 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:19:31:1931 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:20:41:2041 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:20:41:2041 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:20:55:2055 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:20:55:2055 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:21:45:2145 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-02 20:22:12:2212 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-02 20:26:14:2614 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:26:14:2614 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:27:03:273 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:27:03:273 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:27:36:2736 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:27:36:2736 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:28:08:288 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:28:08:288 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:28:45:2845 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:28:45:2845 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:29:01:291 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:29:01:291 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:29:21:2921 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-02 20:29:21:2921 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-02 20:29:21:2921 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-02 20:29:21:2921 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:12:09:129 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:12:09:129 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:12:28:1228 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:13:30:1330 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:13:30:1330 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:13:34:1334 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:14:44:1444 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:14:44:1444 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:14:47:1447 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:16:18:1618 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:16:18:1618 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:16:18:1618 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:18:42:1842 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:18:42:1842 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:18:42:1842 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:19:32:1932 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:19:32:1932 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:20:39:2039 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:20:39:2039 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:21:27:2127 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:21:27:2127 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:25:08:258 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:25:08:258 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:26:14:2614 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:26:14:2614 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:28:45:2845 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:28:45:2845 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:29:47:2947 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:29:47:2947 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:33:13:3313 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:33:13:3313 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:36:12:3612 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:36:12:3612 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:37:06:376 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:37:06:376 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:37:59:3759 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:37:59:3759 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:38:38:3838 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:38:38:3838 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:42:20:4220 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:42:20:4220 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:43:38:4338 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:43:38:4338 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:44:39:4439 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:44:39:4439 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:44:48:4448 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:44:48:4448 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:45:31:4531 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:45:31:4531 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:46:26:4626 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:46:26:4626 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:47:32:4732 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:47:32:4732 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 12:53:42:5342 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 12:53:42:5342 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:02:45:245 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:02:45:245 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:04:17:417 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:04:17:417 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:04:32:432 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:04:32:432 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:05:34:534 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:05:34:534 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:06:45:645 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:06:45:645 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:09:17:917 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:09:17:917 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:10:09:109 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:10:09:109 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:10:40:1040 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:10:40:1040 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:11:50:1150 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:11:50:1150 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:12:36:1236 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:12:36:1236 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:13:15:1315 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:13:15:1315 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:15:56:1556 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:15:56:1556 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:17:29:1729 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:17:29:1729 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:32:28:3228 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:32:28:3228 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:32:32:3232 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-03 14:32:32:3232 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\messageSchemaConfig.ts'[39m
+2021-07-03 14:34:43:3443 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:34:43:3443 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:34:44:3444 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-03 14:34:44:3444 [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array[39m
+2021-07-03 14:35:39:3539 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:35:39:3539 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:36:34:3634 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:36:34:3634 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:38:01:381 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:38:01:381 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:43:14:4314 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:43:14:4314 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:44:34:4434 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:44:34:4434 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:44:36:4436 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 14:45:29:4529 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 14:54:54:5454 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 14:54:54:5454 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 14:55:01:551 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\types\messageModelOptions.ts'[39m

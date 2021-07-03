@@ -42,8 +42,8 @@ import {
   validateTypeCreation,
   validateSchemaCreation,
 } from "./validations";
-// option types
 import {
+  messageOptions,
   addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
@@ -51,6 +51,9 @@ import {
   stub,
 } from "./types";
 // option types end
+// model imports
+import { modelstub, MessageModel } from "./db/schemas";
+// model imports end
 import {
   getResolvers,
   getTypeDefs,
@@ -61,6 +64,13 @@ import * as utils from "./utils/utils";
 import * as create from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
+
+interface addCrudOperationsOptions {
+  options: {
+    schemaName: string;
+    crudActions: string[];
+  };
+}
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",
@@ -175,17 +185,23 @@ export const resolvers = {
     // Action: add prebuilt action: Crud Operations
     addCrudOperations: async (
       _: any,
-      schemaName: string,
-      crudActions: string[]
+      { options }: addCrudOperationsOptions
     ) => {
-      const res = await add.addCrudToDBSchemas(schemaName, crudActions);
-      if (!Array.isArray(res)) return "OK";
-      res.forEach((error) => {
-        Logger.error(`FROM: EPB-server: ${error.message}`);
-      });
-      return `${res.length} out of ${crudActions.length} CRUD operations could not be created for DB schema ${schemaName}!`;
+      const { schemaName, crudActions } = options;
+      try {
+        const res = await add.addCrudToDBSchemas(schemaName, crudActions);
+        if (!Array.isArray(res)) return "OK";
+        res.forEach((error) => {
+          Logger.error(`FROM: EPB-server: ${error.message}`);
+        });
+        return `${res.length} out of ${crudActions.length} CRUD operations could not be created for DB schema ${schemaName}!`;
+      } catch ({ message }) {
+        Logger.error(message);
+      }
     },
 
     // mutation-end
   },
 };
+
+// add.createOne("Message", "Create One");

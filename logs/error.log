@@ -741,3 +741,33 @@
 2021-07-01 15:37:57:3757 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
 2021-07-01 15:39:08:398 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
 2021-07-01 15:52:41:5241 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot destructure property 'type' of 'varList[0]' as it is undefined.[39m
+2021-07-02 17:23:47:2347 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, [39m
+2021-07-02 17:24:56:2456 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, ENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\resolvers'[39m
+2021-07-02 17:25:25:2525 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, lineArray.map(...).finter is not a function[39m
+2021-07-02 17:53:09:539 [31merror[39m: [31mCould not locate db/schemas/index.ts/index.ts file, ENOENT: no such file or directory, access 'C:\Users\koren\Documents\GitHub\EPB-server\db\schemas\index.ts\index.ts'[39m
+2021-07-02 17:54:43:5443 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write ./db/schemas/*.ts[39m
+[31m[error] db\schemas\index.ts: SyntaxError: Expression expected. (3:15)[39m
+[31m[error]   1 | export * from "./stub";[39m
+[31m[error]   2 |[39m
+[31m[error] > 3 | export * from ./messageSchema[39m
+[31m[error]     |               ^[39m
+
+[31mdb\schemas\messageSchema.ts 29ms[39m
+[31mdb\schemas\stub.ts 2ms[39m
+2021-07-02 20:10:50:1050 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:11:55:1155 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:13:33:1333 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:14:32:1432 [31merror[39m: [31mschemaName.split is not a function[39m
+2021-07-02 20:21:45:2145 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-02 20:22:12:2212 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-02 20:29:21:2921 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:12:28:1228 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:13:34:1334 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:14:47:1447 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:16:18:1618 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 12:18:42:1842 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-03 14:32:32:3232 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\messageSchemaConfig.ts'[39m
+2021-07-03 14:34:44:3444 [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Array[39m
+2021-07-03 14:44:36:4436 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 14:45:29:4529 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 14:55:01:551 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\types\messageModelOptions.ts'[39m

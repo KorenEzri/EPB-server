@@ -1,0 +1,1 @@
+export { mongoCRUDS } from "./mongodb";

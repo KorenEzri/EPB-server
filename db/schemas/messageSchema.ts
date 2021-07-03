@@ -2,7 +2,9 @@ import mongoose, { Schema } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
 import { messageDoc } from "../../types";
 const messageSchema: Schema = new mongoose.Schema({
-  content: String,
+  sender: String,
+  kaki: Number,
+  lala: Array,
 });
 messageSchema.plugin(uniqueValidator);
 messageSchema.set("toJSON", {
@@ -10,8 +12,8 @@ messageSchema.set("toJSON", {
     delete returnedObject.__v;
   },
 });
-export const messageModel = mongoose.model<messageDoc>(
-  "messageModel",
+export const MessageModel = mongoose.model<messageDoc>(
+  "MessageModel",
   messageSchema
 );
 //

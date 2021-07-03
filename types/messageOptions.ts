@@ -6,10 +6,12 @@ import { Document } from 'mongoose'
 
 export interface messageOptions {
   options: {
-    content: string
+    sender: string,
+    kaki: number,
+    lala: string[]
   }
 }
-// added at: Thu Jul 01 2021 15:23:51 GMT+0300 (Israel Daylight Time) 
+// added at: Fri Jul 02 2021 17:55:15 GMT+0300 (Israel Daylight Time) 
 
 // exports section
 export interface messageDoc extends Document, messageOptions {}

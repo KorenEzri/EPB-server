@@ -7,6 +7,7 @@ import { promisify } from "util";
 import fs from "fs";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
+
 const updateInterfaceFile = async ({ options }: createSchemaOptions) => {
   const interfaceFilePath = `./types/${options.name}Options.ts`;
   const interfaceFile = await read(interfaceFilePath, "utf8");
@@ -55,7 +56,11 @@ const toMongoSchema = (options: createSchemaOptions) => {
                 delete returnedObject.__v;
             }
         })
-        export const ${name}Model = mongoose.model<${name}Doc>('${name}Model', ${name}Schema)
+        export const ${utils.capitalizeFirstLetter(
+          name
+        )}Model = mongoose.model<${name}Doc>('${utils.capitalizeFirstLetter(
+    name
+  )}Model', ${name}Schema)
         // ${comment}
 `;
   return utils.replaceAllInString(schema, '"', "");
@@ -85,6 +90,13 @@ export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   await updateInterfaceFile({ options: options });
   let error = await writeSchemaToFile(options.name, mongoDBSchema);
   if (error) return error;
+  Logger.http(
+    "FROM: EPB-server: Add a model export statement to db/schemas/index.ts.."
+  );
+  await utils.addExportStatement(
+    "db/schemas",
+    `export * from "./${options.name}Schema"`
+  );
   Logger.http("FROM: EPB-server: Done, applying prettier for files.");
   await utils.applyPrettier("./db/schemas/*.ts");
   return "Schema created successfully.";

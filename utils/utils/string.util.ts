@@ -44,6 +44,11 @@ export const capitalizeFirstLetter = (string: string | String) => {
     return "[" + string.charAt(1).toUpperCase() + string.slice(2);
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
+export const lowercaseFirstLetter = (string: string | String) => {
+  if (string[0] === "[")
+    return "[" + string.charAt(1).toLowerCase() + string.slice(2);
+  return string.charAt(0).toLowerCase() + string.slice(1);
+};
 export const pushIntoString = (
   stringToPushTo: string,
   handlerA: string | number,

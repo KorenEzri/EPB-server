@@ -1,9 +1,10 @@
-import { avalableCRUDActions } from "../../../consts";
+import { availableCRUDActions } from "../../../consts";
 import { getResolvers } from "../../codeToString";
-import Logger from "../../../logger/logger";
-import * as utils from "../../utils";
-import fs from "fs";
 import { promisify } from "util";
+import * as utils from "../../utils";
+import { mongoCRUDS } from "./index";
+import Logger from "../../../logger/logger";
+import fs from "fs";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 
@@ -27,7 +28,7 @@ const createDBSchemaConfigList = async (schemaName: string) => {
     Logger.info(
       "FROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file.."
     );
-    await write(ConfigListPath, avalableCRUDActions);
+    await write(ConfigListPath, availableCRUDActions);
     return ConfigListPath;
   } else return ConfigListPath;
 };
@@ -43,7 +44,7 @@ const validateCRUDopAvailability = async (
   crudOps: string[]
 ) => {
   const availableCrudOperations = await getDBSchemaConfigList(schemaName);
-  const availableCrudOpsLineArray = JSON.parse(availableCrudOperations);
+  const availableCrudOpsLineArray = availableCrudOperations.toString();
   const errors: { error: boolean; message: string }[] = [];
   crudOps.forEach((crudOp: string) => {
     if (!availableCrudOpsLineArray.includes(crudOp)) {
@@ -56,47 +57,107 @@ const validateCRUDopAvailability = async (
   if (errors.length) return errors;
 };
 //
+const checkIfInterfaceExists = async (schemaName: string) => {
+  const interfaceName = schemaName.split("Schema")[0];
+  return await utils.checkIfFileAlreadyExists(
+    "types",
+    `${interfaceName}Options.ts`
+  );
+};
 const removeCrudOpsFromAvailabilityList = async (
   schemaName: string,
   crudOps: string[]
-) => {};
+) => {
+  const listPath = `db/schemas/${schemaName}Config.ts`;
+  let configList = utils.toLineArray(await read(listPath, "utf8"));
+  crudOps.forEach((crud: string) => {
+    configList = configList.filter((val: string) => !val.includes(crud));
+  });
+  await write(listPath, configList.join(""));
+};
 //
-const insertImportStatementToResolverFile = async (modelName: string) => {
+const insertModelImportStatementToResolverFile = async (modelName: string) => {
   try {
     let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
     if (!allResolversAsString)
       return "Error in utils/createNew/createResolver.ts: No resolvers found!";
-    const insertImportStatementRes = utils.insertImportStatement(
-      allResolversAsString,
-      modelName
+    const startHandler = "// model imports";
+    const endHandler = "// model imports end";
+    await utils.insertStringToFileInRangeOfLines(
+      "./resolvers.ts",
+      utils.capitalizeFirstLetter(modelName),
+      startHandler,
+      endHandler
     );
-    await write("./resolvers.ts", insertImportStatementRes);
   } catch ({ message }) {
     Logger.error(
-      `FROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, `,
-      message
+      `FROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, ${message}`
+    );
+  }
+};
+const insertOptionsInterfaceImportToResolverFile = async (
+  optionsName: string
+) => {
+  try {
+    let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
+    if (!allResolversAsString)
+      return "Error in utils/createNew/createResolver.ts: No resolvers found!";
+    const startHandler = "// option types";
+    const endHandler = "// option types end";
+    await utils.insertStringToFileInRangeOfLines(
+      "./resolvers.ts",
+      `${optionsName},`,
+      startHandler,
+      endHandler
+    );
+  } catch ({ message }) {
+    Logger.error(
+      `FROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, ${message}`
     );
   }
 };
 //
-const createCrudOps = async (schemaName: string, crudOps: string[]) => {};
+const createCrudOps = async (schemaName: string, crudOps: string[]) => {
+  crudOps = crudOps.map((op: string) => op.split(" ").join(""));
+  const schemaNameOnly = utils.replaceAllInString(schemaName, "Schema", "");
+  const modelName = `${schemaNameOnly}Model`;
+  const optionsName = `${utils.lowercaseFirstLetter(schemaNameOnly)}Options`;
+  await insertModelImportStatementToResolverFile(modelName);
+  await insertOptionsInterfaceImportToResolverFile(optionsName);
+  await Promise.all(
+    crudOps.map(async (crudOperation: string) => {
+      switch (crudOperation) {
+        case "CreateOne":
+          await mongoCRUDS.createOne(modelName, crudOperation);
+          break;
+
+        default:
+          break;
+      }
+    })
+  );
+};
+//
+//
 //
 export const addCrudToDBSchemas = async (
   schemaName: string,
   crudOperations: string[]
 ) => {
+  const doesInterfaceExist = await checkIfInterfaceExists(schemaName);
+  if (!doesInterfaceExist)
+    return {
+      error: true,
+      message: `An interface for the schema ${schemaName} doesn't exist. Please create one first.`,
+    };
   await createDBSchemaConfigList(schemaName); // checks if a config file exists, if it doesn't, it creates one.
   const availabilityErrors = await validateCRUDopAvailability(
     // makes sure the received CRUD operations are viable for the schema.
     schemaName,
     crudOperations
   );
-  if (availabilityErrors) return availabilityErrors; // if some are invalid, returns an array of errors.
+  if (availabilityErrors) return availabilityErrors; // if some operations are invalid, returns an array of errors.
   await createCrudOps(schemaName, crudOperations);
   await removeCrudOpsFromAvailabilityList(schemaName, crudOperations);
   return "OK";
-};
-const generate = async (modelName: string) => {
-  const modelImport = `db/schemas/${modelName}.ts`;
-  await insertImportStatementToResolverFile(modelName);
 };
