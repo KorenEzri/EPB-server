@@ -3,10 +3,7 @@ import { GraphQLScalarType } from "graphql";
 /*
 TODO:
 CRUD
-- Add list of schemas to select box on "Select a schema" @ add/crud
 - Add "Select all" button when choosing CRUD actions
-- Add a json file for each schema and a function that checks which CRUD operations are available for the schema.
-- Make CRUD-composing functions.
 DUE: 4.07.21, Saturday night.
 
 CHAT APP PRESENTATION
@@ -42,6 +39,7 @@ import {
   validateTypeCreation,
   validateSchemaCreation,
 } from "./validations";
+// option types
 import {
   messageOptions,
   addUserAuthOptions,
@@ -69,6 +67,7 @@ interface addCrudOperationsOptions {
   options: {
     schemaName: string;
     crudActions: string[];
+    identifier: { name: string; value: any };
   };
 }
 
@@ -187,9 +186,13 @@ export const resolvers = {
       _: any,
       { options }: addCrudOperationsOptions
     ) => {
-      const { schemaName, crudActions } = options;
+      const { schemaName, crudActions, identifier } = options;
       try {
-        const res = await add.addCrudToDBSchemas(schemaName, crudActions);
+        const res = await add.addCrudToDBSchemas(
+          schemaName,
+          crudActions,
+          identifier
+        );
         if (!Array.isArray(res)) return "OK";
         res.forEach((error) => {
           Logger.error(`FROM: EPB-server: ${error.message}`);
@@ -203,5 +206,3 @@ export const resolvers = {
     // mutation-end
   },
 };
-
-// add.createOne("Message", "Create One");

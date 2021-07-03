@@ -117,7 +117,11 @@ const insertOptionsInterfaceImportToResolverFile = async (
   }
 };
 //
-const createCrudOps = async (schemaName: string, crudOps: string[]) => {
+const createCrudOps = async (
+  schemaName: string,
+  crudOps: string[],
+  identifier: { name: string; value: any }
+) => {
   crudOps = crudOps.map((op: string) => op.split(" ").join(""));
   const schemaNameOnly = utils.replaceAllInString(schemaName, "Schema", "");
   const modelName = `${schemaNameOnly}Model`;
@@ -126,14 +130,20 @@ const createCrudOps = async (schemaName: string, crudOps: string[]) => {
   await insertOptionsInterfaceImportToResolverFile(optionsName);
   await Promise.all(
     crudOps.map(async (crudOperation: string) => {
-      switch (crudOperation) {
-        case "CreateOne":
-          await mongoCRUDS.createOne(modelName, crudOperation);
-          break;
-
-        default:
-          break;
-      }
+      Logger.http(
+        `FROM: EPB-server: Creating CRUD operation ${crudOperation} for DB Schema ${schemaName}`
+      );
+      // switch (crudOperation.trim()) {
+      //   case "CreateOne":
+      crudOperation.includes("One")
+        ? mongoCRUDS.single(modelName, crudOperation, identifier)
+        : mongoCRUDS.many(modelName, crudOperation);
+      //     break;
+      //   case "CreateMany":
+      //     mongoCRUDS.createMany(modelName, crudOperation);
+      //   default:
+      //     break;
+      // }
     })
   );
 };
@@ -142,8 +152,10 @@ const createCrudOps = async (schemaName: string, crudOps: string[]) => {
 //
 export const addCrudToDBSchemas = async (
   schemaName: string,
-  crudOperations: string[]
+  crudOperations: string[],
+  identifier: { name: string; value: any }
 ) => {
+  Logger.http("FROM: EPB-server: Checking if interface exists..");
   const doesInterfaceExist = await checkIfInterfaceExists(schemaName);
   if (!doesInterfaceExist)
     return {
@@ -157,7 +169,9 @@ export const addCrudToDBSchemas = async (
     crudOperations
   );
   if (availabilityErrors) return availabilityErrors; // if some operations are invalid, returns an array of errors.
-  await createCrudOps(schemaName, crudOperations);
+  await createCrudOps(schemaName, crudOperations, identifier);
   await removeCrudOpsFromAvailabilityList(schemaName, crudOperations);
+  await utils.applyPrettier();
+  Logger.http("FROM: EPB-server: CRUDS created successfully.");
   return "OK";
 };

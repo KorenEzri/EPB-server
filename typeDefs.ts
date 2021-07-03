@@ -8,6 +8,7 @@ export const typeDefs = gql`
   input addCrudOperationsOptionsInput {
     schemaName: String
     crudActions: [String]
+    identifier: identifier
   }
   # added at: Thu Jul 01 2021 16:50:14 GMT+0300 (Israel Daylight Time)
 
@@ -52,6 +53,10 @@ export const typeDefs = gql`
     type: String
     properties: [String]
     description: String
+  }
+  input identifier {
+    name: String
+    value: String
   }
   type Query {
     getResolvers: String

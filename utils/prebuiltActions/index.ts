@@ -1,3 +1,3 @@
 export * from "./userauth/controller";
 export * from "./crudOperations/controller";
-export * from "./crudOperations/mongodb/graphQL/resolvers";
+export * from "./crudOperations/mongodb/graphQL/typeDefs";

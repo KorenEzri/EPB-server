@@ -9897,3 +9897,263 @@
 2021-07-03 14:54:54:5454 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-07-03 14:54:54:5454 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
 2021-07-03 14:55:01:551 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\types\messageModelOptions.ts'[39m
+2021-07-03 17:47:00:470 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 17:47:00:470 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 17:56:40:5640 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 17:59:24:5924 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 17:59:24:5924 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 17:59:31:5931 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 18:04:57:457 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:04:57:457 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:09:14:914 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:09:14:914 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:10:21:1021 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:10:21:1021 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:10:39:1039 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:10:39:1039 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:41:38:4138 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:41:38:4138 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:43:01:431 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:43:01:431 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:46:20:4620 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:46:20:4620 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:46:32:4632 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:46:32:4632 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:46:48:4648 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:46:48:4648 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:47:08:478 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:47:08:478 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:47:27:4727 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:47:27:4727 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:48:40:4840 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:48:40:4840 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:52:34:5234 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:52:34:5234 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:52:34:5234 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 18:52:34:5234 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'name' of undefined[39m
+2021-07-03 18:52:51:5251 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:52:51:5251 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:52:51:5251 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 18:52:51:5251 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'name' of undefined[39m
+2021-07-03 18:54:11:5411 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:54:11:5411 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:54:11:5411 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 18:55:17:5517 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:55:17:5517 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:55:55:5555 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 18:56:45:5645 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:56:45:5645 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:58:35:5835 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 18:58:35:5835 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 18:58:37:5837 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 19:01:27:127 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:01:27:127 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:01:29:129 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 19:01:52:152 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:01:52:152 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:04:51:451 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:04:51:451 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:11:50:1150 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:11:50:1150 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:11:51:1151 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 19:11:51:1151 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateOne for DB Schema messageSchema[39m
+2021-07-03 19:11:51:1151 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 19:17:12:1712 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:17:12:1712 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:17:12:1712 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 19:17:12:1712 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateOne for DB Schema messageSchema[39m
+2021-07-03 19:17:12:1712 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 19:17:13:1713 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 19:18:41:1841 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:18:41:1841 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:18:42:1842 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 19:18:42:1842 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateOne for DB Schema messageSchema[39m
+2021-07-03 19:18:42:1842 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 19:18:43:1843 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 19:19:07:197 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 19:19:07:197 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 19:19:07:197 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 19:22:10:2210 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 19:22:10:2210 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 19:22:19:2219 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 19:22:19:2219 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 19:22:19:2219 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 19:22:20:2220 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:33:27:3327 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:33:27:3327 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:33:27:3327 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 20:33:27:3327 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-03 20:33:28:3328 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:33:55:3355 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:33:55:3355 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:33:56:3356 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:33:56:3356 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:33:57:3357 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:34:51:3451 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:34:51:3451 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:34:52:3452 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:34:52:3452 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:34:53:3453 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:35:10:3510 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:35:10:3510 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:35:11:3511 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:35:30:3530 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:35:30:3530 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:35:31:3531 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:35:31:3531 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:35:33:3533 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:36:23:3623 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:36:23:3623 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:36:25:3625 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:36:25:3625 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-03 20:36:25:3625 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:36:26:3626 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (207:60)[39m
+[31m[error]   205 |[39m
+[31m[error]   206 | // add.createOne("Message", "Create One");[39m
+[31m[error] > 207 | import { GraphQLScalarType } from "graphql";messageOptions,/*TODO:CRUD- Add list of schemas to select box on "Select a schema" @ add/crud- Add "Select all" button when choosing CRUD actions- Add a json file for each schema and a function that checks which CRUD operations are available for the schema.- Make CRUD-composing functions.DUE: 4.07.21, Saturday night.CHAT APP PRESENTATION- Make a 100% working chatapp presentation- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TSDUE: 8.07.21, Thursday morning.PRESENTATION- Make a presentation to depict the project- Add documentation to your Github repo.DUE: 9.07.21, Friday night.AUTH- Add complete user auth system with the click of a button - will include:- public user schema- auth user schemafour GQLtypes - input and type for user, input and type for authCRUD operations for both schemas:- create - with hashing of passwords and saving them in a DB- delete - to delete- read - to get the user- login - to log in with password.- cookies on backend.DUE: 12.07.21, Monday morning.//  - add more options to the CLI - make it customizable//  - make sure creating only a DB schema works*///////////// DUE: 13.07.21, Sunday. //////////////////import {validateResolverCreation,validateTypeCreation,validateSchemaCreation,} from "./validations";import {addUserAuthOptions,ResolverOptions,createSchemaOptions,createCustomTypeOptions,stub,} from "./types";[39m
+[31m[error]       |                                                            ^[39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 20ms[39m
+
+[31mtypeDefs.ts 14ms[39m
+2021-07-03 20:36:26:3626 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:37:15:3715 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:37:15:3715 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-03 20:38:06:386 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:38:06:386 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:38:07:387 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:38:07:387 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:38:08:388 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (207:60)[39m
+[31m[error]   205 |[39m
+[31m[error]   206 | // add.createOne("Message", "Create One");[39m
+[31m[error] > 207 | import { GraphQLScalarType } from "graphql";messageOptions,/*TODO:CRUD- Add list of schemas to select box on "Select a schema" @ add/crud- Add "Select all" button when choosing CRUD actions- Add a json file for each schema and a function that checks which CRUD operations are available for the schema.- Make CRUD-composing functions.DUE: 4.07.21, Saturday night.CHAT APP PRESENTATION- Make a 100% working chatapp presentation- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TSDUE: 8.07.21, Thursday morning.PRESENTATION- Make a presentation to depict the project- Add documentation to your Github repo.DUE: 9.07.21, Friday night.AUTH- Add complete user auth system with the click of a button - will include:- public user schema- auth user schemafour GQLtypes - input and type for user, input and type for authCRUD operations for both schemas:- create - with hashing of passwords and saving them in a DB- delete - to delete- read - to get the user- login - to log in with password.- cookies on backend.DUE: 12.07.21, Monday morning.//  - add more options to the CLI - make it customizable//  - make sure creating only a DB schema works*///////////// DUE: 13.07.21, Sunday. //////////////////import {validateResolverCreation,validateTypeCreation,validateSchemaCreation,} from "./validations";import {addUserAuthOptions,ResolverOptions,createSchemaOptions,createCustomTypeOptions,stub,} from "./types";[39m
+[31m[error]       |                                                            ^[39m
+[31mapp.ts 164ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-03 20:38:08:388 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:39:55:3955 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:39:55:3955 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:39:57:3957 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:39:57:3957 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:39:58:3958 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:41:34:4134 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:41:34:4134 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:41:50:4150 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:41:50:4150 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:41:51:4151 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:41:51:4151 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:41:52:4152 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:43:10:4310 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:43:10:4310 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:43:12:4312 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:43:12:4312 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:43:13:4313 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:43:32:4332 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:43:32:4332 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:43:32:4332 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:43:32:4332 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:43:33:4333 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:45:01:451 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:45:01:451 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:45:03:453 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:45:03:453 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:45:04:454 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:46:31:4631 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:46:31:4631 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:46:32:4632 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:46:32:4632 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-03 20:46:38:4638 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:46:38:4638 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:46:39:4639 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:46:58:4658 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:46:58:4658 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:47:00:470 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:47:00:470 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:47:01:471 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 20:48:59:4859 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 20:48:59:4859 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 20:49:02:492 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 20:49:02:492 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 20:49:02:492 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 20:49:03:493 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 21:14:07:147 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 21:14:07:147 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 21:14:11:1411 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 21:14:11:1411 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 21:14:12:1412 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:14:12:1412 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (206:7)[39m
+[31m[error]   204 |[39m
+[31m[error]   205 |       })[39m
+[31m[error] > 206 |       return errors ? errors : 'OK'[39m
+[31m[error]       |       ^[39m
+[31m[error]   207 |     } [39m
+[31m[error]   208 |[39m
+[31m[error]   209 | // mutation-end[39m
+[31mapp.ts 153ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 20ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-03 21:14:12:1412 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 21:20:31:2031 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 21:20:31:2031 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 21:20:32:2032 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 21:20:32:2032 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-03 21:20:32:2032 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 21:20:32:2032 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:20:33:2033 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (220:60)[39m
+[31m[error]   218 |[39m
+[31m[error]   219 | // add.createOne("Message", "Create One");[39m
+[31m[error] > 220 | import { GraphQLScalarType } from "graphql";messageOptions,/*TODO:CRUD- Add list of schemas to select box on "Select a schema" @ add/crud- Add "Select all" button when choosing CRUD actionsDUE: 4.07.21, Saturday night.CHAT APP PRESENTATION- Make a 100% working chatapp presentation- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TSDUE: 8.07.21, Thursday morning.PRESENTATION- Make a presentation to depict the project- Add documentation to your Github repo.DUE: 9.07.21, Friday night.AUTH- Add complete user auth system with the click of a button - will include:- public user schema- auth user schemafour GQLtypes - input and type for user, input and type for authCRUD operations for both schemas:- create - with hashing of passwords and saving them in a DB- delete - to delete- read - to get the user- login - to log in with password.- cookies on backend.DUE: 12.07.21, Monday morning.//  - add more options to the CLI - make it customizable//  - make sure creating only a DB schema works*///////////// DUE: 13.07.21, Sunday. //////////////////import {validateResolverCreation,validateTypeCreation,validateSchemaCreation,} from "./validations";import {addUserAuthOptions,ResolverOptions,createSchemaOptions,createCustomTypeOptions,stub,} from "./types";[39m
+[31m[error]       |                                                            ^[39m
+[31mapp.ts 161ms[39m
+[31mconnections.ts 15ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 14ms[39m
+2021-07-03 21:20:33:2033 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 21:21:47:2147 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 21:21:47:2147 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 21:21:59:2159 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 21:21:59:2159 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 21:22:01:221 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 21:22:01:221 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-03 21:22:17:2217 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 21:22:17:2217 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-03 21:22:17:2217 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 21:22:18:2218 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:22:18:2218 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m
+2021-07-03 21:38:26:3826 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-03 21:38:26:3826 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Checking if interface exists..[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateMany for DB Schema messageSchema[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation CreateOne for DB Schema messageSchema[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation DeleteOne for DB Schema messageSchema[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating CRUD operation UpdateOne for DB Schema messageSchema[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:39:25:3925 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-03 21:39:26:3926 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Declaration or statement expected. (222:9)[39m
+[31m[error]   220 | };[39m
+[31m[error]   221 | essage[39m
+[31m[error] > 222 |         }[39m
+[31m[error]       |         ^[39m
+[31m[error]   223 |[39m
+[31m[error]   224 |       }))[39m
+[31m[error]   225 |       return errors ? errors : 'OK'[39m
+[31mapp.ts 167ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 16ms[39m
+2021-07-03 21:39:26:3926 [35mhttp[39m: [35mFROM: EPB-server: CRUDS created successfully.[39m

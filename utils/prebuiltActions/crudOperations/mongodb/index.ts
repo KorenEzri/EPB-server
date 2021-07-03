@@ -1,12 +1,55 @@
 import Logger from "../../../../logger/logger";
-import { createOne } from "./graphQL/resolvers";
-import { createOneTypeDef } from "./graphQL/typeDefs";
+import {
+  generateResolver,
+  generateResolverForManyCRUD,
+} from "./graphQL/resolvers";
+import {
+  generateTypedef,
+  generateTypedefForManyCRUD,
+} from "./graphQL/typeDefs";
+const mutationCRUDS = [
+  "CreateOne",
+  "CreateMany",
+  "UpdateOne",
+  "UpdateMany",
+  "DeleteOne",
+  "DeleteMany",
+];
 
 export const mongoCRUDS = {
-  createOne: async (Model: string, action: string) => {
+  single: async (
+    Model: string,
+    action: string,
+    identifier: { name: string; value: any }
+  ) => {
     try {
-      await createOne(Model, action);
-      await createOneTypeDef(Model);
+      await generateResolver(
+        Model,
+        action,
+        mutationCRUDS.includes(action) ? "Mutation" : "Query",
+        identifier
+      );
+      await generateTypedef(
+        Model,
+        action,
+        mutationCRUDS.includes(action) ? "input" : "type"
+      );
+    } catch ({ message }) {
+      Logger.error(message);
+    }
+  },
+  many: async (Model: string, action: string) => {
+    try {
+      await generateResolverForManyCRUD(
+        Model,
+        action,
+        mutationCRUDS.includes(action) ? "Mutation" : "Query"
+      );
+      await generateTypedefForManyCRUD(
+        Model,
+        action,
+        mutationCRUDS.includes(action) ? "input" : "type"
+      );
     } catch ({ message }) {
       Logger.error(message);
     }

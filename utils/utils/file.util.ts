@@ -136,8 +136,10 @@ export const insertStringToFileInRangeOfLines = async (
   string: string,
   startHandler: string | number,
   endHandler: string | number,
-  duplicates?: boolean
+  duplicates?: boolean,
+  addToStartIndex?: number
 ) => {
+  addToStartIndex = addToStartIndex ? addToStartIndex : 0;
   const fileAsString = await read(filePath, "utf8");
   const lineArray = await utils
     .toLineArray(fileAsString)
@@ -164,7 +166,11 @@ export const insertStringToFileInRangeOfLines = async (
   } else {
     const splatOneLineRange = linesInRange[0].split("}");
     splatOneLineRange[0] = `${splatOneLineRange[0]}, ${string} }`;
-    lineArray.splice(startIndex + 1, 1, splatOneLineRange.join(""));
+    lineArray.splice(
+      startIndex + 1 + addToStartIndex,
+      1,
+      splatOneLineRange.join("")
+    );
   }
   const finished = utils.fromLineArray(lineArray);
   await write(filePath, finished);

@@ -771,3 +771,72 @@
 2021-07-03 14:44:36:4436 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
 2021-07-03 14:45:29:4529 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
 2021-07-03 14:55:01:551 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\types\messageModelOptions.ts'[39m
+2021-07-03 17:56:40:5640 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 17:59:31:5931 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-03 18:52:34:5234 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'name' of undefined[39m
+2021-07-03 18:52:51:5251 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'name' of undefined[39m
+2021-07-03 20:33:27:3327 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-03 20:36:26:3626 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (207:60)[39m
+[31m[error]   205 |[39m
+[31m[error]   206 | // add.createOne("Message", "Create One");[39m
+[31m[error] > 207 | import { GraphQLScalarType } from "graphql";messageOptions,/*TODO:CRUD- Add list of schemas to select box on "Select a schema" @ add/crud- Add "Select all" button when choosing CRUD actions- Add a json file for each schema and a function that checks which CRUD operations are available for the schema.- Make CRUD-composing functions.DUE: 4.07.21, Saturday night.CHAT APP PRESENTATION- Make a 100% working chatapp presentation- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TSDUE: 8.07.21, Thursday morning.PRESENTATION- Make a presentation to depict the project- Add documentation to your Github repo.DUE: 9.07.21, Friday night.AUTH- Add complete user auth system with the click of a button - will include:- public user schema- auth user schemafour GQLtypes - input and type for user, input and type for authCRUD operations for both schemas:- create - with hashing of passwords and saving them in a DB- delete - to delete- read - to get the user- login - to log in with password.- cookies on backend.DUE: 12.07.21, Monday morning.//  - add more options to the CLI - make it customizable//  - make sure creating only a DB schema works*///////////// DUE: 13.07.21, Sunday. //////////////////import {validateResolverCreation,validateTypeCreation,validateSchemaCreation,} from "./validations";import {addUserAuthOptions,ResolverOptions,createSchemaOptions,createCustomTypeOptions,stub,} from "./types";[39m
+[31m[error]       |                                                            ^[39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 20ms[39m
+
+[31mtypeDefs.ts 14ms[39m
+2021-07-03 20:37:15:3715 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-03 20:38:08:388 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (207:60)[39m
+[31m[error]   205 |[39m
+[31m[error]   206 | // add.createOne("Message", "Create One");[39m
+[31m[error] > 207 | import { GraphQLScalarType } from "graphql";messageOptions,/*TODO:CRUD- Add list of schemas to select box on "Select a schema" @ add/crud- Add "Select all" button when choosing CRUD actions- Add a json file for each schema and a function that checks which CRUD operations are available for the schema.- Make CRUD-composing functions.DUE: 4.07.21, Saturday night.CHAT APP PRESENTATION- Make a 100% working chatapp presentation- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TSDUE: 8.07.21, Thursday morning.PRESENTATION- Make a presentation to depict the project- Add documentation to your Github repo.DUE: 9.07.21, Friday night.AUTH- Add complete user auth system with the click of a button - will include:- public user schema- auth user schemafour GQLtypes - input and type for user, input and type for authCRUD operations for both schemas:- create - with hashing of passwords and saving them in a DB- delete - to delete- read - to get the user- login - to log in with password.- cookies on backend.DUE: 12.07.21, Monday morning.//  - add more options to the CLI - make it customizable//  - make sure creating only a DB schema works*///////////// DUE: 13.07.21, Sunday. //////////////////import {validateResolverCreation,validateTypeCreation,validateSchemaCreation,} from "./validations";import {addUserAuthOptions,ResolverOptions,createSchemaOptions,createCustomTypeOptions,stub,} from "./types";[39m
+[31m[error]       |                                                            ^[39m
+[31mapp.ts 164ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-03 20:46:32:4632 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-03 21:14:12:1412 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (206:7)[39m
+[31m[error]   204 |[39m
+[31m[error]   205 |       })[39m
+[31m[error] > 206 |       return errors ? errors : 'OK'[39m
+[31m[error]       |       ^[39m
+[31m[error]   207 |     } [39m
+[31m[error]   208 |[39m
+[31m[error]   209 | // mutation-end[39m
+[31mapp.ts 153ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 20ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-03 21:20:33:2033 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (220:60)[39m
+[31m[error]   218 |[39m
+[31m[error]   219 | // add.createOne("Message", "Create One");[39m
+[31m[error] > 220 | import { GraphQLScalarType } from "graphql";messageOptions,/*TODO:CRUD- Add list of schemas to select box on "Select a schema" @ add/crud- Add "Select all" button when choosing CRUD actionsDUE: 4.07.21, Saturday night.CHAT APP PRESENTATION- Make a 100% working chatapp presentation- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TSDUE: 8.07.21, Thursday morning.PRESENTATION- Make a presentation to depict the project- Add documentation to your Github repo.DUE: 9.07.21, Friday night.AUTH- Add complete user auth system with the click of a button - will include:- public user schema- auth user schemafour GQLtypes - input and type for user, input and type for authCRUD operations for both schemas:- create - with hashing of passwords and saving them in a DB- delete - to delete- read - to get the user- login - to log in with password.- cookies on backend.DUE: 12.07.21, Monday morning.//  - add more options to the CLI - make it customizable//  - make sure creating only a DB schema works*///////////// DUE: 13.07.21, Sunday. //////////////////import {validateResolverCreation,validateTypeCreation,validateSchemaCreation,} from "./validations";import {addUserAuthOptions,ResolverOptions,createSchemaOptions,createCustomTypeOptions,stub,} from "./types";[39m
+[31m[error]       |                                                            ^[39m
+[31mapp.ts 161ms[39m
+[31mconnections.ts 15ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 14ms[39m
+2021-07-03 21:22:01:221 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-03 21:39:26:3926 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Declaration or statement expected. (222:9)[39m
+[31m[error]   220 | };[39m
+[31m[error]   221 | essage[39m
+[31m[error] > 222 |         }[39m
+[31m[error]       |         ^[39m
+[31m[error]   223 |[39m
+[31m[error]   224 |       }))[39m
+[31m[error]   225 |       return errors ? errors : 'OK'[39m
+[31mapp.ts 167ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 16ms[39m

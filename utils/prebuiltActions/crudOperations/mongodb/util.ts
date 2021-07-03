@@ -27,4 +27,15 @@ export const writeResolverIntoFile = async (resolver: string, type: string) => {
 export const mongooseMethods = {
   CreateOne: "save()",
   CreateMany: (arr: any[]) => `insertMany(${arr})`,
+  ReadOne: (identifier: { name: string; value: any }) =>
+    `findOne({${identifier.name}:${identifier.value}})`,
+  ReadMany: (identifier: { name: string; value: any }) =>
+    `findMany({${identifier.name}:${identifier.value}})`,
+  ReadAll: "find()",
+  UpdateOne: (identifier: { name: string; value: any }) =>
+    `updateOne({${identifier.name}:${identifier.value}})`,
+  UpdateMany: "NOT SUPPORTED",
+  DeleteOne: (identifier: { name: string; value: any }) =>
+    `deleteOne({${identifier.name}:${identifier.value}})`,
+  DeleteMany: "deleteMany()",
 };

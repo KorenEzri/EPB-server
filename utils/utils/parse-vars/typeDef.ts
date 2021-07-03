@@ -15,7 +15,8 @@ const checkIfAllTypesAreCustomTypes = (
 };
 const compileVarlistAndTypedefInterfaceForCustomTypes = (
   varList: { name: string; type: string }[],
-  name: string
+  name: string,
+  many?: boolean
 ) => {
   const amountOfVars = varList.length;
   const typeDefInterface: any = {};
@@ -36,7 +37,7 @@ const compileVarlistAndTypedefInterfaceForCustomTypes = (
     typeDefInterface[name] = type;
   });
   return {
-    varList: `options: ${name}Options`,
+    varList: `options: ${many ? `[${name}Options]` : `${name}Options`}`,
     typeDefInterface,
   };
 };
@@ -52,7 +53,8 @@ const parseSingleTypedefVariable = (variable: {
 };
 const compileVarlistAndTypedefInterface = (
   varList: { name: string; type: string }[],
-  name: string
+  name: string,
+  many?: boolean
 ) => {
   const typeDefInterface: any = {};
   const moreThanOneVarInVarlist = varList.length > 1 ? true : false;
@@ -65,18 +67,24 @@ const compileVarlistAndTypedefInterface = (
       typeDefInterface[variable.name] = parseSingleTypedefVariable(variable);
     });
     return {
-      varList: `options: ${name}OptionsInput`,
+      varList: `options: ${
+        many ? `[${name}OptionsInput]` : `${name}OptionsInput`
+      }`,
       typeDefInterface,
     };
   }
 };
-export const parseTypeDefVarlist = (vars: string[], name: string) => {
+export const parseTypeDefVarlist = (
+  vars: string[],
+  name: string,
+  many?: boolean
+) => {
   let varList = utils.splitNameType(vars); // return a list of { name: foo, type: string } .
   Array.isArray(varList) ? varList : (varList = [varList]);
   const areAllTypesCustomTypes = checkIfAllTypesAreCustomTypes(varList);
   if (areAllTypesCustomTypes) {
-    return compileVarlistAndTypedefInterfaceForCustomTypes(varList, name);
+    return compileVarlistAndTypedefInterfaceForCustomTypes(varList, name, many);
   } else {
-    return compileVarlistAndTypedefInterface(varList, name);
+    return compileVarlistAndTypedefInterface(varList, name, many);
   }
 };

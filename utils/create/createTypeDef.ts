@@ -15,7 +15,8 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   name: string,
   properties: string[],
   type?: string,
-  returnType?: string
+  returnType?: string,
+  many?: boolean
 ) => {
   const capType = utils.capitalizeFirstLetter(type || "");
   const { typeDef, typeDefInterface } = fromOptionsToGQLTypeDefinition(
@@ -27,7 +28,8 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     name,
     properties,
     capType,
-    returnType
+    returnType,
+    many
   );
   const allTypeDefsAsString = await getTypeDefs(); // current typeDef file as string
   if (!allTypeDefsAsString)
@@ -80,7 +82,8 @@ const fromOptionsToGQLTypeDefinition = (
   name: string,
   properties: string[],
   type: string,
-  returnType?: string
+  returnType?: string,
+  many?: boolean
 ) => {
   // Function receives the name of the type Def, the list of it's properties, and it's returntype (optional)
   const { varList, typeDefInterface } = parseVars.parseTypeDefVarlist(
@@ -90,7 +93,8 @@ const fromOptionsToGQLTypeDefinition = (
     for GraphQL.
     */
     properties,
-    name
+    name,
+    many
   );
   if (returnType) {
     if (!utils.isCustomType(returnType)) {
@@ -174,9 +178,10 @@ const insertTypeDefInterface = (
   );
   return finishedTypeDefs;
 };
-export const createNewTypeDef = async ({
-  options,
-}: ResolverOptions | createCustomTypeOptions) => {
+export const createNewTypeDef = async (
+  { options }: ResolverOptions | createCustomTypeOptions,
+  many?: boolean
+) => {
   /*
   FLOW:
 1. grabTypeDefsAndInsertNewTypeDef() => fromOptionsToGQLTypeDefinition(), 
@@ -196,7 +201,8 @@ export const createNewTypeDef = async ({
       options.name,
       options.properties,
       options.type,
-      options.returnType
+      options.returnType,
+      many
     );
     // calls fromOptionsToGQLTypeDefinition()
     if (!res || res.error) {
