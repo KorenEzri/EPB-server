@@ -8,37 +8,6 @@ import {
   resolverTryCatchBlockOptions,
 } from "../../../../../types";
 
-const parseResolverInfo = (options: createResolverOptions) => {
-  const { Model, action, identifier } = options;
-  const capitalizedModelSchemaName = utils.capitalizeFirstLetter(Model);
-  const lowercasedModelSchemaame = utils.lowercaseFirstLetter(Model);
-  const modelFunctionVarName = utils.replaceAllInString(
-    lowercasedModelSchemaame,
-    "Schema",
-    ""
-  );
-  const mongoDBModelObjectName = utils.replaceAllInString(
-    capitalizedModelSchemaName,
-    "Schema",
-    "Model"
-  );
-  const modelInstaceName = `${modelFunctionVarName}Instance`;
-  const modelInterfaceName = `${modelFunctionVarName}Options`;
-  const resolverName = mongoUtils.generateResolverName(Model, action);
-  const mongooseMethod = mongoUtils.getMongooseMethod(
-    action.split(" ").join(""),
-    identifier,
-    modelFunctionVarName
-  );
-  return {
-    resolverName,
-    modelInterfaceName,
-    modelInstaceName,
-    modelFunctionVarName,
-    mongoDBModelObjectName,
-    mongooseMethod,
-  };
-};
 const buildResolvers = (
   action: string,
   options: { title: resolverTitleOptions; body: resolverBodyOptions }
@@ -83,6 +52,37 @@ const buildResolvers = (
       return "ERROR";
   }
 };
+const parseResolverInfo = (options: createResolverOptions) => {
+  const { Model, action, identifier } = options;
+  const capitalizedModelSchemaName = utils.capitalizeFirstLetter(Model);
+  const lowercasedModelSchemaame = utils.lowercaseFirstLetter(Model);
+  const modelFunctionVarName = utils.replaceAllInString(
+    lowercasedModelSchemaame,
+    "Schema",
+    ""
+  );
+  const mongoDBModelObjectName = utils.replaceAllInString(
+    capitalizedModelSchemaName,
+    "Schema",
+    "Model"
+  );
+  const modelInstaceName = `${modelFunctionVarName}Instance`;
+  const modelInterfaceName = `${modelFunctionVarName}Options`;
+  const resolverName = mongoUtils.generateResolverName(Model, action);
+  const mongooseMethod = mongoUtils.getMongooseMethod(
+    action.split(" ").join(""),
+    identifier,
+    modelFunctionVarName
+  );
+  return {
+    resolverName,
+    modelInterfaceName,
+    modelInstaceName,
+    modelFunctionVarName,
+    mongoDBModelObjectName,
+    mongooseMethod,
+  };
+};
 const getTryCatchBlock = (
   action: string,
   options: resolverTryCatchBlockOptions
@@ -115,13 +115,13 @@ export const createResolverFromOpts = async (
 ) => {
   const parts = parseResolverInfo(options);
   const { action, identifier, resolverType } = options;
-  const titleOptions = {
+  const titleOptions: resolverTitleOptions = {
     resolverName: parts.resolverName,
     modelFunctionVarName: parts.modelFunctionVarName,
     modelInterfaceName: parts.modelInterfaceName,
     identifier,
   };
-  const tryCatchBlockOptions = {
+  const tryCatchBlockOptions: resolverTryCatchBlockOptions = {
     modelInstaceName: parts.modelInstaceName,
     mongoDBModelObjectName: parts.mongoDBModelObjectName,
     modelFunctionVarName: parts.modelFunctionVarName,
@@ -129,7 +129,7 @@ export const createResolverFromOpts = async (
     identifier,
   };
   const resolverTryCatchBlock = getTryCatchBlock(action, tryCatchBlockOptions);
-  const bodyOptions = {
+  const bodyOptions: resolverBodyOptions = {
     modelInstaceName: parts.modelInstaceName,
     mongoDBModelObjectName: parts.mongoDBModelObjectName,
     modelFunctionVarName: parts.modelFunctionVarName,

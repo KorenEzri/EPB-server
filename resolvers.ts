@@ -40,16 +40,16 @@ import {
   validateSchemaCreation,
 } from "./validations";
 import {
-  messageOptions,
   addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
+  addCrudOperationsOptions,
   createCustomTypeOptions,
   stub,
 } from "./types";
 // option types end
 // model imports
-import { modelstub, MessageModel } from "./db/schemas";
+import { modelstub } from "./db/schemas";
 // model imports end
 import {
   getResolvers,
@@ -61,13 +61,6 @@ import * as utils from "./utils/utils";
 import * as create from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
-interface addCrudOperationsOptions {
-  options: {
-    schemaName: string;
-    crudActions: string[];
-    identifier: { name: string; type: string };
-  };
-}
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",

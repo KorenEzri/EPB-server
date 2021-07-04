@@ -1,14 +1,12 @@
-import * as createResolver from "./mongodb/graphQL/resolvers";
+import { createResolverFromOpts } from "./mongodb/graphQL/resolvers";
+import { createResolverOptions } from "../../../types";
 import { availableCRUDActions } from "../../../consts";
 import { getResolvers } from "../../codeToString";
+import { mutationCRUDS } from "./mongodb/util";
+import fs from "fs";
 import { promisify } from "util";
 import * as utils from "../../utils";
 import Logger from "../../../logger/logger";
-import fs from "fs";
-import { mutationCRUDS } from "./mongodb/util";
-import { generateTypedefForOne } from "./mongodb/graphQL/typeDefs";
-import { createResolverFromOpts } from "./mongodb/graphQL/resolvers";
-import { createResolverOptions } from "../../../types";
 
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
@@ -153,25 +151,22 @@ const createCrudOps = async (
   identifier: { name: string; type: string }
 ) => {
   crudOps = crudOps.map((op: string) => op.split(" ").join(""));
-
   for (let i = 0; i < crudOps.length; i++) {
     const crudOperation = crudOps[i];
-
     const resolverType = mutationCRUDS.includes(crudOperation)
       ? "Mutation"
       : "Query";
-
     const options: createResolverOptions = {
       Model: schemaName,
       action: crudOperation,
       resolverType,
       identifier,
     };
-    createResolverFromOpts(options);
+    await createResolverFromOpts(options);
+    // await createTypedefFromOpts()
     Logger.http(
       `FROM: EPB-server: created CRUD action ${crudOperation}, applying Prettier..`
     );
-
     await utils.applyPrettier();
   }
 };

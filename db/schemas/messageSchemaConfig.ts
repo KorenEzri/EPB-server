@@ -1,1 +1,0 @@
-const availableCRUDActions = [  "Update Many",  "Delete Many",];

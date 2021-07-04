@@ -34,26 +34,6 @@ const createTypedefForCRUDS = async (
   options.returnType = returnType;
   await createNewTypeDef({ options: options }, true);
 };
-export const generateTypedefForOne = async (
-  Model: string,
-  action: string,
-  typedefType: string,
-  returnType?: string
-) => {
-  const modelNameOnly = utils.replaceAllInString(
-    utils.replaceAllInString(Model, "Model", ""),
-    "Schema",
-    ""
-  );
-  const actionNameForTypeDef = mongoUtils.generateResolverName(Model, action);
-  const modelPath = `types/${modelNameOnly}Options.ts`;
-  await createTypedefForCRUDS(
-    modelPath,
-    actionNameForTypeDef,
-    typedefType,
-    returnType || "string"
-  );
-};
 export const generateTypedefForManyCRUD = async (
   Model: string,
   action: string,
@@ -74,3 +54,25 @@ export const generateTypedefForManyCRUD = async (
     returnType || "string"
   );
 };
+
+export const createTypedefFromOpts = async () => {};
+// export const generateTypedefForOne = async (
+//   Model: string,
+//   action: string,
+//   typedefType: string,
+//   returnType?: string
+// ) => {
+//   const modelNameOnly = utils.replaceAllInString(
+//     utils.replaceAllInString(Model, "Model", ""),
+//     "Schema",
+//     ""
+//   );
+//   const actionNameForTypeDef = mongoUtils.generateResolverName(Model, action);
+//   const modelPath = `types/${modelNameOnly}Options.ts`;
+//   await createTypedefForCRUDS(
+//     modelPath,
+//     actionNameForTypeDef,
+//     typedefType,
+//     returnType || "string"
+//   );
+// };
