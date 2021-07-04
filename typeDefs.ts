@@ -56,7 +56,7 @@ export const typeDefs = gql`
   }
   input identifier {
     name: String
-    value: String
+    type: String
   }
   type Query {
     getResolvers: String
@@ -64,7 +64,6 @@ export const typeDefs = gql`
     getActions: [String]
     getAllResolverNames: [String]
     getAllowedTypes: [String]
-
     getAllDBSchemaNames: [String]
     # query-end
   }

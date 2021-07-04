@@ -39,7 +39,6 @@ import {
   validateTypeCreation,
   validateSchemaCreation,
 } from "./validations";
-// option types
 import {
   messageOptions,
   addUserAuthOptions,
@@ -62,12 +61,11 @@ import * as utils from "./utils/utils";
 import * as create from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
-
 interface addCrudOperationsOptions {
   options: {
     schemaName: string;
     crudActions: string[];
-    identifier: { name: string; value: any };
+    identifier: { name: string; type: string };
   };
 }
 

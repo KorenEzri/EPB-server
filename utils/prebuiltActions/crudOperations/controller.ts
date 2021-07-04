@@ -1,12 +1,42 @@
+import * as createResolver from "./mongodb/graphQL/resolvers";
 import { availableCRUDActions } from "../../../consts";
 import { getResolvers } from "../../codeToString";
 import { promisify } from "util";
 import * as utils from "../../utils";
-import { mongoCRUDS } from "./index";
 import Logger from "../../../logger/logger";
 import fs from "fs";
+import { mutationCRUDS } from "./mongodb/util";
+import { generateTypedefForOne } from "./mongodb/graphQL/typeDefs";
+import { createResolverFromOpts } from "./mongodb/graphQL/resolvers";
+import { createResolverOptions } from "../../../types";
+
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
+/*
+//////////////////// $ FLOW $ /////////////////////
+1. addCrudToDBSchemas() is called.
+
+2. addCrudToDBSchemas() checks if an interface for the request schema exists and validates the schema's config list (creates one if it can't find it).
+
+3. addCrudToDBSchemas() calls createCrudOps(schemaName, crudOperations, identifier);
+
+4. createCrudOps() calls insertModelImportStatementToResolverFile(modelName); and insertOptionsInterfaceImportToResolverFile(optionsName);
+    basically, createCrudOps() inserts a model and an interface import to the resolvers.ts file.
+
+5. for each crudOp, if it's a "One" and not a "Many" crud operation, call goes to generateResolverForOne(): 
+" 
+   if (crudOperation.includes("One")) {
+      await generateResolverForOne(
+        modelName,
+        crudOperation,
+        resolverType,
+        identifier
+      );
+      return;
+    }   
+        "
+6. 
+*/
 
 const createDBSchemaConfigList = async (schemaName: string) => {
   const ConfigListPath = `db/schemas/${schemaName}Config.ts`;
@@ -120,32 +150,30 @@ const insertOptionsInterfaceImportToResolverFile = async (
 const createCrudOps = async (
   schemaName: string,
   crudOps: string[],
-  identifier: { name: string; value: any }
+  identifier: { name: string; type: string }
 ) => {
   crudOps = crudOps.map((op: string) => op.split(" ").join(""));
-  const schemaNameOnly = utils.replaceAllInString(schemaName, "Schema", "");
-  const modelName = `${schemaNameOnly}Model`;
-  const optionsName = `${utils.lowercaseFirstLetter(schemaNameOnly)}Options`;
-  await insertModelImportStatementToResolverFile(modelName);
-  await insertOptionsInterfaceImportToResolverFile(optionsName);
-  await Promise.all(
-    crudOps.map(async (crudOperation: string) => {
-      Logger.http(
-        `FROM: EPB-server: Creating CRUD operation ${crudOperation} for DB Schema ${schemaName}`
-      );
-      // switch (crudOperation.trim()) {
-      //   case "CreateOne":
-      crudOperation.includes("One")
-        ? mongoCRUDS.single(modelName, crudOperation, identifier)
-        : mongoCRUDS.many(modelName, crudOperation);
-      //     break;
-      //   case "CreateMany":
-      //     mongoCRUDS.createMany(modelName, crudOperation);
-      //   default:
-      //     break;
-      // }
-    })
-  );
+
+  for (let i = 0; i < crudOps.length; i++) {
+    const crudOperation = crudOps[i];
+
+    const resolverType = mutationCRUDS.includes(crudOperation)
+      ? "Mutation"
+      : "Query";
+
+    const options: createResolverOptions = {
+      Model: schemaName,
+      action: crudOperation,
+      resolverType,
+      identifier,
+    };
+    createResolverFromOpts(options);
+    Logger.http(
+      `FROM: EPB-server: created CRUD action ${crudOperation}, applying Prettier..`
+    );
+
+    await utils.applyPrettier();
+  }
 };
 //
 //
@@ -153,9 +181,8 @@ const createCrudOps = async (
 export const addCrudToDBSchemas = async (
   schemaName: string,
   crudOperations: string[],
-  identifier: { name: string; value: any }
+  identifier: { name: string; type: string }
 ) => {
-  Logger.http("FROM: EPB-server: Checking if interface exists..");
   const doesInterfaceExist = await checkIfInterfaceExists(schemaName);
   if (!doesInterfaceExist)
     return {
@@ -169,9 +196,17 @@ export const addCrudToDBSchemas = async (
     crudOperations
   );
   if (availabilityErrors) return availabilityErrors; // if some operations are invalid, returns an array of errors.
+  const schemaNameOnly = utils.replaceAllInString(schemaName, "Schema", "");
+  const modelName = `${schemaNameOnly}Model`;
+  const optionsName = `${utils.lowercaseFirstLetter(schemaNameOnly)}Options`;
+  Logger.http(`FROM: EPB-server: Inserting import statements...`);
+  await insertModelImportStatementToResolverFile(modelName);
+  await insertOptionsInterfaceImportToResolverFile(optionsName);
+  Logger.http(
+    `FROM: EPB-server: Creating ${crudOperations.length} CRUD operations..`
+  );
   await createCrudOps(schemaName, crudOperations, identifier);
   await removeCrudOpsFromAvailabilityList(schemaName, crudOperations);
-  await utils.applyPrettier();
-  Logger.http("FROM: EPB-server: CRUDS created successfully.");
+  Logger.http(`FROM: EPB-server: Finished.`);
   return "OK";
 };

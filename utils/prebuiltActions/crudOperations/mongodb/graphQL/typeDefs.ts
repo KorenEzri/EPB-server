@@ -34,7 +34,7 @@ const createTypedefForCRUDS = async (
   options.returnType = returnType;
   await createNewTypeDef({ options: options }, true);
 };
-export const generateTypedef = async (
+export const generateTypedefForOne = async (
   Model: string,
   action: string,
   typedefType: string,

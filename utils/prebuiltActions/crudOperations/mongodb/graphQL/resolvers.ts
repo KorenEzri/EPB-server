@@ -1,107 +1,145 @@
 import * as mongoUtils from "../util";
 import * as utils from "../../../../utils";
+import { resolverTitles, resolverTryCatchBlocks, resolverBodies } from "./util";
+import {
+  createResolverOptions,
+  resolverTitleOptions,
+  resolverBodyOptions,
+  resolverTryCatchBlockOptions,
+} from "../../../../../types";
 
-const getMongooseMethod = (
+const parseResolverInfo = (options: createResolverOptions) => {
+  const { Model, action, identifier } = options;
+  const capitalizedModelSchemaName = utils.capitalizeFirstLetter(Model);
+  const lowercasedModelSchemaame = utils.lowercaseFirstLetter(Model);
+  const modelFunctionVarName = utils.replaceAllInString(
+    lowercasedModelSchemaame,
+    "Schema",
+    ""
+  );
+  const mongoDBModelObjectName = utils.replaceAllInString(
+    capitalizedModelSchemaName,
+    "Schema",
+    "Model"
+  );
+  const modelInstaceName = `${modelFunctionVarName}Instance`;
+  const modelInterfaceName = `${modelFunctionVarName}Options`;
+  const resolverName = mongoUtils.generateResolverName(Model, action);
+  const mongooseMethod = mongoUtils.getMongooseMethod(
+    action.split(" ").join(""),
+    identifier,
+    modelFunctionVarName
+  );
+  return {
+    resolverName,
+    modelInterfaceName,
+    modelInstaceName,
+    modelFunctionVarName,
+    mongoDBModelObjectName,
+    mongooseMethod,
+  };
+};
+const buildResolvers = (
   action: string,
-  identifier: { name: string; value: any }
+  options: { title: resolverTitleOptions; body: resolverBodyOptions }
 ) => {
-  switch (action) {
-    case "Create One":
-      return mongoUtils.mongooseMethods.CreateOne;
-    case "Create Many":
-      // return mongoUtils.mongooseMethods.CreateMany;
-      return mongoUtils.mongooseMethods.CreateOne;
-    case "Read One":
-      return mongoUtils.mongooseMethods.ReadOne(identifier);
-
-    case "Read Many":
-      return mongoUtils.mongooseMethods.CreateOne;
-
-    case "Read All":
-      return mongoUtils.mongooseMethods.CreateOne;
-
-    case "Update One":
-      return mongoUtils.mongooseMethods.CreateOne;
-
-    case "Update Many":
-      return mongoUtils.mongooseMethods.CreateOne;
-
-    case "Delete One":
-      return mongoUtils.mongooseMethods.CreateOne;
-
-    case "Delete Many":
-      return mongoUtils.mongooseMethods.CreateOne;
-
+  const { title, body } = options;
+  switch (action.split(" ").join("")) {
+    case "CreateOne":
+      const createOneTitle = resolverTitles.createOne(title);
+      const createOneBody = resolverBodies.createOne(body);
+      return createOneTitle + createOneBody;
+    case "CreateMany":
+      const createManyTitle = resolverTitles.createMany(title);
+      const createManyBody = resolverBodies.createMany(body);
+      return createManyTitle + createManyBody;
+    case "ReadOne":
+      const readOneTitle = resolverTitles.readOne(title);
+      const readOneBody = resolverBodies.readOne(body);
+      return readOneTitle + readOneBody;
+    case "ReadMany":
+      const readManyTitle = resolverTitles.readMany(title);
+      const readManyBody = resolverBodies.readMany(body);
+      return readManyTitle + readManyBody;
+    case "ReadAll":
+      const readAllTitle = resolverTitles.readAll(title);
+      const readAllBody = resolverBodies.readAll(body);
+      return readAllTitle + readAllBody;
+    case "UpdateOne":
+      const updateOneTitle = resolverTitles.updateOne(title);
+      const updateOneBody = resolverBodies.updateOne(body);
+      return updateOneTitle + updateOneBody;
+    case "UpdateMany":
+      return "NOT SUPPORTED";
+    case "DeleteOne":
+      const deleteOneTitle = resolverTitles.deleteOne(title);
+      const deleteOneBody = resolverBodies.deleteOne(body);
+      return deleteOneTitle + deleteOneBody;
+    case "DeleteMany":
+      const deleteManyTitle = resolverTitles.deleteMany(title);
+      const deleteManyBody = resolverBodies.deleteMany(body);
+      return deleteManyTitle + deleteManyBody;
     default:
-      break;
+      return "ERROR";
   }
 };
-
-export const generateResolver = async (
-  Model: string,
+const getTryCatchBlock = (
   action: string,
-  resolverType: string,
-  identifier: { name: string; value: any }
+  options: resolverTryCatchBlockOptions
 ) => {
-  Model = utils.capitalizeFirstLetter(Model);
-  const lowerCaseModelName = utils.lowercaseFirstLetter(Model);
-  const onlyModelName = utils.replaceAllInString(
-    lowerCaseModelName,
-    "Model",
-    ""
-  );
-  const modelInstance = `${onlyModelName}Instance`;
-  const modelVariable = `${onlyModelName}Options`;
-  const resolver = `
-  ${mongoUtils.generateResolverName(
-    Model,
-    action
-  )}: async (_:any, ${onlyModelName}:${modelVariable}) => {
-        const ${modelInstance} = new ${Model}(${onlyModelName})
-        try {
-            await ${modelInstance}.${getMongooseMethod(action, identifier)};
-            return 'OK'
-        }
-        catch ({message}) {
-               Logger ? Logger.error(message) : console.log(message)
-                return message
-        }
-    } `;
-  await mongoUtils.writeResolverIntoFile(resolver, resolverType);
-  return;
+  switch (action.split(" ").join("")) {
+    case "CreateOne":
+      return resolverTryCatchBlocks.createOne(options);
+    case "CreateMany":
+      return resolverTryCatchBlocks.createMany(options);
+    case "ReadOne":
+      return resolverTryCatchBlocks.readOne(options);
+    case "ReadMany":
+      return resolverTryCatchBlocks.readMany(options);
+    case "ReadAll":
+      return resolverTryCatchBlocks.readAll(options);
+    case "UpdateOne":
+      return resolverTryCatchBlocks.updateOne(options);
+    case "UpdateMany":
+      return "NOT SUPPORTED";
+    case "DeleteOne":
+      return resolverTryCatchBlocks.deleteOne(options);
+    case "DeleteMany":
+      return resolverTryCatchBlocks.deleteMany(options);
+    default:
+      return "ERR";
+  }
 };
-export const generateResolverForManyCRUD = async (
-  Model: string,
-  action: string,
-  resolverType: string
+export const createResolverFromOpts = async (
+  options: createResolverOptions
 ) => {
-  Model = utils.capitalizeFirstLetter(Model);
-  const lowerCaseModelName = utils.lowercaseFirstLetter(Model);
-  const onlyModelName = utils.replaceAllInString(
-    lowerCaseModelName,
-    "Model",
-    ""
-  );
-  const modelInstance = `${onlyModelName}Instance`;
-  const modelVariable = `${onlyModelName}Options`;
-  const resolver = `
-  ${mongoUtils.generateResolverName(
-    Model,
-    action
-  )}: async (_:any, ${onlyModelName}s:${modelVariable}[]) => {
-      const errors = await Promise.all(${onlyModelName}s.map( async (model) => {
-        const ${modelInstance} = new ${Model}(model)
-        try {
-            await ${modelInstance}.${mongoUtils.mongooseMethods.CreateOne};
-        }
-        catch ({message}) {
-               Logger ? Logger.error(message) : console.log(message)
-                return message
-        }
-
-      }))
-      return errors ? errors : 'OK'
-    } `;
-  await mongoUtils.writeResolverIntoFile(resolver, resolverType);
-  return;
+  const parts = parseResolverInfo(options);
+  const { action, identifier, resolverType } = options;
+  const titleOptions = {
+    resolverName: parts.resolverName,
+    modelFunctionVarName: parts.modelFunctionVarName,
+    modelInterfaceName: parts.modelInterfaceName,
+    identifier,
+  };
+  const tryCatchBlockOptions = {
+    modelInstaceName: parts.modelInstaceName,
+    mongoDBModelObjectName: parts.mongoDBModelObjectName,
+    modelFunctionVarName: parts.modelFunctionVarName,
+    mongooseMethod: parts.mongooseMethod,
+    identifier,
+  };
+  const resolverTryCatchBlock = getTryCatchBlock(action, tryCatchBlockOptions);
+  const bodyOptions = {
+    modelInstaceName: parts.modelInstaceName,
+    mongoDBModelObjectName: parts.mongoDBModelObjectName,
+    modelFunctionVarName: parts.modelFunctionVarName,
+    resolverTryCatchBlock,
+    mongooseMethod: parts.mongooseMethod,
+    identifier,
+  };
+  const resolver = buildResolvers(action, {
+    title: titleOptions,
+    body: bodyOptions,
+  });
+  await mongoUtils.writeResolverIntoFile(`${resolver}}`, resolverType);
 };
