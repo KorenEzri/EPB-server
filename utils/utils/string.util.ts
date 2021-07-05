@@ -3,6 +3,7 @@ export const toLineArray = (string: string, parseFunc?: any) => {
   return string.split("\n");
 };
 export const splitNameType = (toSplit: string | string[]) => {
+  if (!toSplit) return { name: "", type: "" };
   if (Array.isArray(toSplit)) {
     return toSplit.map((string: string) => {
       const splatString = string.split(":");

@@ -66,10 +66,12 @@ export const createNewInterface = async ({
   Logger.http("FROM: EPB-server: Creating a new type interface...");
   const interfaceString = fromOptionsToInterfaceString({ options: options });
   try {
-    await writeInterfaceToFiles(options.name, interfaceString);
-    Logger.http(
-      "FROM: EPB-server: Interface created successfully, applying Prettier."
-    );
+    if (options.tsInterface !== "no") {
+      await writeInterfaceToFiles(options.name, interfaceString);
+      Logger.http(
+        "FROM: EPB-server: Interface created successfully, applying Prettier."
+      );
+    }
     const { typeDef } = options;
     if (typeDef) {
       Logger.http("FROM: EPB-server: typeDef option received, creating..");

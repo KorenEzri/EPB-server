@@ -175,3 +175,99 @@ export const insertStringToFileInRangeOfLines = async (
   const finished = utils.fromLineArray(lineArray);
   await write(filePath, finished);
 };
+
+// export const checkIfLinesAlreadyExist = async (
+//   lines: string[],
+//   filePath: string | undefined,
+//   fileAsString: string | undefined,
+//   ignore?: string[]
+// ) => {
+//   const itemsToIgnore = ignore ? ["", "}", "{"].concat(ignore) : ["", "}", "{"];
+//   if (!filePath && !fileAsString)
+//     return { error: true, message: "No file or filepath provided." };
+//   if (filePath && !fileAsString) {
+//     fileAsString = await read(filePath, "utf8");
+//   }
+//   if (!fileAsString) return { error: true, message: "Could not read file." };
+//   const fileLineArray = utils
+//     .toLineArray(fileAsString)
+//     .map((line: string) => line.trim());
+//   const duplicatesArray = lines
+//     .map((line: string, index: number) => {
+//       if (
+//         fileLineArray.includes(line.trim()) &&
+//         !itemsToIgnore.includes(line.trim())
+//       ) {
+//         return { line: line, index: index };
+//       }
+//     })
+//     .filter((val) => val != null);
+//   if (duplicatesArray.length) {
+//     return {
+//       error: true,
+//       message: "Duplicate lines found",
+//       duplicates: duplicatesArray,
+//     };
+//   } else return { error: false };
+// };
+export const checkIfLinesAlreadyExist = async (
+  lines: string,
+  filePath: string | undefined,
+  fileAsString: string | undefined
+) => {
+  if (!filePath && !fileAsString)
+    return { error: true, message: "No file or filepath provided." };
+  if (filePath && !fileAsString) {
+    fileAsString = await read(filePath, "utf8");
+  }
+  if (!fileAsString) return { error: true, message: "Could not read file." };
+  fileAsString = fileAsString
+    .split("\n")
+    .map((line: string) =>
+      utils.replaceAllInString(
+        line.trim(),
+        [",", " ", ";", "\n", "\r", "\t"],
+        ["", "", "", "", "", ""]
+      )
+    )
+    .filter((line: string) => !(line.includes("#") || line.includes("//")))
+    .join("\n");
+  lines = lines
+    .split("\n")
+    .map((line: string) =>
+      utils.replaceAllInString(
+        line.trim(),
+        [",", " ", ";", "\n", "\r", "\t"],
+        ["", "", "", "", "", ""]
+      )
+    )
+    .filter((line: string) => !(line.includes("#") || line.includes("//")))
+    .join("\n");
+  if (fileAsString.includes(lines))
+    return { error: true, message: "Duplicates found" };
+  return { error: false };
+};
+export const checkForDuplicateLines = async (
+  filePath: string | undefined,
+  fileAsString: string | undefined
+) => {
+  const findDuplicates = (arr: string[]) =>
+    arr.filter((item, index) => arr.indexOf(item) != index);
+  if (!filePath && !fileAsString)
+    return { error: true, message: "No file or filepath provided." };
+  if (filePath && !fileAsString) {
+    fileAsString = await read(filePath, "utf8");
+  }
+  if (!fileAsString) return { error: true, message: "Could not read file." };
+  const fileLineArray = utils
+    .toLineArray(fileAsString)
+    .map((line: string) => line.trim());
+  const duplicates = findDuplicates(fileLineArray);
+  if (duplicates.length > 0) {
+    return {
+      error: true,
+      message: `Duplicate lines detected in file ${filePath}.`,
+      duplicates,
+    };
+  } else return { error: false };
+};

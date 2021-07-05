@@ -1,0 +1,1 @@
+const availableCRUDActions = [    "Create One",]

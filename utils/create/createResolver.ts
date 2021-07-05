@@ -19,13 +19,13 @@ const toResolver = ({ options }: ResolverOptions) => {
     });
   }
   let resolverString = `
-        // Action: ${description}
+        // Action: ${description} \n
         ${name}: async (_:any, ${
     resolverInterface ? `{ options }:${name}Options` : stringifiedVarList
   }) => {
-          // ${comment}
-          // return ${returnType}
-      },
+          // ${comment} \n
+          // return ${returnType} \n
+      },\n
         `;
   resolverString = utils.replaceAllInString(resolverString, "\t", "");
   resolverString = utils.replaceAllInString(resolverString, '"', "");

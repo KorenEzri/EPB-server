@@ -10,16 +10,15 @@ const write = promisify(fs.writeFile);
 const allTypeDefinitions = typeDefs.definitions.map((definition: any) =>
   definition.name.value.trim()
 );
-
 const grabTypeDefsAndInsertNewTypeDef = async (
   name: string,
   properties: string[],
   type?: string,
   returnType?: string,
-  many?: boolean
+  actionName?: string
 ) => {
   const capType = utils.capitalizeFirstLetter(type || "");
-  const { typeDef, typeDefInterface } = fromOptionsToGQLTypeDefinition(
+  let { typeDef, typeDefInterface } = fromOptionsToGQLTypeDefinition(
     /*
     This function returns varList - either an array, or a stringified represntation of name:type in case of having only one option.
     it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
@@ -29,17 +28,18 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     properties,
     capType,
     returnType,
-    many
+    actionName
   );
   const allTypeDefsAsString = await getTypeDefs(); // current typeDef file as string
   if (!allTypeDefsAsString)
     return "Error with utils/createNew/createTypeDef.ts, getTypeDefs() returned undefined!";
   const typeDefLineArray = utils.toLineArray(allTypeDefsAsString);
   if (
+    !actionName &&
     // check if typeDef already exists vv
-    typeDefLineArray.includes(typeDef) ||
-    utils.isCustomType(`${name}Options`) ||
-    allTypeDefinitions.includes(`${name.trim()}Options`)
+    (typeDefLineArray.includes(typeDef) ||
+      utils.isCustomType(`${name}Options`) ||
+      allTypeDefinitions.includes(`${name.trim()}Options`))
   ) {
     // check if typeDef is a custom type vv
     if (type && utils.isCustomType(`${name}Options${capType}`)) {
@@ -54,7 +54,8 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     allTypeDefinitions.push(`${name.trim()}Options`);
     allTypeDefinitions.push(`${name.trim()}Options${capType}`);
   }
-  let finishedTypeDefs = insertTypeDefInterface(
+
+  let finishedTypeDefs = await insertTypeDefInterface(
     // this inserts the interface to the typeDef string.
     allTypeDefsAsString,
     name,
@@ -62,12 +63,14 @@ const grabTypeDefsAndInsertNewTypeDef = async (
     type,
     returnType
   );
+
   let typeInsertEndIndex: string | number =
     type === "Query" ? "# query-end" : "# mutation-end";
   typeInsertEndIndex = utils
     .toLineArray(finishedTypeDefs)
     .map((line: string) => line.trim())
     .indexOf(typeInsertEndIndex);
+  if (actionName) typeDef = actionName + utils.capitalizeFirstLetter(typeDef);
   if (returnType) {
     finishedTypeDefs = utils.pushIntoString(
       finishedTypeDefs,
@@ -83,8 +86,13 @@ const fromOptionsToGQLTypeDefinition = (
   properties: string[],
   type: string,
   returnType?: string,
-  many?: boolean
+  actionName?: string
 ) => {
+  const typeDefForManyObjects =
+    actionName?.toLowerCase().includes("many") ||
+    actionName?.toLowerCase().includes("all")
+      ? true
+      : false;
   // Function receives the name of the type Def, the list of it's properties, and it's returntype (optional)
   const { varList, typeDefInterface } = parseVars.parseTypeDefVarlist(
     /*
@@ -93,9 +101,9 @@ const fromOptionsToGQLTypeDefinition = (
     for GraphQL.
     */
     properties,
-    name,
-    many
+    name
   );
+
   if (returnType) {
     if (!utils.isCustomType(returnType)) {
       returnType = utils.capitalizeFirstLetter(returnType);
@@ -108,24 +116,26 @@ const fromOptionsToGQLTypeDefinition = (
      if the varList is an array, we use typeDefInterface, and it will be inserted later.
     */
     returnType
-      ? (typeDef = `${name}(${varList}): ${returnType}`)
+      ? (typeDef = `${name}${
+          typeDefForManyObjects ? "s" : ""
+        }(${varList}): ${returnType}`)
       : (typeDef = `${type.toLowerCase()} ${name} {${varList}}`);
     /* this^^^^ is like:
                   getMessageOptions(message: messageOptionsInput): messageOptionsType
     */
   } else if (varList.length === 0) {
     return {
-      typeDef: `${name}: ${returnType}`,
+      typeDef: `${name}${typeDefForManyObjects ? "s" : ""}: ${returnType}`,
       typeDefInterface,
     };
   } else {
-    typeDef = `${name}: ${returnType}`; // this <<< is like:
+    typeDef = `${name}${typeDefForManyObjects ? "s" : ""}: ${returnType}`; // this <<< is like:
     // getMessageOptions: messsageOptionsType
     // later, it will get the typeDefInterface options added to it.
   }
   return { typeDef, typeDefInterface };
 };
-const insertTypeDefInterface = (
+const insertTypeDefInterface = async (
   typeDefs: string,
   name: string,
   typeDefInterface: any,
@@ -165,10 +175,16 @@ const insertTypeDefInterface = (
     : undefined;
   typeDef = utils.replaceAllInString(
     typeDef || "",
-    ['"', "Number"],
-    ["", "Int"]
+    ['"', "Number", ";"],
+    ["", "Int", ""]
     // self-explanatory - GQL needs type "Int", not "Number", but for comfort, users can input both.
   );
+  const checkForDuplicates = await utils.checkIfLinesAlreadyExist(
+    typeDef,
+    undefined,
+    typeDefs
+  );
+  if (checkForDuplicates.error) typeDef = "";
   const finishedTypeDefs = utils.pushIntoString(
     // push into a string:
     typeDefs, // All old typeDefs file as string, we are pushing to this string.
@@ -178,10 +194,9 @@ const insertTypeDefInterface = (
   );
   return finishedTypeDefs;
 };
-export const createNewTypeDef = async (
-  { options }: ResolverOptions | createCustomTypeOptions,
-  many?: boolean
-) => {
+export const createNewTypeDef = async ({
+  options,
+}: ResolverOptions | createCustomTypeOptions) => {
   /*
   FLOW:
 1. grabTypeDefsAndInsertNewTypeDef() => fromOptionsToGQLTypeDefinition(), 
@@ -202,7 +217,7 @@ export const createNewTypeDef = async (
       options.properties,
       options.type,
       options.returnType,
-      many
+      options.actionName
     );
     // calls fromOptionsToGQLTypeDefinition()
     if (!res || res.error) {

@@ -1,20 +1,21 @@
 import * as utils from "../../../../utils";
 import * as mongoUtils from "../util";
-import { createNewTypeDef } from "../../../../create";
+import * as create from "../../../../create";
 import { promisify } from "util";
 import fs from "fs";
+import {
+  createResolverOptions,
+  createCustomTypeOptions,
+} from "../../../../../types";
+import Logger from "../../../../../logger/logger";
 const read = promisify(fs.readFile);
 
-const createTypedefForCRUDS = async (
-  interfaceFilePath: string,
-  name: string,
-  type: string,
-  returnType?: string
-) => {
+const getTypedefInterfaceFromModelName = async (model: string) => {
+  const filePath = `types/${model}Options.ts`;
   const interfaceFileLineArray = utils.toLineArray(
-    await read(interfaceFilePath, "utf8")
+    await read(filePath, "utf8")
   );
-  const options: any = {};
+  const typeDefInterface: any = {};
   let startIndex: number = -2,
     endIndex: number = -2;
   interfaceFileLineArray.forEach((line: string) => {
@@ -24,55 +25,40 @@ const createTypedefForCRUDS = async (
       endIndex = interfaceFileLineArray.indexOf(line);
     }
   });
-  options.properties = interfaceFileLineArray
+  typeDefInterface.properties = interfaceFileLineArray
     .slice(startIndex + 2, endIndex - 2)
     .map((line: string) => utils.replaceAllInString(line.trim(), ",", ""));
-  options.name = name;
-  options.typeDef = true;
-  options.dbSchema = false;
-  options.type = type;
-  options.returnType = returnType;
-  await createNewTypeDef({ options: options }, true);
-};
-export const generateTypedefForManyCRUD = async (
-  Model: string,
-  action: string,
-  typedefType: string,
-  returnType?: string
-) => {
-  const modelNameOnly = utils.replaceAllInString(
-    utils.replaceAllInString(Model, "Model", ""),
-    "Schema",
-    ""
-  );
-  const actionNameForTypeDef = mongoUtils.generateResolverName(Model, action);
-  const modelPath = `types/${modelNameOnly}Options.ts`;
-  await createTypedefForCRUDS(
-    modelPath,
-    actionNameForTypeDef,
-    typedefType,
-    returnType || "string"
-  );
+  return typeDefInterface;
 };
 
-export const createTypedefFromOpts = async () => {};
-// export const generateTypedefForOne = async (
-//   Model: string,
-//   action: string,
-//   typedefType: string,
-//   returnType?: string
-// ) => {
-//   const modelNameOnly = utils.replaceAllInString(
-//     utils.replaceAllInString(Model, "Model", ""),
-//     "Schema",
-//     ""
-//   );
-//   const actionNameForTypeDef = mongoUtils.generateResolverName(Model, action);
-//   const modelPath = `types/${modelNameOnly}Options.ts`;
-//   await createTypedefForCRUDS(
-//     modelPath,
-//     actionNameForTypeDef,
-//     typedefType,
-//     returnType || "string"
-//   );
-// };
+export const createTypedefFromOpts = async (options: createResolverOptions) => {
+  const modelNameOnly = utils.replaceAllInString(options.Model, "Schema", "");
+  const typeDefInterface = await getTypedefInterfaceFromModelName(
+    modelNameOnly
+  );
+  const lowerCaseAction = options.action.toLowerCase();
+  const mutationQuery = mongoUtils.mutationCRUDS.includes(options.action);
+  const returnType = mutationQuery
+    ? "String"
+    : lowerCaseAction.includes("many") || lowerCaseAction.includes("all")
+    ? `[${utils.lowercaseFirstLetter(modelNameOnly)}OptionsType]`
+    : `${utils.lowercaseFirstLetter(modelNameOnly)}OptionsType`;
+  const type = mutationQuery ? "Mutation" : "Query";
+  const createCustomTypeOptions: createCustomTypeOptions = {
+    options: {
+      properties: mutationQuery ? typeDefInterface.properties : undefined,
+      name: modelNameOnly,
+      comment: "Custom type created by CRUD generator",
+      dbSchema: true,
+      typeDef: true,
+      returnType,
+      type,
+      tsInterface: "no",
+      actionName: utils.lowercaseFirstLetter(options.action),
+    },
+  };
+  Logger.http("FROM: EPB-server: Creating a new type definition..");
+  await create.createNewInterface(createCustomTypeOptions);
+  createCustomTypeOptions.options.returnType = "";
+  await create.createNewInterface(createCustomTypeOptions);
+};

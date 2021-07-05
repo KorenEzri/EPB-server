@@ -6,5 +6,6 @@ export interface ResolverOptions {
     type: string;
     properties: string[];
     description: string;
+    actionName?: string;
   };
 }

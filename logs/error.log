@@ -1351,3 +1351,245 @@
 [31mindex.ts 22ms[39m
 
 [31mtypeDefs.ts 16ms[39m
+2021-07-05 10:20:14:2014 [31merror[39m: [31mtoSplit.split is not a function[39m
+2021-07-05 10:33:45:3345 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 10:44:15:4415 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 11:08:12:812 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 11:18:21:1821 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 11:21:05:215 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, ENOENT: no such file or directory, open 'C:\Users\koren\Documents\GitHub\EPB-server\const { gql } = require("apollo-server-express");[39m
+[31mexport const typeDefs = gql`[39m
+[31mscalar Date[39m
+[31m#[39m
+
+[31m# generated definitions[39m
+
+[31minput messageOptionsInput {[39m
+[31msender: String,[39m
+[31mkaki: Int,[39m
+[31mlala: [String][39m
+[31m}[39m
+[31m# added at: Mon Jul 05 2021 11:21:05 GMT+0300 (Israel Daylight Time)[39m
+
+[31minput addCrudOperationsOptionsInput {[39m
+[31mschemaName: String[39m
+[31mcrudActions: [String][39m
+[31midentifier: identifier[39m
+[31m}[39m
+[31m# added at: Thu Jul 01 2021 16:50:14 GMT+0300 (Israel Daylight Time)[39m
+
+[31minput addUserAuthOptions {[39m
+[31mpublicUserInputs: [String][39m
+[31mauthUserInputs: [String][39m
+[31mpublicUserProperties: [String][39m
+[31mauthUserProperties: [String][39m
+[31m}[39m
+[31m# added at: Fri Jun 25 2021 19:30:07 GMT+0300 (Israel Daylight Time)[39m
+
+[31minput createSchemaOptions {[39m
+[31mproperties: [String][39m
+[31mname: String[39m
+[31mcomment: String[39m
+[31mtypeDef: Boolean[39m
+[31mdbSchema: Boolean[39m
+[31mtype: String[39m
+[31muniqueIdentifiers: [String][39m
+[31m}[39m
+[31m# added at: Tue Jun 22 2021 09:40:13 GMT+0300 (Israel Daylight Time)[39m
+
+[31minput createCustomTypeOptions {[39m
+[31mproperties: [String][39m
+[31mname: String[39m
+[31mcomment: String[39m
+[31mdbSchema: Boolean[39m
+[31mtypeDef: Boolean[39m
+[31mtype: String[39m
+[31m}[39m
+[31m# added at: Sun Jun 20 2021 15:26:15 GMT+0300 (Israel Daylight Time)[39m
+
+[31m#[39m
+
+[31m# generated definitions end[39m
+
+[31minput ResolverOptions {[39m
+[31mname: String[39m
+[31mcomment: String[39m
+[31mresolver: String[39m
+[31mreturnType: String[39m
+[31mtype: String[39m
+[31mproperties: [String][39m
+[31mdescription: String[39m
+[31m}[39m
+[31minput identifier {[39m
+[31mname: String[39m
+[31mtype: String[39m
+[31m}[39m
+[31mtype Query {[39m
+[31mgetResolvers: String[39m
+[31mgetTypeDefs: String[39m
+[31mgetActions: [String][39m
+[31mgetAllResolverNames: [String][39m
+[31mgetAllowedTypes: [String][39m
+[31mgetAllDBSchemaNames: [String][39m
+[31m# query-end[39m
+[31m}[39m
+[31mtype Mutation {[39m
+[31mcreateResolver(options: ResolverOptions): String[39m
+[31mcreateCustomType(options: createCustomTypeOptions): String[39m
+[31mcreateSchema(options: createSchemaOptions): String[39m
+[31maddUserAuth(options: addUserAuthOptions): String[39m
+[31mrestartServer(timeout: Int): String[39m
+[31maddCrudOperations(options: addCrudOperationsOptionsInput): String[39m
+[31mcreateOneMessage(options: messageOptionsInput): String[39m
+[31m# mutation-end[39m
+[31m}[39m
+[31m`;[39m
+[31m'[39m
+2021-07-05 11:35:12:3512 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, lines.map is not a function[39m
+2021-07-05 11:36:06:366 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, lines.map is not a function[39m
+2021-07-05 11:40:39:4039 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 11:40:58:4058 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 11:47:03:473 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:47:03:473 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:47:36:4736 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 11:51:17:5117 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:51:17:5117 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:51:34:5134 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:51:34:5134 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:52:04:524 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:52:04:524 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:54:26:5426 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:54:26:5426 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:54:42:5442 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 11:55:00:550 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 11:55:11:5511 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:55:11:5511 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:55:36:5536 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:55:36:5536 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:58:35:5835 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:58:35:5835 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:59:51:5951 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 11:59:51:5951 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 11:59:55:5955 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 11:59:58:5958 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:26:226 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:02:40:240 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:25:1325 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:13:25:1325 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:13:25:1325 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:25:1325 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:25:1325 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:26:1326 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:26:1326 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:26:1326 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:26:1326 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:13:26:1326 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:14:04:144 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 12:14:15:1415 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:15:24:1524 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 12:15:40:1540 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:15:40:1540 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:16:27:1627 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 12:16:31:1631 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:40:39:4039 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:40:39:4039 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:42:05:425 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:42:05:425 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:44:07:447 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 12:44:11:4411 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:44:11:4411 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:45:37:4537 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:45:37:4537 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:45:54:4554 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:45:54:4554 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:46:56:4656 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:46:56:4656 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:48:27:4827 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:48:27:4827 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:49:15:4915 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:49:15:4915 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:53:46:5346 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:53:46:5346 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:54:24:5424 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:54:24:5424 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:58:23:5823 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 12:58:23:5823 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 12:58:29:5829 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 12:58:56:5856 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema messageSchema.[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 12:59:04:594 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:01:13:113 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mFROM: EPB-server: Duplicate definitions detected, aborting typeDef creation.[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mFrom: EPB-server: Error creating type definition, Cannot read property 'error' of undefined[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:02:21:221 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:03:54:354 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:05:01:51 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:07:22:722 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Read Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Update Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:39:939 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:09:51:951 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:09:51:951 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:09:51:951 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:09:51:951 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Read Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Update Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema messageSchema.[39m
+2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete Many is not availabe for schema messageSchema.[39m
+2021-07-05 13:43:11:4311 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-05 13:43:54:4354 [31merror[39m: [31mCannot read property 'trim' of undefined[39m

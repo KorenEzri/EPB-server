@@ -7,34 +7,10 @@ import fs from "fs";
 import { promisify } from "util";
 import * as utils from "../../utils";
 import Logger from "../../../logger/logger";
+import { createTypedefFromOpts } from "./mongodb/graphQL/typeDefs";
 
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
-/*
-//////////////////// $ FLOW $ /////////////////////
-1. addCrudToDBSchemas() is called.
-
-2. addCrudToDBSchemas() checks if an interface for the request schema exists and validates the schema's config list (creates one if it can't find it).
-
-3. addCrudToDBSchemas() calls createCrudOps(schemaName, crudOperations, identifier);
-
-4. createCrudOps() calls insertModelImportStatementToResolverFile(modelName); and insertOptionsInterfaceImportToResolverFile(optionsName);
-    basically, createCrudOps() inserts a model and an interface import to the resolvers.ts file.
-
-5. for each crudOp, if it's a "One" and not a "Many" crud operation, call goes to generateResolverForOne(): 
-" 
-   if (crudOperation.includes("One")) {
-      await generateResolverForOne(
-        modelName,
-        crudOperation,
-        resolverType,
-        identifier
-      );
-      return;
-    }   
-        "
-6. 
-*/
 
 const createDBSchemaConfigList = async (schemaName: string) => {
   const ConfigListPath = `db/schemas/${schemaName}Config.ts`;
@@ -163,11 +139,11 @@ const createCrudOps = async (
       identifier,
     };
     await createResolverFromOpts(options);
-    // await createTypedefFromOpts()
+    await createTypedefFromOpts(options);
     Logger.http(
       `FROM: EPB-server: created CRUD action ${crudOperation}, applying Prettier..`
     );
-    await utils.applyPrettier();
+    // await utils.applyPrettier();
   }
 };
 //

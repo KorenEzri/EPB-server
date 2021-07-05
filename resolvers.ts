@@ -3,6 +3,11 @@ import { GraphQLScalarType } from "graphql";
 /*
 TODO:
 CRUD
+IN TYPEDEFS:
+BUG: 
+// readAllMessages - does not require params, so remove them.
+// return types of Queries are capslocked, but they're actually custom types which needn't be capslocked.
+
 - Add "Select all" button when choosing CRUD actions
 DUE: 4.07.21, Saturday night.
 
@@ -40,6 +45,7 @@ import {
   validateSchemaCreation,
 } from "./validations";
 import {
+  messageOptions,
   addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
@@ -49,7 +55,7 @@ import {
 } from "./types";
 // option types end
 // model imports
-import { modelstub } from "./db/schemas";
+import { modelstub, MessageModel } from "./db/schemas";
 // model imports end
 import {
   getResolvers,
@@ -193,7 +199,28 @@ export const resolvers = {
         Logger.error(message);
       }
     },
+    createOneMessage: async (_: any, message: messageOptions) => {
+      const messageInstance = new MessageModel({ message });
+      try {
+        await messageInstance.save();
+      } catch ({ message }) {
+        Logger ? Logger.error(message) : console.log(message);
+        return message;
+      }
+    },
 
     // mutation-end
   },
 };
+
+const opts = {
+  properties: ["kaki:string", "lala:[string]"],
+  name: "message",
+  comment: "asdadsadas",
+  dbSchema: true,
+  typeDef: true,
+  returnType: "[String]",
+  type: "input",
+  actionName: "Create One",
+};
+create.createnewTypedef({ options: opts });

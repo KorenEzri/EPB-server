@@ -4,7 +4,7 @@ import {
   resolverTryCatchBlockOptions,
   typeDefTitleOptions,
   typeDefQueryMutationDefinitionsOptions,
-  typeDefVariableListOptions
+  typeDefVariableListOptions,
 } from "../../../../../types";
 
 export const resolverTitles = {
@@ -121,33 +121,23 @@ export const resolverBodies = {
   deleteMany: (parts: resolverBodyOptions) => `${parts.resolverTryCatchBlock}`,
 };
 
-export const typeDefTitles = {
-  // createOne: (options: typeDefTitleOptions) =>,
-  // createMany: (options: typeDefTitleOptions) => ,
-  // readOne: (options: typeDefTitleOptions) => ,
-  // readMany: (options: typeDefTitleOptions) => ,
-  // readAll: (options: typeDefTitleOptions) => ,
-  // updateOne: (options: typeDefTitleOptions) => ,
-  // deleteOne: (options: typeDefTitleOptions) => ,
-  // deleteMany: (options: typeDefTitleOptions) => ,
-};
-export const typeDefVariableLists = {
-  createOne: (options: typeDefVariableListOptions ) => ,
-  createMany: (options: typeDefVariableListOptions ) => ,
-  readOne: (options: typeDefVariableListOptions ) => ,
-  readMany: (options: typeDefVariableListOptions ) => ,
-  readAll: (options: typeDefVariableListOptions ) => ,
-  updateOne: (options: typeDefVariableListOptions ) => ,
-  deleteOne: (options: typeDefVariableListOptions ) => ,
-  deleteMany: (options: typeDefVariableListOptions ) => ,
-};
-export const typeDefQueryMutationDefinitions = {
-  createOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  createMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  readOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  readMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  readAll: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  updateOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  deleteOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-  deleteMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-};
+// export const typeDefVariableLists = {
+//   createOne: (options: typeDefVariableListOptions ) => ,
+//   createMany: (options: typeDefVariableListOptions ) => ,
+//   readOne: (options: typeDefVariableListOptions ) => ,
+//   readMany: (options: typeDefVariableListOptions ) => ,
+//   readAll: (options: typeDefVariableListOptions ) => ,
+//   updateOne: (options: typeDefVariableListOptions ) => ,
+//   deleteOne: (options: typeDefVariableListOptions ) => ,
+//   deleteMany: (options: typeDefVariableListOptions ) => ,
+// };
+// export const typeDefQueryMutationDefinitions = {
+//   createOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   createMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   readOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   readMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   readAll: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   updateOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   deleteOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+//   deleteMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
+// };

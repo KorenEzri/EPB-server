@@ -46,6 +46,7 @@ const parseSingleTypedefVariable = (variable: {
   type: string;
 }) => {
   let { name, type } = variable;
+  if (!name && !type) return "";
   if (utils.isCustomType(type)) return `${name}:${type}`;
   const capType = utils.capitalizeFirstLetter(type);
   type = utils.parseArrayOperatorTypes(capType, true);
@@ -64,6 +65,7 @@ const compileVarlistAndTypedefInterface = (
     };
   } else {
     varList.forEach((variable) => {
+      if (!variable.name) return;
       typeDefInterface[variable.name] = parseSingleTypedefVariable(variable);
     });
     return {

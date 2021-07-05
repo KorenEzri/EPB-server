@@ -1,4 +1,4 @@
-export interface createCustomTypeOptions {
+export interface createTypedefOptions {
   options: {
     properties: string[];
     name: string;

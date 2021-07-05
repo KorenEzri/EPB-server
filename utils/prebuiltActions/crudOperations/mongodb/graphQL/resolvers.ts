@@ -39,7 +39,7 @@ const buildResolvers = (
       const updateOneBody = resolverBodies.updateOne(body);
       return updateOneTitle + updateOneBody;
     case "UpdateMany":
-      return "NOT SUPPORTED";
+      return "";
     case "DeleteOne":
       const deleteOneTitle = resolverTitles.deleteOne(title);
       const deleteOneBody = resolverBodies.deleteOne(body);
@@ -141,5 +141,5 @@ export const createResolverFromOpts = async (
     title: titleOptions,
     body: bodyOptions,
   });
-  await mongoUtils.writeResolverIntoFile(`${resolver}}`, resolverType);
+  await mongoUtils.writeResolverIntoFile(`${resolver}},`, resolverType);
 };

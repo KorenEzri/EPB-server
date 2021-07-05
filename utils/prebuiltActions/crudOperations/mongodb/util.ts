@@ -17,6 +17,14 @@ export const writeResolverIntoFile = async (resolver: string, type: string) => {
   let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
   if (!allResolversAsString)
     return "Error in utils/createNew/createResolver.ts: No resolvers found!";
+  const checkForDuplicates = await utils.checkIfLinesAlreadyExist(
+    resolver,
+    undefined,
+    allResolversAsString
+  );
+  if (checkForDuplicates.error) {
+    return "Error: duplicate resolvers detected, aborting resolver creation";
+  }
   const finishedResolvers = utils.insertToString(
     allResolversAsString,
     resolver,

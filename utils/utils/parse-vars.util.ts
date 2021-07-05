@@ -31,3 +31,27 @@ export const parseArrayOperatorTypes = (type: string, gqlArray?: boolean) => {
 export const getAllAllowedTypes = () => {
   return allCustomTypesWithArrayTypes.concat(validTypes);
 };
+export const checkIfAllTypesAreCustomTypes = (
+  variables: { name: string; type: string }[]
+) => {
+  const areAllVarsCustomTypes = variables.map((variable) => {
+    if (utils.isCustomType(`${variable.type}`)) {
+      return "custom";
+    } else return "not_custom";
+  });
+  if (!areAllVarsCustomTypes.includes("not_custom"))
+    // if there is no 'not_custom' at all in the arrray, all are custom types.
+    return true;
+  else return false;
+};
+export const parseSingleTypedefVariable = (variable: {
+  name: string;
+  type: string;
+}) => {
+  let { name, type } = variable;
+  if (!name && !type) return "";
+  if (utils.isCustomType(type)) return `${name}:${type}`;
+  const capType = utils.capitalizeFirstLetter(type);
+  type = utils.parseArrayOperatorTypes(capType, true);
+  return type;
+};
