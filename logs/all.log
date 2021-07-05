@@ -12910,3 +12910,48 @@
 2021-07-05 16:01:57:157 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
 2021-07-05 16:01:57:157 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-07-05 16:01:57:157 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 21:57:29:5729 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 21:57:29:5729 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 21:57:29:5729 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:25:26:2526 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:25:26:2526 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:25:26:2526 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:25:56:2556 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:25:56:2556 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:25:56:2556 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:30:07:307 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:30:07:307 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:30:07:307 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:32:52:3252 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:32:52:3252 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:32:52:3252 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:35:40:3540 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:35:40:3540 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:35:40:3540 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:39:12:3912 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:39:12:3912 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:39:12:3912 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:40:42:4042 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:40:42:4042 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:40:42:4042 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:41:06:416 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:41:06:416 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:41:06:416 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:41:22:4122 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:41:22:4122 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:41:22:4122 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:41:30:4130 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:41:30:4130 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:41:30:4130 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:42:06:426 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:42:06:426 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:42:06:426 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:42:45:4245 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:42:45:4245 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:42:45:4245 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:43:13:4313 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:43:13:4313 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:43:13:4313 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-05 22:43:57:4357 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-05 22:43:57:4357 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-05 22:43:57:4357 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m

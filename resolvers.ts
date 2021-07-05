@@ -214,7 +214,7 @@ export const resolvers = {
 };
 
 const opts = {
-  properties: ["kaki:string", "lala:[string]"],
+  properties: ["kaki:string"],
   name: "message",
   comment: "asdadsadas",
   dbSchema: true,
