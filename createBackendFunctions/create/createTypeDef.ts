@@ -1,3 +1,4 @@
+import { mutationCRUDS } from "../prebuiltActions/crudOperations/mongodb/util";
 import { ResolverOptions, createCustomTypeOptions } from "../../types";
 import { typeDefs } from "../../typeDefs";
 import { getTypeDefs } from "../codeToString";
@@ -132,12 +133,7 @@ const fromOptionsToGQLTypeDefinition = async (
     // getMessageOptions: messsageOptionsType
     // later, it will get the typeDefInterface options added to it.
   }
-  await utils.alterConfigFile(
-    "add",
-    "typeDefActions",
-    `${name}${typeDefForManyObjects ? "s" : ""}`,
-    "array"
-  );
+
   return { typeDef, typeDefInterface };
 };
 const insertTypeDefInterface = async (
@@ -230,7 +226,14 @@ export const createNewTypeDef = async ({
       if (res.error) return res.error;
       return res;
     }
+    console.log(options);
     await write("./typeDefs.ts", res);
+    if (options.properties.length > 1) {
+      await addToConfigFile(options.name);
+    }
+    if (options.returnType) {
+      await utils.alterConfigFile("add", "typeDefActions", options.name);
+    }
     return "OK";
   } catch ({ message }) {
     Logger.error(
@@ -238,4 +241,41 @@ export const createNewTypeDef = async ({
     );
     return message;
   }
+};
+
+const addToConfigFile = async (typeName: string) => {
+  const names = getNamesFromTypeName(typeName);
+  await utils.alterConfigFile(
+    "add",
+    "typeDefInterfaces",
+    names.typeDefInterfaceName
+  );
+};
+
+const getActionName = (typeName: string, action?: string) => {
+  if (!action) return;
+  action = utils.lowercaseFirstLetter(action.split(" ").join(""));
+  if (action.includes("Many")) return `${action}${typeName}s`;
+  return `${action}${typeName}`;
+};
+const getTypedefInterfaceName = (typeName: string, action?: string) => {
+  if (!action) action = "";
+  action = action.split(" ").join("");
+  if (mutationCRUDS.includes(action)) {
+    return `${typeName}OptionsInput`;
+  } else return `${typeName}OptionsType`;
+};
+const getNamesFromTypeName = (typeName: string, action?: string) => {
+  const schemaName = `${typeName}Schema`;
+  const modelName = `${typeName}Model`;
+  const customTypeName = `${typeName}Options`;
+  const actionName = getActionName(typeName, action);
+  const typeDefInterfaceName = getTypedefInterfaceName(typeName, action);
+  return {
+    schemaName,
+    modelName,
+    customTypeName,
+    actionName,
+    typeDefInterfaceName,
+  };
 };

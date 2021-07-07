@@ -8,9 +8,10 @@
     "createCustomTypeOptions",
     "createSchemaOptions",
     "createTypedefOptions",
-    "ResolverOptions"
+    "ResolverOptions",
+    "movieOptions"
   ],
-  "dbSchemas": ["stub"],
+  "dbSchemas": ["stub", "movieSchema"],
   "resolvers": [
     "getResolvers",
     "getTypeDefs",
@@ -33,7 +34,8 @@
     "createSchemaOptions",
     "createCustomTypeOptions",
     "ResolverOptions",
-    "identifier"
+    "identifier",
+    "movieOptionsType"
   ],
   "typeDefActions": [
     "getResolvers",

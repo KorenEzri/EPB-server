@@ -1,5 +1,5 @@
 import { createSchemaOptions } from "../../types";
-import { checkIfOK } from "../../utils/codeToString";
+import { checkIfOK } from "../codeToString";
 import * as create from "./createSchemaByDB";
 import Logger from "../../logger/logger";
 import { promisify } from "util";

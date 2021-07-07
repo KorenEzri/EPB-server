@@ -1597,3 +1597,43 @@
 2021-07-06 20:54:47:5447 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
 2021-07-06 20:54:47:5447 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
 2021-07-06 22:09:35:935 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-07 10:21:05:215 [31merror[39m: [31mFROM: EPB-server: Unexpected token i in JSON at position 0[39m
+2021-07-07 10:21:54:2154 [31merror[39m: [31mFROM: EPB-server: Unexpected token i in JSON at position 0[39m
+2021-07-07 10:36:12:3612 [31merror[39m: [31mFROM: EPB-server: [object Object][39m
+2021-07-07 10:37:38:3738 [31merror[39m: [31mFROM: EPB-server: An interface for the schema messageSchema doesn't exist. Please create one first.[39m
+2021-07-07 12:26:29:2629 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-07 12:27:57:2757 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-07 13:20:59:2059 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'name' of undefined[39m
+2021-07-07 13:21:40:2140 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'name' of undefined[39m
+2021-07-07 13:22:23:2223 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'name' of undefined[39m
+2021-07-07 13:23:21:2321 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:24:47:2447 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:25:15:2515 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:25:30:2530 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:26:19:2619 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:27:06:276 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:27:24:2724 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:30:40:3040 [31merror[39m: [31mFROM: EPB-server: Cannot read property 'replace' of undefined[39m
+2021-07-07 13:37:48:3748 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-07 13:39:17:3917 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Expression expected. (4:1)[39m
+[31m[error]   2 | // option types end[39m
+[31m[error]   3 | // model imports[39m
+[31m[error] > 4 | import { modelstub } from "./db/schemas";[39m
+[31m[error]     | ^[39m
+[31m[error]   5 | // model imports end[39m
+[31m[error]   6 | import {[39m
+[31m[error]   7 | getResolvers,[39m
+[31mapp.ts 154ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 16ms[39m
+2021-07-07 14:12:55:1255 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:13:35:1335 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:13:51:1351 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:15:32:1532 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:16:38:1638 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:16:50:1650 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:20:16:2016 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:24:20:2420 [31merror[39m: [31mCannot read property '0' of undefined[39m

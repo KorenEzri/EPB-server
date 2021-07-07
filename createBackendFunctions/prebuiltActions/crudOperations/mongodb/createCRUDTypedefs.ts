@@ -2,12 +2,12 @@ import {
   createCustomTypeOptions,
   createTypedefOptions,
   createResolverOptions,
-} from "../../../../../types";
-import * as mongoUtils from "../util";
+} from "../../../../types";
+import * as mongoUtils from "./util";
 import { promisify } from "util";
-import Logger from "../../../../../logger/logger";
+import Logger from "../../../../logger/logger";
 import fs from "fs";
-import * as utils from "../../../../utils";
+import * as utils from "../../../utils";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 const getType = (type: string | undefined) => {
@@ -41,7 +41,7 @@ const getTypedefInterfaceFromModelName = async (model: string) => {
     .map((line: string) => utils.replaceAllInString(line.trim(), ",", ""));
   return typeDefInterface;
 };
-const createTypedefFromOpts = async (options: createResolverOptions) => {
+const generateCustomTypeOptions = async (options: createResolverOptions) => {
   const modelNameOnly = utils.replaceAllInString(options.Model, "Schema", "");
   const typeDefInterface = await getTypedefInterfaceFromModelName(
     modelNameOnly
@@ -164,8 +164,11 @@ const createFirstLineOfTypedefInterface = ({
 const createTypedefInterface = (options: createCustomTypeOptions) => {
   const firstLine = createFirstLineOfTypedefInterface(options);
   const { inlineVarlist, typeDefInterface } = createTypedefVarList(options);
+  const fullInterface = typeDefInterface
+    ? firstLine + typeDefInterface
+    : undefined;
   return {
-    fullInterface: typeDefInterface ? firstLine + typeDefInterface : undefined,
+    fullInterface,
     inlineVarlist,
   };
 };
@@ -193,7 +196,7 @@ const insertToTypedefs = async (
 };
 export const createnewTypedef = async (options: createTypedefOptions) => {
   Logger.http("FROM: EPB-server: Creating a new type definition...");
-  const interfaceOptions = await createTypedefFromOpts(options.options);
+  const interfaceOptions = await generateCustomTypeOptions(options.options);
   const { inlineVarlist, fullInterface } =
     createTypedefInterface(interfaceOptions);
   let { type, name } = interfaceOptions.options;
@@ -202,9 +205,6 @@ export const createnewTypedef = async (options: createTypedefOptions) => {
   const typeDefInterface = fullInterface
     ? JSON.stringify(fullInterface, null, 2)
     : undefined;
-  const typeDefInterfaceName = `${type} ${name}Options${utils.capitalizeFirstLetter(
-    type || ""
-  )}`;
   const typeDefActionName = await insertToTypedefs(
     typeDefInterface,
     inlineVarlist,

@@ -1,4 +1,4 @@
-import * as utils from "../../utils";
+import * as utils from "..";
 import * as parseUtils from "../parse-vars.util";
 
 export const parseResolverVarlist = (vars: string[]) => {

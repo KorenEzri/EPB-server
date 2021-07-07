@@ -7,3 +7,5 @@ export * from "./createCRUDResolverOptions";
 export * from "./addCrudOperationsOptions";
 export * from "./createCRUDTypedefOptions";
 export * from "./createTypedefOptions";
+
+export * from "./movieOptions"

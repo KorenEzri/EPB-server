@@ -1,13 +1,13 @@
-import * as utils from "../../../../utils";
-import * as mongoUtils from "../util";
-import * as create from "../../../../create";
+import * as utils from "../../../utils";
+import * as mongoUtils from "./util";
+import * as create from "../../../create";
 import { promisify } from "util";
 import fs from "fs";
 import {
   createResolverOptions,
   createCustomTypeOptions,
-} from "../../../../../types";
-import Logger from "../../../../../logger/logger";
+} from "../../../../types";
+import Logger from "../../../../logger/logger";
 const read = promisify(fs.readFile);
 
 const getTypedefInterfaceFromModelName = async (model: string) => {

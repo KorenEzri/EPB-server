@@ -1,7 +1,7 @@
 import { ResolverOptions } from "../../types";
 import { getResolvers } from "../codeToString";
 import Logger from "../../logger/logger";
-import { createNewInterface } from "./";
+import { createNewInterface } from ".";
 import { promisify } from "util";
 import fs from "fs";
 import * as parseVars from "../utils/parse-vars";
@@ -29,11 +29,16 @@ const toResolver = async ({ options }: ResolverOptions) => {
         `;
   resolverString = utils.replaceAllInString(resolverString, "\t", "");
   resolverString = utils.replaceAllInString(resolverString, '"', "");
-  await utils.alterConfigFile("add", "resolvers", name, "array");
+  await utils.alterConfigFile("add", "resolvers", name);
   return { fullResolver: resolverString, importList };
 };
-
 export const createNewResolver = async ({ options }: ResolverOptions) => {
+  if (await utils.checkIfConfigItemExists("resolvers", options.name)) {
+    Logger.error(
+      `FROM: EPB-server: Resolver ${options.name} already exists, aborting.`
+    );
+    return;
+  }
   Logger.http("FROM: EPB-server: Creating a new resolver...");
   const { fullResolver, importList } = await toResolver({ options: options });
   let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string

@@ -1,12 +1,12 @@
-import * as mongoUtils from "../util";
-import * as utils from "../../../../utils";
+import * as mongoUtils from "./util";
+import * as utils from "../../../utils";
 import { resolverTitles, resolverTryCatchBlocks, resolverBodies } from "./util";
 import {
   createResolverOptions,
   resolverTitleOptions,
   resolverBodyOptions,
   resolverTryCatchBlockOptions,
-} from "../../../../../types";
+} from "../../../../types";
 
 const buildResolvers = (
   action: string,

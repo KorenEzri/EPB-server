@@ -98,7 +98,7 @@ export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
     "db/schemas",
     `export * from "./${schemaName}"`
   );
-  await utils.alterConfigFile("add", "dbSchemas", schemaName, "array");
+  await utils.alterConfigFile("add", "dbSchemas", schemaName);
   Logger.http("FROM: EPB-server: Done, applying prettier for files.");
   await utils.applyPrettier("./db/schemas/*.ts");
   return "Schema created successfully.";

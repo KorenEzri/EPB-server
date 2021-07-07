@@ -1,4 +1,4 @@
-import { createResolverFromOpts } from "./mongodb/graphQL/resolvers";
+import { createResolverFromOpts } from "./mongodb/createCRUDResolvers";
 import { createResolverOptions } from "../../../types";
 import { availableCRUDActions } from "../../../consts";
 import { getResolvers } from "../../codeToString";
@@ -7,7 +7,7 @@ import fs from "fs";
 import { promisify } from "util";
 import * as utils from "../../utils";
 import Logger from "../../../logger/logger";
-import { createnewTypedef } from "./mongodb/graphQL/createTypeDefv2";
+import { createTypedef } from "./mongodb/testNewTypedefCreation";
 
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
@@ -127,6 +127,7 @@ const createCrudOps = async (
   identifier: { name: string; type: string }
 ) => {
   crudOps = crudOps.map((op: string) => op.split(" ").join(""));
+  const modelNameOnly = schemaName.replace("Schema", "");
   for (let i = 0; i < crudOps.length; i++) {
     const crudOperation = crudOps[i];
     const resolverType = mutationCRUDS.includes(crudOperation)
@@ -140,12 +141,14 @@ const createCrudOps = async (
     };
     await createResolverFromOpts(options);
     const typeDefOptions = {
-      Model: schemaName,
+      modelName: schemaName,
       action: crudOperation,
       resolverType,
       identifier,
     };
-    await createnewTypedef({ options: typeDefOptions });
+    await createTypedef(typeDefOptions);
+    // await utils.alterConfigFile("add", "resolvers", crudOperation);
+    // await utils.alterConfigFile("add", "typeDefInterfaces", crudOperation);
     Logger.http(
       `FROM: EPB-server: created CRUD action ${crudOperation}, applying Prettier..`
     );

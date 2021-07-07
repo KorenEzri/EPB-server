@@ -1,6 +1,5 @@
 import { allCustomTypesWithArrayTypes, validTypes } from "../../consts";
 import * as utils from ".";
-import Logger from "../../logger/logger";
 
 // for graphQL types I add "Type" || "Input" accordingly to definition names,
 // so users can make both type and input definitions.
@@ -28,9 +27,7 @@ export const parseArrayOperatorTypes = (type: string, gqlArray?: boolean) => {
     return typeString;
   } else return type;
 };
-export const getAllAllowedTypes = () => {
-  return allCustomTypesWithArrayTypes.concat(validTypes);
-};
+
 export const checkIfAllTypesAreCustomTypes = (
   variables: { name: string; type: string }[]
 ) => {

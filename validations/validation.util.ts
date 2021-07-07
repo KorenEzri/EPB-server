@@ -1,5 +1,8 @@
-import { getResolverNames, getTypeDefs } from "../utils/codeToString";
-import { replaceAllInString } from "../utils/utils";
+import {
+  getResolverNames,
+  getTypeDefs,
+} from "../createBackendFunctions/codeToString";
+import { replaceAllInString } from "../createBackendFunctions/utils";
 import Logger from "../logger/logger";
 import { validTypes } from "../consts";
 import { resolvers } from "../resolvers";

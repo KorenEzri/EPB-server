@@ -4,7 +4,6 @@ import fs from "fs";
 import execa from "execa";
 import { promisify } from "util";
 import * as utils from ".";
-import { add } from "winston";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);
@@ -243,8 +242,9 @@ export const alterConfigFile = async (
   action: "add" | "remove",
   contentHeader: string,
   content: string,
-  type: "array" | "string"
+  type?: "array" | "string"
 ) => {
+  if (!type) type = "array";
   const addToContent = (
     content: string | string[],
     toAdd: string,
@@ -275,4 +275,36 @@ export const alterConfigFile = async (
     : removeFromContent(configFileContent, content);
 
   await write(filePath, JSON.stringify(jsonFileAsJSON));
+};
+export const checkIfConfigItemExists = async (
+  contentHeader: string,
+  item: string
+) => {
+  const filePath = "epb.config.json";
+  const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
+  const configFileContent = jsonFileAsJSON[contentHeader];
+  return configFileContent.includes(item) ? true : false;
+};
+// export const addToAllowedTypesConfig = async (types: [string]) => {
+//   const filePath = "epb.config.json";
+//   const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
+//   let configFileContent = jsonFileAsJSON.allowedTypes;
+//   if (!configFileContent) configFileContent = []
+//   types.forEach(type => {
+//     configFileContent.push(type)
+//     configFileContent.push(`${type}`)
+//     configFileContent.push(`[${type}]`)
+//     configFileContent.push(`${type}[]`)
+//   })
+// }
+export const getAllAllowedTypes = async () => {
+  const filePath = "epb.config.json";
+  const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
+  const content = jsonFileAsJSON.typeDefInterfaces;
+  content.forEach((type: string) => {
+    if (!type.includes("[")) {
+      content.push(`[${type}]`);
+    }
+  });
+  return content;
 };

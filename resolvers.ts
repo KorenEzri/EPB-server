@@ -61,10 +61,10 @@ import {
   getTypeDefs,
   getActions,
   getResolverNames,
-} from "./utils/codeToString";
-import * as utils from "./utils/utils";
-import * as create from "./utils/create";
-import * as add from "./utils/prebuiltActions";
+} from "./createBackendFunctions/codeToString";
+import * as utils from "./createBackendFunctions/utils";
+import * as create from "./createBackendFunctions/create";
+import * as add from "./createBackendFunctions/prebuiltActions";
 import Logger from "./logger/logger";
 import { util } from "prettier";
 

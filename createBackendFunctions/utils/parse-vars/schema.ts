@@ -1,4 +1,4 @@
-import * as utils from "../../utils";
+import * as utils from "..";
 import * as parseUtils from "../parse-vars.util";
 
 const arragenMongoTypes = (type: string) => {
@@ -29,7 +29,7 @@ const arragenMongoTypes = (type: string) => {
 export const parseMongoVarlist = (vars: string[], uniques: string[]) => {
   const addUniqueVariant = (type: string) => {
     const uniqueVarString = `
-            { type: ${type}, unique: true }
+            { type: ${utils.capitalizeFirstLetter(type)}, unique: true }
         `;
     return utils.replaceAllInString(uniqueVarString, "\n", "");
   };

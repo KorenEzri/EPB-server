@@ -56,7 +56,7 @@ const writeInterfaceToFiles = async (name: String, interfaceString: any) => {
   }
   const exportStatement = `export * from "./${name}Options"`;
   const res = await utils.addExportStatement(typesPath, exportStatement);
-  await utils.alterConfigFile("add", "customTypes", interfaceName, "array");
+  await utils.alterConfigFile("add", "customTypes", interfaceName);
   return res;
 };
 // create a new interface file called fooOptions.ts inside ./types folder
