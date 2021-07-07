@@ -7,7 +7,7 @@ import fs from "fs";
 import { promisify } from "util";
 import * as utils from "../../utils";
 import Logger from "../../../logger/logger";
-import { createTypedefFromOpts } from "./mongodb/graphQL/typeDefs";
+import { createnewTypedef } from "./mongodb/graphQL/createTypeDefv2";
 
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
@@ -139,7 +139,13 @@ const createCrudOps = async (
       identifier,
     };
     await createResolverFromOpts(options);
-    await createTypedefFromOpts(options);
+    const typeDefOptions = {
+      Model: schemaName,
+      action: crudOperation,
+      resolverType,
+      identifier,
+    };
+    await createnewTypedef({ options: typeDefOptions });
     Logger.http(
       `FROM: EPB-server: created CRUD action ${crudOperation}, applying Prettier..`
     );

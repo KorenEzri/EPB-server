@@ -8,7 +8,7 @@ import * as parseVars from "../utils/parse-vars";
 import * as utils from "../utils";
 const write = promisify(fs.writeFile);
 
-const toResolver = ({ options }: ResolverOptions) => {
+const toResolver = async ({ options }: ResolverOptions) => {
   const { name, comment, returnType, properties, description } = options;
   const { resolverInterface, varList, importList } =
     parseVars.parseResolverVarlist(properties);
@@ -29,12 +29,13 @@ const toResolver = ({ options }: ResolverOptions) => {
         `;
   resolverString = utils.replaceAllInString(resolverString, "\t", "");
   resolverString = utils.replaceAllInString(resolverString, '"', "");
+  await utils.alterConfigFile("add", "resolvers", name, "array");
   return { fullResolver: resolverString, importList };
 };
 
 export const createNewResolver = async ({ options }: ResolverOptions) => {
   Logger.http("FROM: EPB-server: Creating a new resolver...");
-  const { fullResolver, importList } = toResolver({ options: options });
+  const { fullResolver, importList } = await toResolver({ options: options });
   let allResolversAsString = (await getResolvers()) || ""; // current resolver file as string
   if (!allResolversAsString)
     return "Error in utils/createNew/createResolver.ts: No resolvers found!";

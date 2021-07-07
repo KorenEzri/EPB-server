@@ -2,9 +2,6 @@ import {
   resolverBodyOptions,
   resolverTitleOptions,
   resolverTryCatchBlockOptions,
-  typeDefTitleOptions,
-  typeDefQueryMutationDefinitionsOptions,
-  typeDefVariableListOptions,
 } from "../../../../../types";
 
 export const resolverTitles = {
@@ -120,24 +117,3 @@ export const resolverBodies = {
   deleteOne: (parts: resolverBodyOptions) => `${parts.resolverTryCatchBlock}`,
   deleteMany: (parts: resolverBodyOptions) => `${parts.resolverTryCatchBlock}`,
 };
-
-// export const typeDefVariableLists = {
-//   createOne: (options: typeDefVariableListOptions ) => ,
-//   createMany: (options: typeDefVariableListOptions ) => ,
-//   readOne: (options: typeDefVariableListOptions ) => ,
-//   readMany: (options: typeDefVariableListOptions ) => ,
-//   readAll: (options: typeDefVariableListOptions ) => ,
-//   updateOne: (options: typeDefVariableListOptions ) => ,
-//   deleteOne: (options: typeDefVariableListOptions ) => ,
-//   deleteMany: (options: typeDefVariableListOptions ) => ,
-// };
-// export const typeDefQueryMutationDefinitions = {
-//   createOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   createMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   readOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   readMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   readAll: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   updateOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   deleteOne: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-//   deleteMany: (options: typeDefQueryMutationDefinitionsOptions ) => ,
-// };

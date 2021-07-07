@@ -4,6 +4,7 @@ import fs from "fs";
 import execa from "execa";
 import { promisify } from "util";
 import * as utils from ".";
+import { add } from "winston";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 const readDir = promisify(fs.readdir);
@@ -176,40 +177,6 @@ export const insertStringToFileInRangeOfLines = async (
   await write(filePath, finished);
 };
 
-// export const checkIfLinesAlreadyExist = async (
-//   lines: string[],
-//   filePath: string | undefined,
-//   fileAsString: string | undefined,
-//   ignore?: string[]
-// ) => {
-//   const itemsToIgnore = ignore ? ["", "}", "{"].concat(ignore) : ["", "}", "{"];
-//   if (!filePath && !fileAsString)
-//     return { error: true, message: "No file or filepath provided." };
-//   if (filePath && !fileAsString) {
-//     fileAsString = await read(filePath, "utf8");
-//   }
-//   if (!fileAsString) return { error: true, message: "Could not read file." };
-//   const fileLineArray = utils
-//     .toLineArray(fileAsString)
-//     .map((line: string) => line.trim());
-//   const duplicatesArray = lines
-//     .map((line: string, index: number) => {
-//       if (
-//         fileLineArray.includes(line.trim()) &&
-//         !itemsToIgnore.includes(line.trim())
-//       ) {
-//         return { line: line, index: index };
-//       }
-//     })
-//     .filter((val) => val != null);
-//   if (duplicatesArray.length) {
-//     return {
-//       error: true,
-//       message: "Duplicate lines found",
-//       duplicates: duplicatesArray,
-//     };
-//   } else return { error: false };
-// };
 export const checkIfLinesAlreadyExist = async (
   lines: string,
   filePath: string | undefined,
@@ -270,4 +237,42 @@ export const checkForDuplicateLines = async (
       duplicates,
     };
   } else return { error: false };
+};
+
+export const alterConfigFile = async (
+  action: "add" | "remove",
+  contentHeader: string,
+  content: string,
+  type: "array" | "string"
+) => {
+  const addToContent = (
+    content: string | string[],
+    toAdd: string,
+    type: string
+  ) => {
+    if (!content) return type === "array" ? [toAdd] : toAdd;
+    if (Array.isArray(content)) {
+      if (!content.includes(toAdd)) content.push(toAdd);
+      return content;
+    } else return content.includes(toAdd) ? content : content + toAdd;
+  };
+  const removeFromContent = (content: string | string[], toRemove: string) => {
+    if (!content) return;
+    if (Array.isArray(content)) {
+      const index = content.indexOf(toRemove);
+      return content.splice(index, 1);
+    } else return content.split(`${toRemove}`).join("");
+  };
+  const filePath = "epb.config.json";
+  const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
+  const configFileContent = jsonFileAsJSON[contentHeader];
+  action === "add"
+    ? (jsonFileAsJSON[contentHeader] = addToContent(
+        configFileContent,
+        content,
+        type
+      ))
+    : removeFromContent(configFileContent, content);
+
+  await write(filePath, JSON.stringify(jsonFileAsJSON));
 };

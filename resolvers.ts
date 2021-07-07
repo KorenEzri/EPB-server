@@ -4,7 +4,7 @@ import { GraphQLScalarType } from "graphql";
 TODO:
 CRUD
 IN TYPEDEFS:
-BUG: 
+BUG:
 // readAllMessages - does not require params, so remove them.
 // return types of Queries are capslocked, but they're actually custom types which needn't be capslocked.
 
@@ -45,7 +45,6 @@ import {
   validateSchemaCreation,
 } from "./validations";
 import {
-  messageOptions,
   addUserAuthOptions,
   ResolverOptions,
   createSchemaOptions,
@@ -55,7 +54,7 @@ import {
 } from "./types";
 // option types end
 // model imports
-import { modelstub, MessageModel } from "./db/schemas";
+import { modelstub } from "./db/schemas";
 // model imports end
 import {
   getResolvers,
@@ -67,6 +66,7 @@ import * as utils from "./utils/utils";
 import * as create from "./utils/create";
 import * as add from "./utils/prebuiltActions";
 import Logger from "./logger/logger";
+import { util } from "prettier";
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",
@@ -110,6 +110,8 @@ export const resolvers = {
 
       // return [String]
     },
+
+    // Action: asdasd
 
     // query-end
   },
@@ -199,28 +201,7 @@ export const resolvers = {
         Logger.error(message);
       }
     },
-    createOneMessage: async (_: any, message: messageOptions) => {
-      const messageInstance = new MessageModel({ message });
-      try {
-        await messageInstance.save();
-      } catch ({ message }) {
-        Logger ? Logger.error(message) : console.log(message);
-        return message;
-      }
-    },
 
     // mutation-end
   },
 };
-
-const opts = {
-  properties: ["kaki:string"],
-  name: "message",
-  comment: "asdadsadas",
-  dbSchema: true,
-  typeDef: true,
-  returnType: "[String]",
-  type: "input",
-  actionName: "Create One",
-};
-create.createnewTypedef({ options: opts });

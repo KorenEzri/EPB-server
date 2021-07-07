@@ -41,7 +41,8 @@ const fromOptionsToInterfaceString = ({ options }: createCustomTypeOptions) => {
 
 const writeInterfaceToFiles = async (name: String, interfaceString: any) => {
   const typesPath = "./types";
-  const typeFilePath = `${typesPath}/${name}Options.ts`;
+  const interfaceName = `${name}Options`;
+  const typeFilePath = `${typesPath}/${interfaceName}.ts`;
   const doesSchemaFileExist = await utils.checkIfFileAlreadyExists(
     "./db/schemas",
     typeFilePath
@@ -55,6 +56,7 @@ const writeInterfaceToFiles = async (name: String, interfaceString: any) => {
   }
   const exportStatement = `export * from "./${name}Options"`;
   const res = await utils.addExportStatement(typesPath, exportStatement);
+  await utils.alterConfigFile("add", "customTypes", interfaceName, "array");
   return res;
 };
 // create a new interface file called fooOptions.ts inside ./types folder

@@ -1,1 +1,0 @@
-const availableCRUDActions = [    "Create One",]

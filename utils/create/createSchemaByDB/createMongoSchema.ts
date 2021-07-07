@@ -84,6 +84,7 @@ export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   Logger.http("FROM: EPB-server: Creating a MongoDB schema...");
   // await createNewInterface({ options: options });
   const mongoDBSchema = toMongoSchema({ options: options });
+  const schemaName = `${options.name}Schema`;
   Logger.http(
     "FROM: EPB-server: Schema created, updating interface file to include a mongo document export..."
   );
@@ -95,8 +96,9 @@ export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   );
   await utils.addExportStatement(
     "db/schemas",
-    `export * from "./${options.name}Schema"`
+    `export * from "./${schemaName}"`
   );
+  await utils.alterConfigFile("add", "dbSchemas", schemaName, "array");
   Logger.http("FROM: EPB-server: Done, applying prettier for files.");
   await utils.applyPrettier("./db/schemas/*.ts");
   return "Schema created successfully.";

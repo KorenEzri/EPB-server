@@ -18,7 +18,7 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   actionName?: string
 ) => {
   const capType = utils.capitalizeFirstLetter(type || "");
-  let { typeDef, typeDefInterface } = fromOptionsToGQLTypeDefinition(
+  let { typeDef, typeDefInterface } = await fromOptionsToGQLTypeDefinition(
     /*
     This function returns varList - either an array, or a stringified represntation of name:type in case of having only one option.
     it also returns typeDefInterface - which is either undefined, or an object, represting a whole type definition interface
@@ -81,7 +81,7 @@ const grabTypeDefsAndInsertNewTypeDef = async (
   }
   return finishedTypeDefs;
 };
-const fromOptionsToGQLTypeDefinition = (
+const fromOptionsToGQLTypeDefinition = async (
   name: string,
   properties: string[],
   type: string,
@@ -103,7 +103,6 @@ const fromOptionsToGQLTypeDefinition = (
     properties,
     name
   );
-
   if (returnType) {
     if (!utils.isCustomType(returnType)) {
       returnType = utils.capitalizeFirstLetter(returnType);
@@ -133,6 +132,12 @@ const fromOptionsToGQLTypeDefinition = (
     // getMessageOptions: messsageOptionsType
     // later, it will get the typeDefInterface options added to it.
   }
+  await utils.alterConfigFile(
+    "add",
+    "typeDefActions",
+    `${name}${typeDefForManyObjects ? "s" : ""}`,
+    "array"
+  );
   return { typeDef, typeDefInterface };
 };
 const insertTypeDefInterface = async (

@@ -5,13 +5,6 @@ export const typeDefs = gql`
 
   # generated definitions
 
-  input messageOptionsInput {
-    sender: String
-    kaki: Int
-    lala: [String]
-  }
-  # added at: Mon Jul 05 2021 12:16:20 GMT+0300 (Israel Daylight Time)
-
   input addCrudOperationsOptionsInput {
     schemaName: String
     crudActions: [String]
@@ -81,7 +74,7 @@ export const typeDefs = gql`
     addUserAuth(options: addUserAuthOptions): String
     restartServer(timeout: Int): String
     addCrudOperations(options: addCrudOperationsOptionsInput): String
-    createOneMessage(options: messageOptionsInput): String
     # mutation-end
   }
 `;
+// # readOneMessage(:): MessageOptionsType

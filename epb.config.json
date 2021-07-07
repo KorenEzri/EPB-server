@@ -1,1 +1,52 @@
-{ "database": "mongodb" }
+{
+  "database": "mongodb",
+  "customTypes": [
+    "addCrudOperationsOptions",
+    "addUserAuthOptions",
+    "createCRUDResolverOptions",
+    "createCRUDTypedefOptions",
+    "createCustomTypeOptions",
+    "createSchemaOptions",
+    "createTypedefOptions",
+    "ResolverOptions"
+  ],
+  "dbSchemas": ["stub"],
+  "resolvers": [
+    "getResolvers",
+    "getTypeDefs",
+    "getActions",
+    "getAllResolverNames",
+    "getAllowedTypes",
+    "getAllDBSchemaNames",
+    "createResolver",
+    "createCustomType",
+    "createSchema",
+    "addUserAuth",
+    "restartServer",
+    "addCrudOperations",
+    "createOneMessage",
+    "ResolverOptions"
+  ],
+  "typeDefInterfaces": [
+    "addCrudOperationsOptionsInput",
+    "addUserAuthOptions",
+    "createSchemaOptions",
+    "createCustomTypeOptions",
+    "ResolverOptions",
+    "identifier"
+  ],
+  "typeDefActions": [
+    "getResolvers",
+    "getTypeDefs",
+    "getActions",
+    "getAllResolverNames",
+    "getAllowedTypes",
+    "getAllDBSchemaNames",
+    "createResolver",
+    "createCustomType",
+    "createSchema",
+    "addUserAuth",
+    "restartServer",
+    "addCrudOperations"
+  ]
+}

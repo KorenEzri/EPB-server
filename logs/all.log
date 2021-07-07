@@ -12955,3 +12955,143 @@
 2021-07-05 22:43:57:4357 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
 2021-07-05 22:43:57:4357 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-07-05 22:43:57:4357 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:03:12:312 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:03:12:312 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:03:12:312 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:03:58:358 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:03:59:359 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:03:59:359 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:04:25:425 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:04:25:425 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:04:25:425 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:04:47:447 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:04:47:447 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:04:47:447 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:10:03:103 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:10:03:103 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:10:03:103 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:23:05:235 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:23:05:235 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:24:46:2446 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition..[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-06 20:24:46:2446 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition..[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-06 20:44:50:4450 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition..[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-06 20:46:06:466 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-06 20:46:17:4617 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating 2 CRUD operations..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-06 20:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:54:47:5447 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-06 20:54:47:5447 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-06 20:54:47:5447 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-07-06 20:54:47:5447 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 20:55:05:555 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 20:55:05:555 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-06 20:56:15:5615 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-06 20:56:16:5616 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 20:57:04:574 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 20:57:04:574 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-06 20:57:04:574 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-06 20:57:05:575 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 21:00:48:048 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:00:48:048 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:01:57:157 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:01:57:157 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:34:34:3434 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:34:34:3434 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:35:42:3542 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:35:42:3542 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:36:10:3610 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:36:10:3610 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:36:32:3632 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:36:32:3632 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:39:06:396 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:39:06:396 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:47:22:4722 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:47:22:4722 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:48:59:4859 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:48:59:4859 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:56:32:5632 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:56:32:5632 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:58:11:5811 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:58:11:5811 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 21:58:45:5845 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 21:58:45:5845 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 22:02:53:253 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 22:02:53:253 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 22:08:04:84 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 22:08:04:84 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-06 22:08:04:84 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-06 22:08:05:85 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 22:08:10:810 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 22:08:10:810 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 22:08:11:811 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 22:08:24:824 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 22:08:31:831 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-06 22:08:31:831 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-06 22:08:33:833 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 22:08:33:833 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-06 22:08:33:833 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-06 22:08:34:834 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-06 22:09:35:935 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-06 22:09:35:935 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-06 22:09:35:935 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m

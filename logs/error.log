@@ -1593,3 +1593,7 @@
 2021-07-05 13:30:12:3012 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete Many is not availabe for schema messageSchema.[39m
 2021-07-05 13:43:11:4311 [31merror[39m: [31mCannot read property 'split' of undefined[39m
 2021-07-05 13:43:54:4354 [31merror[39m: [31mCannot read property 'trim' of undefined[39m
+2021-07-06 20:46:17:4617 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema messageSchema.[39m
+2021-07-06 20:54:47:5447 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-06 20:54:47:5447 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name messageSchema.ts already exists![39m
+2021-07-06 22:09:35:935 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
