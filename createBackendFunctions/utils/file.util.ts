@@ -84,7 +84,7 @@ export const getAllSchemaNames = async () => {
       val != null &&
       !val.includes("SchemaConfig")
     )
-      return val;
+      return val.split(".ts").join("");
   });
 };
 export const insertImportStatement = (resolvers: string, name: string) => {
@@ -137,7 +137,8 @@ export const insertStringToFileInRangeOfLines = async (
   startHandler: string | number,
   endHandler: string | number,
   duplicates?: boolean,
-  addToStartIndex?: number
+  addToStartIndex?: number,
+  addString?: string
 ) => {
   addToStartIndex = addToStartIndex ? addToStartIndex : 0;
   const fileAsString = await read(filePath, "utf8");
@@ -162,9 +163,14 @@ export const insertStringToFileInRangeOfLines = async (
   }
   if (linesInRange.length > 1) {
     linesInRange.splice(1, 0, string);
-    lineArray.splice(startIndex, endIndex - startIndex, linesInRange.join(""));
+    lineArray.splice(
+      startIndex,
+      endIndex - startIndex,
+      addString + "\n" + linesInRange.join("")
+    );
   } else {
     const splatOneLineRange = linesInRange[0].split("}");
+    if (!addString) addString = "";
     splatOneLineRange[0] = `${splatOneLineRange[0]}, ${string} }`;
     lineArray.splice(
       startIndex + 1 + addToStartIndex,
@@ -283,7 +289,7 @@ export const checkIfConfigItemExists = async (
   const filePath = "epb.config.json";
   const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
   const configFileContent = jsonFileAsJSON[contentHeader];
-  return configFileContent.includes(item) ? true : false;
+  return configFileContent.includes(item);
 };
 // export const addToAllowedTypesConfig = async (types: [string]) => {
 //   const filePath = "epb.config.json";

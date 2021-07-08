@@ -45,7 +45,7 @@ export const validTypes = [
   "[Int]",
 ].concat(allCustomTypesWithArrayTypes);
 
-export const availableCRUDActions = `const availableCRUDActions = [
+export const availableCRUDActions = ` {"availableCRUDActions": [
     "Create One",
     "Create Many",
     "Read One",
@@ -54,5 +54,5 @@ export const availableCRUDActions = `const availableCRUDActions = [
     "Update One",
     "Update Many",
     "Delete One",
-    "Delete Many",
-]`;
+    "Delete Many"
+]}`;

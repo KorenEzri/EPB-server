@@ -27,8 +27,9 @@ const setType = (type: string) => {
 const getActionName = (typeName: string, action?: string) => {
   if (!action) return;
   action = utils.lowercaseFirstLetter(action.split(" ").join(""));
-  if (action.includes("Many")) return `${action}${typeName}s`;
-  return `${action}${typeName}`;
+  if (action.includes("Many") || action.includes("All"))
+    return `${action}${utils.capitalizeFirstLetter(typeName)}s`;
+  return `${action}${utils.capitalizeFirstLetter(typeName)}`;
 };
 const getInterfacePrefix = (type: string) => {
   type = type.toLowerCase();
@@ -36,7 +37,7 @@ const getInterfacePrefix = (type: string) => {
 };
 const getTypedefInterfaceName = (typeName: string, action?: string) => {
   if (!action) action = "";
-  action = action.split(" ").join("");
+  action = action?.split(" ").join("");
   if (mongoUtils.mutationCRUDS.includes(action)) {
     return `${typeName}OptionsInput`;
   } else return `${typeName}OptionsType`;

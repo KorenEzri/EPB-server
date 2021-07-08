@@ -13,7 +13,8 @@ const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
 
 const createDBSchemaConfigList = async (schemaName: string) => {
-  const ConfigListPath = `db/schemas/${schemaName}Config.ts`;
+  schemaName = schemaName.split(".ts").join("");
+  const ConfigListPath = `db/schemas/${schemaName}Config.json`;
   const doesSchemaExist = await utils.checkIfFileAlreadyExists(
     "db/schemas",
     `${schemaName}`
@@ -72,12 +73,14 @@ const removeCrudOpsFromAvailabilityList = async (
   schemaName: string,
   crudOps: string[]
 ) => {
-  const listPath = `db/schemas/${schemaName}Config.ts`;
-  let configList = utils.toLineArray(await read(listPath, "utf8"));
+  const listPath = `db/schemas/${schemaName}Config.json`;
+  let configList = JSON.parse(await read(listPath, "utf8"));
   crudOps.forEach((crud: string) => {
-    configList = configList.filter((val: string) => !val.includes(crud));
+    configList.availableCRUDActions = configList.availableCRUDActions.filter(
+      (val: string) => val.trim() !== crud.trim()
+    );
   });
-  await write(listPath, configList.join(""));
+  await write(listPath, JSON.stringify(configList));
 };
 //
 const insertModelImportStatementToResolverFile = async (modelName: string) => {
@@ -112,7 +115,10 @@ const insertOptionsInterfaceImportToResolverFile = async (
       "./resolvers.ts",
       `${optionsName},`,
       startHandler,
-      endHandler
+      endHandler,
+      false,
+      0,
+      "// option types"
     );
   } catch ({ message }) {
     Logger.error(
@@ -147,12 +153,10 @@ const createCrudOps = async (
       identifier,
     };
     await createTypedef(typeDefOptions);
-    // await utils.alterConfigFile("add", "resolvers", crudOperation);
-    // await utils.alterConfigFile("add", "typeDefInterfaces", crudOperation);
     Logger.http(
       `FROM: EPB-server: created CRUD action ${crudOperation}, applying Prettier..`
     );
-    // await utils.applyPrettier();
+    await utils.applyPrettier();
   }
 };
 //
@@ -163,6 +167,7 @@ export const addCrudToDBSchemas = async (
   crudOperations: string[],
   identifier: { name: string; type: string }
 ) => {
+  schemaName = schemaName.split(".ts").join("");
   const doesInterfaceExist = await checkIfInterfaceExists(schemaName);
   if (!doesInterfaceExist)
     return {

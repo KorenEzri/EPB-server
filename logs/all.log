@@ -13354,3 +13354,732 @@
 2021-07-07 14:24:20:2420 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
 2021-07-07 14:24:20:2420 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
 2021-07-07 14:24:20:2420 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:29:53:2953 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:29:53:2953 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:29:53:2953 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:29:53:2953 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:29:53:2953 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:29:53:2953 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:30:14:3014 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:30:30:3030 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:30:30:3030 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:30:30:3030 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:30:30:3030 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:31:26:3126 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:31:26:3126 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:31:28:3128 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:31:28:3128 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:31:28:3128 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:31:28:3128 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:31:52:3152 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:31:55:3155 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:31:55:3155 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:31:55:3155 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:31:55:3155 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:32:09:329 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:32:09:329 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:32:09:329 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:32:13:3213 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:32:13:3213 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:32:13:3213 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:32:13:3213 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:33:08:338 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:33:08:338 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:33:08:338 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:33:08:338 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:35:14:3514 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:35:14:3514 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:35:14:3514 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:35:14:3514 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:35:33:3533 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:35:33:3533 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:35:34:3534 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:35:37:3537 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:35:37:3537 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:35:37:3537 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:35:37:3537 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:36:25:3625 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:36:25:3625 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:36:26:3626 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:36:26:3626 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:36:26:3626 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:36:26:3626 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:37:15:3715 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:37:15:3715 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:38:33:3833 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:38:33:3833 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:38:35:3835 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:38:38:3838 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:38:38:3838 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:38:38:3838 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:38:38:3838 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:39:04:394 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:39:04:394 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:39:05:395 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:39:05:395 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:39:05:395 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:39:05:395 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 14:54:45:5445 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 14:54:45:5445 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 14:54:48:5448 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 14:54:48:5448 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 14:54:48:5448 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 14:54:48:5448 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:02:30:230 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:02:30:230 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:02:31:231 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:02:31:231 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:02:31:231 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:02:31:231 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:02:54:254 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:02:54:254 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:02:56:256 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:02:56:256 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:02:56:256 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:02:56:256 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:03:22:322 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:03:22:322 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:03:24:324 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 15:03:27:327 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:03:27:327 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:03:27:327 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:03:27:327 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:04:44:444 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:04:44:444 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:05:08:58 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:05:08:58 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:05:10:510 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:05:10:510 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:05:10:510 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:05:10:510 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:05:10:510 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:05:52:552 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:05:52:552 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:05:53:553 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:05:53:553 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:05:53:553 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:05:53:553 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:06:12:612 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:06:12:612 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:06:12:612 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:06:12:612 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:06:12:612 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:06:12:612 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:06:36:636 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:06:36:636 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:06:39:639 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:06:39:639 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:06:39:639 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:06:39:639 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:06:39:639 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:07:27:727 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:07:27:727 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:07:27:727 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:07:27:727 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:07:27:727 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:07:27:727 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:07:27:727 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:08:11:811 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:08:11:811 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:08:11:811 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:08:11:811 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:08:11:811 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:08:11:811 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:08:11:811 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:09:54:954 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:09:54:954 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:09:55:955 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:09:55:955 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:09:55:955 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:09:55:955 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:10:30:1030 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:10:30:1030 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:10:30:1030 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:10:30:1030 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:10:31:1031 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:10:31:1031 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:11:38:1138 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:11:38:1138 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:11:40:1140 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:11:40:1140 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:11:40:1140 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:11:40:1140 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:11:55:1155 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:11:55:1155 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:11:55:1155 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:11:55:1155 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:11:55:1155 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:11:55:1155 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:12:19:1219 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:12:19:1219 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:12:19:1219 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:12:19:1219 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:12:19:1219 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:12:19:1219 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:13:38:1338 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:13:38:1338 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:13:39:1339 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:13:39:1339 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:13:39:1339 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:13:39:1339 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:14:03:143 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:14:03:143 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:14:03:143 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:14:03:143 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:14:03:143 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 15:14:03:143 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:14:12:1412 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:14:12:1412 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:14:12:1412 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-07 15:14:12:1412 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:46:04:464 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:46:04:464 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:46:04:464 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-07 15:46:04:464 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:46:33:4633 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:46:33:4633 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:46:34:4634 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:46:34:4634 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:46:34:4634 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 15:47:24:4724 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:47:24:4724 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:47:43:4743 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:47:43:4743 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:47:48:4748 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:47:48:4748 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:47:48:4748 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-07 15:47:48:4748 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:51:59:5159 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:51:59:5159 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:52:00:520 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:52:00:520 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:52:00:520 [31merror[39m: [31mextraFunc is not a function[39m
+2021-07-07 15:52:52:5252 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:52:52:5252 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:52:53:5253 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:52:53:5253 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:52:53:5253 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-07 15:52:53:5253 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 15:54:27:5427 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:54:27:5427 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:58:11:5811 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 15:58:11:5811 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 15:58:49:5849 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 15:58:49:5849 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 15:58:49:5849 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:00:01:01 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:00:01:01 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:00:02:02 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:00:02:02 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:00:02:02 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:02:11:211 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:02:11:211 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:02:11:211 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:02:11:211 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:03:37:337 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:03:37:337 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:03:37:337 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:03:37:337 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:03:37:337 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:04:49:449 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:04:49:449 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:04:52:452 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:04:52:452 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:04:52:452 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:05:16:516 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:05:16:516 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:05:16:516 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:05:16:516 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:05:16:516 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:05:39:539 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:05:39:539 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:05:41:541 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:05:41:541 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:05:41:541 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:05:54:554 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:05:54:554 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:05:54:554 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:05:54:554 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:05:54:554 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:06:39:639 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:06:39:639 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:06:40:640 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:06:40:640 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:06:40:640 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 16:07:59:759 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:07:59:759 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:07:59:759 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:07:59:759 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:07:59:759 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 16:08:38:838 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:08:38:838 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:08:39:839 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:08:39:839 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:08:39:839 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 16:09:54:954 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:09:54:954 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:11:14:1114 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:11:14:1114 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:11:27:1127 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:11:27:1127 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:11:27:1127 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 16:11:28:1128 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:12:55:1255 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:12:55:1255 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:12:55:1255 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:12:55:1255 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:12:56:1256 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 16:12:56:1256 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:16:27:1627 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:16:27:1627 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:16:28:1628 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:16:28:1628 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:16:28:1628 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 16:16:29:1629 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:20:09:209 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:20:09:209 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:20:09:209 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-07 16:20:10:2010 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:26:15:2615 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:26:15:2615 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:26:15:2615 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-07 16:26:16:2616 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:36:46:3646 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:36:46:3646 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:51:15:5115 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:51:15:5115 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:52:11:5211 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:52:11:5211 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:52:14:5214 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:52:14:5214 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:52:14:5214 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-07 16:52:15:5215 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:52:40:5240 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 16:53:16:5316 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:53:16:5316 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:53:16:5316 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 16:53:17:5317 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:54:54:5454 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 16:54:54:5454 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 16:54:55:5455 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:54:55:5455 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:54:55:5455 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-07 16:54:55:5455 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:55:07:557 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-07 16:55:15:5515 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-07 16:55:29:5529 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:55:29:5529 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-07 16:55:29:5529 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-07 16:55:30:5530 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 16:55:57:5557 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 16:55:57:5557 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-07 16:55:57:5557 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-07 16:55:57:5557 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-07 16:55:58:5558 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-07 16:55:59:5559 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-07 16:56:00:560 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-07 17:42:06:426 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-07 17:42:06:426 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-07 17:42:07:427 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-07 17:42:07:427 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-07 17:42:07:427 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-07 17:42:07:427 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-07 17:42:08:428 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-07 17:42:09:429 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-07 17:42:10:4210 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:06:13:613 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:06:13:613 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:06:16:616 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:06:16:616 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:06:16:616 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:06:17:617 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:06:18:618 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:06:19:619 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:06:20:620 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:09:19:919 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:09:19:919 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:09:21:921 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:09:21:921 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:09:21:921 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:09:22:922 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:09:22:922 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:09:23:923 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:09:24:924 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:14:00:140 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:14:00:140 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:14:02:142 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:14:02:142 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:14:02:142 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:14:02:142 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:14:03:143 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:14:04:144 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:14:05:145 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:16:42:1642 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:16:42:1642 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:16:43:1643 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:16:43:1643 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:16:43:1643 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:16:44:1644 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:16:45:1645 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:16:46:1646 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:16:47:1647 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:18:30:1830 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:18:30:1830 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:18:30:1830 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:18:30:1830 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:18:30:1830 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:18:31:1831 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:18:32:1832 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:18:32:1832 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:18:33:1833 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:20:10:2010 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:20:10:2010 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:20:13:2013 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:20:13:2013 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:20:13:2013 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:20:14:2014 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:20:15:2015 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:20:15:2015 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:20:16:2016 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete Many is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:47:2047 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:20:47:2047 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:20:47:2047 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:20:48:2048 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:20:49:2049 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:20:50:2050 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:20:51:2051 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:23:16:2316 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:23:16:2316 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:23:17:2317 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:23:17:2317 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:23:17:2317 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:23:18:2318 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:23:18:2318 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:23:19:2319 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:23:20:2320 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:37:08:378 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:37:08:378 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:37:09:379 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:37:09:379 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:37:09:379 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:37:10:3710 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:37:11:3711 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:37:12:3712 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:37:13:3713 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:46:24:4624 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:46:24:4624 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:46:24:4624 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:46:24:4624 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:46:24:4624 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:46:25:4625 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:46:26:4626 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:46:27:4627 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:46:28:4628 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:47:56:4756 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:47:56:4756 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:48:50:4850 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:48:50:4850 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:48:50:4850 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:48:51:4851 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:48:51:4851 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:48:52:4852 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:48:53:4853 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:49:55:4955 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:49:55:4955 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:49:55:4955 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:49:55:4955 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:49:55:4955 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:49:56:4956 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:49:57:4957 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:49:58:4958 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:49:58:4958 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:53:19:5319 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:53:19:5319 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:53:21:5321 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:53:21:5321 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-08 11:53:21:5321 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:53:22:5322 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:54:09:549 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:54:09:549 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:54:09:549 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:54:09:549 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-08 11:54:09:549 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:54:10:5410 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:55:16:5516 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:55:16:5516 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:55:16:5516 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:55:16:5516 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-08 11:55:16:5516 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:55:17:5517 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:58:51:5851 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:58:51:5851 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:58:54:5854 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:58:54:5854 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:58:54:5854 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:58:55:5855 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:58:56:5856 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:58:57:5857 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:58:58:5858 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 11:59:38:5938 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 11:59:38:5938 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 11:59:38:5938 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 11:59:38:5938 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 11:59:38:5938 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 11:59:39:5939 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 11:59:40:5940 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 11:59:41:5941 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 11:59:42:5942 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:00:48:048 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:00:48:048 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:00:49:049 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:00:49:049 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:00:49:049 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:00:50:050 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:00:51:051 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:00:51:051 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:00:52:052 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:01:28:128 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:01:28:128 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:01:40:140 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:01:40:140 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:01:40:140 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:01:40:140 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:01:40:140 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:01:41:141 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:01:42:142 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:01:43:143 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:01:44:144 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:01:58:158 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:01:58:158 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:03:32:332 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:03:32:332 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:46:11:4611 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:46:11:4611 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:46:19:4619 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:46:19:4619 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:46:19:4619 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:46:20:4620 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:46:21:4621 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:46:21:4621 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:46:22:4622 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:47:53:4753 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:47:53:4753 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:47:54:4754 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:47:54:4754 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:47:54:4754 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:47:54:4754 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:47:55:4755 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:47:56:4756 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:47:57:4757 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:48:45:4845 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:48:45:4845 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:48:45:4845 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:48:46:4846 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:48:46:4846 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:48:47:4847 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:48:48:4848 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:50:13:5013 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:50:13:5013 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:50:20:5020 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:50:20:5020 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:50:20:5020 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:50:21:5021 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:50:22:5022 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:50:22:5022 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:50:23:5023 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 12:52:23:5223 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:52:23:5223 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:52:23:5223 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 12:52:23:5223 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:52:23:5223 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:52:23:5223 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:52:24:5224 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:52:25:5225 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:52:26:5226 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:52:27:5227 [31merror[39m: [31mconfigList.filter is not a function[39m
+2021-07-08 12:53:10:5310 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:53:10:5310 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:53:12:5312 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:53:12:5312 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:53:12:5312 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:53:13:5313 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:53:14:5314 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:53:15:5315 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:53:15:5315 [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object[39m
+2021-07-08 12:54:04:544 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:54:04:544 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:54:04:544 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:54:04:544 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:54:04:544 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:54:05:545 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:54:06:546 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:54:06:546 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:54:07:547 [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object[39m
+2021-07-08 12:54:38:5438 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 12:54:38:5438 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 12:54:39:5439 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 12:54:39:5439 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 12:54:39:5439 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 12:54:40:5440 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 12:54:41:5441 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 12:54:42:5442 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 12:54:43:5443 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-08 13:10:54:1054 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 13:10:54:1054 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: typeDef option received, creating..[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-08 13:13:35:1335 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-08 13:13:35:1335 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-08 13:42:23:4223 [32minfo[39m: [32mFROM: EPB-server: Restarting server in [object Object] miliseconds.[39m
+2021-07-08 13:44:15:4415 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 13:44:15:4415 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 13:44:26:4426 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 13:44:26:4426 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 14:06:47:647 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 14:06:47:647 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 14:06:47:647 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 14:06:47:647 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 14:06:47:647 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-08 14:06:48:648 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteOne, applying Prettier..[39m
+2021-07-08 14:06:49:649 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 14:06:50:650 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-08 14:06:51:651 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-08 15:16:23:1623 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:16:23:1623 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:18:01:181 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:18:01:181 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:18:01:181 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:18:01:181 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:18:01:181 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:19:15:1915 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:19:15:1915 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:19:29:1929 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:19:29:1929 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:19:29:1929 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:19:29:1929 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:19:29:1929 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:20:05:205 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:20:05:205 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:20:16:2016 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:20:16:2016 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:20:16:2016 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:20:16:2016 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:20:16:2016 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:03:213 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:21:03:213 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:21:05:215 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:21:05:215 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:21:05:215 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:05:215 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:05:215 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:22:2122 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:21:22:2122 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:21:23:2123 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:21:23:2123 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:21:23:2123 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:23:2123 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:23:2123 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:37:2137 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:21:37:2137 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:21:38:2138 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:21:38:2138 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:21:38:2138 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:38:2138 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:38:2138 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:30:2430 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:24:30:2430 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:24:30:2430 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:30:2430 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:30:2430 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:57:2457 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:24:57:2457 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:24:57:2457 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 15:24:57:2457 [35mhttp[39m: [35mFROM: EPB-server: Creating 3 CRUD operations..[39m
+2021-07-08 15:24:57:2457 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\movie.tsOptions.ts'[39m
+2021-07-08 15:26:34:2634 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:26:34:2634 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:26:37:2637 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:26:37:2637 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:26:37:2637 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 15:26:37:2637 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 15:26:37:2637 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\movie.tsOptions.ts'[39m
+2021-07-08 15:27:26:2726 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-08 15:27:26:2726 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-08 15:27:27:2727 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:27:27:2727 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-08 15:27:27:2727 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-08 15:27:27:2727 [35mhttp[39m: [35mFROM: EPB-server: Creating 4 CRUD operations..[39m
+2021-07-08 15:27:27:2727 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action DeleteMany, applying Prettier..[39m
+2021-07-08 15:27:28:2728 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (200:34)[39m
+[31m[error]   198 | }[39m
+[31m[error]   199 | },[39m
+[31m[error] > 200 | deleteManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                  ^[39m
+[31m[error]   201 |       [39m
+[31m[error]   202 |  try {[39m
+[31m[error]   203 |           await MovieModel.deleteMany({: });[39m
+[31mapp.ts 161ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 18ms[39m
+2021-07-08 15:27:28:2728 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadMany, applying Prettier..[39m
+2021-07-08 15:27:28:2728 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (111:32)[39m
+[31m[error]   109 | // return [String][39m
+[31m[error]   110 | },[39m
+[31m[error] > 111 | readManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                ^[39m
+[31m[error]   112 |       [39m
+[31m[error]   113 |  try {[39m
+[31m[error]   114 |           const movieInstances = await MovieModel.find({: })[39m
+[31mapp.ts 157ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 19ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-08 15:27:28:2728 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-08 15:27:29:2729 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (111:32)[39m
+[31m[error]   109 | // return [String][39m
+[31m[error]   110 | },[39m
+[31m[error] > 111 | readManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                ^[39m
+[31m[error]   112 |[39m
+[31m[error]   113 | try {[39m
+[31m[error]   114 | const movieInstances = await MovieModel.find({: })[39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-08 15:27:29:2729 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-08 15:27:30:2730 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (111:32)[39m
+[31m[error]   109 | // return [String][39m
+[31m[error]   110 | },[39m
+[31m[error] > 111 | readManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                ^[39m
+[31m[error]   112 |[39m
+[31m[error]   113 | try {[39m
+[31m[error]   114 | const movieInstances = await MovieModel.find({: })[39m
+[31mapp.ts 159ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-08 15:27:30:2730 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m

@@ -129,7 +129,8 @@ const createTypedefVarList = ({ options }: createCustomTypeOptions) => {
   // check if handling only custom types
   const moreThanOneVarInVarlist = varList.length > 1 ? true : false;
   // check if there's more than one variable for the varList to determine the need for an interface.
-  const returnsArray = actionName?.includes("Many") ? true : false;
+  const returnsArray =
+    actionName?.includes("Many") || actionName?.includes("All") ? true : false;
   // check if the type definition acting is supposed to return an array of something.
   const definitionType = getType(type);
   const definitionReturnType = returnType ? returnType : "String";

@@ -44,6 +44,11 @@ import {
   validateTypeCreation,
   validateSchemaCreation,
 } from "./validations";
+// generated imports
+
+//
+
+// option types
 import {
   addUserAuthOptions,
   ResolverOptions,
@@ -110,8 +115,6 @@ export const resolvers = {
 
       // return [String]
     },
-
-    // Action: asdasd
 
     // query-end
   },

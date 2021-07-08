@@ -226,7 +226,6 @@ export const createNewTypeDef = async ({
       if (res.error) return res.error;
       return res;
     }
-    console.log(options);
     await write("./typeDefs.ts", res);
     if (options.properties.length > 1) {
       await addToConfigFile(options.name);

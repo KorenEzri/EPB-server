@@ -1637,3 +1637,116 @@
 2021-07-07 14:16:50:1650 [31merror[39m: [31mCannot read property '0' of undefined[39m
 2021-07-07 14:20:16:2016 [31merror[39m: [31mCannot read property '0' of undefined[39m
 2021-07-07 14:24:20:2420 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 14:30:14:3014 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:31:52:3152 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:32:09:329 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:35:34:3534 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 14:38:35:3835 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 15:03:24:324 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 15:05:10:510 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:06:39:639 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:07:27:727 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:08:11:811 [31merror[39m: [31mFROM: EPB-server: Error with insertImportStatementToResolverFile() at utils/prebuiltActions/crudOperations/controller.ts ~line 64, Cannot read property 'includes' of undefined[39m
+2021-07-07 15:46:34:4634 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 15:52:00:520 [31merror[39m: [31mextraFunc is not a function[39m
+2021-07-07 15:58:49:5849 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:00:02:02 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:02:11:211 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:03:37:337 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:04:52:452 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:05:16:516 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:05:41:541 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:05:54:554 [31merror[39m: [31mCannot read property 'split' of undefined[39m
+2021-07-07 16:06:40:640 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 16:07:59:759 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 16:08:39:839 [31merror[39m: [31mCannot read property '0' of undefined[39m
+2021-07-07 16:52:40:5240 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-07 16:55:07:557 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-07 16:55:15:5515 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete Many is not availabe for schema movieSchema.[39m
+2021-07-08 11:20:39:2039 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema movieSchema.[39m
+2021-07-08 12:52:27:5227 [31merror[39m: [31mconfigList.filter is not a function[39m
+2021-07-08 12:53:15:5315 [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object[39m
+2021-07-08 12:54:07:547 [31merror[39m: [31mThe "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received an instance of Object[39m
+2021-07-08 14:06:51:651 [31merror[39m: [31mUnexpected token c in JSON at position 0[39m
+2021-07-08 15:18:01:181 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:18:01:181 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:18:01:181 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:19:29:1929 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:19:29:1929 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:19:29:1929 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:20:16:2016 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:20:16:2016 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:20:16:2016 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:05:215 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:05:215 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:05:215 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:23:2123 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:23:2123 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:23:2123 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:38:2138 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:38:2138 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:21:38:2138 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:30:2430 [31merror[39m: [31mFROM: EPB-server: Crud operation createOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:30:2430 [31merror[39m: [31mFROM: EPB-server: Crud operation createMany is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:30:2430 [31merror[39m: [31mFROM: EPB-server: Crud operation readOne is not availabe for schema movieSchema.ts.[39m
+2021-07-08 15:24:57:2457 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\movie.tsOptions.ts'[39m
+2021-07-08 15:26:37:2637 [31merror[39m: [31mENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\movie.tsOptions.ts'[39m
+2021-07-08 15:27:28:2728 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (200:34)[39m
+[31m[error]   198 | }[39m
+[31m[error]   199 | },[39m
+[31m[error] > 200 | deleteManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                  ^[39m
+[31m[error]   201 |       [39m
+[31m[error]   202 |  try {[39m
+[31m[error]   203 |           await MovieModel.deleteMany({: });[39m
+[31mapp.ts 161ms[39m
+[31mconnections.ts 12ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 18ms[39m
+2021-07-08 15:27:28:2728 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (111:32)[39m
+[31m[error]   109 | // return [String][39m
+[31m[error]   110 | },[39m
+[31m[error] > 111 | readManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                ^[39m
+[31m[error]   112 |       [39m
+[31m[error]   113 |  try {[39m
+[31m[error]   114 |           const movieInstances = await MovieModel.find({: })[39m
+[31mapp.ts 157ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 19ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-08 15:27:29:2729 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (111:32)[39m
+[31m[error]   109 | // return [String][39m
+[31m[error]   110 | },[39m
+[31m[error] > 111 | readManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                ^[39m
+[31m[error]   112 |[39m
+[31m[error]   113 | try {[39m
+[31m[error]   114 | const movieInstances = await MovieModel.find({: })[39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m
+2021-07-08 15:27:30:2730 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Parameter declaration expected. (111:32)[39m
+[31m[error]   109 | // return [String][39m
+[31m[error]   110 | },[39m
+[31m[error] > 111 | readManyMovies: async (_: any, : ) => {[39m
+[31m[error]       |                                ^[39m
+[31m[error]   112 |[39m
+[31m[error]   113 | try {[39m
+[31m[error]   114 | const movieInstances = await MovieModel.find({: })[39m
+[31mapp.ts 159ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 15ms[39m

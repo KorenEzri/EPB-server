@@ -1,17 +1,7 @@
-import {
-  createCustomTypeOptions,
-  createTypedefOptions,
-  createResolverOptions,
-  ResolverOptions,
-} from "../../../../types";
 import * as mongoUtils from "./util";
 import { promisify } from "util";
-import Logger from "../../../../logger/logger";
 import fs from "fs";
 import * as utils from "../../../utils";
-import { typeDefs } from "../../../../typeDefs";
-import { getTypeDefs } from "../../../codeToString";
-import * as parseVars from "../../../utils/parse-vars";
 import * as createTypeDefUtils from "./testTypedefCreationutils";
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
@@ -88,19 +78,27 @@ const createTypedefClientOptionsFromFileOptions = async (
   };
   return createCustomTypeOptions;
 };
-
 const createTypedefFromClientOptions = async (options: optionsFromClient) => {
   const setupOptions = createTypeDefUtils.setUpOptions(options);
   const { names, properties, interfacePrefix, type } = setupOptions;
   let { returnType } = setupOptions;
+  const doesInterfaceExist = await utils.checkIfConfigItemExists(
+    "typeDefInterfaces",
+    names?.typeDefInterfaceName || ""
+  );
   const typeDefInterfaceName = `${interfacePrefix} ${names?.typeDefInterfaceName}`;
   const typeDefInterfaceVariables =
     Array.isArray(properties) && properties.length >= 1
       ? createTypeDefInterface(properties)
       : undefined;
-  const typeDefInterface = typeDefInterfaceVariables
+  let typeDefInterface = typeDefInterfaceVariables
     ? typeDefInterfaceName + typeDefInterfaceVariables
     : "";
+  typeDefInterface = utils.replaceAllInString(
+    typeDefInterface,
+    ["number", "Number"],
+    ["Int", "Int"]
+  );
   const typeDefActionVariables =
     Array.isArray(properties) && properties.length >= 1
       ? `(options: ${names?.typeDefInterfaceName})`
@@ -112,9 +110,32 @@ const createTypedefFromClientOptions = async (options: optionsFromClient) => {
       ? `${[returnType]}`
       : returnType;
   const typeDefAction = returnType
-    ? `${names?.actionName}${typeDefActionVariables}: ${returnType}`
+    ? `${names?.actionName}${typeDefActionVariables || ""}: ${returnType}`
     : undefined;
-  await insertToTypedefs(typeDefInterface, typeDefAction, type || "type");
+  if (doesInterfaceExist) typeDefInterface = "";
+  const typeDefInterfaceTypeName =
+    utils.replaceAllInString(
+      names?.typeDefInterfaceName || "",
+      "Input",
+      "Type"
+    ) || "";
+  const inputAndType = await utils.checkIfConfigItemExists(
+    "typeDefInterfaces",
+    typeDefInterfaceTypeName
+  );
+  await insertToTypedefs(
+    typeDefInterface,
+    typeDefAction,
+    type || "type",
+    !inputAndType
+  );
+  if (inputAndType) {
+    await utils.alterConfigFile(
+      "add",
+      "typeDefInterfaces",
+      typeDefInterfaceTypeName
+    );
+  }
   if (names?.typeDefInterfaceName && typeDefInterface.length) {
     await utils.alterConfigFile(
       "add",
@@ -127,21 +148,18 @@ const createTypedefFromClientOptions = async (options: optionsFromClient) => {
     await utils.alterConfigFile("add", "resolvers", names.actionName);
   }
 };
-
 const handleOptions = async (options: any) => {
-  if (options.properties[0] || !Array.isArray(options.properties)) {
-    await createTypedefFromClientOptions(options);
-  } else {
-    const typeDefFromClientOptions: optionsFromClient =
-      await createTypedefClientOptionsFromFileOptions(options);
-    await createTypedefFromClientOptions(typeDefFromClientOptions);
-  }
+  // if (options.properties || !Array.isArray(options.properties)) {
+  //   await createTypedefFromClientOptions(options);
+  // } else {
+  const typeDefFromClientOptions: optionsFromClient =
+    await createTypedefClientOptionsFromFileOptions(options);
+  await createTypedefFromClientOptions(typeDefFromClientOptions);
+  // };
 };
-
 export const createTypedef = async (options: createTypeDefOptions) => {
   await handleOptions(options);
 };
-
 const createTypeDefInterface = (varList: varList) => {
   const areAllTypesCustomTypes = utils.checkIfAllTypesAreCustomTypes(varList);
   const cleanTypedefInterface = (typeDefInterface: any) => {
@@ -159,20 +177,22 @@ const createTypeDefInterface = (varList: varList) => {
   });
   return cleanTypedefInterface(typeDefInterface);
 };
-
 const insertToTypedefs = async (
   typeDefInterface: string | undefined,
   typeDefAction: string | undefined,
-  type: string
+  type: string,
+  typeAndInput?: boolean
 ) => {
   const typeDefsAsString = await read("typeDefs.ts", "utf8");
   const handlerA =
-    type === "input" || "Mutation" ? "# mutation-end" : "# query-end";
+    type === "input" || type === "Mutation" ? "# mutation-end" : "# query-end";
   let typeDefs = utils.pushIntoString(
     typeDefsAsString,
     handlerA,
     0,
-    typeDefAction || ""
+    typeDefAction || "",
+    undefined,
+    -1
   );
   typeDefs = utils.pushIntoString(
     typeDefs,
@@ -180,5 +200,24 @@ const insertToTypedefs = async (
     0,
     typeDefInterface || ""
   );
+  if (typeAndInput) {
+    const splatInterface = typeDefInterface?.split("{");
+    if (splatInterface) {
+      let firstLine = splatInterface[0];
+      firstLine = utils.replaceAllInString(
+        firstLine || "",
+        ["input", "Input"],
+        ["type", "Type"]
+      );
+      splatInterface[0] = firstLine;
+      typeDefInterface = splatInterface.join("{");
+      typeDefs = utils.pushIntoString(
+        typeDefs,
+        "# generated definitions",
+        0,
+        typeDefInterface || ""
+      );
+    }
+  }
   await write("typeDefs.ts", typeDefs);
 };

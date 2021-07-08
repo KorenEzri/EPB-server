@@ -34,8 +34,7 @@
     "createSchemaOptions",
     "createCustomTypeOptions",
     "ResolverOptions",
-    "identifier",
-    "movieOptionsType"
+    "identifier"
   ],
   "typeDefActions": [
     "getResolvers",

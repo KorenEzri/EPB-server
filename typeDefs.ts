@@ -5,14 +5,6 @@ export const typeDefs = gql`
 
   # generated definitions
 
-  type movieOptionsType {
-    duration: Int
-    views: Int
-    movie: String
-    name: String
-  }
-  # added at: Wed Jul 07 2021 13:59:44 GMT+0300 (Israel Daylight Time)
-
   input addCrudOperationsOptionsInput {
     schemaName: String
     crudActions: [String]

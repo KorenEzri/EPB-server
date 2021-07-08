@@ -3,14 +3,14 @@ export const toLineArray = (string: string, parseFunc?: any) => {
   return string.split("\n");
 };
 export const splitNameType = (toSplit: string | string[]) => {
-  if (!toSplit) return { name: "", type: "" };
+  if (!toSplit || !toSplit.length) return { name: "", type: "" };
   if (Array.isArray(toSplit)) {
     return toSplit.map((string: string) => {
-      const splatString = string.split(":");
+      const splatString = string?.split(":");
       return { name: splatString[0].trim(), type: splatString[1].trim() };
     });
   } else {
-    const splatString = toSplit.split(":");
+    const splatString = toSplit?.split(":");
     return { name: splatString[0].trim(), type: splatString[1].trim() };
   }
 };
@@ -55,14 +55,18 @@ export const pushIntoString = (
   handlerA: string | number,
   handlerB: string | number,
   stringToPush: string,
-  extraFunc?: any
+  extraFunc?: any,
+  addToStartIndex?: number
 ) => {
+  if (!addToStartIndex) addToStartIndex = 0;
   const lineArray = toLineArray(stringToPushTo, (arr: string[]) =>
     arr.map((line) => line.trim())
   );
   // split the stirng to an array of lines, trim each line.
   const startIndex =
-    typeof handlerA === "number" ? handlerA : lineArray.indexOf(handlerA) + 1; // The index (line number) in which to push
+    typeof handlerA === "number"
+      ? handlerA + addToStartIndex
+      : lineArray.indexOf(handlerA) + 1 + addToStartIndex; // The index (line number) in which to push
   const endIndex =
     typeof handlerB === "number" ? handlerB : lineArray.indexOf(handlerB); // The index (line number) in which to stop splicing.
   if (extraFunc) stringToPush = extraFunc(stringToPush);
