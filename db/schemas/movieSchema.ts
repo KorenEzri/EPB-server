@@ -2,10 +2,10 @@ import mongoose, { Schema } from "mongoose";
 import uniqueValidator from "mongoose-unique-validator";
 import { movieDoc } from "../../types";
 const movieSchema: Schema = new mongoose.Schema({
-  name: { type: String, unique: true },
+  actors: Array,
   duration: Number,
+  name: { type: String, unique: true },
   views: Number,
-  cast: Array,
 });
 movieSchema.plugin(uniqueValidator);
 movieSchema.set("toJSON", {

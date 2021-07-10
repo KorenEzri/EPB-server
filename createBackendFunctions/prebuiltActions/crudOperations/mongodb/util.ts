@@ -81,17 +81,29 @@ export const resolverTitles = {
   createMany: (parts: resolverTitleOptions) =>
     `${parts.resolverName}s: async (_: any, ${parts.modelFunctionVarName}s: ${parts.modelInterfaceName}[]) => {`,
   readOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_:any, ${parts.identifier?.name}: ${parts.identifier?.type}) => {`,
+    `${parts.resolverName}: async (_:any, ${
+      parts.identifier?.name
+    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
   readMany: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}s: async (_: any, ${parts.identifier?.name}: ${parts.identifier?.type}) => {`,
+    `${parts.resolverName}s: async (_: any, ${
+      parts.identifier?.name
+    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
   readAll: (parts: resolverTitleOptions) =>
     `${parts.resolverName}s: async () => {`,
   updateOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_:any, ${parts.identifier?.name}:${parts.identifier?.type}, ${parts.modelFunctionVarName}: ${parts.modelInterfaceName}) => {`,
+    `${parts.resolverName}: async (_:any, ${
+      parts.identifier?.name
+    }:${utils.lowercaseFirstLetter(parts.identifier?.type || "")}, ${
+      parts.modelFunctionVarName
+    }: ${parts.modelInterfaceName}) => {`,
   deleteOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_:any, ${parts.identifier?.name}: ${parts.identifier?.type}) => {`,
+    `${parts.resolverName}: async (_:any, ${
+      parts.identifier?.name
+    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
   deleteMany: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}s: async (_: any, ${parts.identifier?.name}: ${parts.identifier?.type}) => {`,
+    `${parts.resolverName}s: async (_: any, ${
+      parts.identifier?.name
+    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
 };
 export const resolverTryCatchBlocks = {
   createOne: (parts: resolverTryCatchBlockOptions) =>

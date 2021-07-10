@@ -1,25 +1,6 @@
-import { optionsFromClient } from "./testNewTypedefCreation";
 import * as mongoUtils from "../../../prebuiltActions/crudOperations/mongodb/util";
 import * as utils from "../../../utils";
-
-interface revampedOptions {
-  properties?:
-    | { name: string; type: string }[]
-    | { name: string; type: string };
-  names?: {
-    schemaName: string;
-    modelName: string;
-    customTypeName: string;
-    actionName?: string;
-    typeDefInterfaceName?: string;
-  };
-  comment?: string;
-  dbSchema?: boolean;
-  typeDef?: boolean;
-  returnType?: string;
-  type?: string;
-  interfacePrefix?: string;
-}
+import { revampedOptions, optionsFromClient } from "../../../../types";
 
 const setType = (type: string) => {
   return utils.capitalizeFirstLetter(type);
@@ -57,9 +38,16 @@ const getNamesFromTypeName = (typeName: string, action?: string) => {
   };
 };
 export const setUpOptions = (options: optionsFromClient) => {
-  const { properties, name, actionName, comment, returnType } = options;
+  const {
+    properties,
+    name,
+    actionName,
+    comment,
+    returnType,
+    propertiesForTypeInterface,
+  } = options;
   let { type } = options;
-  if (!type) type = "type";
+  if (!type || propertiesForTypeInterface) type = "type";
   let revampedOpts: revampedOptions = {};
   const interfacePrefix = getInterfacePrefix(type);
   revampedOpts.type = setType(type);
@@ -67,6 +55,9 @@ export const setUpOptions = (options: optionsFromClient) => {
   revampedOpts.names = getNamesFromTypeName(name, actionName);
   revampedOpts.comment = comment;
   revampedOpts.interfacePrefix = interfacePrefix;
+  revampedOpts.propertiesForTypeInterface = propertiesForTypeInterface
+    ? utils.splitNameType(propertiesForTypeInterface)
+    : undefined;
   if (returnType) revampedOpts.returnType = returnType;
   return revampedOpts;
 };

@@ -6,13 +6,13 @@ import { Document } from 'mongoose'
 
 export interface movieOptions {
   options: {
-    name: string,
+    actors: string[],
     duration: number,
-    views: number,
-    cast: string[]
+    name: string,
+    views: number
   }
 }
-// added at: Thu Jul 08 2021 13:13:35 GMT+0300 (Israel Daylight Time) 
+// added at: Fri Jul 09 2021 21:25:51 GMT+0300 (Israel Daylight Time) 
 
 // exports section
 export interface movieDoc extends Document, movieOptions {}

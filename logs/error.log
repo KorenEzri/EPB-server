@@ -1750,3 +1750,78 @@
 [31mindex.ts 21ms[39m
 
 [31mtypeDefs.ts 15ms[39m
+2021-07-08 16:28:39:2839 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-08 16:30:18:3018 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-08 16:30:47:3047 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-08 16:31:06:316 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-08 16:31:59:3159 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-08 16:32:16:3216 [31merror[39m: [31mFROM: EPB-server: Error with creating a DB schema: ENOENT: no such file or directory, open 'C:\Users\Koren\Documents\EPB-server\types\JumanjeeOptions.ts'[39m
+2021-07-08 18:47:08:478 [31merror[39m: [31mavailableCrudOpsLineArray.includes is not a function[39m
+2021-07-08 18:59:01:591 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-08 18:59:01:591 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema movieSchema.[39m
+2021-07-08 18:59:01:591 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema movieSchema.[39m
+2021-07-09 12:23:33:2333 [31merror[39m: [31mCannot read property 'trim' of undefined[39m
+2021-07-09 12:24:21:2421 [31merror[39m: [31mCannot read property 'trim' of undefined[39m
+2021-07-09 12:26:19:2619 [31merror[39m: [31mCannot read property 'trim' of undefined[39m
+2021-07-09 12:27:22:2722 [31merror[39m: [31mCannot read property 'trim' of undefined[39m
+2021-07-09 12:30:14:3014 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Property or signature expected. (241:39)[39m
+[31m[error]   239 | }[39m
+[31m[error]   240 | },[39m
+[31m[error] > 241 | deleteOneMovie: async (_:any, name: { type) => {[39m
+[31m[error]       |                                       ^[39m
+[31m[error]   242 |       [39m
+[31m[error]   243 |  try {[39m
+[31m[error]   244 |           await MovieModel.deleteOne({name: name});[39m
+[31mapp.ts 163ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 16ms[39m
+2021-07-09 12:32:10:3210 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Type expected. (241:36)[39m
+[31m[error]   239 | }[39m
+[31m[error]   240 | },[39m
+[31m[error] > 241 | deleteOneMovie: async (_:any, type:: ) => {[39m
+[31m[error]       |                                    ^[39m
+[31m[error]   242 |       [39m
+[31m[error]   243 |  try {[39m
+[31m[error]   244 |           await MovieModel.deleteOne({type:: type:});[39m
+[31mapp.ts 162ms[39m
+[31mconnections.ts 15ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 17ms[39m
+2021-07-09 12:36:45:3645 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Type expected. (241:36)[39m
+[31m[error]   239 | }[39m
+[31m[error]   240 | },[39m
+[31m[error] > 241 | deleteOneMovie: async (_:any, type:: ) => {[39m
+[31m[error]       |                                    ^[39m
+[31m[error]   242 |       [39m
+[31m[error]   243 |  try {[39m
+[31m[error]   244 |           await MovieModel.deleteOne({type:: type:});[39m
+[31mapp.ts 156ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 16ms[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Read Many is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Update Many is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema movieSchema.[39m
+2021-07-09 13:06:51:651 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete Many is not availabe for schema movieSchema.[39m
+2021-07-09 17:13:48:1348 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-09 21:25:52:2552 [31merror[39m: [31mFROM: EPB-server: Error: Schema file by the name movieSchema.ts already exists![39m
+2021-07-09 22:09:15:915 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Create One is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Delete One is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Update Many is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema movieSchema.[39m
+2021-07-09 22:11:32:1132 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m

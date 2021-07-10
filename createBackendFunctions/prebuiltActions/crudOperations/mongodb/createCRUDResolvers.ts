@@ -8,11 +8,25 @@ import {
   resolverTryCatchBlockOptions,
 } from "../../../../types";
 
+const parseIdentifierType = (type: string) => {
+  type = type.toLowerCase();
+  if (type === "array") {
+    return `any[]`;
+  } else if (type === "object") {
+    return `any`;
+  } else return type;
+};
+
 const buildResolvers = (
   action: string,
   options: { title: resolverTitleOptions; body: resolverBodyOptions }
 ) => {
   const { title, body } = options;
+  const identifierType = title.identifier?.type;
+  if (identifierType && title.identifier) {
+    const type = title.identifier.type;
+    title.identifier.type = parseIdentifierType(type);
+  }
   switch (action.split(" ").join("")) {
     case "CreateOne":
       const createOneTitle = resolverTitles.createOne(title);

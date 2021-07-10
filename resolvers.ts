@@ -71,7 +71,6 @@ import * as utils from "./createBackendFunctions/utils";
 import * as create from "./createBackendFunctions/create";
 import * as add from "./createBackendFunctions/prebuiltActions";
 import Logger from "./logger/logger";
-import { util } from "prettier";
 
 const dateScalar = new GraphQLScalarType({
   name: "Date",
@@ -116,6 +115,16 @@ export const resolvers = {
       // return [String]
     },
 
+    // Action: get all the properties of a schema, provided it's name.
+
+    getAllSchemaProps: async (
+      _: any,
+      { schemaName }: { schemaName: string }
+    ) => {
+      return await utils.getAllSchemaProps(schemaName);
+      // return [String]
+    },
+   
     // query-end
   },
   Mutation: {
@@ -195,15 +204,22 @@ export const resolvers = {
           crudActions,
           identifier
         );
-        if (!Array.isArray(res)) return "OK";
-        res.forEach((error) => {
-          Logger.error(`FROM: EPB-server: ${error.message}`);
-        });
-        return `${res.length} out of ${crudActions.length} CRUD operations could not be created for DB schema ${schemaName}!`;
+        if (Array.isArray(res)) {
+          res.forEach((error) => {
+            Logger.error(`FROM: EPB-server: ${error.message}`);
+          });
+          return `${res.length} out of ${crudActions.length} CRUD operations could not be created for DB schema ${schemaName}!`;
+        } else if (!res.error) {
+          return `${crudActions.length} crud operation(s) created successfully.`;
+        } else {
+          return `${res.message}`;
+        }
       } catch ({ message }) {
         Logger.error(message);
+        return message;
       }
     },
+
 
     // mutation-end
   },

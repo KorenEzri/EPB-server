@@ -65,6 +65,7 @@ export const typeDefs = gql`
     getAllResolverNames: [String]
     getAllowedTypes: [String]
     getAllDBSchemaNames: [String]
+    getAllSchemaProps(schemaName: String): [String]
     # query-end
   }
   type Mutation {

@@ -8,10 +8,9 @@
     "createCustomTypeOptions",
     "createSchemaOptions",
     "createTypedefOptions",
-    "ResolverOptions",
-    "movieOptions"
+    "ResolverOptions"
   ],
-  "dbSchemas": ["stub", "movieSchema"],
+  "dbSchemas": ["stub"],
   "resolvers": [
     "getResolvers",
     "getTypeDefs",
@@ -26,7 +25,8 @@
     "restartServer",
     "addCrudOperations",
     "createOneMessage",
-    "ResolverOptions"
+    "ResolverOptions",
+    "getAllSchemaProps"
   ],
   "typeDefInterfaces": [
     "addCrudOperationsOptionsInput",
@@ -48,6 +48,7 @@
     "createSchema",
     "addUserAuth",
     "restartServer",
-    "addCrudOperations"
+    "addCrudOperations",
+    "getAllSchemaProps"
   ]
 }

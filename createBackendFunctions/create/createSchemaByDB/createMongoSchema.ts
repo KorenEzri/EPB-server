@@ -88,7 +88,13 @@ export const createMongoDBSchema = async ({ options }: createSchemaOptions) => {
   Logger.http(
     "FROM: EPB-server: Schema created, updating interface file to include a mongo document export..."
   );
-  await updateInterfaceFile({ options: options });
+  try {
+    await updateInterfaceFile({ options: options });
+  } catch ({ message }) {
+    Logger.debug(
+      "FROM: EPB_server: Failed to add a document export to interface file - possibly because the file doesn't exist."
+    );
+  }
   let error = await writeSchemaToFile(options.name, mongoDBSchema);
   if (error) return error;
   Logger.http(

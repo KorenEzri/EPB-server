@@ -158,7 +158,7 @@ export const insertStringToFileInRangeOfLines = async (
       }
     })
     .filter((v: string) => v != null);
-  if (linesInRange.includes(string) || linesInRange[0].includes(string)) {
+  if (linesInRange?.includes(string) || linesInRange[0]?.includes(string)) {
     if (!duplicates) return lineArray.join("\n");
   }
   if (linesInRange.length > 1) {
@@ -313,4 +313,25 @@ export const getAllAllowedTypes = async () => {
     }
   });
   return content;
+};
+
+export const getAllSchemaProps = async (schemaName: string) => {
+  const filePath = `db/schemas/${schemaName}`;
+  const schemaAsString = await read(filePath, "utf8");
+  const schemaNameOnly = schemaName.split(".ts").join("");
+  const schemaFileLineArray: string[] = utils.toLineArray(schemaAsString);
+  const startIndex =
+    schemaFileLineArray.indexOf(
+      `const ${schemaNameOnly}: Schema = new mongoose.Schema({`
+    ) + 1;
+  const endIndex =
+    schemaFileLineArray.indexOf(`${schemaNameOnly}.plugin(uniqueValidator);`) -
+    1;
+  const allProperties = schemaFileLineArray.splice(
+    startIndex,
+    endIndex - startIndex
+  );
+  return allProperties.map((property: string) =>
+    utils.replaceAllInString(property.trim(), ",", "")
+  );
 };

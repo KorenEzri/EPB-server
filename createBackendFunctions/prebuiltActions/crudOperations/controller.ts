@@ -27,7 +27,7 @@ const createDBSchemaConfigList = async (schemaName: string) => {
   }
   const doesConfigListExist = await utils.checkIfFileAlreadyExists(
     "db/schemas",
-    `${schemaName}Config`
+    `${schemaName}Config.json`
   );
   if (!doesConfigListExist) {
     Logger.info(
@@ -49,7 +49,9 @@ const validateCRUDopAvailability = async (
   crudOps: string[]
 ) => {
   const availableCrudOperations = await getDBSchemaConfigList(schemaName);
-  const availableCrudOpsLineArray = availableCrudOperations.toString();
+  const availableCrudOpsLineArray = JSON.parse(
+    availableCrudOperations
+  ).availableCRUDActions;
   const errors: { error: boolean; message: string }[] = [];
   crudOps.forEach((crudOp: string) => {
     if (!availableCrudOpsLineArray.includes(crudOp)) {
@@ -193,5 +195,8 @@ export const addCrudToDBSchemas = async (
   await createCrudOps(schemaName, crudOperations, identifier);
   await removeCrudOpsFromAvailabilityList(schemaName, crudOperations);
   Logger.http(`FROM: EPB-server: Finished.`);
-  return "OK";
+  return {
+    error: false,
+    message: `OK`,
+  };
 };
