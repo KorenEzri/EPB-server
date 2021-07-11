@@ -3,34 +3,12 @@ import { ApolloServer } from "apollo-server-express";
 import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
 import express from "express";
-import cors from "cors";
-import { connectToDb } from "./connections";
 import Logger from "./logger/logger";
 
 const PORT = process.env.PORT || 8001;
 
 const startServer = async () => {
   const app = express();
-  app.use(
-    cors({
-      allowedHeaders: ["Content-Type"],
-      origin: "*",
-      preflightContinue: true,
-    })
-  );
-  app.use(function (req, res, next) {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.setHeader(
-      "Access-Control-Allow-Methods",
-      "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-    );
-    res.setHeader(
-      "Access-Control-Allow-Headers",
-      "X-Requested-With,content-type"
-    );
-    res.setHeader("Access-Control-Allow-Credentials", "true");
-    next();
-  });
   const server = new ApolloServer({
     context: ({ req, res }) => ({ req, res }),
     playground: {
@@ -45,7 +23,6 @@ const startServer = async () => {
   app.listen({ port: PORT }, () =>
     Logger.info(`EPB-server @ http://localhost:${PORT}${server.graphqlPath}`)
   );
-  Logger.http("Client @ http://localhost:5000");
-  await connectToDb();
 };
+
 startServer();
