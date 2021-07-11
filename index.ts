@@ -21,7 +21,10 @@ const startServer = async () => {
   });
   server.applyMiddleware({ app });
   app.listen({ port: PORT }, () =>
-    Logger.info(`EPB-server @ http://localhost:${PORT}${server.graphqlPath}`)
+    Logger.info(`
+    EPB-server @ 
+    http://localhost:${PORT}${server.graphqlPath}
+    `)
   );
 };
 
