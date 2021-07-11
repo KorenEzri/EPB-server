@@ -36,7 +36,7 @@ export const parseMongoVarlist = (vars: string[], uniques: string[]) => {
   const checkIfUniqueVar = (varb: string, uniqueList: string[]) => {
     return uniqueList
       .map((variable) => variable.split(":")[0].toLowerCase())
-      .includes(varb);
+      .includes(varb.toLowerCase());
   };
   let varList = utils.splitNameType(vars);
   const schemaInterface: any = {};

@@ -108,11 +108,11 @@ export const resolverTitles = {
       parts.modelInterfaceName
     } Instance, based on an identifying property \n ${
       parts.resolverName
-    }: async (_:any, { ${parts.identifier?.name} }: { ${
+    }: async (_:any, { ${parts.identifier?.name}, options }: { ${
       parts.identifier?.name
-    } :${utils.lowercaseFirstLetter(
-      parts.identifier?.type || ""
-    )} }, { options }: { options: ${parts.modelInterfaceName} } ) => {`,
+    } :${utils.lowercaseFirstLetter(parts.identifier?.type || "")},  options: ${
+      parts.modelInterfaceName
+    } } ) => {`,
 
   deleteOne: (parts: resolverTitleOptions) =>
     `// Action: Delete one ${

@@ -12,16 +12,24 @@ const toResolver = async ({ options }: ResolverOptions) => {
   const { name, comment, returnType, properties, description } = options;
   const { resolverInterface, varList, importList } =
     parseVars.parseResolverVarlist(properties);
-  let stringifiedVarList: string[] = [];
+  let stringifiedVarList: string = "";
   if (Array.isArray(varList)) {
-    stringifiedVarList = varList.map((variable) => {
-      return `${variable.name}:${variable.type}`;
+    // const allVarTypes = varList.map((variable, index) =>  {type: variable.type, index});
+    let varListNamesString = ``;
+    let varListTypeString = ``;
+    varList.map((variable) => {
+      varListNamesString = varListNamesString + `${variable.name},`;
+      varListTypeString =
+        varListTypeString + `${variable.name}: ${variable.type},`;
     });
+    stringifiedVarList = `{ ${varListNamesString} } : { ${varListTypeString} }`;
   }
   let resolverString = `
         // Action: ${description} \n
         ${name}: async (_:any, ${
-    resolverInterface ? `{ options }:${name}Options` : stringifiedVarList
+    resolverInterface
+      ? `{ options }: { options: ${name}Options }`
+      : stringifiedVarList
   }) => {
           // ${comment} \n
           // return ${returnType} \n

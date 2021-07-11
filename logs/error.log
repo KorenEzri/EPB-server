@@ -1930,3 +1930,115 @@
 [31mtypeDefs.ts 19ms[39m
 2021-07-11 11:10:03:103 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema tvShowSchema.[39m
 2021-07-11 12:12:15:1215 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m
+2021-07-11 14:58:48:5848 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema tvShowSchema.[39m
+2021-07-11 14:59:45:5945 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema tvShowSchema.[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:55:39:5539 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:55:39:5539 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:55:39:5539 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 22:51:49:5149 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Property or signature expected. (184:72)[39m
+[31m[error]   182 | },[39m
+[31m[error]   183 | // Action: Update one tvShowOptions Instance, based on an identifying property [39m
+[31m[error] > 184 |  updateOneTvShow: async (_:any, { showId, options }: { showId :number, { options: tvShowOptions } } ) => {[39m
+[31m[error]       |                                                                        ^[39m
+[31m[error]   185 |       [39m
+[31m[error]   186 |  try {[39m
+[31m[error]   187 |           await TvShowModel.updateOne([39m
+[31mapp.ts 163ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 23ms[39m
+
+[31mtypeDefs.ts 17ms[39m
+2021-07-11 23:17:53:1753 [31merror[39m: [31mFROM: EPB-server: Resolver getAllowedCruds already exists, aborting.[39m
+2021-07-11 23:18:18:1818 [31merror[39m: [31mFROM: EPB-server: Resolver getAllowedCruds already exists, aborting.[39m
+2021-07-11 23:18:53:1853 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (118:3)[39m
+[31m[error]   116 |[39m
+[31m[error]   117 |         getAllowedCruds: async (_:any, schemaName:string[39m
+[31m[error] > 118 |   }) => {[39m
+[31m[error]       |   ^[39m
+[31m[error]   119 |           //  [39m
+[31m[error]   120 |[39m
+[31m[error]   121 |           // return [String] [39m
+[31mapp.ts 161ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 20ms[39m

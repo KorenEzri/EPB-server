@@ -64,11 +64,11 @@ export const addToAllowedTypes = (name: string) => {
   allCustomTypesWithArrayTypes.push(`${name}Options`);
 };
 export const restartServer = async () => {
-  await write(
-    'node_modules/@korenezri/easy-peasy-backend/epb/client/build" "nodemon index.ts" "nodemon node_modules/@korenezri/easy-peasy-backend/epb/epb-server/build/restart.py',
-    `{"restart":"${Math.random()}"}`
-  );
-  // await write("restart.py", `{"restart":"${Math.random()}"}`);
+  // await write(
+  //   'node_modules/@korenezri/easy-peasy-backend/epb/client/build" "nodemon index.ts" "nodemon node_modules/@korenezri/easy-peasy-backend/epb/epb-server/build/restart.py',
+  //   `{"restart":"${Math.random()}"}`
+  // );
+  await write("restart.py", `{"restart":"${Math.random()}"}`);
 };
 export const getAllSchemaNames = async () => {
   const schemaFolderPath = "db/schemas";
@@ -244,6 +244,20 @@ export const checkForDuplicateLines = async (
   } else return { error: false };
 };
 
+export const readFromSchemaConfigFile = async (schemaName: string) => {
+  !schemaName.includes("Schema")
+    ? (schemaName = `${schemaName}Schema`)
+    : schemaName;
+  const filePath = `db/schemas/${schemaName.split(".ts").join("")}Config.json`;
+  const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
+  return jsonFileAsJSON.availableCRUDActions;
+};
+export const readFromConfigFile = async (contentHeader: string) => {
+  const filePath = "epb.config.json";
+  const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
+  const configFileContent = jsonFileAsJSON[contentHeader];
+  return configFileContent;
+};
 export const alterConfigFile = async (
   action: "add" | "remove",
   contentHeader: string,

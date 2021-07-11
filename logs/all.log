@@ -15224,3 +15224,623 @@
 2021-07-11 12:51:52:5152 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
 2021-07-11 12:51:52:5152 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
 2021-07-11 12:51:53:5153 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:05:47:547 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:05:47:547 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:05:49:549 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:08:23:823 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 14:08:23:823 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 14:08:24:824 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 14:08:24:824 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 14:08:24:824 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 14:08:24:824 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 14:08:24:824 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 14:08:25:825 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:10:25:1025 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:10:25:1025 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:10:26:1026 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:14:16:1416 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 14:14:16:1416 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 14:14:17:1417 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 14:14:17:1417 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 14:14:17:1417 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 14:14:17:1417 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 14:14:17:1417 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 14:14:17:1417 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:14:23:1423 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:14:23:1423 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:14:25:1425 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:16:43:1643 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 14:16:43:1643 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 14:16:43:1643 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 14:16:43:1643 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 14:16:44:1644 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 14:16:44:1644 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:18:43:1843 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:18:43:1843 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:18:45:1845 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:18:49:1849 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 14:18:49:1849 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 14:18:49:1849 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 14:18:49:1849 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 14:18:50:1850 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 14:18:50:1850 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:45:50:4550 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:45:50:4550 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:45:52:4552 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:45:56:4556 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 14:45:56:4556 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 14:45:56:4556 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 14:45:56:4556 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 14:45:57:4557 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 14:45:57:4557 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:46:32:4632 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:46:32:4632 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:46:34:4634 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:58:48:5848 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema tvShowSchema.[39m
+2021-07-11 14:58:48:5848 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:58:53:5853 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:58:53:5853 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:58:54:5854 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:59:05:595 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 14:59:05:595 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 14:59:05:595 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 14:59:05:595 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 14:59:06:596 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 14:59:06:596 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:59:45:5945 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:59:45:5945 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:59:45:5945 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema tvShowSchema.[39m
+2021-07-11 14:59:45:5945 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 14:59:50:5950 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 14:59:50:5950 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 14:59:52:5952 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 14:59:52:5952 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 14:59:52:5952 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 14:59:52:5952 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 14:59:52:5952 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 14:59:53:5953 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 14:59:53:5953 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:01:46:146 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:01:46:146 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:01:46:146 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:01:46:146 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:01:46:146 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:01:46:146 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 15:01:47:147 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:01:47:147 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:04:16:416 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:04:16:416 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:04:18:418 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:04:19:419 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:04:19:419 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:04:19:419 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:04:19:419 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 15:04:20:420 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:04:20:420 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:04:36:436 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:04:36:436 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:04:38:438 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:05:19:519 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:05:19:519 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:05:20:520 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:05:20:520 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:05:20:520 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:05:20:520 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 15:05:21:521 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:05:21:521 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:05:39:539 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:05:39:539 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:05:41:541 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:06:00:60 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:06:00:60 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:06:00:60 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:06:00:60 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:06:00:60 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:06:00:60 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 15:06:01:61 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:06:01:61 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:06:44:644 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:06:44:644 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:06:45:645 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:06:45:645 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:06:45:645 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:06:45:645 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 15:06:46:646 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:06:46:646 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:06:46:646 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:07:09:79 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:07:09:79 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:07:11:711 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:07:11:711 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:07:11:711 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:07:11:711 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:07:11:711 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 15:07:12:712 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:07:12:712 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:07:16:716 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:07:16:716 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:07:18:718 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:19:25:1925 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 15:19:25:1925 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 15:19:26:1926 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 15:19:26:1926 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 15:19:26:1926 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 15:19:26:1926 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 15:19:26:1926 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 15:19:27:1927 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:19:32:1932 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:19:32:1932 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:19:34:1934 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:20:01:201 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 15:20:01:201 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:20:01:201 [35mhttp[39m: [35mFROM: EPB-server: Creating 2 CRUD operations..[39m
+2021-07-11 15:20:01:201 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadMany, applying Prettier..[39m
+2021-07-11 15:20:02:202 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-11 15:20:03:203 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:20:03:203 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:20:08:208 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:20:08:208 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:20:10:2010 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:20:47:2047 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:20:47:2047 [35mhttp[39m: [35mFROM: EPB-server: Creating 2 CRUD operations..[39m
+2021-07-11 15:20:47:2047 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-11 15:20:48:2048 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateMany, applying Prettier..[39m
+2021-07-11 15:20:49:2049 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:20:49:2049 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:20:54:2054 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:20:54:2054 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:20:56:2056 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:32:28:3228 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:32:28:3228 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:32:30:3230 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 15:32:30:3230 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 15:32:30:3230 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action CreateOne, applying Prettier..[39m
+2021-07-11 15:32:30:3230 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:32:31:3231 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 15:32:31:3231 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 15:32:36:3236 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:32:36:3236 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:32:37:3237 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:34:16:3416 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:34:16:3416 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:34:18:3418 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:37:32:3732 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:37:32:3732 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:37:36:3736 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:38:35:3835 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:38:35:3835 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:38:38:3838 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:52:47:5247 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:52:47:5247 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:52:50:5250 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:55:21:5521 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 15:55:21:5521 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 15:55:23:5523 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:55:32:5532 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:55:33:5533 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:55:38:5538 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:55:39:5539 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:55:39:5539 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:55:39:5539 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:55:46:5546 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `35624`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `33514`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `22410`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `52439`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `23455`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29560`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43467`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `43234`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46692`[39m
+2021-07-11 15:56:01:561 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `24010`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `47145`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `46778`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `5348`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `8362`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `31452`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `37444`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29977`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `29671`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `36210`[39m
+2021-07-11 15:56:02:562 [31merror[39m: [31mSingleTvShowModel validation failed: showId: Error, expected `showId` to be unique. Value: `49269`[39m
+2021-07-11 16:00:44:044 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 16:00:44:044 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 16:00:46:046 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 16:09:33:933 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 16:09:33:933 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 16:09:34:934 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 16:12:04:124 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 16:12:04:124 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 16:12:06:126 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 16:31:35:3135 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 16:31:35:3135 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 16:31:37:3137 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:26:09:269 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:26:09:269 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:26:11:2611 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:30:27:3027 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:30:27:3027 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:30:28:3028 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:30:28:3028 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:30:28:3028 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:30:28:3028 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:30:28:3028 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:30:29:3029 [32minfo[39m: [32mFROM: EPB-server: Restarting server in undefined miliseconds..[39m
+2021-07-11 22:31:38:3138 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:31:38:3138 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:31:40:3140 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:33:32:3332 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:33:32:3332 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:33:33:3333 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:33:33:3333 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:33:33:3333 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:33:33:3333 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:33:33:3333 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:33:34:3334 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:34:21:3421 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:34:21:3421 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:34:23:3423 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:35:39:3539 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:35:39:3539 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:35:40:3540 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:35:43:3543 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:35:43:3543 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:35:44:3544 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:35:44:3544 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:35:44:3544 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:35:44:3544 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:35:44:3544 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:35:45:3545 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:35:50:3550 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:35:50:3550 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:35:52:3552 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:36:11:3611 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:36:11:3611 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:36:12:3612 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:36:12:3612 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:36:12:3612 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:36:12:3612 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:36:12:3612 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:36:13:3613 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:36:18:3618 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:36:18:3618 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:36:20:3620 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:37:21:3721 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:37:21:3721 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:37:23:3723 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:37:28:3728 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:37:28:3728 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:37:29:3729 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:37:29:3729 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:37:29:3729 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:37:29:3729 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:37:29:3729 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:37:30:3730 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:37:35:3735 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:37:35:3735 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:37:36:3736 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:38:50:3850 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:38:50:3850 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:38:50:3850 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:38:50:3850 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:38:51:3851 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:38:51:3851 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:38:51:3851 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:38:51:3851 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:38:51:3851 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:38:52:3852 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:38:52:3852 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:38:57:3857 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:38:57:3857 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:38:59:3859 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:39:26:3926 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:39:26:3926 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:39:28:3928 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:39:28:3928 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:39:29:3929 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:39:34:3934 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:39:34:3934 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:39:36:3936 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:39:58:3958 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:39:58:3958 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:40:00:400 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:40:00:400 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:40:01:401 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:40:07:407 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:40:07:407 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:40:08:408 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:40:22:4022 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:40:22:4022 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:40:24:4024 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:40:26:4026 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:40:26:4026 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:40:27:4027 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:40:27:4027 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:40:27:4027 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:40:27:4027 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:40:27:4027 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:40:28:4028 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:40:33:4033 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:40:33:4033 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:40:35:4035 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:41:10:4110 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 22:41:10:4110 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 22:41:10:4110 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 22:41:10:4110 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-11 22:41:11:4111 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 22:41:11:4111 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:41:17:4117 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:41:17:4117 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:41:20:4120 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:41:58:4158 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:41:58:4158 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:42:00:420 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:46:17:4617 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:46:17:4617 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:47:40:4740 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:47:40:4740 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:47:42:4742 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:48:20:4820 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:48:20:4820 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:48:22:4822 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:49:08:498 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:49:08:498 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:49:10:4910 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:51:28:5128 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:51:28:5128 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:51:30:5130 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:51:47:5147 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:51:47:5147 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:51:48:5148 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 22:51:48:5148 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 22:51:48:5148 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-11 22:51:49:5149 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: Property or signature expected. (184:72)[39m
+[31m[error]   182 | },[39m
+[31m[error]   183 | // Action: Update one tvShowOptions Instance, based on an identifying property [39m
+[31m[error] > 184 |  updateOneTvShow: async (_:any, { showId, options }: { showId :number, { options: tvShowOptions } } ) => {[39m
+[31m[error]       |                                                                        ^[39m
+[31m[error]   185 |       [39m
+[31m[error]   186 |  try {[39m
+[31m[error]   187 |           await TvShowModel.updateOne([39m
+[31mapp.ts 163ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 23ms[39m
+
+[31mtypeDefs.ts 17ms[39m
+2021-07-11 22:51:49:5149 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 22:51:49:5149 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:52:24:5224 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:52:24:5224 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:52:25:5225 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:52:42:5242 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 22:52:42:5242 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 22:52:42:5242 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action UpdateOne, applying Prettier..[39m
+2021-07-11 22:52:43:5243 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 22:52:43:5243 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:52:48:5248 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:52:48:5248 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:52:50:5250 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:58:38:5838 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 22:58:38:5838 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 22:58:39:5839 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 22:58:39:5839 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 22:58:39:5839 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 22:58:39:5839 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 22:58:39:5839 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 22:58:40:5840 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 22:58:45:5845 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 22:58:45:5845 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 22:58:47:5847 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 22:59:12:5912 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 22:59:12:5912 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 22:59:12:5912 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 22:59:13:5913 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 22:59:13:5913 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:00:58:058 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:00:58:058 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:01:00:10 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:02:19:219 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:02:19:219 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:02:21:221 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:03:44:344 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 23:03:44:344 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 23:03:45:345 [35mhttp[39m: [35mFROM: EPB-server: creating a DB schema, database: mongodb[39m
+2021-07-11 23:03:45:345 [35mhttp[39m: [35mFROM: EPB-server: Creating a MongoDB schema...[39m
+2021-07-11 23:03:45:345 [35mhttp[39m: [35mFROM: EPB-server: Schema created, updating interface file to include a mongo document export...[39m
+2021-07-11 23:03:45:345 [35mhttp[39m: [35mFROM: EPB-server: Add a model export statement to db/schemas/index.ts..[39m
+2021-07-11 23:03:45:345 [35mhttp[39m: [35mFROM: EPB-server: Done, applying prettier for files.[39m
+2021-07-11 23:03:46:346 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:03:51:351 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:03:51:351 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:03:53:353 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:04:11:411 [32minfo[39m: [32mFROM: EPB-server: Schema configuration file was not found. Creating a configuration .ts file..[39m
+2021-07-11 23:04:11:411 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 23:04:11:411 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 23:04:11:411 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadAll, applying Prettier..[39m
+2021-07-11 23:04:12:412 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 23:04:12:412 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:04:18:418 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:04:18:418 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:04:19:419 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:05:05:55 [35mhttp[39m: [35mFROM: EPB-server: Inserting import statements...[39m
+2021-07-11 23:05:05:55 [35mhttp[39m: [35mFROM: EPB-server: Creating 1 CRUD operations..[39m
+2021-07-11 23:05:05:55 [35mhttp[39m: [35mFROM: EPB-server: created CRUD action ReadOne, applying Prettier..[39m
+2021-07-11 23:05:06:56 [35mhttp[39m: [35mFROM: EPB-server: Finished.[39m
+2021-07-11 23:05:06:56 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:05:11:511 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:05:11:511 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:05:13:513 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:07:21:721 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:07:21:721 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:07:23:723 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:10:15:1015 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:10:15:1015 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:10:17:1017 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:14:56:1456 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:14:56:1456 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-11 23:14:56:1456 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-11 23:14:57:1457 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:15:03:153 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:15:03:153 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:15:05:155 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:17:52:1752 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:17:52:1752 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:17:53:1753 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:17:53:1753 [31merror[39m: [31mFROM: EPB-server: Resolver getAllowedCruds already exists, aborting.[39m
+2021-07-11 23:17:53:1753 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:17:58:1758 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:17:58:1758 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:18:00:180 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:18:08:188 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:18:13:1813 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:18:13:1813 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:18:15:1815 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:18:18:1818 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:18:18:1818 [31merror[39m: [31mFROM: EPB-server: Resolver getAllowedCruds already exists, aborting.[39m
+2021-07-11 23:18:18:1818 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:18:25:1825 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:18:25:1825 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:18:27:1827 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:18:52:1852 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:18:52:1852 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-11 23:18:52:1852 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-11 23:18:53:1853 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ',' expected. (118:3)[39m
+[31m[error]   116 |[39m
+[31m[error]   117 |         getAllowedCruds: async (_:any, schemaName:string[39m
+[31m[error] > 118 |   }) => {[39m
+[31m[error]       |   ^[39m
+[31m[error]   119 |           //  [39m
+[31m[error]   120 |[39m
+[31m[error]   121 |           // return [String] [39m
+[31mapp.ts 161ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 20ms[39m
+2021-07-11 23:18:53:1853 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:22:25:2225 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:22:25:2225 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:22:27:2227 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:29:52:2952 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:29:52:2952 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:29:54:2954 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:29:58:2958 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:29:58:2958 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-11 23:29:58:2958 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 23:29:58:2958 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 23:29:59:2959 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-11 23:30:00:300 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:31:40:3140 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:31:40:3140 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:31:42:3142 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:31:48:3148 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:31:48:3148 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-11 23:31:48:3148 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type interface...[39m
+2021-07-11 23:31:48:3148 [35mhttp[39m: [35mFROM: EPB-server: Interface created successfully, applying Prettier.[39m
+2021-07-11 23:31:49:3149 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-11 23:31:50:3150 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:31:55:3155 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:31:55:3155 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:31:57:3157 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:32:51:3251 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:32:51:3251 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:32:53:3253 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:32:53:3253 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:32:53:3253 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-11 23:32:53:3253 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-11 23:32:54:3254 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:33:00:330 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:33:00:330 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:33:01:331 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:33:23:3323 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:33:23:3323 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:33:24:3324 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:33:27:3327 [35mhttp[39m: [35mFROM: EPB-server: Creating a new type definition...[39m
+2021-07-11 23:33:27:3327 [35mhttp[39m: [35mFROM: EPB-server: Creating a new resolver...[39m
+2021-07-11 23:33:27:3327 [35mhttp[39m: [35mFROM: EPB-server: Action created successfully, applying Prettier for files..[39m
+2021-07-11 23:33:28:3328 [32minfo[39m: [32mFROM: EPB-server: Restarting server in 700 miliseconds..[39m
+2021-07-11 23:33:34:3334 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:33:34:3334 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:33:36:3336 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:37:15:3715 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:37:15:3715 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:37:17:3717 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:39:31:3931 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:39:31:3931 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:39:33:3933 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:40:17:4017 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:40:17:4017 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:40:19:4019 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:40:36:4036 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:40:36:4036 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:40:38:4038 [32minfo[39m: [32mconnected to database[39m
+2021-07-11 23:55:09:559 [35mhttp[39m: [35mClient @ http://localhost:5000[39m
+2021-07-11 23:55:09:559 [32minfo[39m: [32mEPB-server @ http://localhost:8001/graphql[39m
+2021-07-11 23:55:10:5510 [32minfo[39m: [32mconnected to database[39m

@@ -1,1 +1,55 @@
-{"database":"mongodb","customTypes":["addCrudOperationsOptions","addUserAuthOptions","createCRUDResolverOptions","createCRUDTypedefOptions","createCustomTypeOptions","createSchemaOptions","createTypedefOptions","ResolverOptions","JumanjeeOptions"],"dbSchemas":["stub","JumanjeeSchema"],"resolvers":["getResolvers","getTypeDefs","getActions","getAllResolverNames","getAllowedTypes","getAllDBSchemaNames","createResolver","createCustomType","createSchema","addUserAuth","restartServer","addCrudOperations","createOneMessage","ResolverOptions","getAllSchemaProps"],"typeDefInterfaces":["addCrudOperationsOptionsInput","addUserAuthOptions","createSchemaOptions","createCustomTypeOptions","ResolverOptions","identifier","JumanjeeOptionsType"],"typeDefActions":["getResolvers","getTypeDefs","getActions","getAllResolverNames","getAllowedTypes","getAllDBSchemaNames","createResolver","createCustomType","createSchema","addUserAuth","restartServer","addCrudOperations","getAllSchemaProps"]}
+{
+  "database": "mongodb",
+  "customTypes": [
+    "addCrudOperationsOptions",
+    "addUserAuthOptions",
+    "createCRUDResolverOptions",
+    "createCRUDTypedefOptions",
+    "createCustomTypeOptions",
+    "createSchemaOptions",
+    "createTypedefOptions",
+    "ResolverOptions"
+  ],
+  "dbSchemas": ["stub"],
+  "resolvers": [
+    "getResolvers",
+    "getTypeDefs",
+    "getActions",
+    "getAllResolverNames",
+    "getAllowedTypes",
+    "getAllDBSchemaNames",
+    "createResolver",
+    "createCustomType",
+    "createSchema",
+    "addUserAuth",
+    "restartServer",
+    "addCrudOperations",
+    "createOneMessage",
+    "ResolverOptions",
+    "getAllSchemaProps",
+    "getAllowedCruds"
+  ],
+  "typeDefInterfaces": [
+    "addCrudOperationsOptionsInput",
+    "addUserAuthOptions",
+    "createSchemaOptions",
+    "createCustomTypeOptions",
+    "ResolverOptions",
+    "identifier"
+  ],
+  "typeDefActions": [
+    "getResolvers",
+    "getTypeDefs",
+    "getActions",
+    "getAllResolverNames",
+    "getAllowedTypes",
+    "getAllDBSchemaNames",
+    "createResolver",
+    "createCustomType",
+    "createSchema",
+    "addUserAuth",
+    "restartServer",
+    "addCrudOperations",
+    "getAllSchemaProps"
+  ]
+}

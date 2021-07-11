@@ -85,6 +85,13 @@ export const resolvers = {
       // return [String]
     },
 
+    // Action: get allowed CRUD operations for schema
+
+    getAllowedCruds: async (_: any, { schemaName }: { schemaName: string }) => {
+      return await utils.readFromSchemaConfigFile(schemaName);
+      // return [String]
+    },
+
     // query-end
   },
   Mutation: {
