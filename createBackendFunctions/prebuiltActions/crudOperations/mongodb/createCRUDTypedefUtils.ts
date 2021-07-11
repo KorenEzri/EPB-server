@@ -1,4 +1,4 @@
-import * as mongoUtils from "../../../prebuiltActions/crudOperations/mongodb/util";
+import * as mongoUtils from "./util";
 import * as utils from "../../../utils";
 import { revampedOptions, optionsFromClient } from "../../../../types";
 

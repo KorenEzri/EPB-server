@@ -1,44 +1,4 @@
 import { GraphQLScalarType } from "graphql";
-
-/*
-TODO:
-CRUD
-IN TYPEDEFS:
-BUG:
-// readAllMessages - does not require params, so remove them.
-// return types of Queries are capslocked, but they're actually custom types which needn't be capslocked.
-
-- Add "Select all" button when choosing CRUD actions
-DUE: 4.07.21, Saturday night.
-
-CHAT APP PRESENTATION
-- Make a 100% working chatapp presentation
-- CHECK BEST PRACTICE FOR WHERE TO STORE RESOLVER.TS AND TYPEDEF.TS
-DUE: 8.07.21, Thursday morning.
-
-PRESENTATION
-- Make a presentation to depict the project
-- Add documentation to your Github repo.
-DUE: 9.07.21, Friday night.
-
-AUTH
-- Add complete user auth system with the click of a button - will include:
-- public user schema
-- auth user schema
-four GQLtypes - input and type for user, input and type for auth
-CRUD operations for both schemas:
-- create - with hashing of passwords and saving them in a DB
-- delete - to delete
-- read - to get the user
-- login - to log in with password.
-- cookies on backend.
-DUE: 12.07.21, Monday morning.
-
-//  - add more options to the CLI - make it customizable
-//  - make sure creating only a DB schema works
-*/
-//////////// DUE: 13.07.21, Sunday. //////////////////
-
 import {
   validateResolverCreation,
   validateTypeCreation,
@@ -124,7 +84,7 @@ export const resolvers = {
       return await utils.getAllSchemaProps(schemaName);
       // return [String]
     },
-   
+
     // query-end
   },
   Mutation: {
@@ -183,9 +143,9 @@ export const resolvers = {
     },
 
     // Action: Restart the server
-    restartServer: async (_: any, timeout: number) => {
+    restartServer: async (_: any, { timeout }: { timeout: number }) => {
       Logger.info(
-        `FROM: EPB-server: Restarting server in ${timeout} miliseconds.`
+        `FROM: EPB-server: Restarting server in ${timeout} miliseconds..`
       );
       setTimeout(async () => {
         await utils.restartServer();
@@ -219,7 +179,6 @@ export const resolvers = {
         return message;
       }
     },
-
 
     // mutation-end
   },

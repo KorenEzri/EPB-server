@@ -77,38 +77,66 @@ export const getMongooseMethod = (
 
 export const resolverTitles = {
   createOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_: any, ${parts.modelFunctionVarName}: ${parts.modelInterfaceName}) => {`,
+    `// Action: Create one ${parts.modelInterfaceName} Instance \n ${parts.resolverName}: async (_: any, { options }: { options: ${parts.modelInterfaceName} } ) => {`,
+
   createMany: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}s: async (_: any, ${parts.modelFunctionVarName}s: ${parts.modelInterfaceName}[]) => {`,
+    `// Action: Create many ${parts.modelInterfaceName} Instances \n ${parts.resolverName}s: async (_: any, { options }: { options: ${parts.modelInterfaceName}[] }) => {`,
+
   readOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_:any, ${
+    `\n// Action: Read one ${
+      parts.modelInterfaceName
+    } Instance, based on an identifying property. \n\n ${
+      parts.resolverName
+    }: async (_:any, { ${parts.identifier?.name} }: { ${
       parts.identifier?.name
-    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
+    } :${utils.lowercaseFirstLetter(parts.identifier?.type || "")} }) => {`,
+
   readMany: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}s: async (_: any, ${
+    `\n// Action: Read many ${
+      parts.modelInterfaceName
+    } Instances, based on an identifying property. \n\n ${
+      parts.resolverName
+    }s: async (_: any, { ${parts.identifier?.name} }: { ${
       parts.identifier?.name
-    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
+    } :${utils.lowercaseFirstLetter(parts.identifier?.type || "")} }) => {`,
+
   readAll: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}s: async () => {`,
+    `\n// Action: Read all ${parts.modelInterfaceName} Instances \n\n ${parts.resolverName}s: async () => {`,
+
   updateOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_:any, ${
+    `// Action: Update one ${
+      parts.modelInterfaceName
+    } Instance, based on an identifying property \n ${
+      parts.resolverName
+    }: async (_:any, { ${parts.identifier?.name} }: { ${
       parts.identifier?.name
-    }:${utils.lowercaseFirstLetter(parts.identifier?.type || "")}, ${
-      parts.modelFunctionVarName
-    }: ${parts.modelInterfaceName}) => {`,
+    } :${utils.lowercaseFirstLetter(
+      parts.identifier?.type || ""
+    )} }, { options }: { options: ${parts.modelInterfaceName} } ) => {`,
+
   deleteOne: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}: async (_:any, ${
+    `// Action: Delete one ${
+      parts.modelInterfaceName
+    } Instance, based on an identifying property \n ${
+      parts.resolverName
+    }: async (_:any, { ${parts.identifier?.name} }: { ${
       parts.identifier?.name
-    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
+    } :${utils.lowercaseFirstLetter(parts.identifier?.type || "")} }) => {`,
+
   deleteMany: (parts: resolverTitleOptions) =>
-    `${parts.resolverName}s: async (_: any, ${
+    `// Action: Delete many ${
+      parts.modelInterfaceName
+    } Instances, based on an identifying property \n ${
+      parts.resolverName
+    }s: async (_: any, { ${parts.identifier?.name} }: { ${
       parts.identifier?.name
-    }: ${utils.lowercaseFirstLetter(parts.identifier?.type || "")}) => {`,
+    } :${utils.lowercaseFirstLetter(parts.identifier?.type || "")} }) => {`,
 };
 export const resolverTryCatchBlocks = {
   createOne: (parts: resolverTryCatchBlockOptions) =>
     `\n try {
         await ${parts.modelInstaceName}.${parts.mongooseMethod}
+        return "OK"
       }
         catch ({ message }) {
             Logger ? Logger.error(message) : console.log(message)
@@ -116,7 +144,7 @@ export const resolverTryCatchBlocks = {
       }`,
   createMany: (parts: resolverTryCatchBlockOptions) =>
     `\n try {
-        await ${parts.mongoDBModelObjectName}.insertMany(${parts.modelFunctionVarName}s);
+        await ${parts.mongoDBModelObjectName}.insertMany(options);
         return 'OK'
     }
     catch ({ message }) {
@@ -158,8 +186,9 @@ export const resolverTryCatchBlocks = {
     `
       \n try {
           await ${parts.mongoDBModelObjectName}.updateOne(
-              {${parts.identifier?.name}: ${parts.identifier?.name}}, ${parts.modelFunctionVarName}
+              {${parts.identifier?.name}: ${parts.identifier?.name}}, options
           )
+          return "OK";
       }
       catch ({ message }) {
         Logger ? Logger.error(message) : console.log(message)
@@ -191,7 +220,7 @@ export const resolverTryCatchBlocks = {
 };
 export const resolverBodies = {
   createOne: (parts: resolverBodyOptions) =>
-    ` const ${parts.modelInstaceName} = new ${parts.mongoDBModelObjectName} ({${parts.modelFunctionVarName}}) ${parts.resolverTryCatchBlock}`,
+    ` const ${parts.modelInstaceName} = new ${parts.mongoDBModelObjectName} ( options ) ${parts.resolverTryCatchBlock}`,
   createMany: (parts: resolverBodyOptions) => `${parts.resolverTryCatchBlock}`,
   readOne: (parts: resolverBodyOptions) => `${parts.resolverTryCatchBlock}`,
   readMany: (parts: resolverBodyOptions) => `${parts.resolverTryCatchBlock}`,

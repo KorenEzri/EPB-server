@@ -198,19 +198,6 @@ const insertTypeDefInterface = async (
 export const createNewTypeDef = async ({
   options,
 }: ResolverOptions | createCustomTypeOptions) => {
-  /*
-  FLOW:
-1. grabTypeDefsAndInsertNewTypeDef() => fromOptionsToGQLTypeDefinition(), 
-2. fromOptionsToGQLTypeDefinition() => utils.parseTypeDefVarlist() 
-   utils.parseTypeDefVarlist() // Returns varList: {name:string, type:string} to fromOptionstoGQLTypeDefinition() (2)
-   fromOptionsToGQLTypeDefinition() // Returns '{typeDef, typeDefInterface}' to grabTypeDefsAndInsertNewTypeDef() (1)
-3. grabTypeDefsAndInsertNewTypeDef() => insertTypeDefInterface()
-   insertTypeDefInterface() // Returns 'finishedTypeDefs' to grabTypeDefsAndInsertNewTypeDef() (1)
-   grabTypeDefsAndInsertNewTypeDef() // Returns 'finishedTypeDefs' 
-   write to file: finishedTypeDefs
-   .. end ..
-*/
-
   Logger.http("FROM: EPB-server: Creating a new type definition...");
   try {
     const res: any = await grabTypeDefsAndInsertNewTypeDef(

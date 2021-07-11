@@ -2,7 +2,7 @@ import * as mongoUtils from "./util";
 import { promisify } from "util";
 import fs from "fs";
 import * as utils from "../../../utils";
-import * as createTypeDefUtils from "./testTypedefCreationutils";
+import * as createTypeDefUtils from "./createCRUDTypedefUtils";
 import {
   arrangeSchemaConfigFileVars,
   Names,
@@ -22,21 +22,25 @@ const checkIfActionRequiresIdentifier = (
   modelName?: string | undefined,
   fromSource?: boolean
 ) => {
-  const deleteAndReadActionNames = [
+  const deleteReadAndUpdateActionNames = [
     "deleteone",
     "deletemany",
     "readone",
     "readmany",
+    "updatemany",
+    "updateone",
   ];
   actionName = actionName || "";
   if (fromSource) {
-    return deleteAndReadActionNames.includes(actionName);
+    return deleteReadAndUpdateActionNames.includes(actionName);
   }
-  const removeModelName = `${modelName?.split("Model").join("")}`;
+  const removeModelName = `${modelName?.split("Model").join("").toLowerCase()}`;
   const actionNameWithoutModelName = actionName
     ?.toLowerCase()
     .split(removeModelName)[0];
-  return deleteAndReadActionNames.includes(actionNameWithoutModelName || "");
+  return deleteReadAndUpdateActionNames.includes(
+    actionNameWithoutModelName || ""
+  );
 };
 ////
 
@@ -117,17 +121,49 @@ const getTypedefInterfaceVariables = (
 };
 const getTypeDefActionVariables = (
   properties: propertiesForInterfaceVariables,
-  names: Names
+  names: Names,
+  identifier: { name: string; type: string }
 ) => {
-  return Array.isArray(properties) && properties.length >= 1
-    ? `(options: ${names?.typeDefInterfaceName})`
-    : Array.isArray(properties)
-    ? `${properties[0].name}:${properties[0].type}`
-    : checkIfActionRequiresIdentifier(names?.actionName, names?.modelName)
-    ? `(${properties?.name}:${utils.capitalizeFirstLetter(
-        properties?.type || ""
-      )})`
-    : undefined;
+  let typeDefActionVars: string | undefined;
+  const typeDefInterfaceName = names?.typeDefInterfaceName;
+  const actionName = names?.actionName;
+  const actionRequiresIdentifier = checkIfActionRequiresIdentifier(
+    actionName,
+    names?.modelName
+  );
+  const lowercaseActionName = actionName?.toLowerCase();
+  if (Array.isArray(properties) && properties.length >= 1) {
+    if (lowercaseActionName?.includes("many")) {
+      typeDefActionVars = `(options: [${typeDefInterfaceName}])`;
+    } else {
+      if (actionRequiresIdentifier) {
+        if (lowercaseActionName?.includes("update")) {
+          const identifierType = utils.capitalizeFirstLetter(
+            utils.replaceAllInString(
+              identifier.type,
+              ["number", "Number"],
+              ["Int"]
+            )
+          );
+          typeDefActionVars = `(${identifier.name}: ${identifierType}, options: ${typeDefInterfaceName})`;
+        } else {
+          typeDefActionVars = `(options: ${typeDefInterfaceName})`;
+        }
+      }
+    }
+  } else if (Array.isArray(properties)) {
+    typeDefActionVars = `${properties[0].name}:${properties[0].type}`;
+  } else if (actionRequiresIdentifier) {
+    const identifierType = utils.capitalizeFirstLetter(
+      utils.replaceAllInString(
+        properties?.type?.toLowerCase() || "",
+        ["number"],
+        ["Int"]
+      )
+    );
+    typeDefActionVars = `(${properties?.name}:${identifierType})`;
+  }
+  return typeDefActionVars;
 };
 const getInitialTypeDefInterface = (
   interfacePrefix: string | undefined,
@@ -162,7 +198,11 @@ const getTypeDefAction = (
     ? `${names?.actionName}${typeDefActionVariables || ""}: ${returnType}`
     : undefined;
 };
-const getTypeDefInterfaceAndAction = async (setupOptions: revampedOptions) => {
+const getTypeDefInterfaceAndAction = async (
+  setupOptions: revampedOptions,
+  identifier?: { name: string; type: string }
+) => {
+  if (!identifier) identifier = { name: "", type: "" };
   const { names, properties, interfacePrefix, propertiesForTypeInterface } =
     setupOptions;
   let { returnType } = setupOptions;
@@ -180,7 +220,11 @@ const getTypeDefInterfaceAndAction = async (setupOptions: revampedOptions) => {
       true
     );
   }
-  const typeDefActionVariables = getTypeDefActionVariables(properties, names);
+  const typeDefActionVariables = getTypeDefActionVariables(
+    properties,
+    names,
+    identifier
+  );
   returnType = getReturnType(names, returnType);
   const typeDefAction = getTypeDefAction(
     names,
@@ -229,10 +273,11 @@ const arrangeSchemaConfigFile = async (
 };
 /////// Typedef creation utils ////////
 const createTypedefFromClientOptions = async (options: optionsFromClient) => {
+  const { identifier } = options;
   const setupOptions = createTypeDefUtils.setUpOptions(options);
   const { names, type } = setupOptions;
   let { typeDefInterface, typeDefAction, extraTypeDefInterfaceObj } =
-    await getTypeDefInterfaceAndAction(setupOptions);
+    await getTypeDefInterfaceAndAction(setupOptions, identifier);
   const typeDefInterfaceTypeName =
     utils.replaceAllInString(
       names?.typeDefInterfaceName || "",
@@ -281,7 +326,7 @@ const getTypescriptInterfaceFromModelName = async (model: string) => {
     }
   });
   typeDefInterface.properties = interfaceFileLineArray
-    .slice(startIndex + 2, endIndex - 2)
+    .slice(startIndex + 1, endIndex - 1)
     .map((line: string) => utils.replaceAllInString(line.trim(), ",", ""));
   return typeDefInterface;
 };
@@ -306,18 +351,23 @@ const createTypedefClientOptionsFromFileOptions = async (
     modelNameOnly,
     true
   );
+  const isUpdateQuery = lowerCaseAction.includes("update");
   let propertiesForOptions = mutationQuery
     ? typeDefInterface.properties
     : undefined;
   let propertiesForTypeInterface;
-  if (requiresIdentifier) {
+  if (requiresIdentifier && !isUpdateQuery) {
     propertiesForOptions = `${identifier.name}: ${identifier.type}`;
-    if (lowerCaseAction.includes("read")) {
+    if (
+      lowerCaseAction.includes("read") &&
+      !utils.checkIfConfigItemExists(
+        "typeDefInterfaces",
+        `${modelNameOnly}OptionsType`
+      )
+    ) {
       propertiesForTypeInterface = typeDefInterface.properties;
     }
   }
-  // BUG: When creating a "Read One" query, it doesn't create the requirred "moveOptionsType" that is the return type of this query.
-  // this happens because properties is now just a string. my attempt at line 296 is to fix this with an extra prop inside optionsFromClient interface.
   const createCustomTypeOptions: optionsFromClient = {
     properties: propertiesForOptions,
     name: modelNameOnly,
@@ -328,6 +378,7 @@ const createTypedefClientOptionsFromFileOptions = async (
     type,
     actionName: action,
     propertiesForTypeInterface,
+    identifier,
   };
   return createCustomTypeOptions;
 };

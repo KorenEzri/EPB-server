@@ -4,6 +4,7 @@ import { typeDefs } from "./typeDefs";
 import { resolvers } from "./resolvers";
 import express from "express";
 import cors from "cors";
+import { connectToDb } from "./connections";
 import Logger from "./logger/logger";
 
 const PORT = process.env.PORT || 8001;
@@ -45,5 +46,6 @@ const startServer = async () => {
     Logger.info(`EPB-server @ http://localhost:${PORT}${server.graphqlPath}`)
   );
   Logger.http("Client @ http://localhost:5000");
+  await connectToDb();
 };
 startServer();

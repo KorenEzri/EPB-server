@@ -7,7 +7,7 @@ import fs from "fs";
 import { promisify } from "util";
 import * as utils from "../../utils";
 import Logger from "../../../logger/logger";
-import { createTypedef } from "./mongodb/testNewTypedefCreation";
+import { createTypedef } from "./mongodb/createCRUDTypedef";
 
 const write = promisify(fs.writeFile);
 const read = promisify(fs.readFile);
@@ -135,7 +135,6 @@ const createCrudOps = async (
   identifier: { name: string; type: string }
 ) => {
   crudOps = crudOps.map((op: string) => op.split(" ").join(""));
-  const modelNameOnly = schemaName.replace("Schema", "");
   for (let i = 0; i < crudOps.length; i++) {
     const crudOperation = crudOps[i];
     const resolverType = mutationCRUDS.includes(crudOperation)

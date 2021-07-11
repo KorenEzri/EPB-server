@@ -64,11 +64,11 @@ export const addToAllowedTypes = (name: string) => {
   allCustomTypesWithArrayTypes.push(`${name}Options`);
 };
 export const restartServer = async () => {
-  // await write(
-  //   'node_modules/@korenezri/easy-peasy-backend/epb/client/build" "nodemon index.ts" "nodemon node_modules/@korenezri/easy-peasy-backend/epb/epb-server/build/restart.json',
-  //   `{"restart":"${Math.random()}"}`
-  // );
-  await write("restart.json", `{"restart":"${Math.random()}"}`);
+  await write(
+    'node_modules/@korenezri/easy-peasy-backend/epb/client/build" "nodemon index.ts" "nodemon node_modules/@korenezri/easy-peasy-backend/epb/epb-server/build/restart.py',
+    `{"restart":"${Math.random()}"}`
+  );
+  // await write("restart.py", `{"restart":"${Math.random()}"}`);
 };
 export const getAllSchemaNames = async () => {
   const schemaFolderPath = "db/schemas";
@@ -265,9 +265,9 @@ export const alterConfigFile = async (
   const removeFromContent = (content: string | string[], toRemove: string) => {
     if (!content) return;
     if (Array.isArray(content)) {
-      const index = content.indexOf(toRemove);
-      return content.splice(index, 1);
-    } else return content.split(`${toRemove}`).join("");
+      const index = content?.indexOf(toRemove);
+      return content?.splice(index, 1);
+    } else return content?.split(`${toRemove}`).join("");
   };
   const filePath = "epb.config.json";
   const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
@@ -289,20 +289,9 @@ export const checkIfConfigItemExists = async (
   const filePath = "epb.config.json";
   const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
   const configFileContent = jsonFileAsJSON[contentHeader];
-  return configFileContent.includes(item);
+  return configFileContent?.includes(item);
 };
-// export const addToAllowedTypesConfig = async (types: [string]) => {
-//   const filePath = "epb.config.json";
-//   const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));
-//   let configFileContent = jsonFileAsJSON.allowedTypes;
-//   if (!configFileContent) configFileContent = []
-//   types.forEach(type => {
-//     configFileContent.push(type)
-//     configFileContent.push(`${type}`)
-//     configFileContent.push(`[${type}]`)
-//     configFileContent.push(`${type}[]`)
-//   })
-// }
+
 export const getAllAllowedTypes = async () => {
   const filePath = "epb.config.json";
   const jsonFileAsJSON = JSON.parse(await read(filePath, "utf8"));

@@ -1825,3 +1825,108 @@
 2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema movieSchema.[39m
 2021-07-09 22:11:25:1125 [31merror[39m: [31mFROM: EPB-server: Crud operation Read All is not availabe for schema movieSchema.[39m
 2021-07-09 22:11:32:1132 [31merror[39m: [31mFROM: EPB-server: Crud operation Read One is not availabe for schema movieSchema.[39m
+2021-07-10 16:48:30:4830 [31merror[39m: [31mFROM: EPB-server: Crud operation Create Many is not availabe for schema tvShowSchema.[39m
+2021-07-10 17:13:05:135 [31merror[39m: [31mCast to Number failed for value "{ showId: 35624 }" (type Object) at path "showId" for model "TvShowModel"[39m
+2021-07-11 00:23:30:2330 [31merror[39m: [31mCast to Number failed for value "{ showId: 35624 }" (type Object) at path "showId" for model "TvShowModel"[39m
+2021-07-11 00:24:12:2412 [31merror[39m: [31mOperation `tvshowmodels.findOne()` buffering timed out after 10000ms[39m
+2021-07-11 00:35:26:3526 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (271:99)[39m
+[31m[error]   269 | }[39m
+[31m[error]   270 | },[39m
+[31m[error] > 271 | updateOneTvShow: async (_:any, { showId }: { showId :number }, { tvShow }: { tvShow: tvShowOptions) }=> {[39m
+[31m[error]       |                                                                                                   ^[39m
+[31m[error]   272 |       [39m
+[31m[error]   273 |  try {[39m
+[31m[error]   274 |           await TvShowModel.updateOne([39m
+[31mapp.ts 159ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 19ms[39m
+2021-07-11 00:35:27:3527 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (271:99)[39m
+[31m[error]   269 | }[39m
+[31m[error]   270 | },[39m
+[31m[error] > 271 | updateOneTvShow: async (_:any, { showId }: { showId :number }, { tvShow }: { tvShow: tvShowOptions) }=> {[39m
+[31m[error]       |                                                                                                   ^[39m
+[31m[error]   272 |       [39m
+[31m[error]   273 |  try {[39m
+[31m[error]   274 |           await TvShowModel.updateOne([39m
+[31mapp.ts 160ms[39m
+[31mconnections.ts 15ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 19ms[39m
+2021-07-11 00:35:28:3528 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (271:99)[39m
+[31m[error]   269 | }[39m
+[31m[error]   270 | },[39m
+[31m[error] > 271 | updateOneTvShow: async (_:any, { showId }: { showId :number }, { tvShow }: { tvShow: tvShowOptions) }=> {[39m
+[31m[error]       |                                                                                                   ^[39m
+[31m[error]   272 |[39m
+[31m[error]   273 | try {[39m
+[31m[error]   274 | await TvShowModel.updateOne([39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 22ms[39m
+
+[31mtypeDefs.ts 19ms[39m
+2021-07-11 00:35:29:3529 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (271:99)[39m
+[31m[error]   269 | }[39m
+[31m[error]   270 | },[39m
+[31m[error] > 271 | updateOneTvShow: async (_:any, { showId }: { showId :number }, { tvShow }: { tvShow: tvShowOptions) }=> {[39m
+[31m[error]       |                                                                                                   ^[39m
+[31m[error]   272 |[39m
+[31m[error]   273 | try {[39m
+[31m[error]   274 | await TvShowModel.updateOne([39m
+[31mapp.ts 158ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 20ms[39m
+
+[31mtypeDefs.ts 19ms[39m
+2021-07-11 01:19:26:1926 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (217:68)[39m
+[31m[error]   215 | //BUG: 1. createOne's params is not correct. Also, it doesn't pass params correctly to TvShowModel at line 235. I think.[39m
+[31m[error]   216 | //BUG: 2. Make sure all the routes work perecetly[39m
+[31m[error] > 217 | createOneTvShow: async (_: any, { tvShow }: { tvShow: tvShowOptions) } => { const tvShowInstance = new TvShowModel ({tvShow}) [39m
+[31m[error]       |                                                                    ^[39m
+[31m[error]   218 |  try {[39m
+[31m[error]   219 |         await tvShowInstance.save()[39m
+[31m[error]   220 |       }[39m
+[31mapp.ts 170ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 24ms[39m
+
+[31mtypeDefs.ts 16ms[39m
+2021-07-11 01:23:00:230 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (217:68)[39m
+[31m[error]   215 | //BUG: 1. createOne's params is not correct. Also, it doesn't pass params correctly to TvShowModel at line 235. I think.[39m
+[31m[error]   216 | //BUG: 2. Make sure all the routes work perecetly[39m
+[31m[error] > 217 | createOneTvShow: async (_: any, { tvShow }: { tvShow: tvShowOptions) } } => { const tvShowInstance = new TvShowModel ({tvShow}) [39m
+[31m[error]       |                                                                    ^[39m
+[31m[error]   218 |  try {[39m
+[31m[error]   219 |         await tvShowInstance.save()[39m
+[31m[error]   220 |       }[39m
+[31mapp.ts 163ms[39m
+[31mconnections.ts 14ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 16ms[39m
+2021-07-11 01:38:49:3849 [31merror[39m: [31mE11000 duplicate key error collection: EPBtest.tvshowmodels index: showId_1 dup key: { showId: null }[39m
+2021-07-11 11:08:01:81 [31merror[39m: [31mFROM: EPB-server: Command failed with exit code 2: npx prettier --write *.ts[39m
+[31m[error] resolvers.ts: SyntaxError: ';' expected. (282:99)[39m
+[31m[error]   280 | }[39m
+[31m[error]   281 | },[39m
+[31m[error] > 282 | updateOneTvShow: async (_:any, { showId }: { showId :number }, { tvShow }: { tvShow: tvShowOptions) }=> {[39m
+[31m[error]       |                                                                                                   ^[39m
+[31m[error]   283 |       [39m
+[31m[error]   284 |  try {[39m
+[31m[error]   285 |           await TvShowModel.updateOne([39m
+[31mapp.ts 163ms[39m
+[31mconnections.ts 13ms[39m
+[31mindex.ts 21ms[39m
+
+[31mtypeDefs.ts 19ms[39m
+2021-07-11 11:10:03:103 [31merror[39m: [31mFROM: EPB-server: Crud operation Update One is not availabe for schema tvShowSchema.[39m
+2021-07-11 12:12:15:1215 [31merror[39m: [31mError creating type definition! Duplicate type definitions detected, aborting..[39m

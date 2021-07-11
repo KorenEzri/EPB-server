@@ -60,6 +60,7 @@ export interface optionsFromClient {
   type?: string;
   actionName?: string;
   propertiesForTypeInterface?: string[];
+  identifier?: { name: string; type: string };
 }
 export type varList = { name: string; type: string }[];
 export interface arrangeSchemaConfigFileVars {

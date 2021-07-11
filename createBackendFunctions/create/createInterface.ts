@@ -22,7 +22,7 @@ const toInterfaceString = (
 // turn interface object to a stringified representation.
 
 const fromOptionsToInterfaceString = ({ options }: createCustomTypeOptions) => {
-  let interfaceOpts: any = { options: {} }; // this will be the interface as a string to write to a file
+  let interfaceOpts: any = {}; // this will be the interface as a string to write to a file
   const { properties, name } = options; // properties of the interface and it's name (ie const "name" = {...})
   const { importList, varList } = parseVars.parseInterfaceVarlist(properties);
   // importList = an array of import statements to add to the interface utils.
@@ -31,7 +31,7 @@ const fromOptionsToInterfaceString = ({ options }: createCustomTypeOptions) => {
   varList.forEach((variable) => {
     let type = variable.type;
     type = utils.removeLastWordFromString(type, ["Type", "Input"]);
-    interfaceOpts.options[variable.name] = type; // assign names and types to interfaceOpts
+    interfaceOpts[variable.name] = type; // assign names and types to interfaceOpts
   });
   const importStatements = utils.toImportStatements(importList);
   // turn an array of custom type names to an array of import statements
