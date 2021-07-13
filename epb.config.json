@@ -24,7 +24,6 @@
     "addUserAuth",
     "restartServer",
     "addCrudOperations",
-    "createOneMessage",
     "ResolverOptions",
     "getAllSchemaProps",
     "getAllowedCruds"
