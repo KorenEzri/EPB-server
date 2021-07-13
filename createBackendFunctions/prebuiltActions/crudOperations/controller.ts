@@ -185,9 +185,13 @@ export const addCrudToDBSchemas = async (
   const schemaNameOnly = utils.replaceAllInString(schemaName, "Schema", "");
   const modelName = `${schemaNameOnly}Model`;
   const optionsName = `${utils.lowercaseFirstLetter(schemaNameOnly)}Options`;
+
   Logger.http(`FROM: EPB-server: Inserting import statements...`);
+  if (! (await utils.checkIfConfigItemExists('imported_options', optionsName))) {
+    await insertOptionsInterfaceImportToResolverFile(optionsName);
+    await utils.alterConfigFile('add', 'imported_options', optionsName)
+  }
   await insertModelImportStatementToResolverFile(modelName);
-  await insertOptionsInterfaceImportToResolverFile(optionsName);
   Logger.http(
     `FROM: EPB-server: Creating ${crudOperations.length} CRUD operations..`
   );
